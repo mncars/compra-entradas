@@ -1,4 +1,9 @@
 @import "variables";
 @import "bootstrap";
+@import "mixins";
 
+// Global
+@import "global/type";
+
+// Demo
 @import "demo";

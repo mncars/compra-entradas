@@ -1,0 +1,125 @@
+/*doc
+---
+title: Tipografía
+category: Estilos base
+---
+
+Los tamaños de fuente y de títulos de sección pueden variar en función del tamaño de pantalla. Para modificar estos tamaños disponemos de una serie de variables en el fichero variables _sass/_variables.scss (apartado "Tamaños de fuente en función del tamaño de pantaña") cuyos valores podemos modificar.
+
+
+### Tamaños de fuente
+
+Al igual que Bootstrap, disponemos de tres tamaños de fuente que utilizaremos en cualquier elemento que construyamos haciendo uso de las variables disponibles. Además, para facilitar la tarea de formatear texto introducido mediante un WYSWYG hemos incluido las siguientes clases: .fuente-grande, .fuente-base, .fuente-pequena.
+
+```html_example
+
+<p class="fuente-grande">Tamaño de fuente grande</p>
+<p class="fuente-base">Tamaño de fuente base</p>
+<p class="fuente-pequena">Tamaño de fuente pequeña</p>
+
+```
+
+
+### Títulos
+
+Los títulos de sección se muestran por defecto con el siguiente aspecto.
+
+```html_example
+
+<h1>Título 1</h1>
+<h2>Título 2</h2>
+<h3>Título 3</h3>
+<h4>Título 4</h4>
+<h5>Título 5</h5>
+<h6>Título 6</h6>
+
+```
+
+Además, disponemos de las siguientes clases para cambiar la apariencia de un título de sección o de cualquier otro tipo de elemento.
+
+```html_example
+
+<p class="titulo-1">Título 1</p>
+<h1 class="titulo-2">Título 2</h1>
+<h4 class="titulo-3">Título 3</h4>
+<h1 class="titulo-4">Título 4</h1>
+<p class="titulo-5">Título 5</p>
+<h5 class="titulo-6">Título 6</h5>
+
+```
+
+### Cuerpo de texto
+
+Este es un ejemplo de cuerpo de texto basado en la ficha de obra del Guernica de Picasso.
+
+```html_example
+
+<p>Reflejo fiel de una época y de unas luctuosas y dramáticas circunstancias, el lienzo Guernica nació para formar parte del Pabellón Español en la Exposición Internacional de París, de 1937. El motivo que impulsó a Pablo Picasso a realizar la escena representada en esta gran pintura fue la noticia de los bombardeos efectuados por la aviación alemana sobre la villa vasca que da nombre a la obra, conocidos por el artista a través de las dramáticas fotografías publicadas, entre otros diarios, por el periódico francés L'Humanité. A pesar de ello, tanto los bocetos como el cuadro no contienen ninguna alusión a sucesos concretos, sino que, por el contrario, constituyen un alegato genérico contra la barbarie y el terror de la guerra. Concebido como un gigantesco cartel, el gran lienzo es el testimonio del horror que supuso la Guerra Civil española, así como la premonición de lo que iba a suceder en la Segunda Guerra Mundial. La sobriedad cromática, la intensidad de todos y cada uno de los motivos, y la articulación de esos mismos motivos, determinan el extremado carácter trágico de la escena, que se iba a convertir en el emblema de los desgarradores conflictos de la sociedad de nuestros días.</p>
+
+<p>Guernica ha suscitado numerosas y polémicas interpretaciones, circunstancia a la que contribuye indudablemente la voluntaria eliminación del lienzo de cualquier tonalidad ajena a la grisalla. Al analizar su iconografía, uno de los estudiosos de la obra, Anthony Blunt, divide a los actores de esta composición piramidal en dos grupos, el primero de los cuales está integrado por tres animales: el toro, el caballo herido y el pájaro alado que se aprecia tenuemente al fondo, a la izquierda. Los seres humanos componen un segundo grupo, en el que figuran un soldado muerto y varias mujeres: la situada en la zona superior derecha, que se asoma por una ventana y sostiene hacia fuera una lámpara; la madre que, a la izquierda del lienzo, grita llevando al hijo muerto; la que entra precipitadamente por la derecha; y finalmente, la que clama al cielo, con los brazos alzados, ante una casa en llamas.
+En este mismo contexto, tampoco hay que olvidar que dos años antes, en 1935, Picasso había grabado al aguafuerte la Minotauromaquia, obra sintética que condensa en una sola imagen todos los símbolos del ciclo dedicado a este animal mitológico y que es, a la vez, el antecedente más directo de Guernica.</p>
+
+<p>Los acontecimientos de la vida privada de Picasso, junto a los sucesos políticos que atribularon al continente europeo en el período de entreguerras, se fusionan en los motivos creados por el pintor en estos momentos, para dar lugar tanto al propio Guernica como a sus bocetos y post scriptum, considerados como unas de las obras de arte más representativas del siglo XX.</p>
+
+```
+
+
+*/
+
+
+// Importamos las fuentes
+
+@import '../../fonts/MyFontsWebfontsKit.css';
+
+// Tamaños de fuente
+
+.fuente-grande {
+	@include font-size($font-size-large-xs, $font-size-large-sm, $font-size-large-md, $font-size-large-lg);
+}
+
+.fuente-base {
+	@include font-size($font-size-base-xs, $font-size-base-sm, $font-size-base-md, $font-size-base-lg);
+}
+
+.fuente-pequena {
+	@include font-size($font-size-small-xs, $font-size-small-sm, $font-size-small-md, $font-size-small-lg);
+}
+
+
+// Títulos
+
+h1,
+.titulo-1 {
+	@include font-size($font-size-h1-xs, $font-size-h1-sm, $font-size-h1-md, $font-size-h1-lg);
+	font-family: $font-museo-bold;
+}
+
+h2,
+.titulo-2 {
+	@include font-size($font-size-h2-xs, $font-size-h2-sm, $font-size-h2-md, $font-size-h2-lg);
+	font-family: $font-museo-thin;
+}
+
+h3,
+.titulo-3 {
+	@include font-size($font-size-h3-xs, $font-size-h3-sm, $font-size-h3-md, $font-size-h3-lg);
+	font-family: $font-museo-bold;
+}
+
+h4,
+.titulo-4 {
+	@include font-size($font-size-h4-xs, $font-size-h4-sm, $font-size-h4-md, $font-size-h4-lg);
+	font-family: $font-museo-bold;
+}
+
+h5,
+.titulo-5 {
+	@include font-size($font-size-h5-xs, $font-size-h5-sm, $font-size-h5-md, $font-size-h5-lg);
+	font-family: $font-museo-thin;
+}
+
+h6,
+.titulo-6 { 
+	@include font-size($font-size-h6-xs, $font-size-h6-sm, $font-size-h6-md, $font-size-h6-lg);
+	font-family: $font-museo-regular;
+}

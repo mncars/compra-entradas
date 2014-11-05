@@ -1,0 +1,14 @@
+// Type
+
+@mixin font-size($font-size-xs, $font-size-sm, $font-size-md, $font-size-lg) {
+	font-size: $font-size-xs;
+	@media (min-width: $screen-sm-min) {
+		font-size: $font-size-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		font-size: $font-size-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		font-size: $font-size-lg;
+	}
+}
