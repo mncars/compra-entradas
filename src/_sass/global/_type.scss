@@ -4,8 +4,8 @@ title: Tipografía
 category: Estilos base
 ---
 
-Los tamaños de fuente y de títulos de sección pueden variar en función del tamaño de pantalla. Para modificar estos tamaños disponemos de una serie de variables en el fichero variables _sass/_variables.scss (apartado "Tamaños de fuente en función del tamaño de pantaña") cuyos valores podemos modificar.
 
+Los tamaños de fuente y de títulos de sección pueden variar en función del tamaño de pantalla. Para modificar estos tamaños disponemos de una serie de variables en el fichero variables _sass/_variables.scss (apartado "Tamaños de fuente en función del tamaño de pantaña") cuyos valores podemos modificar.
 
 ### Tamaños de fuente
 
@@ -19,8 +19,7 @@ Al igual que Bootstrap, disponemos de tres tamaños de fuente que utilizaremos e
 
 ```
 
-
-### Títulos
+### Títulos de sección
 
 Los títulos de sección se muestran por defecto con el siguiente aspecto.
 
@@ -63,13 +62,8 @@ En este mismo contexto, tampoco hay que olvidar que dos años antes, en 1935, Pi
 
 ```
 
-
 */
 
-
-// Importamos las fuentes
-
-@import '../../fonts/MyFontsWebfontsKit.css';
 
 // Tamaños de fuente
 
@@ -86,40 +80,64 @@ En este mismo contexto, tampoco hay que olvidar que dos años antes, en 1935, Pi
 }
 
 
-// Títulos
+// Títulos de sección
 
 h1,
 .titulo-1 {
-	@include font-size($font-size-h1-xs, $font-size-h1-sm, $font-size-h1-md, $font-size-h1-lg);
+	@include font-size(
+		$font-size-h1-xs, 
+		$font-size-h1-sm, 
+		$font-size-h1-md, 
+		$font-size-h1-lg);	
 	font-family: $font-museo-bold;
 }
 
 h2,
 .titulo-2 {
-	@include font-size($font-size-h2-xs, $font-size-h2-sm, $font-size-h2-md, $font-size-h2-lg);
+	@include font-size(
+		$font-size-h2-xs, 
+		$font-size-h2-sm, 
+		$font-size-h2-md, 
+		$font-size-h2-lg);
 	font-family: $font-museo-thin;
 }
 
 h3,
 .titulo-3 {
-	@include font-size($font-size-h3-xs, $font-size-h3-sm, $font-size-h3-md, $font-size-h3-lg);
+	@include font-size(
+		$font-size-h3-xs, 
+		$font-size-h3-sm, 
+		$font-size-h3-md, 
+		$font-size-h3-lg);
 	font-family: $font-museo-bold;
 }
 
 h4,
 .titulo-4 {
-	@include font-size($font-size-h4-xs, $font-size-h4-sm, $font-size-h4-md, $font-size-h4-lg);
+	@include font-size(
+		$font-size-h4-xs, 
+		$font-size-h4-sm, 
+		$font-size-h4-md, 
+		$font-size-h4-lg);
 	font-family: $font-museo-bold;
 }
 
 h5,
 .titulo-5 {
-	@include font-size($font-size-h5-xs, $font-size-h5-sm, $font-size-h5-md, $font-size-h5-lg);
+	@include font-size(
+		$font-size-h5-xs, 
+		$font-size-h5-sm, 
+		$font-size-h5-md, 
+		$font-size-h5-lg);
 	font-family: $font-museo-thin;
 }
 
 h6,
 .titulo-6 { 
-	@include font-size($font-size-h6-xs, $font-size-h6-sm, $font-size-h6-md, $font-size-h6-lg);
+	@include font-size(
+		$font-size-h6-xs, 
+		$font-size-h6-sm, 
+		$font-size-h6-md, 
+		$font-size-h6-lg);
 	font-family: $font-museo-regular;
 }
