@@ -1,0 +1,140 @@
+/*doc
+---
+title: Tamaños de fuente
+category: Mixins
+---
+
+Sirven para asignar a un elemento un tamaño de fuente y que este se ajuste en función de los tamaños de pantalla que define Bootstrap.
+
+```
+@mixin font-size-large;
+@mixin font-size-base;
+@mixin font-size-small;
+@mixin font-size-h1;
+@mixin font-size-h2;
+@mixin font-size-h3;
+@mixin font-size-h4;
+@mixin font-size-h5;
+@mixin font-size-h6;
+```
+
+Los valores de sus respectivas variables se pueden editar en el archivo `_sass/_variables.scss` en el apartado titulado "Tamaños de fuente en función del tamaño de pantaña".
+
+*/
+
+@mixin font-size-large {
+	font-size: $font-size-large-xs;
+	@media (min-width: $screen-sm-min) {
+		font-size: $font-size-large-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		font-size: $font-size-large-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		font-size: $font-size-large-lg;
+	}		
+}
+
+@mixin font-size-base {
+	font-size: $font-size-base-xs;
+	@media (min-width: $screen-sm-min) {
+		font-size: $font-size-base-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		font-size: $font-size-base-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		font-size: $font-size-base-lg;
+	}		
+}
+
+@mixin font-size-small {
+	font-size: $font-size-small-xs;
+	@media (min-width: $screen-sm-min) {
+		font-size: $font-size-small-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		font-size: $font-size-small-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		font-size: $font-size-small-lg;
+	}		
+}
+
+@mixin font-size-h1 {
+	font-size: $font-size-h1-xs;
+	@media (min-width: $screen-sm-min) {
+		font-size: $font-size-h1-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		font-size: $font-size-h1-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		font-size: $font-size-h1-lg;
+	}		
+}
+
+@mixin font-size-h2 {
+	font-size: $font-size-h2-xs;
+	@media (min-width: $screen-sm-min) {
+		font-size: $font-size-h2-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		font-size: $font-size-h2-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		font-size: $font-size-h2-lg;
+	}		
+}
+
+@mixin font-size-h3 {
+	font-size: $font-size-h3-xs;
+	@media (min-width: $screen-sm-min) {
+		font-size: $font-size-h3-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		font-size: $font-size-h3-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		font-size: $font-size-h3-lg;
+	}		
+}
+
+@mixin font-size-h4 {
+	font-size: $font-size-h4-xs;
+	@media (min-width: $screen-sm-min) {
+		font-size: $font-size-h4-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		font-size: $font-size-h4-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		font-size: $font-size-h4-lg;
+	}		
+}
+
+@mixin font-size-h5 {
+	font-size: $font-size-h5-xs;
+	@media (min-width: $screen-sm-min) {
+		font-size: $font-size-h5-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		font-size: $font-size-h5-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		font-size: $font-size-h5-lg;
+	}		
+}
+
+@mixin font-size-h6 {
+	font-size: $font-size-h6-xs;
+	@media (min-width: $screen-sm-min) {
+		font-size: $font-size-h6-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		font-size: $font-size-h6-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		font-size: $font-size-h6-lg;
+	}		
+}

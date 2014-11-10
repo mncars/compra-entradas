@@ -1,0 +1,36 @@
+/*doc
+---
+title: Sección
+category: Componentes
+---
+
+<div class="alert alert-danger" role="alert">Este componente todavía no puede utilizarse ya que no esta terminado.</div>
+
+*/
+
+.seccion {
+	@include padding-vertical-lg;
+}
+
+.seccion__header {
+	@include margin-bottom-md;
+}
+
+.seccion__header--centrado {
+	text-align: center;
+	.seccion__header__entradilla {
+		@media (min-width: $screen-lg-min) {
+			@include center-block;
+		}
+	}
+}
+
+.seccion__header__titulo {
+	margin-top: 0;
+}
+
+.seccion__header__entradilla {
+	@media (min-width: $screen-lg-min) {
+		max-width: 85%;
+	}
+}

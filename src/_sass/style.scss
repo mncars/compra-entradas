@@ -6,7 +6,10 @@
 @import "../fonts/MyFontsWebfontsKit.css";
 
 // Global
-@import "global/type";
+@import "global/tipografia";
+@import "global/espacios";
+@import "global/enlaces";
 
-// Demo
-@import "demo";
+// Componentes
+@import "componentes/secciones";
+@import "componentes/miniaturas";

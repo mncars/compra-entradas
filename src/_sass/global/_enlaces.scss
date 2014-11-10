@@ -1,0 +1,42 @@
+/*doc
+---
+title: Enlaces
+category: Estilos base
+---
+
+Diferentes tipos de enlace.
+
+```html_example
+<p><a href="#">Enlace por defecto</a></p>
+<p><a href="#" class="enlace--subrayado">Enlace subrayado</a></p>
+<p><a href="tel: 948072222" class="enlace--telefono">Enlace para números de teléfono</a></p>
+<a href="#" class="enlace--bloque">
+	<p>Enlace para envolver bloques</p>
+</a>
+```
+*/
+
+.enlace--subrayado {
+	color: $text-color;
+	text-decoration: underline;
+	&:hover {
+		color: darken($text-color, 10%);
+	}
+}
+
+.enlace--telefono {
+	color: inherit;
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+		cursor: text;
+	}
+}
+
+.enlace--bloque {
+	color: inherit;
+	&:hover {
+		color: inherit;
+		text-decoration: none;
+	}
+}

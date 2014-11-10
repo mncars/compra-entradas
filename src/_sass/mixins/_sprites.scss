@@ -1,0 +1,122 @@
+/*doc
+---
+title: Sprites
+category: Mixins
+---
+
+Para trabajar comodamente con sprites hay definidos una serie de mixins creados a partir de los ejemplos de [este post](http://www.smashingmagazine.com/2012/04/11/css-sprites-revisited/).
+
+Los sprites de imágenes los guardamos en la carpeta `img/sprites/` y los nombramos de la siguiente forma: `sprite1` , `sprite2` , `sprite3` . Cada sprite consta de una cuadrícula donde se colocan las imágenes y cuyas dimensiones de celda pueden variar. El nombre del sprite, su ruta, y las dimensiones de su cuadrícula las vamos definiendo en el archivo `_sass/mixins/_sprites.scss`: 
+
+```
+@mixin sprite($image, $x, $y) {
+   @if $image == sprite1 {
+      $spriteX: 120px;
+      $spriteY: 120px;
+         @include spriteHelper($x, $y, $spriteX, $spriteY);
+         background-image: url("../img/sprites/${image}.svg");
+      }
+}
+```
+
+Tenemos tres mixins para hacer aplicar los sprites de tres formas diferentes.
+
+##spriteReplace##
+
+```
+@mixin spriteReplace ($image, $x, $y, $width, $height);
+```
+
+Sirve para reemplazar un texto por una imagen, por ejemplo:
+
+```
+.sharing .twitter a {
+   .spriteReplace(sprite1, 0, 0, 32px, 32px); display:block;
+}
+```
+
+##spriteInline##
+
+```
+@mixin spriteInline($image, $x, $y, $width, $height);
+```
+
+Sirve para añadir una imagen en línea a un lado de un texto de una sola línea, por ejemplo:
+
+```
+.affiliates .amazon a:before {
+   .spriteInline(sprite1, 4, 1, 22px, 16px);
+}
+```
+
+##spritePadded##
+
+```
+@mixin spritePadded($image, $x, $y, $width, $height);
+```
+Sirve para añadir una imagen a un lado de un texto de más de una línea, por ejemplo:
+
+```
+.translated p {
+   padding-left: 22px;
+   position: relative;
+}
+.translated p:before {
+   .spritePadded(sprite1, 5, 5, 16px, 14px);
+   left: 0;
+   top: 0;
+}
+```
+*/
+
+
+@mixin spriteHelper($x, $y, $spriteX, $spriteY) {
+   background-position: -($x * $spriteX) -($y * $spriteY);
+   background-repeat: no-repeat;
+}
+
+// Definimos los nombres de sprites, sus rutas y sus tamaños de cuadrícula
+
+@mixin sprite($image, $x, $y) {
+	@if $image == sprite1 {
+		$spriteX: 120px;
+		$spriteY: 120px;
+   		@include spriteHelper($x, $y, $spriteX, $spriteY);
+   		background-image: url("../img/sprites/${image}.svg");
+   	}
+}
+
+// Sprite: Reemplazar texto
+
+@mixin hideText{
+   text-indent: -999em;
+   letter-spacing: -999em;
+   overflow: hidden;
+}
+
+@mixin spriteReplace ($image, $x, $y, $width, $height) {
+   @include sprite($image, $x, $y);
+   @include hideText;
+   width: $width;
+   height: $height;
+}
+
+// Sprite: Inline images
+
+@mixin spriteInline($image, $x, $y, $width, $height) {
+   @include sprite($image, $x, $y);
+   display: inline-block;
+   content: "";
+   width: $width;
+   height: $height;
+}
+
+// Sprite: Padded images
+
+@mixin spritePadded($image, $x, $y, $width, $height) {
+   @include sprite($image, $x, $y);
+   position: absolute;
+   content: "";
+   width: $width;
+   height: $height;
+}

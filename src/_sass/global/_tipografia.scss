@@ -5,11 +5,15 @@ category: Estilos base
 ---
 
 
-Los tamaños de fuente y de títulos de sección pueden variar en función del tamaño de pantalla. Para modificar estos tamaños disponemos de una serie de variables en el fichero variables _sass/_variables.scss (apartado "Tamaños de fuente en función del tamaño de pantaña") cuyos valores podemos modificar.
+Para asignar a un elemento un tamaño de fuente que cambie en función de los tamaños de pantalla definidos por Bootstrap utilizaremos los mixins del tipo ["Tamaños de fuente"](/docs/mixins.html#Tamaños_de_fuente).
+
+Para modificar sus valores disponemos de una serie de variables en el fichero `variables _sass/_variables.scss` bajo el título "Tamaños de fuente en función del tamaño de pantaña".
 
 ### Tamaños de fuente
 
-Al igual que Bootstrap, disponemos de tres tamaños de fuente que utilizaremos en cualquier elemento que construyamos haciendo uso de las variables disponibles. Además, para facilitar la tarea de formatear texto introducido mediante un WYSWYG hemos incluido las siguientes clases: .fuente-grande, .fuente-base, .fuente-pequena.
+Al igual que Bootstrap, disponemos de tres tamaños de fuente básicos que utilizaremos en cualquier elemento que construyamos.
+
+Además, para facilitar la tarea de formatear texto introducido mediante un WYSWYG hemos incluido las clases: `.fuente-grande` , `.fuente-base` , `.fuente-pequena` .
 
 ```html_example
 
@@ -38,11 +42,11 @@ Además, disponemos de las siguientes clases para cambiar la apariencia de un t�
 
 ```html_example
 
-<p class="titulo-1">Título 1</p>
+<h2 class="titulo-1">Título 1</h2>
 <h1 class="titulo-2">Título 2</h1>
 <h4 class="titulo-3">Título 3</h4>
 <h1 class="titulo-4">Título 4</h1>
-<p class="titulo-5">Título 5</p>
+<h3 class="titulo-5">Título 5</h3>
 <h5 class="titulo-6">Título 6</h5>
 
 ```
@@ -68,76 +72,65 @@ En este mismo contexto, tampoco hay que olvidar que dos años antes, en 1935, Pi
 // Tamaños de fuente
 
 .fuente-grande {
-	@include font-size($font-size-large-xs, $font-size-large-sm, $font-size-large-md, $font-size-large-lg);
+	@include font-size-large;
 }
 
 .fuente-base {
-	@include font-size($font-size-base-xs, $font-size-base-sm, $font-size-base-md, $font-size-base-lg);
+	@include font-size-base;
 }
 
 .fuente-pequena {
-	@include font-size($font-size-small-xs, $font-size-small-sm, $font-size-small-md, $font-size-small-lg);
+	@include font-size-small;
 }
 
 
 // Títulos de sección
 
 h1,
+.h1,
 .titulo-1 {
-	@include font-size(
-		$font-size-h1-xs, 
-		$font-size-h1-sm, 
-		$font-size-h1-md, 
-		$font-size-h1-lg);	
+	@include font-size-h1;
+	@include no-margin-top;
+	@include margin-bottom-sm;
 	font-family: $font-museo-bold;
 }
 
 h2,
+.h2,
 .titulo-2 {
-	@include font-size(
-		$font-size-h2-xs, 
-		$font-size-h2-sm, 
-		$font-size-h2-md, 
-		$font-size-h2-lg);
-	font-family: $font-museo-thin;
-}
-
-h3,
-.titulo-3 {
-	@include font-size(
-		$font-size-h3-xs, 
-		$font-size-h3-sm, 
-		$font-size-h3-md, 
-		$font-size-h3-lg);
+	@include font-size-h2;
+	@include no-margin-top;
 	font-family: $font-museo-bold;
 }
 
+h3,
+.h3,
+.titulo-3 {
+	@include font-size-h3;
+	@include no-margin-top;
+	font-family: $font-museo-thin;
+}
+
 h4,
+.h4,
 .titulo-4 {
-	@include font-size(
-		$font-size-h4-xs, 
-		$font-size-h4-sm, 
-		$font-size-h4-md, 
-		$font-size-h4-lg);
+	@include font-size-h4;
+	@include no-margin-top;
 	font-family: $font-museo-bold;
 }
 
 h5,
+.h5,
 .titulo-5 {
-	@include font-size(
-		$font-size-h5-xs, 
-		$font-size-h5-sm, 
-		$font-size-h5-md, 
-		$font-size-h5-lg);
-	font-family: $font-museo-thin;
+	@include font-size-h5;
+	@include no-margin-top;
+	font-family: $font-museo-regular;
 }
 
 h6,
+.h6,
 .titulo-6 { 
-	@include font-size(
-		$font-size-h6-xs, 
-		$font-size-h6-sm, 
-		$font-size-h6-md, 
-		$font-size-h6-lg);
-	font-family: $font-museo-regular;
+	@include font-size-h6;
+	@include no-margin-top;
+	font-family: $font-museo-thin;
 }

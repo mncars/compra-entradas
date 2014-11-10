@@ -1,0 +1,44 @@
+/*doc
+---
+title: Espacio en blanco
+category: Estilos base
+---
+
+
+Para asignar a un elemento una cantidad de espacio en blanco determinada utilizaremos los mixins del tipo ["Espacios en blanco"](/docs/mixins.html#Espacios_en_blanco).
+
+Para modificar sus valores disponemos de una serie de variables en el fichero `variables _sass/_variables.scss` bajo el título "Espacio en blanco".
+
+En caso de que sea necesario utilizar este tipo de márgenes para dar formato a un contenido introducido mediante WYSWYG, disponemos de las siguientes clases. Se trata de márgenes inferiores que nos sirven para separar bloques.
+
+```html_example
+<div class="well margen-muy-pequeno">Margen muy pequeño</div>
+<div class="well margen-pequeno">Margen pequeño</div>
+<div class="well margen-mediano">Margen mediano</div>
+<div class="well margen-largo">Margen largo</div>
+<div class="well margen-muy-largo">Margen muy largo</div>
+```
+
+NOTA: Ignora el estilo `.well` , sólo sirve para diferenciar los bloques entre sí.
+
+*/
+
+.margen-muy-pequeno {
+	@include margin-bottom-xs;
+}
+
+.margen-pequeno {
+	@include margin-bottom-sm;
+}
+
+.margen-mediano {
+	@include margin-bottom-md;
+}
+
+.margen-largo {
+	@include margin-bottom-lg;
+}
+
+.margen-muy-largo {
+	@include margin-bottom-xl;
+}
