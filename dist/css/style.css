@@ -4655,7 +4655,7 @@ Documentación...
       background-position-x: -150px;
       background-position-y: -0px;
       background-repeat: no-repeat;
-      background-image: url("/img/sprites/sprite1.svg");
+      background-image: url("../img/sprites/sprite1.svg");
       text-indent: -999em;
       letter-spacing: -999em;
       overflow: hidden;
@@ -4666,7 +4666,7 @@ Documentación...
       background-position-x: -0px;
       background-position-y: -0px;
       background-repeat: no-repeat;
-      background-image: url("/img/sprites/sprite1.svg");
+      background-image: url("../img/sprites/sprite1.svg");
       text-indent: -999em;
       letter-spacing: -999em;
       overflow: hidden;
@@ -4676,10 +4676,10 @@ Documentación...
 
 @media (max-width: 767px) {
   .lt-ie9 .navegacion-principal__cabecera__logo {
-    background-image: url("/img/sprites/sprite1.png"); } }
+    background-image: url("../img/sprites/sprite1.png"); } }
 @media (min-width: 768px) {
   .lt-ie9 .navegacion-principal__cabecera__logo {
-    background-image: url("/img/sprites/sprite1.png"); } }
+    background-image: url("../img/sprites/sprite1.png"); } }
 
 .navegacion-principal__cabecera__slogan {
   font-family: 'PFDinTextPro-Regular', Helvetica, Arial, sans-serif;

@@ -83,7 +83,7 @@ Sirve para añadir una imagen a un lado de un texto de más de una línea, por e
 		$spriteX: 50px;
 		$spriteY: 50px;
    		@include spriteHelper($x, $y, $spriteX, $spriteY);
-   		background-image: url("/img/sprites/#{$image}.svg");
+   		background-image: url("../img/sprites/#{$image}.svg");
    	}
 }
 
@@ -125,5 +125,5 @@ Sirve para añadir una imagen a un lado de un texto de más de una línea, por e
 // Sprite: Sustituimos las imágenes .svg por .png para IE8
 
 @mixin spritePNG($image) {
-   background-image: url("/img/sprites/#{$image}.png");
+   background-image: url("../img/sprites/#{$image}.png");
 }
