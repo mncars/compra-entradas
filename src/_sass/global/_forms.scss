@@ -1,0 +1,17 @@
+/*doc
+---
+title: Checkout
+category: Módulos
+---
+
+Documentación...
+
+<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+
+*/
+
+.input-xlg {
+	@media (min-width: $screen-sm-min) {
+		font-size: $font-size-large + 4;	
+	}
+}

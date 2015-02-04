@@ -1,0 +1,49 @@
+---
+layout: default
+title: Compra y reserva de entradas | Museo Nacional Centro de Arte Reina Sofía
+---
+
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading">
+    <h1 class="panel-heading__titulo">Fecha</h1>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-3">
+        <h2 class="panel-body__titulo">Confirma la fecha de tu visita</h2>    
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <div class="form-group margen-pequeno">
+          <label class="sr-only" for="input-fecha-1">Fecha</label>
+          <input id="input-fecha-1" class="form-control input-lg input-xlg" type="text" placeholder="Lunes, 16 febrero 2015">
+        </div>
+      </div>
+      <div class="clearfix visible-sm-block"></div>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        {% include calendario-visita-individual.html %}
+      </div>
+      <div class="clearfix visible-md-block"></div>
+      <div class="col-sm-6 col-md-4 col-md-offset-8 col-lg-2 col-lg-offset-0">
+        <p class="margen-pequeno">El precio de la entrada puede variar en función de la fecha seleccionada.</p>
+      </div>
+    </div>
+    <div class="botonera botonera--centrada">
+      <a href="" class="btn btn-primary btn-lg btn-link botonera__btn">← Todas las entradas</a>
+      <a href="" class="btn btn-primary btn-lg botonera__btn">Continuar →</a>
+    </div>
+  </div>
+
+  <!-- List group -->
+  <div class="list-group">
+    <a href="#" class="list-group-item disabled">
+      <span class="list-group-item__titulo">Entradas</span>
+    </a>
+    <a href="#" class="list-group-item disabled">
+      <span class="list-group-item__titulo">Revisar compra y cupón</span>
+    </a>
+    <a href="#" class="list-group-item disabled">
+      <span class="list-group-item__titulo">Tus datos</span>
+    </a>
+  </div>
+</div>

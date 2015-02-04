@@ -8,16 +8,22 @@
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-        {% include header.html %}
         
+        {% include header.html %}
         <div class="container">
             {{ content }}
         </div>
-        
         {% include footer.html %}
-
+        
         <script src="/js/console.js"></script>
+        <script src="vendor/jquery/dist/jquery.js"></script>
+        <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="popover"]').popover()
+            })
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!--

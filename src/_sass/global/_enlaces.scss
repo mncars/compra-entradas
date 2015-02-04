@@ -25,6 +25,7 @@ Diferentes tipos de enlace.
 }
 
 .enlace--telefono {
+	white-space: nowrap;
 	color: inherit;
 	&:hover {
 		color: inherit;

@@ -1,0 +1,17 @@
+/*doc
+---
+title: Botonera
+category: Componentes
+---
+
+Documentación...
+
+*/
+
+.botonera--centrada {
+	text-align: center;
+}
+
+.botonera__btn {
+	@include margin-bottom-xs;
+}

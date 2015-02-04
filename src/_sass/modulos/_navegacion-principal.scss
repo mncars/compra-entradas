@@ -1,0 +1,88 @@
+/*doc
+---
+title: Navegación principal
+category: Módulos
+---
+
+Documentación...
+
+<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+
+*/
+
+.navegacion-principal {
+	@include margin-bottom-sm;
+	@media (min-width: $screen-sm-min) {
+		@include padding-top-xs;
+		border-top: 10px solid $gray-dark;
+	}
+}
+
+.navegacion-principal__cabecera {
+	min-height: 65px;
+	position: relative;
+	padding: 18px 15px 0 115px;
+	@media (min-width: $screen-sm-min) {
+		min-height: 60px;
+		padding: 0 0 0 135px;	
+	}
+	@media (min-width: $screen-md-min) {
+		@include padding-top-xs;
+	}
+}
+
+.navegacion-principal__cabecera__logo {
+	@include no-padding;
+	position: absolute;
+	top: 15px;
+	left: 0;
+	@media (max-width: $screen-xs-max) {
+		@include spriteReplace (sprite1, 3, 0, 100px, 50px);
+	}
+	@media (min-width: $screen-sm-min) {
+		@include spriteReplace (sprite1, 0, 0, 120px, 60px);
+		top: 0;
+	}
+}
+
+.lt-ie9 {
+	.navegacion-principal__cabecera__logo {
+		@media (max-width: $screen-xs-max) {
+			@include spritePNG (sprite1);
+		}
+		@media (min-width: $screen-sm-min) {
+			@include spritePNG (sprite1);
+		}
+	}
+}
+
+.navegacion-principal__cabecera__slogan {
+	font-family: $font-museo-regular;
+	@include font-size-navegacion-principal__cabecera__slogan;
+	@include no-margin;
+	line-height: 1.1;
+	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+		margin-top: 10px;
+	}
+}
+
+.navegacion-principal__grupo-botones {
+	@media (max-width: $screen-xs-max) {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	@media (min-width: $screen-sm-min) {
+		@include margin-top-xs;
+	}
+	@media (min-width: $screen-lg-min) {
+		margin-top: 18px;
+	}
+}
+
+.navegacion-principal__grupo-botones__boton {
+	@media (max-width: $screen-xs-max) {
+		@include button-variant($gray-light, $gray-darker, $gray-dark);
+		font-weight: normal;
+		border-radius: 0!important;
+	}
+}

@@ -1,0 +1,19 @@
+/*doc
+---
+title: Panels
+category: Componentes
+---
+
+Extendemos el componente de Bootstrap.
+
+*/
+
+.panel-heading__titulo {
+	@include no-margin-bottom;
+	@include font-size-panel-heading__titulo;
+}
+
+.panel-body__titulo {
+	@include margin-bottom-xs;
+	@include font-size-panel-body__titulo;
+}

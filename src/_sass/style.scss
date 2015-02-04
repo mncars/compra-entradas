@@ -9,7 +9,14 @@
 @import "global/tipografia";
 @import "global/espacios";
 @import "global/enlaces";
+@import "global/forms";
 
 // Componentes
-@import "componentes/secciones";
-@import "componentes/miniaturas";
+@import "componentes/panels";
+@import "componentes/list-group";
+@import "componentes/popovers";
+@import "componentes/calendario";
+@import "componentes/botonera";
+
+// Módulos
+@import "modulos/navegacion-principal";

@@ -1,0 +1,91 @@
+/*doc
+---
+title: Calendario
+category: Componentes
+---
+
+Calendario de Museo 
+
+*/
+
+.calendario {
+	max-width: $calendario-anchura-maxima;
+	@include padding-xs;
+	@include margin-bottom-sm;
+	background-color: $calendario-fondo;
+}
+
+.calendario__navegacion {
+	@include padding-bottom-xs;
+	@include padding-horizontal-sm;
+	position: relative;
+}
+
+.calendario__navegacion__boton {
+	position: absolute;
+	top: 5px;
+	display: block;
+	text-align: center;
+	@include size(24px, 24px);
+}
+
+.calendario__navegacion__boton--anterior {
+	left: 0;
+}
+
+.calendario__navegacion__boton--siguiente {
+	right: 0;
+}
+
+.calendario__fechas {
+	@include no-margin-bottom;
+}
+
+.calendario__fechas__dia-semana {
+	@include font-size-small;
+	text-transform: uppercase;
+	text-align: center;
+	border-color: transparent!important;
+}
+
+.calendario__fechas__dia {
+	padding: 0!important;
+	@include font-size-small;
+	text-align: right;
+	border-color: $calendario-fondo!important;
+}
+
+.calendario__fechas__dia__enlace {
+	padding: 5px;
+	display: block;
+	font-weight: bold;
+	background-color: #fff;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background-color: $link-hover-color;
+		color: #fff;
+	}
+}
+
+.calendario__fechas__dia__enlace--seleccionado {
+	&,
+	&:hover {
+		background-color: $gray-dark;
+		color: #fff;	
+	}
+}
+
+.calendario__fechas__dia__enlace--desactivado {
+	font-weight: normal;
+	&,
+	&:hover {
+		background-color: $calendario-desactivado-fondo;
+		color: $calendario-desactivado-color;
+		cursor: $cursor-disabled;
+	}	
+}
+
+.calendario__fechas__dia--vacio {
+	background-color: $calendario-fondo;	
+}

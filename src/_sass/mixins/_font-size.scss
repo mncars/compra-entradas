@@ -22,119 +22,123 @@ Los valores de sus respectivas variables se pueden editar en el archivo `_sass/_
 
 */
 
-@mixin font-size-large {
-	font-size: $font-size-large-xs;
+@mixin font-size-helper (
+	$font-size-xs, 
+	$font-size-sm, 
+	$font-size-md, 
+	$font-size-lg){
+	font-size: $font-size-xs;
 	@media (min-width: $screen-sm-min) {
-		font-size: $font-size-large-sm;
+		font-size: $font-size-sm;
 	}
 	@media (min-width: $screen-md-min) {
-		font-size: $font-size-large-md;
+		font-size: $font-size-md;
 	}
 	@media (min-width: $screen-lg-min) {
-		font-size: $font-size-large-lg;
-	}		
+		font-size: $font-size-lg;
+	}
+}
+
+@mixin font-size-large {
+	@include font-size-helper (
+		$font-size-large-xs, 
+		$font-size-large-sm, 
+		$font-size-large-md, 
+		$font-size-large-lg);	
 }
 
 @mixin font-size-base {
-	font-size: $font-size-base-xs;
-	@media (min-width: $screen-sm-min) {
-		font-size: $font-size-base-sm;
-	}
-	@media (min-width: $screen-md-min) {
-		font-size: $font-size-base-md;
-	}
-	@media (min-width: $screen-lg-min) {
-		font-size: $font-size-base-lg;
-	}		
+	@include font-size-helper (
+		$font-size-base-xs, 
+		$font-size-base-sm, 
+		$font-size-base-md, 
+		$font-size-base-lg);	
 }
 
 @mixin font-size-small {
-	font-size: $font-size-small-xs;
-	@media (min-width: $screen-sm-min) {
-		font-size: $font-size-small-sm;
-	}
-	@media (min-width: $screen-md-min) {
-		font-size: $font-size-small-md;
-	}
-	@media (min-width: $screen-lg-min) {
-		font-size: $font-size-small-lg;
-	}		
+	@include font-size-helper (
+		$font-size-small-xs, 
+		$font-size-small-sm, 
+		$font-size-small-md, 
+		$font-size-small-lg);	
 }
 
 @mixin font-size-h1 {
-	font-size: $font-size-h1-xs;
-	@media (min-width: $screen-sm-min) {
-		font-size: $font-size-h1-sm;
-	}
-	@media (min-width: $screen-md-min) {
-		font-size: $font-size-h1-md;
-	}
-	@media (min-width: $screen-lg-min) {
-		font-size: $font-size-h1-lg;
-	}		
+	@include font-size-helper (
+		$font-size-h1-xs, 
+		$font-size-h1-sm, 
+		$font-size-h1-md, 
+		$font-size-h1-lg);	
 }
 
 @mixin font-size-h2 {
-	font-size: $font-size-h2-xs;
-	@media (min-width: $screen-sm-min) {
-		font-size: $font-size-h2-sm;
-	}
-	@media (min-width: $screen-md-min) {
-		font-size: $font-size-h2-md;
-	}
-	@media (min-width: $screen-lg-min) {
-		font-size: $font-size-h2-lg;
-	}		
+	@include font-size-helper (
+		$font-size-h2-xs, 
+		$font-size-h2-sm, 
+		$font-size-h2-md, 
+		$font-size-h2-lg);	
 }
 
 @mixin font-size-h3 {
-	font-size: $font-size-h3-xs;
-	@media (min-width: $screen-sm-min) {
-		font-size: $font-size-h3-sm;
-	}
-	@media (min-width: $screen-md-min) {
-		font-size: $font-size-h3-md;
-	}
-	@media (min-width: $screen-lg-min) {
-		font-size: $font-size-h3-lg;
-	}		
+	@include font-size-helper (
+		$font-size-h3-xs, 
+		$font-size-h3-sm, 
+		$font-size-h3-md, 
+		$font-size-h3-lg);	
 }
 
 @mixin font-size-h4 {
-	font-size: $font-size-h4-xs;
-	@media (min-width: $screen-sm-min) {
-		font-size: $font-size-h4-sm;
-	}
-	@media (min-width: $screen-md-min) {
-		font-size: $font-size-h4-md;
-	}
-	@media (min-width: $screen-lg-min) {
-		font-size: $font-size-h4-lg;
-	}		
+	@include font-size-helper (
+		$font-size-h4-xs, 
+		$font-size-h4-sm, 
+		$font-size-h4-md, 
+		$font-size-h4-lg);	
 }
 
 @mixin font-size-h5 {
-	font-size: $font-size-h5-xs;
-	@media (min-width: $screen-sm-min) {
-		font-size: $font-size-h5-sm;
-	}
-	@media (min-width: $screen-md-min) {
-		font-size: $font-size-h5-md;
-	}
-	@media (min-width: $screen-lg-min) {
-		font-size: $font-size-h5-lg;
-	}		
+	@include font-size-helper (
+		$font-size-h5-xs, 
+		$font-size-h5-sm, 
+		$font-size-h5-md, 
+		$font-size-h5-lg);	
 }
 
 @mixin font-size-h6 {
-	font-size: $font-size-h6-xs;
-	@media (min-width: $screen-sm-min) {
-		font-size: $font-size-h6-sm;
-	}
-	@media (min-width: $screen-md-min) {
-		font-size: $font-size-h6-md;
-	}
-	@media (min-width: $screen-lg-min) {
-		font-size: $font-size-h6-lg;
-	}		
+	@include font-size-helper (
+		$font-size-h6-xs, 
+		$font-size-h6-sm, 
+		$font-size-h6-md, 
+		$font-size-h6-lg);	
+}
+
+@mixin font-size-navegacion-principal__cabecera__slogan {
+	@include font-size-helper (
+		$navegacion-principal-cabecera-slogan-font-size-xs, 
+		$navegacion-principal-cabecera-slogan-font-size-sm, 
+		$navegacion-principal-cabecera-slogan-font-size-md, 
+		$navegacion-principal-cabecera-slogan-font-size-lg);	
+}
+
+@mixin font-size-panel-heading__titulo {
+	@include font-size-helper (
+		$panel-heading-titulo-font-size-xs, 
+		$panel-heading-titulo-font-size-sm, 
+		$panel-heading-titulo-font-size-md, 
+		$panel-heading-titulo-font-size-lg);	
+}
+
+@mixin font-size-panel-body__titulo {
+	@include font-size-helper (
+		$panel-body-titulo-font-size-xs, 
+		$panel-body-titulo-font-size-sm, 
+		$panel-body-titulo-font-size-md, 
+		$panel-body-titulo-font-size-lg);	
+}
+
+@mixin font-size-list-group-item__titulo {
+	@include font-size-helper (
+		$list-group-item-titulo-font-size-xs, 
+		$list-group-item-titulo-font-size-sm, 
+		$list-group-item-titulo-font-size-md, 
+		$list-group-item-titulo-font-size-lg);	
 }

@@ -1,0 +1,14 @@
+/*doc
+---
+title: List group
+category: Componentes
+---
+
+Extendemos el componente List group de Bootstrap.
+
+*/
+
+.list-group-item__titulo {
+	@include font-size-list-group-item__titulo;
+	font-family: $font-museo-thin;
+}

@@ -1,20 +1,38 @@
 /*
   Incluye:
+  	- Colores propios
     - Variables sobreescritas de bootstrap
     - Variables propias 
 */
 
 
 /*
+	Colores propios
+*/
+
+$beige: 					#eee5d5;
+
+/*
 	Variables sobreescritas de bootstrap
 */
 
-$text-color:              	#666;
+$gray-base:              	#000;
+$gray-dark:              	lighten($gray-base, 20%);   // #333
+$gray-darker:            	lighten($gray-base, 13.5%); // #222
+$gray-light:             	lighten(#777, 30%);
+$gray-lighter:           	lighten(#f5f5f5, 1%);
 
-$font-family-sans-serif:  	'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
+$brand-primary:         	#80DAFF;
 
-$font-size-base:          	16px;
-$font-size-large:         	22px;
+$body-bg:               	#f2f2f2;
+
+$text-color:              	$gray-dark;
+
+$link-color:            	#9a7f4a;
+$link-hover-color:      	#665431;
+
+$font-size-base:          	14px;
+$font-size-large:         	18px;
 $font-size-small:         	13px;
 
 $font-size-h1:            	44px;
@@ -24,16 +42,26 @@ $font-size-h4:            	20px;
 $font-size-h5:            	16px;
 $font-size-h6:            	16px;
 
-$line-height-base:        	1.6;
-
 $headings-font-weight:    	normal;
-$headings-color:          	#333;
+$headings-color:          	$gray-dark;
 
-$navbar-height:           	85px;
-$navbar-border-radius:    	0;
+$bootstrap-sass-asset-helper:		(twbs-font-path("") != unquote('twbs-font-path("")')) !default;
+$icon-font-path: 					if($bootstrap-sass-asset-helper, "bootstrap/", "../vendor/bootstrap-sass-official/assets/fonts/bootstrap/") !default;
 
-$navbar-default-bg:       	#fff;
-$navbar-default-border:   	transparent;
+$btn-font-weight:           bold;
+
+$btn-default-color:         $text-color;
+$btn-default-bg:            $gray-lighter;
+$btn-default-border:        $gray-light;
+
+$btn-primary-color:         #fff;
+$btn-primary-bg:            $gray-dark;
+$btn-primary-border:        $btn-primary-bg;
+
+$panel-bg: 					#fff;
+$panel-heading-padding: 	15px;
+$panel-default-heading-bg: 	#fff;
+$panel-body-padding:        30px 15px;
 
 
 /*
@@ -43,54 +71,55 @@ $navbar-default-border:   	transparent;
 // Tamaños de fuente en función del tamaño de pantaña
 
 $font-size-base-xs:       	$font-size-base;
-$font-size-large-xs:      	$font-size-large;
-$font-size-small-xs:      	$font-size-small;
-
 $font-size-base-sm:       	$font-size-base;
-$font-size-large-sm:      	$font-size-large;
-$font-size-small-sm:      	$font-size-small;
-
 $font-size-base-md:       	$font-size-base;
-$font-size-large-md:      	$font-size-large;
-$font-size-small-md:      	$font-size-small;
-
 $font-size-base-lg:       	$font-size-base;
-$font-size-large-lg:      	$font-size-large;
-$font-size-small-lg:      	$font-size-small;
+
+$font-size-large-xs:       	$font-size-large;
+$font-size-large-sm:       	$font-size-large;
+$font-size-large-md:       	$font-size-large;
+$font-size-large-lg:       	$font-size-large;
+
+$font-size-small-xs:       	$font-size-small;
+$font-size-small-sm:       	$font-size-small;
+$font-size-small-md:       	$font-size-small;
+$font-size-small-lg:       	$font-size-small;
 
 $font-size-h1-xs:         	$font-size-h1;
-$font-size-h2-xs:         	$font-size-h2;
-$font-size-h3-xs:         	$font-size-h3;
-$font-size-h4-xs:         	$font-size-h4;
-$font-size-h5-xs:         	$font-size-h5;
-$font-size-h6-xs:         	$font-size-h6;
-
 $font-size-h1-sm:         	$font-size-h1;
-$font-size-h2-sm:         	$font-size-h2;
-$font-size-h3-sm:         	$font-size-h3;
-$font-size-h4-sm:         	$font-size-h4;
-$font-size-h5-sm:         	$font-size-h5;
-$font-size-h6-sm:         	$font-size-h6;
-
 $font-size-h1-md:         	$font-size-h1;
-$font-size-h2-md:         	$font-size-h2;
-$font-size-h3-md:         	$font-size-h3;
-$font-size-h4-md:         	$font-size-h4;
-$font-size-h5-md:         	$font-size-h5;
-$font-size-h6-md:         	$font-size-h6;
-
 $font-size-h1-lg:         	$font-size-h1;
+
+$font-size-h2-xs:         	$font-size-h2;
+$font-size-h2-sm:         	$font-size-h2;
+$font-size-h2-md:         	$font-size-h2;
 $font-size-h2-lg:         	$font-size-h2;
+
+$font-size-h3-xs:         	$font-size-h3;
+$font-size-h3-sm:         	$font-size-h3;
+$font-size-h3-md:         	$font-size-h3;
 $font-size-h3-lg:         	$font-size-h3;
+
+$font-size-h4-xs:         	$font-size-h4;
+$font-size-h4-sm:         	$font-size-h4;
+$font-size-h4-md:         	$font-size-h4;
 $font-size-h4-lg:         	$font-size-h4;
+
+$font-size-h5-xs:         	$font-size-h5;
+$font-size-h5-sm:         	$font-size-h5;
+$font-size-h5-md:         	$font-size-h5;
 $font-size-h5-lg:         	$font-size-h5;
+
+$font-size-h6-xs:         	$font-size-h6;
+$font-size-h6-sm:         	$font-size-h6;
+$font-size-h6-md:         	$font-size-h6;
 $font-size-h6-lg:         	$font-size-h6;
 
 // Familia tipográfica de Museo
 
 $font-museo-bold: 		  	'PFDinTextPro-Bold', Helvetica, Arial, sans-serif;
 $font-museo-regular: 	  	'PFDinTextPro-Regular', Helvetica, Arial, sans-serif;
-$font-museo-thin: 		  	$font-family-sans-serif;
+$font-museo-thin: 		  	'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
 
 // Espacio en blanco
 
@@ -99,3 +128,36 @@ $space-unit-sm:  			($space-unit-xs * 2); // 30px;
 $space-unit-md:  			($space-unit-xs * 3); // 45px;
 $space-unit-lg:  			($space-unit-xs * 4); // 60px;
 $space-unit-xl:  			($space-unit-xs * 5); // 75px;
+
+// Navegación principal
+
+$navegacion-principal-cabecera-slogan-font-size-xs: 	22px; 
+$navegacion-principal-cabecera-slogan-font-size-sm: 	28px;
+$navegacion-principal-cabecera-slogan-font-size-md: 	$navegacion-principal-cabecera-slogan-font-size-sm;
+$navegacion-principal-cabecera-slogan-font-size-lg: 	36px;
+
+// Componente Panel
+
+$panel-heading-titulo-font-size-xs: 		30px;
+$panel-heading-titulo-font-size-sm: 		$panel-heading-titulo-font-size-xs;
+$panel-heading-titulo-font-size-md: 		$panel-heading-titulo-font-size-xs;
+$panel-heading-titulo-font-size-lg: 		36px;
+
+$panel-body-titulo-font-size-xs: 			22px;
+$panel-body-titulo-font-size-sm: 			$panel-body-titulo-font-size-xs;
+$panel-body-titulo-font-size-md: 			$panel-body-titulo-font-size-xs;
+$panel-body-titulo-font-size-lg: 			26px;
+
+// Componente List group
+
+$list-group-item-titulo-font-size-xs: 		19px;
+$list-group-item-titulo-font-size-sm: 		$list-group-item-titulo-font-size-xs;
+$list-group-item-titulo-font-size-md: 		$list-group-item-titulo-font-size-xs;
+$list-group-item-titulo-font-size-lg: 		$list-group-item-titulo-font-size-xs;
+
+// Componente Calendario
+
+$calendario-anchura-maxima: 				330px;
+$calendario-fondo: 							$body-bg;
+$calendario-desactivado-fondo: 				$gray-lighter;
+$calendario-desactivado-color: 				$gray-light;

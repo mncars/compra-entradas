@@ -42,12 +42,12 @@ Además, disponemos de las siguientes clases para cambiar la apariencia de un t�
 
 ```html_example
 
-<h2 class="titulo-1">Título 1</h2>
-<h1 class="titulo-2">Título 2</h1>
-<h4 class="titulo-3">Título 3</h4>
-<h1 class="titulo-4">Título 4</h1>
-<h3 class="titulo-5">Título 5</h3>
-<h5 class="titulo-6">Título 6</h5>
+<h2 class="h1">Título 1</h2>
+<h1 class="h2">Título 2</h1>
+<h4 class="h3">Título 3</h4>
+<h1 class="h4">Título 4</h1>
+<h3 class="h5">Título 5</h3>
+<h5 class="h6">Título 6</h5>
 
 ```
 
@@ -87,8 +87,7 @@ En este mismo contexto, tampoco hay que olvidar que dos años antes, en 1935, Pi
 // Títulos de sección
 
 h1,
-.h1,
-.titulo-1 {
+.h1 {
 	@include font-size-h1;
 	@include no-margin-top;
 	@include margin-bottom-sm;
@@ -96,40 +95,35 @@ h1,
 }
 
 h2,
-.h2,
-.titulo-2 {
+.h2 {
 	@include font-size-h2;
 	@include no-margin-top;
 	font-family: $font-museo-bold;
 }
 
 h3,
-.h3,
-.titulo-3 {
+.h3 {
 	@include font-size-h3;
 	@include no-margin-top;
 	font-family: $font-museo-thin;
 }
 
 h4,
-.h4,
-.titulo-4 {
+.h4 {
 	@include font-size-h4;
 	@include no-margin-top;
 	font-family: $font-museo-bold;
 }
 
 h5,
-.h5,
-.titulo-5 {
+.h5 {
 	@include font-size-h5;
 	@include no-margin-top;
 	font-family: $font-museo-regular;
 }
 
 h6,
-.h6,
-.titulo-6 { 
+.h6 { 
 	@include font-size-h6;
 	@include no-margin-top;
 	font-family: $font-museo-thin;
