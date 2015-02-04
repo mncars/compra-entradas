@@ -12,6 +12,16 @@ Documentación...
 	text-align: center;
 }
 
-.botonera__btn {
+.botonera__botones {
+	@media (min-width: $screen-sm-min) {
+		display: inline-block;
+		@include clearfix;
+	}
+}
+
+.botonera__boton {
 	@include margin-bottom-xs;
+	@media (min-width: $screen-sm-min) {
+		float: right;
+	}
 }

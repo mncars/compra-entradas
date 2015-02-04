@@ -1,0 +1,31 @@
+/*doc
+---
+title: Pie principal
+category: Módulos
+---
+
+Documentación...
+
+<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+
+*/
+
+
+.pie-principal {
+	@include margin-bottom-sm;
+}
+
+.pie-principal__menu {
+	color: lighten($gray, 15%);
+	@media (min-width: $screen-md-min) {
+		padding-top: 5px;
+		text-align: right;
+	}
+	> li {
+		margin-bottom: 7px;
+		@include font-size-small;
+		@media (max-width: $screen-xs-max) {
+			display: block;
+		}
+	}
+}

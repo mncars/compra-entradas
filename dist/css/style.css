@@ -972,7 +972,7 @@ p {
       font-size: 21px; } }
 
 small, .small {
-  font-size: 92%; }
+  font-size: 85%; }
 
 mark, .mark {
   background-color: #fcf8e3;
@@ -2029,7 +2029,7 @@ output {
   .form-control::-webkit-input-placeholder {
     color: #999; }
   .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-    cursor: not-allowed;
+    cursor: default;
     background-color: #f8f8f8;
     opacity: 1; }
 
@@ -2043,7 +2043,7 @@ input[type="date"], input[type="time"], input[type="datetime-local"], input[type
   line-height: 34px;
   line-height: 1.428571429 \0; }
   input[type="date"].input-sm, input[type="time"].input-sm, input[type="datetime-local"].input-sm, input[type="month"].input-sm {
-    line-height: 31px;
+    line-height: 30px;
     line-height: 1.5 \0; }
   input[type="date"].input-lg, input[type="time"].input-lg, input[type="datetime-local"].input-lg, input[type="month"].input-lg {
     line-height: 46px;
@@ -2092,13 +2092,13 @@ _:-ms-fullscreen, :root input[type="date"], _:-ms-fullscreen, :root input[type="
   margin-left: 10px; }
 
 input[type="radio"][disabled], input[type="radio"].disabled, fieldset[disabled] input[type="radio"], input[type="checkbox"][disabled], input[type="checkbox"].disabled, fieldset[disabled] input[type="checkbox"] {
-  cursor: not-allowed; }
+  cursor: default; }
 
 .radio-inline.disabled, fieldset[disabled] .radio-inline, .checkbox-inline.disabled, fieldset[disabled] .checkbox-inline {
-  cursor: not-allowed; }
+  cursor: default; }
 
 .radio.disabled label, fieldset[disabled] .radio label, .checkbox.disabled label, fieldset[disabled] .checkbox label {
-  cursor: not-allowed; }
+  cursor: default; }
 
 .form-control-static {
   padding-top: 7px;
@@ -2109,15 +2109,15 @@ input[type="radio"][disabled], input[type="radio"].disabled, fieldset[disabled] 
     padding-right: 0; }
 
 .input-sm, .form-group-sm .form-control {
-  height: 31px;
+  height: 30px;
   padding: 5px 10px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
   border-radius: 3px; }
 
 select.input-sm, .form-group-sm .form-control {
-  height: 31px;
-  line-height: 31px; }
+  height: 30px;
+  line-height: 30px; }
 
 textarea.input-sm, .form-group-sm .form-control, select[multiple].input-sm, .form-group-sm .form-control {
   height: auto; }
@@ -2159,9 +2159,9 @@ textarea.input-lg, .form-group-lg .form-control, select[multiple].input-lg, .for
   line-height: 46px; }
 
 .input-sm + .form-control-feedback {
-  width: 31px;
-  height: 31px;
-  line-height: 31px; }
+  width: 30px;
+  height: 30px;
+  line-height: 30px; }
 
 .has-success .help-block, .has-success .control-label, .has-success .radio, .has-success .checkbox, .has-success .radio-inline, .has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label {
   color: #3c763d; }
@@ -2325,7 +2325,7 @@ textarea.input-lg, .form-group-lg .form-control, select[multiple].input-lg, .for
     background-image: none;
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
   .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
-    cursor: not-allowed;
+    cursor: default;
     pointer-events: none;
     opacity: 0.65;
     filter: alpha(opacity=65);
@@ -2458,13 +2458,13 @@ textarea.input-lg, .form-group-lg .form-control, select[multiple].input-lg, .for
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 5px 10px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
   border-radius: 3px; }
 
 .btn-xs, .btn-group-xs > .btn {
   padding: 1px 5px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.5;
   border-radius: 3px; }
 
@@ -2579,7 +2579,7 @@ tbody.collapse.in {
   background-color: transparent;
   background-image: none;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  cursor: not-allowed; }
+  cursor: default; }
 
 .open > .dropdown-menu {
   display: block; }
@@ -2597,7 +2597,7 @@ tbody.collapse.in {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.428571429;
   color: #c3c3c3;
   white-space: nowrap; }
@@ -2794,7 +2794,7 @@ tbody.collapse.in {
         color: #c3c3c3;
         text-decoration: none;
         background-color: transparent;
-        cursor: not-allowed; }
+        cursor: default; }
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background-color: #f8f8f8;
     border-color: #9a7f4a; }
@@ -3130,8 +3130,8 @@ tbody.collapse.in {
   margin-top: 8px;
   margin-bottom: 8px; }
   .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-    margin-top: 9.5px;
-    margin-bottom: 9.5px; }
+    margin-top: 10px;
+    margin-bottom: 10px; }
   .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
     margin-top: 14px;
     margin-bottom: 14px; }
@@ -3366,7 +3366,7 @@ a.list-group-item {
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus {
   background-color: #f8f8f8;
   color: #c3c3c3;
-  cursor: not-allowed; }
+  cursor: default; }
   .list-group-item.disabled .list-group-item-heading, .list-group-item.disabled:hover .list-group-item-heading, .list-group-item.disabled:focus .list-group-item-heading {
     color: inherit; }
   .list-group-item.disabled .list-group-item-text, .list-group-item.disabled:hover .list-group-item-text, .list-group-item.disabled:focus .list-group-item-text {
@@ -4251,16 +4251,16 @@ En este mismo contexto, tampoco hay que olvidar que dos años antes, en 1935, Pi
       font-size: 14px; } }
 
 .fuente-pequena {
-  font-size: 13px; }
+  font-size: 12px; }
   @media (min-width: 768px) {
     .fuente-pequena {
-      font-size: 13px; } }
+      font-size: 12px; } }
   @media (min-width: 992px) {
     .fuente-pequena {
-      font-size: 13px; } }
+      font-size: 12px; } }
   @media (min-width: 1200px) {
     .fuente-pequena {
-      font-size: 13px; } }
+      font-size: 12px; } }
 
 h1, .h1 {
   font-size: 44px;
@@ -4547,34 +4547,34 @@ Calendario de Museo
   margin-bottom: 0; }
 
 .calendario__fechas__dia-semana {
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
   text-align: center;
   border-color: transparent !important; }
   @media (min-width: 768px) {
     .calendario__fechas__dia-semana {
-      font-size: 13px; } }
+      font-size: 12px; } }
   @media (min-width: 992px) {
     .calendario__fechas__dia-semana {
-      font-size: 13px; } }
+      font-size: 12px; } }
   @media (min-width: 1200px) {
     .calendario__fechas__dia-semana {
-      font-size: 13px; } }
+      font-size: 12px; } }
 
 .calendario__fechas__dia {
   padding: 0 !important;
-  font-size: 13px;
+  font-size: 12px;
   text-align: right;
   border-color: #f2f2f2 !important; }
   @media (min-width: 768px) {
     .calendario__fechas__dia {
-      font-size: 13px; } }
+      font-size: 12px; } }
   @media (min-width: 992px) {
     .calendario__fechas__dia {
-      font-size: 13px; } }
+      font-size: 12px; } }
   @media (min-width: 1200px) {
     .calendario__fechas__dia {
-      font-size: 13px; } }
+      font-size: 12px; } }
 
 .calendario__fechas__dia__enlace {
   padding: 5px;
@@ -4595,7 +4595,7 @@ Calendario de Museo
   .calendario__fechas__dia__enlace--desactivado, .calendario__fechas__dia__enlace--desactivado:hover {
     background-color: #f8f8f8;
     color: #c3c3c3;
-    cursor: not-allowed; }
+    cursor: default; }
 
 .calendario__fechas__dia--vacio {
   background-color: #f2f2f2; }
@@ -4612,8 +4612,20 @@ Documentación...
 .botonera--centrada {
   text-align: center; }
 
-.botonera__btn {
+@media (min-width: 768px) {
+  .botonera__botones {
+    display: inline-block; }
+    .botonera__botones:before, .botonera__botones:after {
+      content: " ";
+      display: table; }
+    .botonera__botones:after {
+      clear: both; } }
+
+.botonera__boton {
   margin-bottom: 15px; }
+  @media (min-width: 768px) {
+    .botonera__boton {
+      float: right; } }
 
 /*doc
 ---
@@ -4729,3 +4741,39 @@ Documentación...
     .navegacion-principal__grupo-botones__boton .badge {
       color: #222222;
       background-color: #c3c3c3; } }
+
+/*doc
+---
+title: Pie principal
+category: Módulos
+---
+
+Documentación...
+
+<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+
+*/
+.pie-principal {
+  margin-bottom: 30px; }
+
+.pie-principal__menu {
+  color: #7c7c7c; }
+  @media (min-width: 992px) {
+    .pie-principal__menu {
+      padding-top: 5px;
+      text-align: right; } }
+  .pie-principal__menu > li {
+    margin-bottom: 7px;
+    font-size: 12px; }
+    @media (min-width: 768px) {
+      .pie-principal__menu > li {
+        font-size: 12px; } }
+    @media (min-width: 992px) {
+      .pie-principal__menu > li {
+        font-size: 12px; } }
+    @media (min-width: 1200px) {
+      .pie-principal__menu > li {
+        font-size: 12px; } }
+    @media (max-width: 767px) {
+      .pie-principal__menu > li {
+        display: block; } }
