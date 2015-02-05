@@ -76,11 +76,10 @@
 	</div>
 </header>
         <div class="container">
+            <form>
             <div class="panel panel-info">
 	<div class="list-group">
-		<a href="#" class="list-group-item">
-			<span class="list-group-item__titulo">Fecha</span>
-		</a>
+		<a href="#" class="list-group-item">Fecha</a>
 	</div>
 	<!-- Default panel contents -->
 	<div class="panel-heading">
@@ -100,7 +99,8 @@
 							</div>
 							<div class="col-xs-5 col-sm-2">
 								<div class="form-group">
-									<select class="form-control">
+									<label class="sr-only" for="select-numero-entradas-1">Número de entradas</label>
+									<select id="numero-entradas-1" class="form-control">
 										<option>1</option>
 										<option>2</option>
 										<option>3</option>
@@ -127,7 +127,8 @@
 							</div>
 							<div class="col-xs-5 col-sm-2">
 								<div class="form-group">
-									<select class="form-control">
+									<label class="sr-only" for="select-numero-entradas-2">Número de entradas</label>
+									<select for="select-numero-entradas-2" class="form-control">
 										<option>1</option>
 										<option>2</option>
 										<option>3</option>
@@ -154,7 +155,8 @@
 							</div>
 							<div class="col-xs-5 col-sm-2">
 								<div class="form-group">
-									<select class="form-control">
+									<label class="sr-only" for="select-numero-entradas-3">Número de entradas</label>
+									<select for="select-numero-entradas-3" class="form-control">
 										<option>1</option>
 										<option>2</option>
 										<option>3</option>
@@ -181,7 +183,8 @@
 							</div>
 							<div class="col-xs-5 col-sm-2">
 								<div class="form-group">
-									<select class="form-control">
+									<label class="sr-only" for="select-numero-entradas-4">Número de entradas</label>
+									<select for="select-numero-entradas-4" class="form-control">
 										<option>1</option>
 										<option>2</option>
 										<option>3</option>
@@ -209,21 +212,15 @@
 				<a href="" class="btn btn-primary btn-lg botonera__boton">Continuar →</a>    
 				<a href="" class="btn btn-primary btn-lg btn-link botonera__boton">← Fecha</a>    
 			</div>
-		</div>
+		</div>		
 	</div>
 	<!-- List group -->
 	<div class="list-group">
-		<a href="#" class="list-group-item disabled">
-			<span class="list-group-item__titulo">Entradas</span>
-		</a>
-		<a href="#" class="list-group-item disabled">
-			<span class="list-group-item__titulo">Revisar compra y cupón</span>
-		</a>
-		<a href="#" class="list-group-item disabled">
-			<span class="list-group-item__titulo">Tus datos</span>
-		</a>
+		<a href="#" class="list-group-item disabled">Revisar compra y cupón</a>
+		<a href="#" class="list-group-item disabled">Tus datos</a>
 	</div>
 </div>
+            </form>
         </div>
         <footer class="pie-principal">
 	<div class="container">
@@ -242,10 +239,10 @@
 	</div>
 </footer>
         
-        <script src="/js/console.js"></script>
-        <script src="vendor/jquery/dist/jquery.js"></script>
-        <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="./js/console.js"></script>
+        <script src="./vendor/jquery/dist/jquery.js"></script>
+        <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
         <script>
             $(function () {
                 $('[data-toggle="popover"]').popover()

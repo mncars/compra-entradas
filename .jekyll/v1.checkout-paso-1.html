@@ -76,6 +76,7 @@
 	</div>
 </header>
         <div class="container">
+            <form>
             <div class="panel panel-info">
 	<!-- Default panel contents -->
 	<div class="panel-heading">
@@ -106,14 +107,16 @@
 		</a>
 		<div class="row">		
 			<div class="col-xs-6">
-				<select class="form-control input-sm calendario__navegacion__desplegable calendario__navegacion__desplegable--mes">
+				<label for="select-mes-1" class="sr-only">Mes</label>
+				<select id="select-mes-1" class="form-control input-sm calendario__navegacion__desplegable calendario__navegacion__desplegable--mes">
 					<option>Ene</option>
 					<option>Feb</option>
 					<option>...</option>
 				</select>
 			</div>
 			<div class="col-xs-6">
-				<select class="form-control input-sm calendario__navegacion__desplegable calendario__navegacion__desplegable--ano">
+				<label for="select-ano-1" class="sr-only">Mes</label>
+				<select id="select-ano-1" class="form-control input-sm calendario__navegacion__desplegable calendario__navegacion__desplegable--ano">
 					<option>2004</option>
 					<option>2005</option>
 					<option>...</option>
@@ -271,17 +274,12 @@
 	</div>
 	<!-- List group -->
 	<div class="list-group">
-		<a href="#" class="list-group-item disabled">
-			<span class="list-group-item__titulo">Entradas</span>
-		</a>
-		<a href="#" class="list-group-item disabled">
-			<span class="list-group-item__titulo">Revisar compra y cupón</span>
-		</a>
-		<a href="#" class="list-group-item disabled">
-			<span class="list-group-item__titulo">Tus datos</span>
-		</a>
+		<a href="#" class="list-group-item disabled">Entradas</a>
+		<a href="#" class="list-group-item disabled">Revisar compra y cupón</a>
+		<a href="#" class="list-group-item disabled">Tus datos</a>
 	</div>
 </div>
+            </form>
         </div>
         <footer class="pie-principal">
 	<div class="container">
@@ -300,10 +298,10 @@
 	</div>
 </footer>
         
-        <script src="/js/console.js"></script>
-        <script src="vendor/jquery/dist/jquery.js"></script>
-        <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="./js/console.js"></script>
+        <script src="./vendor/jquery/dist/jquery.js"></script>
+        <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
         <script>
             $(function () {
                 $('[data-toggle="popover"]').popover()

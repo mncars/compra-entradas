@@ -11,14 +11,16 @@
         
         {% include header.html %}
         <div class="container">
+            <form>
             {{ content }}
+            </form>
         </div>
         {% include footer.html %}
         
-        <script src="/js/console.js"></script>
-        <script src="vendor/jquery/dist/jquery.js"></script>
-        <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-        <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="./js/console.js"></script>
+        <script src="./vendor/jquery/dist/jquery.js"></script>
+        <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
         <script>
             $(function () {
                 $('[data-toggle="popover"]').popover()
