@@ -6,9 +6,6 @@
     - Variables propias 
 */
 /*
-	Colores propios
-*/
-/*
 	Variables sobreescritas de bootstrap
 */
 /*
@@ -1006,10 +1003,10 @@ mark, .mark {
   color: #c3c3c3; }
 
 .text-primary {
-  color: #80DAFF; }
+  color: #428bca; }
 
 a.text-primary:hover {
-  color: #4dcbff; }
+  color: #3071a9; }
 
 .text-success {
   color: #3c763d; }
@@ -1039,10 +1036,10 @@ a.text-danger:hover {
   color: #fff; }
 
 .bg-primary {
-  background-color: #80DAFF; }
+  background-color: #428bca; }
 
 a.bg-primary:hover {
-  background-color: #4dcbff; }
+  background-color: #3071a9; }
 
 .bg-success {
   background-color: #dff0d8; }
@@ -2570,7 +2567,7 @@ tbody.collapse.in {
   color: #fff;
   text-decoration: none;
   outline: 0;
-  background-color: #80DAFF; }
+  background-color: #428bca; }
 
 .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
   color: #c3c3c3; }
@@ -2833,7 +2830,7 @@ tbody.collapse.in {
     margin-left: 2px; }
   .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color: #fff;
-    background-color: #80DAFF; }
+    background-color: #428bca; }
 
 .nav-stacked > li {
   float: none; }
@@ -3355,12 +3352,12 @@ tbody.collapse.in {
     margin-right: 5px; }
 
 a.list-group-item {
-  color: #555; }
+  color: #333333; }
   a.list-group-item .list-group-item-heading {
     color: #333; }
   a.list-group-item:hover, a.list-group-item:focus {
     text-decoration: none;
-    color: #555;
+    color: #333333;
     background-color: #f5f5f5; }
 
 .list-group-item.disabled, .list-group-item.disabled:hover, .list-group-item.disabled:focus {
@@ -3374,12 +3371,12 @@ a.list-group-item {
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
   z-index: 2;
   color: #fff;
-  background-color: #80DAFF;
-  border-color: #80DAFF; }
+  background-color: #428bca;
+  border-color: #428bca; }
   .list-group-item.active .list-group-item-heading, .list-group-item.active .list-group-item-heading > small, .list-group-item.active .list-group-item-heading > .small, .list-group-item.active:hover .list-group-item-heading, .list-group-item.active:hover .list-group-item-heading > small, .list-group-item.active:hover .list-group-item-heading > .small, .list-group-item.active:focus .list-group-item-heading, .list-group-item.active:focus .list-group-item-heading > small, .list-group-item.active:focus .list-group-item-heading > .small {
     color: inherit; }
   .list-group-item.active .list-group-item-text, .list-group-item.active:hover .list-group-item-text, .list-group-item.active:focus .list-group-item-text {
-    color: white; }
+    color: #e1edf7; }
 
 .list-group-item-success {
   color: #3c763d;
@@ -3585,18 +3582,18 @@ a.list-group-item-danger {
     border-bottom-color: #ddd; }
 
 .panel-primary {
-  border-color: #80DAFF; }
+  border-color: #428bca; }
   .panel-primary > .panel-heading {
     color: #fff;
-    background-color: #80DAFF;
-    border-color: #80DAFF; }
+    background-color: #428bca;
+    border-color: #428bca; }
     .panel-primary > .panel-heading + .panel-collapse > .panel-body {
-      border-top-color: #80DAFF; }
+      border-top-color: #428bca; }
     .panel-primary > .panel-heading .badge {
-      color: #80DAFF;
+      color: #428bca;
       background-color: #fff; }
   .panel-primary > .panel-footer + .panel-collapse > .panel-body {
-    border-bottom-color: #80DAFF; }
+    border-bottom-color: #428bca; }
 
 .panel-success {
   border-color: #d6e9c6; }
@@ -4473,6 +4470,22 @@ Extendemos el componente de Bootstrap.
     .panel-body__titulo {
       font-size: 26px; } }
 
+.panel > .list-group .list-group-item {
+  font-size: 25px;
+  font-family: 'PFDinTextPro-Thin', Helvetica, Arial, sans-serif; }
+  @media (min-width: 768px) {
+    .panel > .list-group .list-group-item {
+      font-size: 25px; } }
+  @media (min-width: 992px) {
+    .panel > .list-group .list-group-item {
+      font-size: 25px; } }
+  @media (min-width: 1200px) {
+    .panel > .list-group .list-group-item {
+      font-size: 25px; } }
+
+.list-group + .panel-heading {
+  border-radius: 0; }
+
 /*doc
 ---
 title: List group
@@ -4482,18 +4495,64 @@ category: Componentes
 Extendemos el componente List group de Bootstrap.
 
 */
-.list-group-item__titulo {
-  font-size: 19px;
-  font-family: 'PFDinTextPro-Thin', Helvetica, Arial, sans-serif; }
+.list-group {
+  margin-bottom: 30px; }
+
+.list-group-item {
+  padding: 7px 15px 8px; }
+
+.list-group-item-heading {
+  margin: 8px 0 12px;
+  font-size: 18px;
+  font-family: 'PFDinTextPro-Regular', Helvetica, Arial, sans-serif; }
   @media (min-width: 768px) {
-    .list-group-item__titulo {
-      font-size: 19px; } }
+    .list-group-item-heading {
+      font-size: 18px; } }
   @media (min-width: 992px) {
-    .list-group-item__titulo {
-      font-size: 19px; } }
+    .list-group-item-heading {
+      font-size: 18px; } }
   @media (min-width: 1200px) {
-    .list-group-item__titulo {
-      font-size: 19px; } }
+    .list-group-item-heading {
+      font-size: 18px; } }
+  @media (min-width: 768px) {
+    .list-group-item-heading {
+      margin-bottom: 5px; } }
+
+@media (min-width: 768px) {
+  .list-group-item--inline .form-group {
+    margin-bottom: 0; } }
+.list-group-item--inline .list-group-item-text {
+  margin-bottom: 10px; }
+  @media (min-width: 768px) {
+    .list-group-item--inline .list-group-item-text {
+      margin-top: 7px;
+      margin-bottom: 0; } }
+.list-group-item--inline .list-group-item-text--grande {
+  font-size: 18px;
+  margin: 3px 0 5px; }
+  @media (min-width: 768px) {
+    .list-group-item--inline .list-group-item-text--grande {
+      font-size: 18px; } }
+  @media (min-width: 992px) {
+    .list-group-item--inline .list-group-item-text--grande {
+      font-size: 18px; } }
+  @media (min-width: 1200px) {
+    .list-group-item--inline .list-group-item-text--grande {
+      font-size: 18px; } }
+.list-group-item--inline .list-group-item-text--pequeno {
+  font-size: 12px; }
+  @media (min-width: 768px) {
+    .list-group-item--inline .list-group-item-text--pequeno {
+      font-size: 12px; } }
+  @media (min-width: 992px) {
+    .list-group-item--inline .list-group-item-text--pequeno {
+      font-size: 12px; } }
+  @media (min-width: 1200px) {
+    .list-group-item--inline .list-group-item-text--pequeno {
+      font-size: 12px; } }
+  @media (min-width: 768px) {
+    .list-group-item--inline .list-group-item-text--pequeno {
+      margin: 10px 0 5px; } }
 
 /*doc
 ---
@@ -4626,6 +4685,10 @@ Documentación...
   @media (min-width: 768px) {
     .botonera__boton {
       float: right; } }
+  @media (max-width: 767px) {
+    .botonera__boton {
+      width: 100%;
+      display: block; } }
 
 /*doc
 ---

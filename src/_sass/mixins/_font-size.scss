@@ -135,10 +135,10 @@ Los valores de sus respectivas variables se pueden editar en el archivo `_sass/_
 		$panel-body-titulo-font-size-lg);	
 }
 
-@mixin font-size-list-group-item__titulo {
+@mixin font-size-panel-list-group-list-group-item {
 	@include font-size-helper (
-		$list-group-item-titulo-font-size-xs, 
-		$list-group-item-titulo-font-size-sm, 
-		$list-group-item-titulo-font-size-md, 
-		$list-group-item-titulo-font-size-lg);	
+		$panel-list-group-list-group-item-font-size-xs, 
+		$panel-list-group-list-group-item-font-size-sm, 
+		$panel-list-group-list-group-item-font-size-md, 
+		$panel-list-group-list-group-item-font-size-lg);	
 }

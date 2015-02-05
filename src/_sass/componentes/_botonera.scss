@@ -24,4 +24,9 @@ Documentación...
 	@media (min-width: $screen-sm-min) {
 		float: right;
 	}
+	@media (max-width: $screen-xs-max) {
+		width: 100%;
+		display: block;
+	}
 }
+

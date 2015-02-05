@@ -17,3 +17,18 @@ Extendemos el componente de Bootstrap.
 	@include margin-bottom-xs;
 	@include font-size-panel-body__titulo;
 }
+
+// Panel con "list group"
+
+.panel {
+	> .list-group {
+		.list-group-item {
+			@include font-size-panel-list-group-list-group-item;
+			font-family: $font-museo-thin;
+		}
+	}
+}
+
+.list-group + .panel-heading {
+	border-radius: 0;
+}
