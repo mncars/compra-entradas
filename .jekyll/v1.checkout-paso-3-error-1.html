@@ -85,148 +85,86 @@
         
                     <div class="list-group">
 	<a href="#" class="list-group-item">Fecha</a>
+	<a href="#" class="list-group-item">Entradas</a>
 </div>
 
 <div class="panel-heading">
-	<h1 class="panel-heading__titulo">Entradas</h1>
+	<h1 class="panel-heading__titulo">Revisar compra y cupón</h1>
 </div>
 
 <div class="panel-body">
 	<div class="row">
-		<div class="col-md-3">
-			<h2 class="panel-body__titulo">Confirma las entradas que deseas adquirir</h2>    
-		</div>
-		<div class="col-md-9">
-			<div class="list-group">
-				<a href="#" class="list-group-item list-group-item--inline">
-					<div class="row">
-						<div class="col-xs-12 col-sm-5">
-							<h3 class="list-group-item-heading">General</h3>
-						</div>
-						<div class="col-xs-12 col-sm-2">
-							<div class="form-inline">
-								<div class="form-group pull-left">
-									<label class="sr-only" for="select-numero-entradas-1">Número de entradas</label>
-									<select id="numero-entradas-1" class="form-control">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-									</select>
-								</div>
-								<p class="list-group-item-text list-group-item-text--grande">8€</p>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-5">
-							<p class="list-group-item-text list-group-item-text--pequeno">+0,75€ gastos gestión por entrada</p>
+		<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+
+			
+
+			<div class="alert alert-danger alert-dismissible" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	</button>
+	Lo sentimos, el cupón no es válido
+</div>
+
+			
+
+			<p class="lead"><strong>Fecha:</strong> Lunes, 16 febrero 2015 - 10:30h</p>
+<div class="table-responsive">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Entrada</th>
+				<th>Precio ud.</th>
+				<th>Cantidad</th>
+				<th>Precio</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">Entrada individual <br><span class="fuente-normal">Exposiciones + <em>Kunstmuseum Basel</em></span></th>
+				<td>5€</td>
+				<td>8</td>
+				<td>40.00€</td>
+			</tr>
+			<tr>
+				<th scope="row">Gastos de gestión</th>
+				<td>0.75€</td>
+				<td>8</td>
+				<td>6.00€</td>
+			</tr>
+			<tr>
+				<th scope="row" colspan="3">Total</th>
+				<td>46.00€</td>
+			</tr>
+		</tbody>
+	</table>					
+</div>			
+
+			<div class="island island--xs bg-danger">
+				<div class="row">
+					<div class="col-sm-6">
+						<p><strong>¿Tienes un cupón de descuento?</strong> <br>Introduce tu código y aplica tu descuento</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="input-group has-error">
+							<input id="input-cupon-1" type="text" class="form-control">
+							<label class="sr-only" for="input-cupon-1">Código del cupón</label>
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Aplicar cupón</button>
+							</span>
 						</div>
 					</div>
-				</a>
-				<a href="#" class="list-group-item list-group-item--inline">
-					<div class="row">
-						<div class="col-xs-12 col-sm-5">
-							<h3 class="list-group-item-heading">Exposiciones temporales</h3>
-						</div>
-						<div class="col-xs-12 col-sm-2">
-							<div class="form-inline">
-								<div class="form-group pull-left">
-									<label class="sr-only" for="select-numero-entradas-2">Número de entradas</label>
-									<select id="select-numero-entradas-2" class="form-control">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-									</select>
-								</div>
-								<p class="list-group-item-text list-group-item-text--grande">4€</p>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-5">
-							<p class="list-group-item-text list-group-item-text--pequeno">+0,75€ gastos gestión por entrada</p>
-						</div>
-					</div>
-				</a>
-				<a href="#" class="list-group-item list-group-item--inline">
-					<div class="row">
-						<div class="col-xs-12 col-sm-5">
-							<h3 class="list-group-item-heading">General + <em>Kunstmuseum Basel</em></h3>
-						</div>
-						<div class="col-xs-12 col-sm-2">
-							<div class="form-inline">
-								<div class="form-group pull-left">
-									<label class="sr-only" for="select-numero-entradas-3">Número de entradas</label>
-									<select id="select-numero-entradas-3" class="form-control">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-									</select>
-								</div>
-								<p class="list-group-item-text list-group-item-text--grande">9€</p>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-5">
-							<p class="list-group-item-text list-group-item-text--pequeno">+0,75€ gastos gestión por entrada</p>
-						</div>
-					</div>
-				</a>
-				<a href="#" class="list-group-item list-group-item-info list-group-item--inline">
-					<div class="row">
-						<div class="col-xs-12 col-sm-5">
-							<h3 class="list-group-item-heading">Exposiciones + <em>Kunstmuseum Basel</em></h3>
-						</div>
-						<div class="col-xs-12 col-sm-2">
-							<div class="form-inline">
-								<div class="form-group pull-left">
-									<label class="sr-only" for="select-numero-entradas-4">Número de entradas</label>
-									<select id="select-numero-entradas-4" class="form-control">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-									</select>
-								</div>
-								<p class="list-group-item-text list-group-item-text--grande">5€</p>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-4">
-							<p class="list-group-item-text list-group-item-text--pequeno">+0,75€ gastos gestión por entrada</p>
-						</div>
-						<div class="col-xs-12 col-sm-1">
-							<p class="list-group-item-text--grande">
-								<strong><span class="visible-xs-inline">TOTAL: </span>46€</strong>
-							</p>
-						</div>
-					</div>
-				</a>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="botonera--centrada">
 		<div class="botonera__botones">
 			<a href="" class="btn btn-primary btn-lg botonera__boton">Continuar →</a>    
-			<a href="" class="btn btn-primary btn-lg btn-link botonera__boton">← Fecha</a>    
+			<a href="" class="btn btn-primary btn-lg btn-link botonera__boton">← Entradas</a>
 		</div>
 	</div>		
 </div>
 <div class="list-group">
-	<a href="#" class="list-group-item disabled">Revisar compra y cupón</a>
 	<a href="#" class="list-group-item disabled">Tus datos</a>
 </div>
         

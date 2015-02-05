@@ -9,12 +9,16 @@
 @import "global/tipografia";
 @import "global/espacios";
 @import "global/enlaces";
+@import "global/tables";
 @import "global/forms";
 
 // Componentes
 @import "componentes/panels";
 @import "componentes/list-group";
 @import "componentes/popovers";
+@import "componentes/alerts";
+
+@import "componentes/island";
 @import "componentes/calendario";
 @import "componentes/botonera";
 

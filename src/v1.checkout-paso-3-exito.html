@@ -1,0 +1,80 @@
+---
+layout: checkout
+title: Revisar compra y cupón
+---
+
+<div class="list-group">
+	<a href="#" class="list-group-item">Fecha</a>
+	<a href="#" class="list-group-item">Entradas</a>
+</div>
+
+{% include checkout-titulo-pagina.html %}
+
+<div class="panel-body">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+			<p class="lead"><strong>Fecha:</strong> Lunes, 16 febrero 2015 - 10:30h</p>
+			<div class="table-responsive">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Entrada</th>
+							<th>Precio ud.</th>
+							<th>Cantidad</th>
+							<th>Precio</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <em>Kunstmuseum Basel</em></span></th>
+							<td>5€</td>
+							<td>8</td>
+							<td>40.00€</td>
+						</tr>
+						<tr>
+							<th scope="row">Descuento <br><span class="fuente-normal">Fundación Telefónica 50% (max. 5 entradas)</span></th>
+							<td>-2.50€</td>
+							<td>5</td>
+							<td>-12.50€</td>
+						</tr>
+						<tr>
+							<th scope="row">Gastos de gestión</th>
+							<td>0.75€</td>
+							<td>8</td>
+							<td>6.00€</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="3">Total</th>
+							<td>33.50€</td>
+						</tr>
+					</tbody>
+				</table>					
+			</div>
+			<div class="island island--xs bg-success">
+				<div class="row">
+					<div class="col-sm-6">
+						<p><strong>CUPÓN APLICADO</strong> <br>Fundación Telefónica 50% (máx. 5 entradas)</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="input-group">
+							<input id="input-cupon-1" type="text" class="form-control" value="TELEFONICA50">
+							<label class="sr-only" for="input-cupon-1">Código del cupón</label>
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">X</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="botonera--centrada">
+		<div class="botonera__botones">
+			<a href="" class="btn btn-primary btn-lg botonera__boton">Continuar →</a>    
+			<a href="" class="btn btn-primary btn-lg btn-link botonera__boton">← Entradas</a>    
+		</div>
+	</div>		
+</div>
+<div class="list-group">
+	<a href="#" class="list-group-item disabled">Tus datos</a>
+</div>

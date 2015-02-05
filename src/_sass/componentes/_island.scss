@@ -1,0 +1,45 @@
+/*doc
+---
+title: Island
+category: Componentes
+---
+
+Este componente se basa en el objeto "Island" de Harry Roberts http://csswizardry@mixin com/2011/10/the-island-object/
+
+*/
+
+
+.island {
+    @include margin-bottom-sm;
+    p,
+    ul {
+        &:last-child {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.island--xs {
+    @include padding-xs;
+}
+
+.island--sm {
+    @include padding-sm;
+    @media (max-width: $screen-xs-max) {
+        @include padding-horizontal-xs;
+    }
+}
+
+.island--md {
+    @include padding-md;
+    @media (max-width: $screen-xs-max) {
+        @include padding-horizontal-xs;
+    }
+}
+
+.island--xl {
+    @include padding-xl;
+    @media (max-width: $screen-xs-max) {
+        @include padding-horizontal-xs;
+    }
+}

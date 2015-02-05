@@ -1,0 +1,52 @@
+---
+layout: checkout
+title: Revisar compra y cupón
+---
+
+<div class="list-group">
+	<a href="#" class="list-group-item">Fecha</a>
+	<a href="#" class="list-group-item">Entradas</a>
+</div>
+
+{% include checkout-titulo-pagina.html %}
+
+<div class="panel-body">
+	<div class="row">
+		<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+
+			{% for alerta in site.data.alertas.checkout offset:3 limit:1 %}
+
+			{% include alert.html %}
+
+			{% endfor %}
+
+			{% include checkout-resumen-compra.html %}			
+
+			<div class="island island--xs bg-danger">
+				<div class="row">
+					<div class="col-sm-6">
+						<p><strong>¿Tienes un cupón de descuento?</strong> <br>Introduce tu código y aplica tu descuento</p>
+					</div>
+					<div class="col-sm-6">
+						<div class="input-group has-error">
+							<input id="input-cupon-1" type="text" class="form-control">
+							<label class="sr-only" for="input-cupon-1">Código del cupón</label>
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button">Aplicar cupón</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="botonera--centrada">
+		<div class="botonera__botones">
+			<a href="" class="btn btn-primary btn-lg botonera__boton">Continuar →</a>    
+			<a href="" class="btn btn-primary btn-lg btn-link botonera__boton">← Entradas</a>
+		</div>
+	</div>		
+</div>
+<div class="list-group">
+	<a href="#" class="list-group-item disabled">Tus datos</a>
+</div>

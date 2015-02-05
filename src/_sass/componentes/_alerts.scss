@@ -1,0 +1,15 @@
+/*doc
+---
+title: Alerts
+category: Componentes
+---
+
+Documentación...
+
+<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+
+*/
+
+.alert {
+	@include margin-bottom-sm;
+}

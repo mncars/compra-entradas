@@ -1,0 +1,21 @@
+/*doc
+---
+title: Tables
+category: Global
+---
+
+Documentación...
+
+<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+
+*/
+
+.table {
+	@include margin-bottom-sm;
+}
+
+.table-responsive {
+	@media screen and (max-width: $screen-xs-max) {
+		@include margin-bottom-sm;
+	}
+}

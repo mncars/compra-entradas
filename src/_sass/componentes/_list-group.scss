@@ -27,8 +27,9 @@ Extendemos el componente List group de Bootstrap.
 
 .list-group-item--inline {
 	.form-group {
-		@media (min-width: $screen-sm-min) {
-			@include no-margin-bottom;
+		+ .list-group-item-text {
+			margin-left: 10px;
+			float: left;
 		}
 	}
 	.list-group-item-text {
