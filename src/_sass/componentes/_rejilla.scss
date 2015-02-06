@@ -1,0 +1,44 @@
+/*doc
+---
+title: Display
+category: Global
+---
+
+Documentación...
+
+<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+
+*/
+
+.rejilla--tabla {
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.rejilla--tabla__contenedor {
+	width: 100%;
+	display: table;
+	border-spacing: 10px 0;
+}
+
+.rejilla--tabla__fila {
+	display: table-row;
+}
+
+.rejilla--tabla__columna {
+	height: 100%;
+	display: table-cell;
+	vertical-align: top;
+	p {
+		&:last-child {
+			margin-bottom: 0;	
+		}
+	}
+	select {
+		min-width: 50px; // Si no damos este ancho mínimo no se ven los números
+	}
+}
+
+.rejilla--tabla__columna--vertical-centrada {
+	vertical-align: middle;
+}

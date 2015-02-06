@@ -24,30 +24,3 @@ Extendemos el componente List group de Bootstrap.
 		margin-bottom: 5px;
 	}
 }
-
-.list-group-item--inline {
-	.form-group {
-		+ .list-group-item-text {
-			margin-left: 10px;
-			float: left;
-		}
-	}
-	.list-group-item-text {
-		margin-bottom: 10px;
-		@media (min-width: $screen-sm-min) {
-			margin-top: 7px;
-			@include no-margin-bottom;
-		}
-	}
-	.list-group-item-text--grande {
-		@include font-size-large;
-		margin: 3px 0 5px;
-	}
-	.list-group-item-text--pequeno {
-		@include font-size-small;
-		@media (min-width: $screen-sm-min) {
-			margin: 10px 0 5px;
-		}
-	}
-}
-

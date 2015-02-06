@@ -2043,7 +2043,7 @@ input[type="date"], input[type="time"], input[type="datetime-local"], input[type
     line-height: 30px;
     line-height: 1.5 \0; }
   input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control, .input-group-lg > input[type="date"].input-group-addon, .input-group-lg > .input-group-btn > input[type="date"].btn, input[type="time"].input-lg, .input-group-lg > input[type="time"].form-control, .input-group-lg > input[type="time"].input-group-addon, .input-group-lg > .input-group-btn > input[type="time"].btn, input[type="datetime-local"].input-lg, .input-group-lg > input[type="datetime-local"].form-control, .input-group-lg > input[type="datetime-local"].input-group-addon, .input-group-lg > .input-group-btn > input[type="datetime-local"].btn, input[type="month"].input-lg, .input-group-lg > input[type="month"].form-control, .input-group-lg > input[type="month"].input-group-addon, .input-group-lg > .input-group-btn > input[type="month"].btn {
-    line-height: 46px;
+    line-height: 49px;
     line-height: 1.33 \0; }
 
 _:-ms-fullscreen, :root input[type="date"], _:-ms-fullscreen, :root input[type="time"], _:-ms-fullscreen, :root input[type="datetime-local"], _:-ms-fullscreen, :root input[type="month"] {
@@ -2120,15 +2120,15 @@ textarea.input-sm, .input-group-sm > textarea.form-control, .input-group-sm > te
   height: auto; }
 
 .input-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn, .form-group-lg .form-control {
-  height: 46px;
+  height: 49px;
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33;
   border-radius: 6px; }
 
 select.input-lg, .input-group-lg > select.form-control, .input-group-lg > select.input-group-addon, .input-group-lg > .input-group-btn > select.btn, .form-group-lg .form-control {
-  height: 46px;
-  line-height: 46px; }
+  height: 49px;
+  line-height: 49px; }
 
 textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > textarea.input-group-addon, .input-group-lg > .input-group-btn > textarea.btn, .form-group-lg .form-control, select[multiple].input-lg, .input-group-lg > select[multiple].form-control, .input-group-lg > select[multiple].input-group-addon, .input-group-lg > .input-group-btn > select[multiple].btn, .form-group-lg .form-control {
   height: auto; }
@@ -2151,9 +2151,9 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
   pointer-events: none; }
 
 .input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, .input-group-lg > .input-group-addon + .form-control-feedback, .input-group-lg > .input-group-btn > .btn + .form-control-feedback {
-  width: 46px;
-  height: 46px;
-  line-height: 46px; }
+  width: 49px;
+  height: 49px;
+  line-height: 49px; }
 
 .input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback, .input-group-sm > .input-group-addon + .form-control-feedback, .input-group-sm > .input-group-btn > .btn + .form-control-feedback {
   width: 30px;
@@ -2449,7 +2449,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33;
   border-radius: 6px; }
 
@@ -2807,7 +2807,7 @@ tbody.collapse.in {
     border-radius: 3px; }
   .input-group-addon.input-lg, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .input-group-addon.btn {
     padding: 10px 16px;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 6px; }
   .input-group-addon input[type="radio"], .input-group-addon input[type="checkbox"] {
     margin-top: 0; }
@@ -3055,7 +3055,7 @@ tbody.collapse.in {
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
   height: 50px; }
   .navbar-brand:hover, .navbar-brand:focus {
@@ -4342,16 +4342,16 @@ En este mismo contexto, tampoco hay que olvidar que dos años antes, en 1935, Pi
 
 */
 .fuente-grande {
-  font-size: 18px; }
+  font-size: 20px; }
   @media (min-width: 768px) {
     .fuente-grande {
-      font-size: 18px; } }
+      font-size: 20px; } }
   @media (min-width: 992px) {
     .fuente-grande {
-      font-size: 18px; } }
+      font-size: 20px; } }
   @media (min-width: 1200px) {
     .fuente-grande {
-      font-size: 18px; } }
+      font-size: 20px; } }
 
 .fuente-base {
   font-size: 14px; }
@@ -4594,7 +4594,7 @@ Documentación...
 */
 @media (min-width: 768px) {
   .input-xlg {
-    font-size: 22px; } }
+    font-size: 24px; } }
 
 /*doc
 ---
@@ -4664,56 +4664,20 @@ Extendemos el componente List group de Bootstrap.
 
 .list-group-item-heading {
   margin: 8px 0 12px;
-  font-size: 18px;
+  font-size: 20px;
   font-family: 'PFDinTextPro-Regular', Helvetica, Arial, sans-serif; }
   @media (min-width: 768px) {
     .list-group-item-heading {
-      font-size: 18px; } }
+      font-size: 20px; } }
   @media (min-width: 992px) {
     .list-group-item-heading {
-      font-size: 18px; } }
+      font-size: 20px; } }
   @media (min-width: 1200px) {
     .list-group-item-heading {
-      font-size: 18px; } }
+      font-size: 20px; } }
   @media (min-width: 768px) {
     .list-group-item-heading {
       margin-bottom: 5px; } }
-
-.list-group-item--inline .form-group + .list-group-item-text {
-  margin-left: 10px;
-  float: left; }
-.list-group-item--inline .list-group-item-text {
-  margin-bottom: 10px; }
-  @media (min-width: 768px) {
-    .list-group-item--inline .list-group-item-text {
-      margin-top: 7px;
-      margin-bottom: 0; } }
-.list-group-item--inline .list-group-item-text--grande {
-  font-size: 18px;
-  margin: 3px 0 5px; }
-  @media (min-width: 768px) {
-    .list-group-item--inline .list-group-item-text--grande {
-      font-size: 18px; } }
-  @media (min-width: 992px) {
-    .list-group-item--inline .list-group-item-text--grande {
-      font-size: 18px; } }
-  @media (min-width: 1200px) {
-    .list-group-item--inline .list-group-item-text--grande {
-      font-size: 18px; } }
-.list-group-item--inline .list-group-item-text--pequeno {
-  font-size: 12px; }
-  @media (min-width: 768px) {
-    .list-group-item--inline .list-group-item-text--pequeno {
-      font-size: 12px; } }
-  @media (min-width: 992px) {
-    .list-group-item--inline .list-group-item-text--pequeno {
-      font-size: 12px; } }
-  @media (min-width: 1200px) {
-    .list-group-item--inline .list-group-item-text--pequeno {
-      font-size: 12px; } }
-  @media (min-width: 768px) {
-    .list-group-item--inline .list-group-item-text--pequeno {
-      margin: 10px 0 5px; } }
 
 /*doc
 ---
@@ -4726,7 +4690,7 @@ Sobreescribimos algunos estilos del componente de Boostrap.
 */
 .popover-title {
   font-family: 'PFDinTextPro-Bold', Helvetica, Arial, sans-serif;
-  font-size: 18px; }
+  font-size: 20px; }
 
 /*doc
 ---
@@ -4741,6 +4705,41 @@ Documentación...
 */
 .alert {
   margin-bottom: 30px; }
+
+/*doc
+---
+title: Display
+category: Global
+---
+
+Documentación...
+
+<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+
+*/
+.rejilla--tabla {
+  margin-left: -10px;
+  margin-right: -10px; }
+
+.rejilla--tabla__contenedor {
+  width: 100%;
+  display: table;
+  border-spacing: 10px 0; }
+
+.rejilla--tabla__fila {
+  display: table-row; }
+
+.rejilla--tabla__columna {
+  height: 100%;
+  display: table-cell;
+  vertical-align: top; }
+  .rejilla--tabla__columna p:last-child {
+    margin-bottom: 0; }
+  .rejilla--tabla__columna select {
+    min-width: 50px; }
+
+.rejilla--tabla__columna--vertical-centrada {
+  vertical-align: middle; }
 
 /*doc
 ---
