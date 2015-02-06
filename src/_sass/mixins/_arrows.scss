@@ -1,0 +1,18 @@
+// Top
+
+@mixin arrow-top ($arrow-y-left, $arrow-y-right){
+	position: relative;
+	&:before {
+		position: absolute;  
+		content: "";
+		border-style: solid;
+		right: $arrow-y-right;
+		bottom: auto;
+		left: $arrow-y-left;
+		z-index: $arrow-z-index;
+		border-color: transparent transparent $arrow-color transparent;
+		margin-left: -$arrow-size;
+		top: -$arrow-size;
+		border-width: 0px $arrow-size $arrow-size $arrow-size;
+	}
+}

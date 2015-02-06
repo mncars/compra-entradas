@@ -14,15 +14,15 @@ title: Revisar compra y cupón
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 
+			{% include checkout-resumen-compra.html %}
+
 			{% for alerta in site.data.alertas.checkout offset:0 limit:1 %}
 
 			{% include alert.html %}
 
 			{% endfor %}
 
-			{% include checkout-resumen-compra.html %}			
-
-			<div class="island island--xs bg-danger">
+			<div class="island island--xs bg-info">
 				<div class="row">
 					<div class="col-sm-6">
 						<p><strong>¿Tienes un cupón de descuento?</strong> <br>Introduce tu código y aplica tu descuento</p>

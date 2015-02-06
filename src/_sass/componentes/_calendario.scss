@@ -59,12 +59,13 @@ Calendario de Museo
 	padding: 5px;
 	display: block;
 	font-weight: bold;
-	background-color: #fff;
+	background-color: $brand-primary;
+	color: #fff;
 	&:hover,
 	&:focus {
-		text-decoration: none;
-		background-color: $link-hover-color;
 		color: #fff;
+		text-decoration: none;
+		background-color: darken($brand-primary, 10%);
 	}
 }
 
@@ -80,7 +81,7 @@ Calendario de Museo
 	font-weight: normal;
 	&,
 	&:hover {
-		background-color: $calendario-desactivado-fondo;
+		background-color: lighten($brand-primary, 20%);
 		color: $calendario-desactivado-color;
 		cursor: $cursor-disabled;
 	}	

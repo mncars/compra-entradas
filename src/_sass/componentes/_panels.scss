@@ -8,6 +8,16 @@ Extendemos el componente de Bootstrap.
 
 */
 
+.panel {
+	@include margin-bottom-sm;
+	border: none;
+	@include box-shadow(1px 1px 3px rgba(0, 0, 0, 0.21));
+}
+
+.panel-body {
+	@include arrow-top (50px, auto);
+}
+
 .panel-heading__titulo {
 	@include no-margin-bottom;
 	@include font-size-panel-heading__titulo;

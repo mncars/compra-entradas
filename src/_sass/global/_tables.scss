@@ -19,3 +19,8 @@ Documentación...
 		@include margin-bottom-sm;
 	}
 }
+
+th,
+td {
+	white-space: nowrap;
+}
