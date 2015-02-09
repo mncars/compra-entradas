@@ -4,7 +4,24 @@ title: List group
 category: Componentes
 ---
 
-Extendemos el componente List group de Bootstrap.
+Utilizamos el componente ["List group" de Bootstrap](http://getbootstrap.com/components/#list-group), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+
+```html_example
+<div class="list-group">
+	<a href="#" class="list-group-item active">
+		<h4 class="list-group-item-heading">List group item heading</h4>
+		<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+	</a>
+	<a href="#" class="list-group-item">
+		<h4 class="list-group-item-heading">List group item heading</h4>
+		<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+	</a>
+	<a href="#" class="list-group-item">
+		<h4 class="list-group-item-heading">List group item heading</h4>
+		<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+	</a>
+</div>
+```
 
 */
 

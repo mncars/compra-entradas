@@ -4,7 +4,28 @@ title: Island
 category: Componentes
 ---
 
-Este componente se basa en el objeto "Island" de Harry Roberts http://csswizardry@mixin com/2011/10/the-island-object/
+<style>
+  .island {
+    background-color: yellow;
+  }
+</style>
+
+Este componente se basa en el [objeto "Island" de Harry Roberts](http://csswizardry@mixin com/2011/10/the-island-object/). El color de fondo amarillo sólo se utiliza en la guía de estilo para que el ejemplo sea visible.
+
+```html_example
+<div class="island island--xs">
+    Aquí va el contenido
+</div>
+<div class="island island--sm">
+    Aquí va el contenido
+</div>
+<div class="island island--md">
+    Aquí va el contenido
+</div>
+<div class="island island--lg">
+    Aquí va el contenido
+</div>
+```
 
 */
 
@@ -37,8 +58,8 @@ Este componente se basa en el objeto "Island" de Harry Roberts http://csswizardr
     }
 }
 
-.island--xl {
-    @include padding-xl;
+.island--lg {
+    @include padding-lg;
     @media (max-width: $screen-xs-max) {
         @include padding-horizontal-xs;
     }

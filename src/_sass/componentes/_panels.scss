@@ -4,7 +4,28 @@ title: Panels
 category: Componentes
 ---
 
-Extendemos el componente de Bootstrap.
+Utilizamos el componente ["Panels" de Bootstrap](http://getbootstrap.com/components/#panels), sobreescribiendo alguno de sus estilos y personalizando sus variables. Además, le añadimos los elementos `.panel-heading__titulo` y `.panel-body__titulo`.
+
+```html_example
+<div class="panel panel-primary">
+	<!-- Default panel contents -->
+	<div class="panel-heading">
+		<h1 class="panel-heading__titulo">Panel heading</h1>
+	</div>
+	<div class="panel-body">
+		<h2 class="panel-body__titulo">Panel body heading</h2>
+		<p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	</div>
+	<!-- List group -->
+	<ul class="list-group">
+		<li class="list-group-item">Cras justo odio</li>
+		<li class="list-group-item">Dapibus ac facilisis in</li>
+		<li class="list-group-item disabled">Morbi leo risus</li>
+		<li class="list-group-item disabled">Porta ac consectetur ac</li>
+		<li class="list-group-item disabled">Vestibulum at eros</li>
+	</ul>
+</div>
+```
 
 */
 

@@ -4,7 +4,35 @@ title: Popovers
 category: Componentes
 ---
 
-Sobreescribimos algunos estilos del componente de Boostrap.
+<style>
+	.ejemplo--popover {
+		margin-top: 20px;
+		height: 160px;
+	}
+	.popover {
+    	position: relative;
+		display: block;
+		float: left;
+		width: 260px;
+		margin: 20px;
+  }
+</style>
+
+Utilizamos el componente ["Popovers" de Bootstrap](http://getbootstrap.com/javascript/#popovers), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+
+El div `.ejemplo--popover` no es necesario utilizarlo, sólo sirve para que se vea correctamente el popover de la guía de estilos.
+
+```html_example
+<div class="ejemplo--popover">
+	<div class="popover top">
+		<div class="arrow"></div>
+		<h3 class="popover-title">Popover top</h3>
+		<div class="popover-content">
+			<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+		</div>
+	</div>
+</div>
+```
 
 */
 

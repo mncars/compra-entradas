@@ -4275,7 +4275,7 @@ Sirve para añadir una imagen a un lado de un texto de más de una línea, por e
 /*doc
 ---
 title: Tipografía
-category: Estilos base
+category: Global
 ---
 
 
@@ -4490,7 +4490,7 @@ h6, .h6 {
 /*doc
 ---
 title: Espacio en blanco
-category: Estilos base
+category: Global
 ---
 
 
@@ -4529,7 +4529,7 @@ NOTA: Ignora el estilo `.well` , sólo sirve para diferenciar los bloques entre 
 /*doc
 ---
 title: Enlaces
-category: Estilos base
+category: Global
 ---
 
 Diferentes tipos de enlace.
@@ -4542,6 +4542,7 @@ Diferentes tipos de enlace.
 	<p>Enlace para envolver bloques</p>
 </a>
 ```
+
 */
 .enlace--subrayado {
   color: #333333;
@@ -4586,8 +4587,8 @@ th, td {
 
 /*doc
 ---
-title: Checkout
-category: Módulos
+title: Forms
+category: Global
 ---
 
 Documentación...
@@ -4601,11 +4602,102 @@ Documentación...
 
 /*doc
 ---
+title: Rejilla
+category: Global
+---
+
+Documentación...
+
+<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+
+*/
+.rejilla--adaptable {
+  margin-left: -10px;
+  margin-right: -10px; }
+
+.rejilla--adaptable__contenedor {
+  width: 100%;
+  display: table;
+  border-spacing: 10px 0; }
+
+.rejilla--adaptable__fila {
+  display: table-row; }
+
+.rejilla--adaptable__columna {
+  height: 100%;
+  display: table-cell;
+  vertical-align: top; }
+  .rejilla--adaptable__columna p:last-child {
+    margin-bottom: 0; }
+  .rejilla--adaptable__columna select {
+    min-width: 50px; }
+
+.rejilla--adaptable__columna--vertical-centrada {
+  vertical-align: middle; }
+
+.rejilla--tabla {
+  margin-bottom: 30px; }
+  @media (max-width: 767px) {
+    .rejilla--tabla {
+      border-top: 1px solid #ddd; } }
+
+.rejilla--tabla__fila {
+  margin-left: 0;
+  margin-right: 0;
+  border-bottom: 1px solid #ddd; }
+  @media (max-width: 767px) {
+    .rejilla--tabla__fila {
+      padding-top: 15px;
+      padding-bottom: 15px; } }
+  @media (min-width: 768px) {
+    .rejilla--tabla__fila:first-child {
+      border-bottom-width: 2px; } }
+  .rejilla--tabla__fila:last-child {
+    border-bottom: none; }
+
+@media (min-width: 768px) {
+  .rejilla--tabla__columna {
+    padding: 15px; } }
+
+.rejilla--tabla__columna--cabecera {
+  font-weight: bold; }
+
+@media (min-width: 768px) {
+  .rejilla--tabla__columna--izquierda {
+    text-align: left; } }
+
+@media (min-width: 768px) {
+  .rejilla--tabla__columna--centrada {
+    text-align: center; } }
+
+/*doc
+---
 title: Panels
 category: Componentes
 ---
 
-Extendemos el componente de Bootstrap.
+Utilizamos el componente ["Panels" de Bootstrap](http://getbootstrap.com/components/#panels), sobreescribiendo alguno de sus estilos y personalizando sus variables. Además, le añadimos los elementos `.panel-heading__titulo` y `.panel-body__titulo`.
+
+```html_example
+<div class="panel panel-primary">
+	<!-- Default panel contents -->
+	<div class="panel-heading">
+		<h1 class="panel-heading__titulo">Panel heading</h1>
+	</div>
+	<div class="panel-body">
+		<h2 class="panel-body__titulo">Panel body heading</h2>
+		<p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+	</div>
+	<!-- List group -->
+	<ul class="list-group">
+		<li class="list-group-item">Cras justo odio</li>
+		<li class="list-group-item">Dapibus ac facilisis in</li>
+		<li class="list-group-item disabled">Morbi leo risus</li>
+		<li class="list-group-item disabled">Porta ac consectetur ac</li>
+		<li class="list-group-item disabled">Vestibulum at eros</li>
+	</ul>
+</div>
+```
 
 */
 .panel {
@@ -4676,7 +4768,24 @@ title: List group
 category: Componentes
 ---
 
-Extendemos el componente List group de Bootstrap.
+Utilizamos el componente ["List group" de Bootstrap](http://getbootstrap.com/components/#list-group), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+
+```html_example
+<div class="list-group">
+	<a href="#" class="list-group-item active">
+		<h4 class="list-group-item-heading">List group item heading</h4>
+		<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+	</a>
+	<a href="#" class="list-group-item">
+		<h4 class="list-group-item-heading">List group item heading</h4>
+		<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+	</a>
+	<a href="#" class="list-group-item">
+		<h4 class="list-group-item-heading">List group item heading</h4>
+		<p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+	</a>
+</div>
+```
 
 */
 .list-group {
@@ -4708,7 +4817,35 @@ title: Popovers
 category: Componentes
 ---
 
-Sobreescribimos algunos estilos del componente de Boostrap.
+<style>
+	.ejemplo--popover {
+		margin-top: 20px;
+		height: 160px;
+	}
+	.popover {
+    	position: relative;
+		display: block;
+		float: left;
+		width: 260px;
+		margin: 20px;
+  }
+</style>
+
+Utilizamos el componente ["Popovers" de Bootstrap](http://getbootstrap.com/javascript/#popovers), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+
+El div `.ejemplo--popover` no es necesario utilizarlo, sólo sirve para que se vea correctamente el popover de la guía de estilos.
+
+```html_example
+<div class="ejemplo--popover">
+	<div class="popover top">
+		<div class="arrow"></div>
+		<h3 class="popover-title">Popover top</h3>
+		<div class="popover-content">
+			<p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+		</div>
+	</div>
+</div>
+```
 
 */
 .popover-title {
@@ -4721,9 +4858,22 @@ title: Alerts
 category: Componentes
 ---
 
-Documentación...
+Utilizamos el componente ["Alerts" de Bootstrap](http://getbootstrap.com/components/#alerts), sobreescribiendo alguno de sus estilos y personalizando sus variables.
 
-<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+```html_example
+<div class="alert alert-success" role="alert">
+	<strong>Well done!</strong> You successfully read this important alert message.
+</div>
+<div class="alert alert-info" role="alert">
+    <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+</div>
+<div class="alert alert-warning" role="alert">
+    <strong>Warning!</strong> Better check yourself, you're not looking too good.
+</div>
+<div class="alert alert-danger" role="alert">
+    <strong>Oh snap!</strong> Change a few things up and try submitting again.
+</div>
+```
 
 */
 .alert {
@@ -4731,81 +4881,32 @@ Documentación...
 
 /*doc
 ---
-title: Display
-category: Global
----
-
-Documentación...
-
-<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
-
-*/
-.rejilla--adaptable {
-  margin-left: -10px;
-  margin-right: -10px; }
-
-.rejilla--adaptable__contenedor {
-  width: 100%;
-  display: table;
-  border-spacing: 10px 0; }
-
-.rejilla--adaptable__fila {
-  display: table-row; }
-
-.rejilla--adaptable__columna {
-  height: 100%;
-  display: table-cell;
-  vertical-align: top; }
-  .rejilla--adaptable__columna p:last-child {
-    margin-bottom: 0; }
-  .rejilla--adaptable__columna select {
-    min-width: 50px; }
-
-.rejilla--adaptable__columna--vertical-centrada {
-  vertical-align: middle; }
-
-.rejilla--tabla {
-  margin-bottom: 30px; }
-  @media (max-width: 767px) {
-    .rejilla--tabla {
-      border-top: 1px solid #ddd; } }
-
-.rejilla--tabla__fila {
-  margin-left: 0;
-  margin-right: 0;
-  border-bottom: 1px solid #ddd; }
-  @media (max-width: 767px) {
-    .rejilla--tabla__fila {
-      padding-top: 15px;
-      padding-bottom: 15px; } }
-  @media (min-width: 768px) {
-    .rejilla--tabla__fila:first-child {
-      border-bottom-width: 2px; } }
-  .rejilla--tabla__fila:last-child {
-    border-bottom: none; }
-
-@media (min-width: 768px) {
-  .rejilla--tabla__columna {
-    padding: 15px; } }
-
-.rejilla--tabla__columna--cabecera {
-  font-weight: bold; }
-
-@media (min-width: 768px) {
-  .rejilla--tabla__columna--izquierda {
-    text-align: left; } }
-
-@media (min-width: 768px) {
-  .rejilla--tabla__columna--centrada {
-    text-align: center; } }
-
-/*doc
----
 title: Island
 category: Componentes
 ---
 
-Este componente se basa en el objeto "Island" de Harry Roberts http://csswizardry@mixin com/2011/10/the-island-object/
+<style>
+  .island {
+    background-color: yellow;
+  }
+</style>
+
+Este componente se basa en el [objeto "Island" de Harry Roberts](http://csswizardry@mixin com/2011/10/the-island-object/). El color de fondo amarillo sólo se utiliza en la guía de estilo para que el ejemplo sea visible.
+
+```html_example
+<div class="island island--xs">
+    Aquí va el contenido
+</div>
+<div class="island island--sm">
+    Aquí va el contenido
+</div>
+<div class="island island--md">
+    Aquí va el contenido
+</div>
+<div class="island island--lg">
+    Aquí va el contenido
+</div>
+```
 
 */
 .island {
@@ -4830,10 +4931,10 @@ Este componente se basa en el objeto "Island" de Harry Roberts http://csswizardr
       padding-left: 15px;
       padding-right: 15px; } }
 
-.island--xl {
-  padding: 75px; }
+.island--lg {
+  padding: 60px; }
   @media (max-width: 767px) {
-    .island--xl {
+    .island--lg {
       padding-left: 15px;
       padding-right: 15px; } }
 
@@ -4843,7 +4944,174 @@ title: Calendario
 category: Componentes
 ---
 
-Calendario de Museo 
+Este componente esta basado en el diseño de los calendarios que aparecen en la web del Museo. Tiene definidos estilos para días activos, inactivos y día actual.
+
+```html_example
+<div class="calendario">
+	<nav class="calendario__navegacion">
+		<a class="calendario__navegacion__boton calendario__navegacion__boton--anterior" title="Anterior">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+			<span class="sr-only">Anterior</span>
+		</a>
+		<a class="calendario__navegacion__boton calendario__navegacion__boton--siguiente" title="Siguiente">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			<span class="sr-only">Siguiente</span>
+		</a>
+		<div class="row">		
+			<div class="col-xs-6">
+				<label for="select-mes-1" class="sr-only">Mes</label>
+				<select id="select-mes-1" class="form-control input-sm calendario__navegacion__desplegable calendario__navegacion__desplegable--mes">
+					<option>Ene</option>
+					<option>Feb</option>
+					<option>...</option>
+				</select>
+			</div>
+			<div class="col-xs-6">
+				<label for="select-ano-1" class="sr-only">Mes</label>
+				<select id="select-ano-1" class="form-control input-sm calendario__navegacion__desplegable calendario__navegacion__desplegable--ano">
+					<option>2004</option>
+					<option>2005</option>
+					<option>...</option>
+				</select>
+			</div>
+		</div>
+	</nav>
+	<table class="table table-bordered table-condensed calendario__fechas">
+		<thead>
+			<tr>
+				<th class="calendario__fechas__dia-semana">
+					<span title="Lunes">Lu</span>
+				</th>
+				<th class="calendario__fechas__dia-semana">
+					<span title="Martes">Ma</span>
+				</th>
+				<th class="calendario__fechas__dia-semana">
+					<span title="Miércoles">Mi</span>
+				</th>
+				<th class="calendario__fechas__dia-semana">
+					<span title="Jueves">Ju</span>
+				</th>
+				<th class="calendario__fechas__dia-semana">
+					<span title="Viernes">Vi</span>
+				</th>
+				<th class="calendario__fechas__dia-semana">
+					<span title="Sábado">Sá</span>
+				</th>
+				<th class="calendario__fechas__dia-semana">
+					<span title="Domingo">Do</span>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="calendario__fechas__dia calendario__fechas__dia--vacio">&nbsp;</td>
+				<td class="calendario__fechas__dia calendario__fechas__dia--vacio">&nbsp;</td>
+				<td class="calendario__fechas__dia calendario__fechas__dia--vacio">&nbsp;</td>
+				<td class="calendario__fechas__dia calendario__fechas__dia--vacio">&nbsp;</td>
+				<td class="calendario__fechas__dia calendario__fechas__dia--vacio">&nbsp;</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">1</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">2</a>
+				</td>
+			</tr>
+			<tr>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">3</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace calendario__fechas__dia__enlace--desactivado" href="#">4</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">5</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">6</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">7</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">8</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">9</a>
+				</td>
+			</tr>
+			<tr>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">10</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace calendario__fechas__dia__enlace--desactivado" href="#">11</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">12</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">13</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">14</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">15</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace calendario__fechas__dia__enlace--seleccionado" href="#">16</a>
+				</td>
+			</tr>
+			<tr>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">17</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace calendario__fechas__dia__enlace--desactivado" href="#">18</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">19</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">20</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">21</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">22</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">23</a>
+				</td>
+			</tr>
+			<tr>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">24</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace calendario__fechas__dia__enlace--desactivado" href="#">25</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">26</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">27</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">28</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">29</a>
+				</td>
+				<td class="calendario__fechas__dia">
+					<a class="calendario__fechas__dia__enlace" href="#">30</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+```
 
 */
 .calendario {
@@ -4937,7 +5205,16 @@ title: Botonera
 category: Componentes
 ---
 
-Documentación...
+Permite añadir una serie de botones que en pantallas pequeñas se muestran en bloque y en pantallas grandes se colocan en línea. El orden de los botones se invierte al pasar de pantalla pequeña a grande.
+
+```html_example
+<div class="botonera--centrada">
+	<div class="botonera__botones">
+		<a href="" class="btn btn-primary btn-lg botonera__boton">Continuar →</a>    
+		<a href="" class="btn btn-primary btn-lg btn-link botonera__boton">← Todas las entradas</a>    
+	</div>
+</div>
+```
 
 */
 .botonera--centrada {
