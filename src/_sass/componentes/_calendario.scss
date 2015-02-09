@@ -39,6 +39,7 @@ Calendario de Museo
 
 .calendario__fechas {
 	@include no-margin-bottom;
+	background-color: transparent;
 }
 
 .calendario__fechas__dia-semana {
@@ -59,13 +60,13 @@ Calendario de Museo
 	padding: 5px;
 	display: block;
 	font-weight: bold;
-	background-color: $brand-primary;
+	background-color: $link-color;
 	color: #fff;
 	&:hover,
 	&:focus {
 		color: #fff;
 		text-decoration: none;
-		background-color: darken($brand-primary, 10%);
+		background-color: $link-hover-color;
 	}
 }
 

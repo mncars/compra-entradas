@@ -10,22 +10,25 @@ Documentación...
 
 */
 
-.rejilla--tabla {
+
+// Rejilla adaptable
+
+.rejilla--adaptable {
 	margin-left: -10px;
 	margin-right: -10px;
 }
 
-.rejilla--tabla__contenedor {
+.rejilla--adaptable__contenedor {
 	width: 100%;
 	display: table;
 	border-spacing: 10px 0;
 }
 
-.rejilla--tabla__fila {
+.rejilla--adaptable__fila {
 	display: table-row;
 }
 
-.rejilla--tabla__columna {
+.rejilla--adaptable__columna {
 	height: 100%;
 	display: table-cell;
 	vertical-align: top;
@@ -39,6 +42,54 @@ Documentación...
 	}
 }
 
-.rejilla--tabla__columna--vertical-centrada {
+.rejilla--adaptable__columna--vertical-centrada {
 	vertical-align: middle;
+}
+
+// Rejilla tabla
+
+.rejilla--tabla {
+	@include margin-bottom-sm;
+	@media (max-width: $screen-xs-max) {
+		border-top: 1px solid $table-border-color;
+	}
+}
+
+.rejilla--tabla__fila {
+	@include no-margin-left;
+	@include no-margin-right;
+	border-bottom: 1px solid $table-border-color;
+	@media (max-width: $screen-xs-max) {
+		@include padding-vertical-xs;
+	}
+	&:first-child {
+		@media (min-width: $screen-sm-min) {
+			border-bottom-width: 2px;
+		}
+	}
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.rejilla--tabla__columna {
+	@media (min-width: $screen-sm-min) {
+		@include padding-xs;	
+	}
+}
+
+.rejilla--tabla__columna--cabecera {
+	font-weight: bold;
+}
+
+.rejilla--tabla__columna--izquierda {
+	@media (min-width: $screen-sm-min) {
+		text-align: left;
+	}	
+}
+
+.rejilla--tabla__columna--centrada {
+	@media (min-width: $screen-sm-min) {
+		text-align: center;
+	}
 }

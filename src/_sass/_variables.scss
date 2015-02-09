@@ -22,8 +22,8 @@ $body-bg:               	$gray-lighter;
 
 $text-color:              	$gray-dark;
 
-$link-color:            	darken($brand-primary, 17%);
-$link-hover-color:      	darken($brand-primary, 15%);
+$link-color:            	darken($brand-primary, 10%);
+$link-hover-color:      	darken($brand-primary, 25%);
 
 $font-size-base:          	14px;
 $font-size-large:         	20px;
@@ -67,9 +67,24 @@ $panel-border-radius: 		0;
 $table-bg:                  #fff;
 $table-cell-padding:        12px 15px 14px;
 
-$state-info-bg:                  lighten($brand-primary, 20%);
-$state-info-text:                darken($state-info-bg, 65%);
-$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+
+
+
+$state-success-bg:          #b9e091;
+$state-success-text: 		darken($state-success-bg, 40%);
+$state-success-border:      $state-success-bg;
+
+$state-info-bg:             lighten($brand-primary, 20%);
+$state-info-text:           darken($state-info-bg, 65%);
+$state-info-border:         $state-info-bg;
+
+$state-warning-bg:          #ffdd86;
+$state-warning-text:        darken($state-warning-bg, 50%);
+$state-warning-border:      $state-warning-bg;
+
+$state-danger-bg:           #f3838f;
+$state-danger-text:         darken($state-danger-bg, 50%);
+$state-danger-border:       $state-danger-bg;
 
 
 /*
