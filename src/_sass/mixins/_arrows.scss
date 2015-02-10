@@ -1,3 +1,17 @@
+/*doc
+---
+title: Arrows
+category: Global
+---
+
+Utilizamos esta serie de mixins para añadir flechas a elementos con forma de bloque. Podemos personalizarlas mediante las variables `$arrow-size`, `$arrow-color` y `$arrow-z-index`. Además, para colocarlas podemos utilizar los argumentos del mixin. Estos son de momento los mixins incluidos:
+
+```
+@mixin arrow-top ($arrow-y-left, $arrow-y-right);
+```
+
+*/
+
 // Top
 
 @mixin arrow-top ($arrow-y-left, $arrow-y-right){

@@ -4,7 +4,7 @@ title: Espacios en blanco
 category: Mixins
 ---
 
-Son una serie muy extensa de mixins para aplicar las propiedades de margin y padding en función de una escala de valores definida previamente. La escala esta disponible en el archivo `_sass/_variables.scss`.
+Son una serie muy extensa de mixins para aplicar las propiedades de margin y padding en función de una escala de valores definida previamente. La escala esta disponible en el archivo `_sass/_variables.scss`. En caso de que necesitemos aplicar un tamaño de espacio diferente, lo haremos con una regla CSS normal.
 
 ```
 $space-unit-xs: 			15px;
@@ -38,7 +38,6 @@ Los mixins se definen añadiendo a cada propiedad (`margin-top`, `padding-bottom
 @mixin margin-top-xl {
 	margin-top: $space-unit-xl;
 }
-
 ...
 ```
 
@@ -51,7 +50,7 @@ Disponemos también de otros mixins que sirven para elminar los espacios en blan
 ...
 ```
 
-Además, tenemos otros mixins que combinan dos propiedades en función de si el espacio que crean es vertical u horizontal.
+Además, tenemos otros mixins que combinan dos propiedades en función de si el espacio que crean es vertical u horizontal, y otros que modifican el espacio tanto vertical cómo horizontalmente.
 
 ```
 @mixin margin-vertical-xs {
@@ -82,6 +81,33 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 @mixin no-margin-vertical {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+...
+```
+
+```
+@mixin margin-xs {
+	margin: $space-unit-xs;
+}
+
+@mixin margin-sm {
+	margin: $space-unit-sm;
+}
+
+@mixin margin-md {
+	margin: $space-unit-md;
+}
+
+@mixin margin-lg {
+	margin: $space-unit-lg;
+}
+
+@mixin margin-xl {
+	margin: $space-unit-xl;
+}
+
+@mixin no-margin {
+	margin: 0;
 }
 ...
 ```

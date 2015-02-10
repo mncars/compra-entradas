@@ -158,7 +158,7 @@
 
 <h1 id="Espacios_en_blanco">Espacios en blanco</h1>
 
-<p>Son una serie muy extensa de mixins para aplicar las propiedades de margin y padding en función de una escala de valores definida previamente. La escala esta disponible en el archivo <code>_sass/_variables.scss</code>.</p>
+<p>Son una serie muy extensa de mixins para aplicar las propiedades de margin y padding en función de una escala de valores definida previamente. La escala esta disponible en el archivo <code>_sass/_variables.scss</code>. En caso de que necesitemos aplicar un tamaño de espacio diferente, lo haremos con una regla CSS normal.</p>
 <div class="highlight"><pre><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="nl">xs:</span><span class="w">             </span><span class="il">15</span><span class="vg">px</span><span class="p">;</span>
 <span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="nl">sm:</span><span class="w">             </span><span class="p">(</span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="il">2</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="il">30</span><span class="vg">px</span><span class="p">;</span>
 <span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="nl">md:</span><span class="w">             </span><span class="p">(</span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="il">3</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="il">45</span><span class="vg">px</span><span class="p">;</span>
@@ -187,7 +187,6 @@
 <span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="o">-</span><span class="vg">xl</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="vg">margin</span><span class="o">-</span><span class="nl">top:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xl</span><span class="p">;</span>
 <span class="p">}</span>
-
 <span class="o">...</span>
 </pre></div>
 <p>Disponemos también de otros mixins que sirven para elminar los espacios en blanco del elemento.</p>
@@ -196,7 +195,7 @@
 <span class="p">}</span>
 <span class="o">...</span>
 </pre></div>
-<p>Además, tenemos otros mixins que combinan dos propiedades en función de si el espacio que crean es vertical u horizontal.</p>
+<p>Además, tenemos otros mixins que combinan dos propiedades en función de si el espacio que crean es vertical u horizontal, y otros que modifican el espacio tanto vertical cómo horizontalmente.</p>
 <div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">vertical</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="o">-</span><span class="vg">xs</span><span class="p">;</span>
 <span class="w">    </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">bottom</span><span class="o">-</span><span class="vg">xs</span><span class="p">;</span>
@@ -227,12 +226,36 @@
 <span class="w">    </span><span class="vg">margin</span><span class="o">-</span><span class="nl">bottom:</span><span class="w"> </span><span class="il">0</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="o">...</span>
+</pre></div><div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">margin:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xs</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">sm</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">margin:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">sm</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">md</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">margin:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">md</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">lg</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">margin:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">lg</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">xl</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">margin:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">no</span><span class="o">-</span><span class="vg">margin</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">margin:</span><span class="w"> </span><span class="il">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">...</span>
 </pre></div>
 <h1 id="Sprites">Sprites</h1>
 
 <p>Para trabajar comodamente con sprites hay definidos una serie de mixins creados a partir de los ejemplos de <a href="http://www.smashingmagazine.com/2012/04/11/css-sprites-revisited/">este post</a>.</p>
 
-<p>Los sprites de imágenes los guardamos en la carpeta <code>img/sprites/</code> y los nombramos de la siguiente forma: <code>sprite1</code> , <code>sprite2</code> , <code>sprite3</code> . Cada sprite consta de una cuadrícula donde se colocan las imágenes y cuyas dimensiones de celda pueden variar. El nombre del sprite, su ruta, y las dimensiones de su cuadrícula las vamos definiendo en el archivo <code>_sass/mixins/_sprites.scss</code>: </p>
+<p>Los sprites de imágenes los guardamos en la carpeta <code>img/sprites/</code> y los nombramos de la siguiente forma: <code>sprite1</code> , <code>sprite2</code> , <code>sprite3</code> . Cada sprite consta de una cuadrícula donde se colocan las imágenes y cuyas dimensiones de celda pueden variar. El nombre del sprite, su ruta, y las dimensiones de su cuadrícula las vamos definiendo en el archivo <code>_sass/mixins/_sprites.scss</code>, cómo se ve en el siguiente ejemplo:</p>
 <div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">sprite</span><span class="p">(</span><span class="err">$</span><span class="vg">image</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">x</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">   </span><span class="err">@</span><span class="vg">if</span><span class="w"> </span><span class="err">$</span><span class="vg">image</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="vg">sprite1</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="err">$</span><span class="nl">spriteX:</span><span class="w"> </span><span class="il">120</span><span class="vg">px</span><span class="p">;</span>
@@ -242,7 +265,7 @@
 <span class="w">      </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-<p>Tenemos tres mixins para hacer aplicar los sprites de tres formas diferentes.</p>
+<p>Tenemos tres mixins para aplicar los sprites de tres formas diferentes.</p>
 
 <h2>spriteReplace</h2>
 <div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">spriteReplace</span><span class="w"> </span><span class="p">(</span><span class="err">$</span><span class="vg">image</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">x</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">y</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">width</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">height</span><span class="p">);</span>
@@ -274,25 +297,36 @@
 <span class="w">   </span><span class="nl">top:</span><span class="w"> </span><span class="il">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
+<h2>Sustituir SVG por PNG en Internet Explorer 8</h2>
+
+<p>Internet Explorer 8 no soporta el formato SVG, así que utilizaremos un mixin que reemplace la imágen SVG por un PNG. Este es un ejemplo de uso:</p>
+<div class="highlight"><pre><span class="o">.</span><span class="vg">lt</span><span class="o">-</span><span class="vg">ie9</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="o">.</span><span class="vg">navegacion</span><span class="o">-</span><span class="vg">principal__cabecera__logo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">spritePNG</span><span class="w"> </span><span class="p">(</span><span class="vg">sprite1</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
 <h1 id="Tamaños_de_fuente">Tamaños de fuente</h1>
 
-<p>Sirven para asignar a un elemento un tamaño de fuente y que este se ajuste en función de los tamaños de pantalla que define Bootstrap.</p>
+<p>Sirven para asignar a un elemento un tamaño de fuente en función de los tamaños de pantalla que define Bootstrap. Los tamaños están definidos en una serie de variables que se pueden editar en el archivo <code>_sass/_variables.scss</code>, bajo el apartado titulado &quot;Tamaños de fuente en función del tamaño de pantaña&quot;.</p>
 <div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">large</span><span class="p">;</span>
 <span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">base</span><span class="p">;</span>
 <span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">small</span><span class="p">;</span>
+
 <span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">h1</span><span class="p">;</span>
 <span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">h2</span><span class="p">;</span>
 <span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">h3</span><span class="p">;</span>
 <span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">h4</span><span class="p">;</span>
 <span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">h5</span><span class="p">;</span>
 <span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">h6</span><span class="p">;</span>
-</pre></div>
-<p>Los valores de sus respectivas variables se pueden editar en el archivo <code>_sass/_variables.scss</code> en el apartado titulado &quot;Tamaños de fuente en función del tamaño de pantaña&quot;.</p>
 
-<p>Para asignar a un elemento un tamaño de fuente que cambie en función de los tamaños de pantalla definidos por Bootstrap utilizaremos los mixins del tipo <a href="/docs/mixins.html#Tama%C3%B1os_de_fuente">&quot;Tamaños de fuente&quot;</a>.</p>
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">navegacion</span><span class="o">-</span><span class="vg">principal__cabecera__slogan</span><span class="p">;</span>
 
-<p>Para modificar sus valores disponemos de una serie de variables en el fichero <code>variables _sass/_variables.scss</code> bajo el título &quot;Tamaños de fuente en función del tamaño de pantaña&quot;.</p>
-      </div>
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">panel</span><span class="o">-</span><span class="vg">heading__titulo</span><span class="p">;</span>
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">panel</span><span class="o">-</span><span class="vg">body__titulo</span><span class="p">;</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">panel</span><span class="o">-</span><span class="vg">list</span><span class="o">-</span><span class="vg">group</span><span class="o">-</span><span class="vg">list</span><span class="o">-</span><span class="vg">group</span><span class="o">-</span><span class="vg">item</span><span class="p">;</span>
+</pre></div>      </div>
       <div class="col-md-2">
         <div class="submenu-container" data-spy="affix" data-offset-top="60">
           <ul class="nav">

@@ -4,25 +4,27 @@ title: Tamaños de fuente
 category: Mixins
 ---
 
-Sirven para asignar a un elemento un tamaño de fuente y que este se ajuste en función de los tamaños de pantalla que define Bootstrap.
+Sirven para asignar a un elemento un tamaño de fuente en función de los tamaños de pantalla que define Bootstrap. Los tamaños están definidos en una serie de variables que se pueden editar en el archivo `_sass/_variables.scss`, bajo el apartado titulado "Tamaños de fuente en función del tamaño de pantaña".
 
 ```
 @mixin font-size-large;
 @mixin font-size-base;
 @mixin font-size-small;
+
 @mixin font-size-h1;
 @mixin font-size-h2;
 @mixin font-size-h3;
 @mixin font-size-h4;
 @mixin font-size-h5;
 @mixin font-size-h6;
+
+@mixin font-size-navegacion-principal__cabecera__slogan;
+
+@mixin font-size-panel-heading__titulo;
+@mixin font-size-panel-body__titulo;
+
+@mixin font-size-panel-list-group-list-group-item;
 ```
-
-Los valores de sus respectivas variables se pueden editar en el archivo `_sass/_variables.scss` en el apartado titulado "Tamaños de fuente en función del tamaño de pantaña".
-
-Para asignar a un elemento un tamaño de fuente que cambie en función de los tamaños de pantalla definidos por Bootstrap utilizaremos los mixins del tipo ["Tamaños de fuente"](/docs/mixins.html#Tamaños_de_fuente).
-
-Para modificar sus valores disponemos de una serie de variables en el fichero `variables _sass/_variables.scss` bajo el título "Tamaños de fuente en función del tamaño de pantaña".
 
 */
 

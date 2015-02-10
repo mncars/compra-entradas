@@ -6,7 +6,7 @@ category: Mixins
 
 Para trabajar comodamente con sprites hay definidos una serie de mixins creados a partir de los ejemplos de [este post](http://www.smashingmagazine.com/2012/04/11/css-sprites-revisited/).
 
-Los sprites de imágenes los guardamos en la carpeta `img/sprites/` y los nombramos de la siguiente forma: `sprite1` , `sprite2` , `sprite3` . Cada sprite consta de una cuadrícula donde se colocan las imágenes y cuyas dimensiones de celda pueden variar. El nombre del sprite, su ruta, y las dimensiones de su cuadrícula las vamos definiendo en el archivo `_sass/mixins/_sprites.scss`: 
+Los sprites de imágenes los guardamos en la carpeta `img/sprites/` y los nombramos de la siguiente forma: `sprite1` , `sprite2` , `sprite3` . Cada sprite consta de una cuadrícula donde se colocan las imágenes y cuyas dimensiones de celda pueden variar. El nombre del sprite, su ruta, y las dimensiones de su cuadrícula las vamos definiendo en el archivo `_sass/mixins/_sprites.scss`, cómo se ve en el siguiente ejemplo:
 
 ```
 @mixin sprite($image, $x, $y) {
@@ -19,7 +19,7 @@ Los sprites de imágenes los guardamos en la carpeta `img/sprites/` y los nombra
 }
 ```
 
-Tenemos tres mixins para hacer aplicar los sprites de tres formas diferentes.
+Tenemos tres mixins para aplicar los sprites de tres formas diferentes.
 
 ##spriteReplace##
 
@@ -54,6 +54,7 @@ Sirve para añadir una imagen en línea a un lado de un texto de una sola línea
 ```
 @mixin spritePadded($image, $x, $y, $width, $height);
 ```
+
 Sirve para añadir una imagen a un lado de un texto de más de una línea, por ejemplo:
 
 ```
@@ -67,6 +68,19 @@ Sirve para añadir una imagen a un lado de un texto de más de una línea, por e
    top: 0;
 }
 ```
+
+##Sustituir SVG por PNG en Internet Explorer 8##
+
+Internet Explorer 8 no soporta el formato SVG, así que utilizaremos un mixin que reemplace la imágen SVG por un PNG. Este es un ejemplo de uso:
+
+```
+.lt-ie9 {
+   .navegacion-principal__cabecera__logo {
+      @include spritePNG (sprite1);
+   }
+}
+```
+
 */
 
 

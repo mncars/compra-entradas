@@ -4095,25 +4095,27 @@ title: Tamaños de fuente
 category: Mixins
 ---
 
-Sirven para asignar a un elemento un tamaño de fuente y que este se ajuste en función de los tamaños de pantalla que define Bootstrap.
+Sirven para asignar a un elemento un tamaño de fuente en función de los tamaños de pantalla que define Bootstrap. Los tamaños están definidos en una serie de variables que se pueden editar en el archivo `_sass/_variables.scss`, bajo el apartado titulado "Tamaños de fuente en función del tamaño de pantaña".
 
 ```
 @mixin font-size-large;
 @mixin font-size-base;
 @mixin font-size-small;
+
 @mixin font-size-h1;
 @mixin font-size-h2;
 @mixin font-size-h3;
 @mixin font-size-h4;
 @mixin font-size-h5;
 @mixin font-size-h6;
+
+@mixin font-size-navegacion-principal__cabecera__slogan;
+
+@mixin font-size-panel-heading__titulo;
+@mixin font-size-panel-body__titulo;
+
+@mixin font-size-panel-list-group-list-group-item;
 ```
-
-Los valores de sus respectivas variables se pueden editar en el archivo `_sass/_variables.scss` en el apartado titulado "Tamaños de fuente en función del tamaño de pantaña".
-
-Para asignar a un elemento un tamaño de fuente que cambie en función de los tamaños de pantalla definidos por Bootstrap utilizaremos los mixins del tipo ["Tamaños de fuente"](/docs/mixins.html#Tamaños_de_fuente).
-
-Para modificar sus valores disponemos de una serie de variables en el fichero `variables _sass/_variables.scss` bajo el título "Tamaños de fuente en función del tamaño de pantaña".
 
 */
 /*doc
@@ -4122,7 +4124,7 @@ title: Espacios en blanco
 category: Mixins
 ---
 
-Son una serie muy extensa de mixins para aplicar las propiedades de margin y padding en función de una escala de valores definida previamente. La escala esta disponible en el archivo `_sass/_variables.scss`.
+Son una serie muy extensa de mixins para aplicar las propiedades de margin y padding en función de una escala de valores definida previamente. La escala esta disponible en el archivo `_sass/_variables.scss`. En caso de que necesitemos aplicar un tamaño de espacio diferente, lo haremos con una regla CSS normal.
 
 ```
 $space-unit-xs: 			15px;
@@ -4156,7 +4158,6 @@ Los mixins se definen añadiendo a cada propiedad (`margin-top`, `padding-bottom
 @mixin margin-top-xl {
 	margin-top: $space-unit-xl;
 }
-
 ...
 ```
 
@@ -4169,7 +4170,7 @@ Disponemos también de otros mixins que sirven para elminar los espacios en blan
 ...
 ```
 
-Además, tenemos otros mixins que combinan dos propiedades en función de si el espacio que crean es vertical u horizontal.
+Además, tenemos otros mixins que combinan dos propiedades en función de si el espacio que crean es vertical u horizontal, y otros que modifican el espacio tanto vertical cómo horizontalmente.
 
 ```
 @mixin margin-vertical-xs {
@@ -4204,6 +4205,33 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 ...
 ```
 
+```
+@mixin margin-xs {
+	margin: $space-unit-xs;
+}
+
+@mixin margin-sm {
+	margin: $space-unit-sm;
+}
+
+@mixin margin-md {
+	margin: $space-unit-md;
+}
+
+@mixin margin-lg {
+	margin: $space-unit-lg;
+}
+
+@mixin margin-xl {
+	margin: $space-unit-xl;
+}
+
+@mixin no-margin {
+	margin: 0;
+}
+...
+```
+
 
 */
 /*doc
@@ -4214,7 +4242,7 @@ category: Mixins
 
 Para trabajar comodamente con sprites hay definidos una serie de mixins creados a partir de los ejemplos de [este post](http://www.smashingmagazine.com/2012/04/11/css-sprites-revisited/).
 
-Los sprites de imágenes los guardamos en la carpeta `img/sprites/` y los nombramos de la siguiente forma: `sprite1` , `sprite2` , `sprite3` . Cada sprite consta de una cuadrícula donde se colocan las imágenes y cuyas dimensiones de celda pueden variar. El nombre del sprite, su ruta, y las dimensiones de su cuadrícula las vamos definiendo en el archivo `_sass/mixins/_sprites.scss`: 
+Los sprites de imágenes los guardamos en la carpeta `img/sprites/` y los nombramos de la siguiente forma: `sprite1` , `sprite2` , `sprite3` . Cada sprite consta de una cuadrícula donde se colocan las imágenes y cuyas dimensiones de celda pueden variar. El nombre del sprite, su ruta, y las dimensiones de su cuadrícula las vamos definiendo en el archivo `_sass/mixins/_sprites.scss`, cómo se ve en el siguiente ejemplo:
 
 ```
 @mixin sprite($image, $x, $y) {
@@ -4227,7 +4255,7 @@ Los sprites de imágenes los guardamos en la carpeta `img/sprites/` y los nombra
 }
 ```
 
-Tenemos tres mixins para hacer aplicar los sprites de tres formas diferentes.
+Tenemos tres mixins para aplicar los sprites de tres formas diferentes.
 
 ##spriteReplace##
 
@@ -4262,6 +4290,7 @@ Sirve para añadir una imagen en línea a un lado de un texto de una sola línea
 ```
 @mixin spritePadded($image, $x, $y, $width, $height);
 ```
+
 Sirve para añadir una imagen a un lado de un texto de más de una línea, por ejemplo:
 
 ```
@@ -4275,6 +4304,32 @@ Sirve para añadir una imagen a un lado de un texto de más de una línea, por e
    top: 0;
 }
 ```
+
+##Sustituir SVG por PNG en Internet Explorer 8##
+
+Internet Explorer 8 no soporta el formato SVG, así que utilizaremos un mixin que reemplace la imágen SVG por un PNG. Este es un ejemplo de uso:
+
+```
+.lt-ie9 {
+   .navegacion-principal__cabecera__logo {
+      @include spritePNG (sprite1);
+   }
+}
+```
+
+*/
+/*doc
+---
+title: Arrows
+category: Global
+---
+
+Utilizamos esta serie de mixins para añadir flechas a elementos con forma de bloque. Podemos personalizarlas mediante las variables `$arrow-size`, `$arrow-color` y `$arrow-z-index`. Además, para colocarlas podemos utilizar los argumentos del mixin. Estos son de momento los mixins incluidos:
+
+```
+@mixin arrow-top ($arrow-y-left, $arrow-y-right);
+```
+
 */
 /*doc
 ---
@@ -5333,9 +5388,33 @@ title: Navegación principal
 category: Módulos
 ---
 
-Documentación...
 
-<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+```html_example
+<header>
+	<div class="container">
+		<nav class="navegacion-principal">
+			<div class="row">
+				<div class="col-sm-6 col-sm-push-6 col-md-5 col-md-push-7 col-lg-4 col-lg-push-8">
+					<div class="navegacion-principal__grupo-botones">
+						<div class="btn-group btn-group-justified btn-group-sm">
+							<a href="#" class="btn btn-default navegacion-principal__grupo-botones__boton">Todas las entradas</a>
+							<a href="#" class="btn btn-default navegacion-principal__grupo-botones__boton">Tus compras/reservas</a>
+						</div>		
+					</div>
+				</div>
+				<div class="col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5 col-lg-8 col-lg-pull-4">
+					<div class="navegacion-principal__cabecera">
+						<a class="navegacion-principal__cabecera__logo" href="#">
+							<span class="sr-only">Museo Nacional Centro de Arte Reina Sofía</span>
+						</a>
+						<p class="navegacion-principal__cabecera__slogan">Compra y reserva de entradas</p>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+```
 
 */
 .navegacion-principal {
@@ -5448,9 +5527,24 @@ title: Pie principal
 category: Módulos
 ---
 
-Documentación...
-
-<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+```html_example
+<footer class="pie-principal">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<p><a href="" class="btn btn-default btn-sm">Horarios y Tarifas</a></p>
+			</div>
+			<div class="col-md-10">
+				<ul class="pie-principal__menu list-inline">
+					<li><a href="">Condiciones y términos para la compra</a></li>
+					<li>Centro de atención al visitante: <a href="tel: +34902364383" class="enlace--telefono">tel. +34 902 364 383</a></li>
+					<li><a href="mailto:reservasreinasofia@iacpos.com">reservasreinasofia@iacpos.com</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+```
 
 */
 .pie-principal {
