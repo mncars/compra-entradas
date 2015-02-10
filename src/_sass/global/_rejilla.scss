@@ -4,9 +4,83 @@ title: Rejilla
 category: Global
 ---
 
-Documentación...
+Disponemos de varios tipos de rejilla adicionales para colocar varios elementos.
 
-<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+##Rejilla adaptable##
+
+Este tipo de rejilla se comporta cómo una tabla, distribuyendo la anchura de sus columnas en función del tamaño de los elementos que contienen.
+
+```html_example
+<div class="rejilla--adaptable">
+	<div class="rejilla--adaptable__contenedor">
+		<div class="rejilla--adaptable__fila">
+			<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+				<label class="sr-only" for="select-numero-entradas-1">Número de entradas</label>
+				<select id="numero-entradas-1" class="form-control">
+				<option>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				</select>
+			</div>
+			<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+				<p class="fuente-grande">8€</p>
+			</div>
+			<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+				<p class="fuente-pequena">+0,75€ gastos gestión por entrada</p>	
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+##Rejilla con aspecto de tabla##
+
+Se trata de una rejilla con aspecto de tabla, que en pantallas pequeñas apila sus columnas en vertical.
+
+```html_example
+<div class="rejilla--tabla">
+	<div class="rejilla--tabla__fila row hidden-xs">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-6">Entrada</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Precio ud.</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Cantidad</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Precio</div>
+	</div>
+	<div class="rejilla--tabla__fila row">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-6">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <em>Kunstmuseum Basel</em></span></div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+			<span class="fuente-negrita visible-xs-inline">Precio ud.</span> 5€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+			<span class="fuente-negrita visible-xs-inline">Cantidad</span> 8
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+			<span class="fuente-negrita visible-xs-inline">Precio</span> 40.00€
+		</div>
+	</div>
+	<div class="rejilla--tabla__fila row">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-6">Gastos de gestión</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+			<span class="fuente-negrita visible-xs-inline">Precio ud.</span> 0.75€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+			<span class="fuente-negrita visible-xs-inline">Cantidad.</span> 8
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+			<span class="fuente-negrita visible-xs-inline">Precio</span> 6.00€
+		</div>
+	</div>
+	<div class="rejilla--tabla__fila row">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-xs-6 col-sm-10">Total</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-xs-6 col-sm-2 text-right"><strong>46.00€</strong></div>
+	</div>
+</div>
+```
 
 */
 
@@ -46,7 +120,7 @@ Documentación...
 	vertical-align: middle;
 }
 
-// Rejilla tabla
+// Rejilla con aspecto de tabla
 
 .rejilla--tabla {
 	@include margin-bottom-sm;

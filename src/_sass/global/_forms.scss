@@ -4,9 +4,13 @@ title: Forms
 category: Global
 ---
 
-Documentación...
+Utilizamos los estilos básicos ["Forms" de Bootstrap](http://getbootstrap.com/css/#forms), sobreescribiendo alguno de sus estilos y personalizando sus variables.
 
-<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clase `input-xlg`.
+
+```html_example
+<input id="input-fecha-1" class="form-control input-lg input-xlg" type="text" value="Lunes, 16 febrero 2015">
+```
 
 */
 

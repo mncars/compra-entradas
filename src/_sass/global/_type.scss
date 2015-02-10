@@ -1,0 +1,124 @@
+/*doc
+---
+title: Tipografía
+category: Global
+---
+
+Utilizamos los estilos básicos ["Typography" de Bootstrap](http://getbootstrap.com/css/#forms), sobreescribiendo alguno de sus estilos y personalizando sus variables. Además, hemos extendido estos estilos básicos con las siguientes características:
+
+##Formato de texto##
+
+Para facilitar la tarea de formatear texto introducido a través de un WYSWYG (o en casos donde no podamos usar un elemento reutilizable) hemos incluido las clases: `.fuente-grande`, `.fuente-base`, `.fuente-pequena`, `.fuente-negrita`, `.fuente-normal`.
+
+```html_example
+<p class="fuente-grande">Tamaño de fuente grande</p>
+<p class="fuente-base">Tamaño de fuente base</p>
+<p class="fuente-pequena">Tamaño de fuente pequeña</p>
+```
+
+##Títulos de sección##
+
+Los títulos de sección se muestran por defecto con el siguiente aspecto.
+
+```html_example
+<h1>Título 1</h1>
+<h2>Título 2</h2>
+<h3>Título 3</h3>
+<h4>Título 4</h4>
+<h5>Título 5</h5>
+<h6>Título 6</h6>
+```
+
+Además, disponemos de las siguientes clases para cambiar la apariencia de un título de sección o de cualquier otro tipo de elemento.
+
+```html_example
+<h2 class="h1">Título 1</h2>
+<h1 class="h2">Título 2</h1>
+<h4 class="h3">Título 3</h4>
+<h1 class="h4">Título 4</h1>
+<h3 class="h5">Título 5</h3>
+<h5 class="h6">Título 6</h5>
+```
+
+*/
+
+// Lead body copy
+
+.lead {
+	@include margin-bottom-sm;
+	@include font-size-h3;
+	font-family: $font-museo-thin;
+	font-weight: inherit;
+	line-height: inherit;
+	strong {
+		font-family: $font-museo-regular;
+		font-weight: normal;
+	}
+}
+
+// Formato de texto
+
+.fuente-grande {
+	@include font-size-large;
+}
+
+.fuente-base {
+	@include font-size-base;
+}
+
+.fuente-pequena {
+	@include font-size-small;
+}
+
+.fuente-negrita {
+	font-weight: bold;
+}
+
+.fuente-normal {
+	font-weight: normal;
+}
+
+// Títulos de sección
+
+h1,
+.h1 {
+	@include font-size-h1;
+	@include no-margin-top;
+	@include margin-bottom-sm;
+	font-family: $font-museo-bold;
+}
+
+h2,
+.h2 {
+	@include font-size-h2;
+	@include no-margin-top;
+	font-family: $font-museo-bold;
+}
+
+h3,
+.h3 {
+	@include font-size-h3;
+	@include no-margin-top;
+	font-family: $font-museo-thin;
+}
+
+h4,
+.h4 {
+	@include font-size-h4;
+	@include no-margin-top;
+	font-family: $font-museo-bold;
+}
+
+h5,
+.h5 {
+	@include font-size-h5;
+	@include no-margin-top;
+	font-family: $font-museo-regular;
+}
+
+h6,
+.h6 { 
+	@include font-size-h6;
+	@include no-margin-top;
+	font-family: $font-museo-thin;
+}

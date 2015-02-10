@@ -4111,6 +4111,10 @@ Sirven para asignar a un elemento un tamaño de fuente y que este se ajuste en f
 
 Los valores de sus respectivas variables se pueden editar en el archivo `_sass/_variables.scss` en el apartado titulado "Tamaños de fuente en función del tamaño de pantaña".
 
+Para asignar a un elemento un tamaño de fuente que cambie en función de los tamaños de pantalla definidos por Bootstrap utilizaremos los mixins del tipo ["Tamaños de fuente"](/docs/mixins.html#Tamaños_de_fuente).
+
+Para modificar sus valores disponemos de una serie de variables en el fichero `variables _sass/_variables.scss` bajo el título "Tamaños de fuente en función del tamaño de pantaña".
+
 */
 /*doc
 ---
@@ -4278,69 +4282,62 @@ title: Tipografía
 category: Global
 ---
 
+Utilizamos los estilos básicos ["Typography" de Bootstrap](http://getbootstrap.com/css/#forms), sobreescribiendo alguno de sus estilos y personalizando sus variables. Además, hemos extendido estos estilos básicos con las siguientes características:
 
-Para asignar a un elemento un tamaño de fuente que cambie en función de los tamaños de pantalla definidos por Bootstrap utilizaremos los mixins del tipo ["Tamaños de fuente"](/docs/mixins.html#Tamaños_de_fuente).
+##Formato de texto##
 
-Para modificar sus valores disponemos de una serie de variables en el fichero `variables _sass/_variables.scss` bajo el título "Tamaños de fuente en función del tamaño de pantaña".
-
-### Tamaños de fuente
-
-Al igual que Bootstrap, disponemos de tres tamaños de fuente básicos que utilizaremos en cualquier elemento que construyamos.
-
-Además, para facilitar la tarea de formatear texto introducido mediante un WYSWYG hemos incluido las clases: `.fuente-grande` , `.fuente-base` , `.fuente-pequena` .
+Para facilitar la tarea de formatear texto introducido a través de un WYSWYG (o en casos donde no podamos usar un elemento reutilizable) hemos incluido las clases: `.fuente-grande`, `.fuente-base`, `.fuente-pequena`, `.fuente-negrita`, `.fuente-normal`.
 
 ```html_example
-
 <p class="fuente-grande">Tamaño de fuente grande</p>
 <p class="fuente-base">Tamaño de fuente base</p>
 <p class="fuente-pequena">Tamaño de fuente pequeña</p>
-
 ```
 
-### Títulos de sección
+##Títulos de sección##
 
 Los títulos de sección se muestran por defecto con el siguiente aspecto.
 
 ```html_example
-
 <h1>Título 1</h1>
 <h2>Título 2</h2>
 <h3>Título 3</h3>
 <h4>Título 4</h4>
 <h5>Título 5</h5>
 <h6>Título 6</h6>
-
 ```
 
 Además, disponemos de las siguientes clases para cambiar la apariencia de un título de sección o de cualquier otro tipo de elemento.
 
 ```html_example
-
 <h2 class="h1">Título 1</h2>
 <h1 class="h2">Título 2</h1>
 <h4 class="h3">Título 3</h4>
 <h1 class="h4">Título 4</h1>
 <h3 class="h5">Título 5</h3>
 <h5 class="h6">Título 6</h5>
-
-```
-
-### Cuerpo de texto
-
-Este es un ejemplo de cuerpo de texto basado en la ficha de obra del Guernica de Picasso.
-
-```html_example
-
-<p>Reflejo fiel de una época y de unas luctuosas y dramáticas circunstancias, el lienzo Guernica nació para formar parte del Pabellón Español en la Exposición Internacional de París, de 1937. El motivo que impulsó a Pablo Picasso a realizar la escena representada en esta gran pintura fue la noticia de los bombardeos efectuados por la aviación alemana sobre la villa vasca que da nombre a la obra, conocidos por el artista a través de las dramáticas fotografías publicadas, entre otros diarios, por el periódico francés L'Humanité. A pesar de ello, tanto los bocetos como el cuadro no contienen ninguna alusión a sucesos concretos, sino que, por el contrario, constituyen un alegato genérico contra la barbarie y el terror de la guerra. Concebido como un gigantesco cartel, el gran lienzo es el testimonio del horror que supuso la Guerra Civil española, así como la premonición de lo que iba a suceder en la Segunda Guerra Mundial. La sobriedad cromática, la intensidad de todos y cada uno de los motivos, y la articulación de esos mismos motivos, determinan el extremado carácter trágico de la escena, que se iba a convertir en el emblema de los desgarradores conflictos de la sociedad de nuestros días.</p>
-
-<p>Guernica ha suscitado numerosas y polémicas interpretaciones, circunstancia a la que contribuye indudablemente la voluntaria eliminación del lienzo de cualquier tonalidad ajena a la grisalla. Al analizar su iconografía, uno de los estudiosos de la obra, Anthony Blunt, divide a los actores de esta composición piramidal en dos grupos, el primero de los cuales está integrado por tres animales: el toro, el caballo herido y el pájaro alado que se aprecia tenuemente al fondo, a la izquierda. Los seres humanos componen un segundo grupo, en el que figuran un soldado muerto y varias mujeres: la situada en la zona superior derecha, que se asoma por una ventana y sostiene hacia fuera una lámpara; la madre que, a la izquierda del lienzo, grita llevando al hijo muerto; la que entra precipitadamente por la derecha; y finalmente, la que clama al cielo, con los brazos alzados, ante una casa en llamas.
-En este mismo contexto, tampoco hay que olvidar que dos años antes, en 1935, Picasso había grabado al aguafuerte la Minotauromaquia, obra sintética que condensa en una sola imagen todos los símbolos del ciclo dedicado a este animal mitológico y que es, a la vez, el antecedente más directo de Guernica.</p>
-
-<p>Los acontecimientos de la vida privada de Picasso, junto a los sucesos políticos que atribularon al continente europeo en el período de entreguerras, se fusionan en los motivos creados por el pintor en estos momentos, para dar lugar tanto al propio Guernica como a sus bocetos y post scriptum, considerados como unas de las obras de arte más representativas del siglo XX.</p>
-
 ```
 
 */
+.lead {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-family: 'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
+  font-weight: inherit;
+  line-height: inherit; }
+  @media (min-width: 768px) {
+    .lead {
+      font-size: 22px; } }
+  @media (min-width: 992px) {
+    .lead {
+      font-size: 22px; } }
+  @media (min-width: 1200px) {
+    .lead {
+      font-size: 22px; } }
+  .lead strong {
+    font-family: 'PFDinTextPro-Regular', Helvetica, Arial, sans-serif;
+    font-weight: normal; }
+
 .fuente-grande {
   font-size: 20px; }
   @media (min-width: 768px) {
@@ -4468,37 +4465,14 @@ h6, .h6 {
     h6, .h6 {
       font-size: 16px; } }
 
-.lead {
-  margin-bottom: 30px;
-  font-size: 22px;
-  font-family: 'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
-  font-weight: inherit;
-  line-height: inherit; }
-  @media (min-width: 768px) {
-    .lead {
-      font-size: 22px; } }
-  @media (min-width: 992px) {
-    .lead {
-      font-size: 22px; } }
-  @media (min-width: 1200px) {
-    .lead {
-      font-size: 22px; } }
-  .lead strong {
-    font-family: 'PFDinTextPro-Regular', Helvetica, Arial, sans-serif;
-    font-weight: normal; }
-
 /*doc
 ---
-title: Espacio en blanco
+title: Márgenes
 category: Global
 ---
 
 
-Para asignar a un elemento una cantidad de espacio en blanco determinada utilizaremos los mixins del tipo ["Espacios en blanco"](/docs/mixins.html#Espacios_en_blanco).
-
-Para modificar sus valores disponemos de una serie de variables en el fichero `variables _sass/_variables.scss` bajo el título "Espacio en blanco".
-
-En caso de que sea necesario utilizar este tipo de márgenes para dar formato a un contenido introducido mediante WYSWYG, disponemos de las siguientes clases. Se trata de márgenes inferiores que nos sirven para separar bloques.
+Si necesitamos darle a un elemento un margen inferior para separarlo de otros, disponemos de las siguientes clases: `margen-muy-pequeno`, `margen-pequeno`, `margen-mediano`, `margen-largo`, `margen-muy-largo`.
 
 ```html_example
 <div class="well margen-muy-pequeno">Margen muy pequeño</div>
@@ -4509,6 +4483,8 @@ En caso de que sea necesario utilizar este tipo de márgenes para dar formato a 
 ```
 
 NOTA: Ignora el estilo `.well` , sólo sirve para diferenciar los bloques entre sí.
+
+NOTA: Es recomendable no abusar de estas clases ya que son demasiado granulares. Para dar margenes inferiores a componentes u otros elementos reutilizables es recomendable utilizar los mixins del tipo ["Espacios en blanco"](/docs/mixins.html#Espacios_en_blanco). Estas clases son útiles para dar formato a contenido introducido mediante WYSWYG o en casos en los que no tiene sentido utilizar componentes.
 
 */
 .margen-muy-pequeno {
@@ -4532,7 +4508,7 @@ title: Enlaces
 category: Global
 ---
 
-Diferentes tipos de enlace.
+Diferentes tipos de enlace: subrayado, enlaces a números de teléfono y enlaces para envolver bloques.
 
 ```html_example
 <p><a href="#">Enlace por defecto</a></p>
@@ -4570,9 +4546,43 @@ title: Tables
 category: Global
 ---
 
-Documentación...
+Utilizamos los estilos básicos ["Tables" de Bootstrap](http://getbootstrap.com/css/#tables), sobreescribiendo alguno de sus estilos y personalizando sus variables.
 
-<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+```html_example
+<div class="table-responsive">
+	<table class="table">
+		<caption>Optional table caption.</caption>
+		<thead>
+	        <tr>
+				<th>#</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Username</th>
+	        </tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">1</th>
+				<td>Mark</td>
+				<td>Otto</td>
+				<td>@mdo</td>
+			</tr>
+			<tr>
+				<th scope="row">2</th>
+				<td>Jacob</td>
+				<td>Thornton</td>
+				<td>@fat</td>
+			</tr>
+			<tr>
+				<th scope="row">3</th>
+				<td>Larry</td>
+				<td>the Bird</td>
+				<td>@twitter</td>
+        	</tr>
+		</tbody>
+	</table>
+</div>
+```
 
 */
 .table {
@@ -4591,9 +4601,13 @@ title: Forms
 category: Global
 ---
 
-Documentación...
+Utilizamos los estilos básicos ["Forms" de Bootstrap](http://getbootstrap.com/css/#forms), sobreescribiendo alguno de sus estilos y personalizando sus variables.
 
-<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clase `input-xlg`.
+
+```html_example
+<input id="input-fecha-1" class="form-control input-lg input-xlg" type="text" value="Lunes, 16 febrero 2015">
+```
 
 */
 @media (min-width: 768px) {
@@ -4606,9 +4620,83 @@ title: Rejilla
 category: Global
 ---
 
-Documentación...
+Disponemos de varios tipos de rejilla adicionales para colocar varios elementos.
 
-<div class="alert alert-error">Revisar que elementos se pueden convertir en componentes.</div>
+##Rejilla adaptable##
+
+Este tipo de rejilla se comporta cómo una tabla, distribuyendo la anchura de sus columnas en función del tamaño de los elementos que contienen.
+
+```html_example
+<div class="rejilla--adaptable">
+	<div class="rejilla--adaptable__contenedor">
+		<div class="rejilla--adaptable__fila">
+			<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+				<label class="sr-only" for="select-numero-entradas-1">Número de entradas</label>
+				<select id="numero-entradas-1" class="form-control">
+				<option>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				</select>
+			</div>
+			<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+				<p class="fuente-grande">8€</p>
+			</div>
+			<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+				<p class="fuente-pequena">+0,75€ gastos gestión por entrada</p>	
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+##Rejilla con aspecto de tabla##
+
+Se trata de una rejilla con aspecto de tabla, que en pantallas pequeñas apila sus columnas en vertical.
+
+```html_example
+<div class="rejilla--tabla">
+	<div class="rejilla--tabla__fila row hidden-xs">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-6">Entrada</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Precio ud.</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Cantidad</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Precio</div>
+	</div>
+	<div class="rejilla--tabla__fila row">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-6">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <em>Kunstmuseum Basel</em></span></div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+			<span class="fuente-negrita visible-xs-inline">Precio ud.</span> 5€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+			<span class="fuente-negrita visible-xs-inline">Cantidad</span> 8
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+			<span class="fuente-negrita visible-xs-inline">Precio</span> 40.00€
+		</div>
+	</div>
+	<div class="rejilla--tabla__fila row">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-6">Gastos de gestión</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+			<span class="fuente-negrita visible-xs-inline">Precio ud.</span> 0.75€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+			<span class="fuente-negrita visible-xs-inline">Cantidad.</span> 8
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+			<span class="fuente-negrita visible-xs-inline">Precio</span> 6.00€
+		</div>
+	</div>
+	<div class="rejilla--tabla__fila row">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-xs-6 col-sm-10">Total</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-xs-6 col-sm-2 text-right"><strong>46.00€</strong></div>
+	</div>
+</div>
+```
 
 */
 .rejilla--adaptable {
