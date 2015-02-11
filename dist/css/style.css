@@ -4824,11 +4824,14 @@ Igual que la anterior pero sin bordes y con menos celdas
   .rejilla--tabla__columna--centrada {
     text-align: center; } }
 
-.rejilla--tabla--sinbordes .rejilla--tabla__fila {
-  border-bottom: none; }
-.rejilla--tabla--sinbordes .rejilla--tabla__columna {
-  padding-top: 0;
-  padding-bottom: 0; }
+.rejilla--tabla--sinbordes {
+  padding: 15px;
+  background: #f6f6f6; }
+  .rejilla--tabla--sinbordes .rejilla--tabla__fila {
+    border-bottom: none; }
+  .rejilla--tabla--sinbordes .rejilla--tabla__columna {
+    padding-top: 0;
+    padding-bottom: 0; }
 
 /*doc
 ---
