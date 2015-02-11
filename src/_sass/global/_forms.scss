@@ -19,3 +19,15 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 		font-size: $font-size-large + 4;	
 	}
 }
+
+.btn--addon {
+	//float: left;
+	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
+	padding-top: $padding-base-vertical + 1;
+	padding-bottom: $padding-base-vertical + 1;
+	padding-right: $padding-base-horizontal;
+	padding-left: $padding-base-horizontal;
+	background-color: rgba(0,0,0,.15);
+}
