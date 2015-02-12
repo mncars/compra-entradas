@@ -1,0 +1,25 @@
+/*doc
+---
+title: Sección
+category: Componentes
+---
+
+Lo utilizamos para dar estilos a los elementos de tipo <section> y a los posibles hijos que tenga: <header>, <footer>, títulos, subtítulos...
+
+*/
+
+.seccion {
+	@include margin-bottom-lg;
+	@media (min-width: $screen-sm-min) {
+		@include margin-bottom-sm;
+	}
+}
+
+.seccion--separador-arriba--fino {
+	@include padding-top-sm;
+	border-top: 1px solid $border-color;
+}
+
+.seccion--separador-abajo--fino {
+	border-bottom: 1px solid $border-color;
+}
