@@ -30,6 +30,7 @@ Permite añadir una serie de botones que en pantallas pequeñas se muestran en b
 
 .botonera__boton {
 	@include margin-bottom-xs;
+	white-space: normal;
 	@media (min-width: $screen-sm-min) {
 		float: right;
 	}

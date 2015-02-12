@@ -67,9 +67,6 @@ $panel-border-radius: 		0;
 $table-bg:                  #fff;
 $table-cell-padding:        12px 15px 14px;
 
-
-
-
 $state-success-bg:          #b9e091;
 $state-success-text: 		darken($state-success-bg, 40%);
 $state-success-border:      $state-success-bg;
@@ -151,6 +148,10 @@ $space-unit-sm:  			($space-unit-xs * 2); // 30px;
 $space-unit-md:  			($space-unit-xs * 3); // 45px;
 $space-unit-lg:  			($space-unit-xs * 4); // 60px;
 $space-unit-xl:  			($space-unit-xs * 5); // 75px;
+
+// Borders
+
+$border-color: 			#ddd;
 
 // Arrows
 
