@@ -16,30 +16,10 @@ title: Tus datos
 
 			{% include checkout-resumen-compra-finalgrupos.html %}	
 
-			<div class="island island--xs bg-info">
-				<div class="row">
-					<div class="col-sm-12">
-						<p><strong>Para comprar o reservar entradas de grupo, debes estar registrado:</strong></p>
-					</div>
-				</div>
-			</div>
+			<h2 class="panel-body__titulo">Datos de la reserva</h2>
+			<p>La facturación se realizará con los datos indicados a continuación</p> 
 
-			<div class="">
-				<div class="row">
-						<div class="col-sm-6">
-								<h2 class="panel-body__titulo">Regístrate</h2>
-								<p>Si es la primera vez que compras entradas</p> 
-
-								{% include checkout-formulario-registro.html %}	
-						</div>
-						<div class="col-sm-6">
-								<h2 class="panel-body__titulo">Inicia Sesión</h2> 
-								<p>Si ya estas registrado</p> 
-
-								{% include checkout-formulario-inicio.html %}	
-						</div>
-				</div>
-			</div>
+			{% include checkout-formulario-edicion.html %}	
 
 		</div>
 	</div>		
@@ -47,8 +27,9 @@ title: Tus datos
 
 	<div class="botonera--centrada">
 		<div class="botonera__botones">
-			<a href="" class="btn btn-primary btn-lg botonera__boton">Completar compra →</a>    
-			<a href="" class="btn btn-primary btn-lg btn-link botonera__boton">← Revisa y compra tu cupón</a>    
+			<a href="" class="btn btn-primary btn-lg botonera__boton">Reservar →</a>    
+			<a href="" class="btn btn-primary btn-lg botonera__boton">Pagar entradas →</a>    
+			<a href="" class="btn btn-primary btn-lg btn-link botonera__boton">← Revisa y compra tu cupón</a> 
 		</div>
 	</div>	
 </div>
