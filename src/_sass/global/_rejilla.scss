@@ -199,18 +199,19 @@ Igual que la anterior pero sin bordes y con menos celdas
 	}
 }
 
+.rejilla--tabla__columna--derecha {
+	@media (min-width: $screen-sm-min) {
+		text-align: right;
+	}	
+}
 
-//Rejilla sin bordes
-.rejilla--tabla--sinbordes {
-	
-	padding: $space-unit-xs;
-	background:$gray-lighter;
+// Rejilla con aspecto de tabla sin bordes
 
+.rejilla--tabla--sin-bordes {
 	.rejilla--tabla__fila {
-		border-bottom:none;
+		border-bottom: none;
 	}
 	.rejilla--tabla__columna{
-		padding-top:0;
-		padding-bottom:0;
+		padding: 5px 0;
 	}
 }

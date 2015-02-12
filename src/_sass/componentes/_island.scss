@@ -33,7 +33,8 @@ Este componente se basa en el [objeto "Island" de Harry Roberts](http://csswizar
 .island {
     @include margin-bottom-sm;
     p,
-    ul {
+    ul,
+    .rejilla--tabla {
         &:last-child {
             margin-bottom: 5px;
         }
