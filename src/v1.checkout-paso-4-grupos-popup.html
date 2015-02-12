@@ -1,0 +1,54 @@
+---
+layout: checkout
+title: Tus datos
+---
+<div class="list-group">
+	<a href="#" class="list-group-item">Fecha</a>
+	<a href="#" class="list-group-item">Entradas</a>
+	<a href="#" class="list-group-item">Revisa y compra tu cupón</a>
+</div>
+
+{% include checkout-titulo-pagina.html %}
+
+<div class="panel-body">
+	<div class="row">
+		<div class="col-md-12 col-lg-10 col-lg-offset-1">
+
+			{% include checkout-resumen-compra-finalgrupos.html %}	
+
+			<div class="island island--xs bg-info">
+				<div class="row">
+					<div class="col-sm-12">
+						<p><strong>Para comprar o reservar entradas de grupo, debes estar registrado:</strong></p>
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<div class="row">
+						<div class="col-sm-6">
+								<h2 class="panel-body__titulo">Regístrate</h2>
+								<p>Si es la primera vez que compras entradas</p> 
+
+								{% include checkout-formulario-registro.html %}	
+						</div>
+						<div class="col-sm-6">
+								<h2 class="panel-body__titulo">Inicia Sesión</h2> 
+								<p>Si ya estas registrado</p> 
+
+								{% include checkout-formulario-inicio.html %}	
+						</div>
+				</div>
+			</div>
+
+		</div>
+	</div>		
+
+
+	<div class="botonera--centrada">
+		<div class="botonera__botones">
+			<a href="" class="btn btn-primary btn-lg botonera__boton">Completar compra →</a>    
+			<a href="" class="btn btn-primary btn-lg btn-link botonera__boton">← Revisa y compra tu cupón</a>    
+		</div>
+	</div>	
+</div>
