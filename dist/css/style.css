@@ -4824,14 +4824,14 @@ Igual que la anterior pero sin bordes y con menos celdas
   .rejilla--tabla__columna--centrada {
     text-align: center; } }
 
-.rejilla--tabla--sinbordes {
-  padding: 15px;
-  background: #f6f6f6; }
-  .rejilla--tabla--sinbordes .rejilla--tabla__fila {
-    border-bottom: none; }
-  .rejilla--tabla--sinbordes .rejilla--tabla__columna {
-    padding-top: 0;
-    padding-bottom: 0; }
+@media (min-width: 768px) {
+  .rejilla--tabla__columna--derecha {
+    text-align: right; } }
+
+.rejilla--tabla--sin-bordes .rejilla--tabla__fila {
+  border-bottom: none; }
+.rejilla--tabla--sin-bordes .rejilla--tabla__columna {
+  padding: 5px 0; }
 
 /*doc
 ---
@@ -5077,7 +5077,7 @@ Este componente se basa en el [objeto "Island" de Harry Roberts](http://csswizar
 */
 .island {
   margin-bottom: 30px; }
-  .island p:last-child, .island ul:last-child {
+  .island p:last-child, .island ul:last-child, .island .rejilla--tabla:last-child {
     margin-bottom: 5px; }
 
 .island--xs {
