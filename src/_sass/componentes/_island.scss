@@ -48,20 +48,20 @@ Este componente se basa en el [objeto "Island" de Harry Roberts](http://csswizar
 .island--sm {
     @include padding-sm;
     @media (max-width: $screen-xs-max) {
-        @include padding-horizontal-xs;
+        @include padding-xs;
     }
 }
 
 .island--md {
     @include padding-md;
     @media (max-width: $screen-xs-max) {
-        @include padding-horizontal-xs;
+        @include padding-xs;
     }
 }
 
 .island--lg {
     @include padding-lg;
     @media (max-width: $screen-xs-max) {
-        @include padding-horizontal-xs;
+        @include padding-xs;
     }
 }

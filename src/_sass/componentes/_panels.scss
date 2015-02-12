@@ -35,8 +35,10 @@ Utilizamos el componente ["Panels" de Bootstrap](http://getbootstrap.com/compone
 	@include box-shadow(1px 1px 3px rgba(0, 0, 0, 0.21));
 }
 
-.panel-body {
-	@include arrow-top (50px, auto);
+.panel-heading {
+	.panel-body {
+		@include arrow-top (50px, auto);
+	}
 }
 
 .panel-heading__titulo {
@@ -65,5 +67,5 @@ Utilizamos el componente ["Panels" de Bootstrap](http://getbootstrap.com/compone
 }
 
 .panel-estatico{
-	padding:$space-unit-md;
+	//padding: $space-unit-md;
 }
