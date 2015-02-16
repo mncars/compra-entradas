@@ -122,7 +122,7 @@
 	</div>
 </div>	
 
-			<div class="island island--xs bg-info">
+			<div class="island island--xs island--margen-pequeno bg-info">
 				<div class="row">
 					<div class="col-sm-12">
 						<p><strong>Para comprar o reservar entradas de grupo, debes estar registrado:</strong></p>
@@ -235,13 +235,13 @@
 	<div class="form-group">
 		<div class="col-sm-offset-3 col-sm-9">
 			<div class="checkbox">
-				<label>
-					<input type="checkbox">He leído y acepto las <a href="v1.checkout-condiciones.html">condiciones de compra</a>
+				<label for="input-condiciones-compra-1">
+					<input id="input-condiciones-compra-1" type="checkbox">He leído y acepto las <a href="v1.checkout-condiciones.html">condiciones de compra</a>
 				</label>
 			</div>
 			<div class="checkbox">
-				<label>
-					<input type="checkbox">Deseo recibir la newsletter</a>
+				<label for="input-newsletter-1">
+					<input id="input-newsletter-1" type="checkbox">Deseo recibir la newsletter</a>
 				</label>
 			</div>
 		</div>
@@ -299,40 +299,37 @@
       </div>
     </div>
   </div>
-    
-<div class="modal fade bs-example-modal-md" id="password" tabindex="-1" role="dialog" aria-labelledby="password"
-     aria-hidden="true">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="terminos">No recuerdo mi contraseña</h4>
-            </div>
-            <div class="modal-body">
-                <div class="island island--xs bg-info">
-                  <p>Te enviaremos un mail con tu contraseña</p>
-                </div>
-                   <div class="form-horizontal">
-                      <div class="form-group">
-                        <label for="inputemail" class="col-sm-2 control-label">Email</label>
-                        <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputemail" placeholder="email">
-                        </div>
-                    </div> 
-                   </div> 
-            </div>
-             <div class="modal-footer">
-              <div class="botonera botonera--centrada">
-                <div class="botonera__botones">
-                     
-                  <a href="" class="btn btn-primary btn-lg botonera__boton">Recordar contraseña</a>    
-
-
-                </div>
-              </div>  
-        </div>
-    </div>
+    <div class="modal fade bs-example-modal-md" id="password" tabindex="-1" role="dialog" aria-labelledby="password"
+aria-hidden="true">
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+					aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="terminos">No recuerdo mi contraseña</h4>
+			</div>
+			<div class="modal-body">
+				<div class="island island--xs island--margen-pequeno bg-info">
+					<p>Te enviaremos un mail con tu contraseña</p>
+				</div>
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="inputemail" class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="inputemail" placeholder="email">
+						</div>
+					</div> 
+				</div> 
+			</div>
+			<div class="modal-footer">
+				<div class="botonera botonera--centrada">
+					<div class="botonera__botones">
+						<a href="" class="btn btn-primary btn-lg botonera__boton">Recordar contraseña</a>    
+					</div>
+				</div>  
+			</div>
+		</div>
+	</div>
 </div>  
 </section>
 	
@@ -342,14 +339,27 @@
 			</div>
 
 		</div>
-	</div>		
+	</div>
 
-	<div class="botonera botonera--centrada">
-		<div class="botonera__botones">
-			<a href="" class="btn btn-primary btn-lg botonera__boton">Completar compra →</a>    
-			<a href="" class="btn btn-primary btn-lg btn-link botonera__boton">← Revisa y compra tu cupón</a>    
+	<div class="botonera">
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+				<div class="row">
+					<div class="col-sm-4 col-sm-push-6">
+						<div class="botonera__accion">
+							<a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Completar compra →</a>
+						</div>
+					</div>
+					<div class="col-sm-4 col-sm-pull-2">
+						<div class="botonera__accion">
+							<a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__accion__boton">← Revisa y compra tu cupón</a>
+						</div> 
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>	
+	</div>
+
 </div>
 
 
