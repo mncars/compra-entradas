@@ -4993,6 +4993,10 @@ Igual que la anterior pero sin bordes y con menos celdas
       .rejilla--tabla--sin-bordes .rejilla--tabla__columna {
         padding: 5px 0; } }
 
+/*Regilla tabla de datos*/
+.rejilla--tabla__dato {
+  font-weight: bold; }
+
 /*doc
 ---
 title: Panels
