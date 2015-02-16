@@ -7,7 +7,7 @@ category: Componentes
 Permite añadir una serie de botones que en pantallas pequeñas se muestran en bloque y en pantallas grandes se colocan en línea. El orden de los botones se invierte al pasar de pantalla pequeña a grande.
 
 ```html_example
-<div class="botonera--centrada">
+<div class="botonera botonera--centrada">
 	<div class="botonera__botones">
 		<a href="" class="btn btn-primary btn-lg botonera__boton">Continuar →</a>    
 		<a href="" class="btn btn-primary btn-lg btn-link botonera__boton">← Todas las entradas</a>    
@@ -16,6 +16,12 @@ Permite añadir una serie de botones que en pantallas pequeñas se muestran en b
 ```
 
 */
+
+.botonera {
+	@media (min-width: $screen-sm-min) {
+		@include padding-top-sm;
+	}
+}
 
 .botonera--centrada {
 	text-align: center;
