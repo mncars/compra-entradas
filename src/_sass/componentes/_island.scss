@@ -31,7 +31,6 @@ Este componente se basa en el [objeto "Island" de Harry Roberts](http://csswizar
 
 
 .island {
-    @include margin-bottom-sm;
     p,
     ul,
     .rejilla--tabla {
@@ -64,4 +63,8 @@ Este componente se basa en el [objeto "Island" de Harry Roberts](http://csswizar
     @media (max-width: $screen-xs-max) {
         @include padding-xs;
     }
+}
+
+.island--margen-pequeno {
+    @include margin-bottom-sm;
 }
