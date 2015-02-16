@@ -72,4 +72,13 @@ Permite añadir una serie de botones que se colocan en función del uso que haga
 	@media (max-width: $screen-xs-max) {
 		text-align: center;
 	}
+
 }
+
+
+@media print {
+    .botonera{
+    	display: none;
+    }
+}
+

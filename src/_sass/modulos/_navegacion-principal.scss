@@ -42,6 +42,7 @@ category: Módulos
 	}
 }
 
+
 .navegacion-principal__cabecera {
 	min-height: 65px;
 	position: relative;
@@ -109,4 +110,8 @@ category: Módulos
 		font-weight: normal;
 		border-radius: 0!important;
 	}
+}
+
+@media print {
+    .navegacion-principal{display:none;}
 }
