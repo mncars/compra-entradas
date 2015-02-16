@@ -65,3 +65,12 @@ Este componente se basa en el [objeto "Island" de Harry Roberts](http://csswizar
         @include padding-xs;
     }
 }
+
+
+@media print {
+    .island{
+       display: block;
+       background-color:none;
+    }
+   
+}

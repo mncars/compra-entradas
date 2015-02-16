@@ -69,3 +69,15 @@ Utilizamos el componente ["Panels" de Bootstrap](http://getbootstrap.com/compone
 .panel-estatico{
 	//padding: $space-unit-md;
 }
+
+
+@media print {
+	body{
+		background-color: #fff;
+	}
+    .panel{
+    	box-shadow:none;
+    	border:none;
+    }
+}
+
