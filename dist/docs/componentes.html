@@ -187,52 +187,76 @@
 <h1 id="Botonera">Botonera</h1>
 
 <p>Permite añadir una serie de botones que se colocan en función del uso que hagamos de la rejilla.</p>
+
+<h2>Ejemplo con dos botones</h2>
 <div class="codeExample"><div class="exampleOutput"><div class="botonera">
     <div class="row">
-        <div class="col-sm-8 col-sm-push-4 col-lg-7 col-lg-push-4">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="botonera__accion">
-                        <a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Pagar entradas →</a>
-                        <p class="botonera__accion__texto-ayuda">Serás dirigido a la pasarela de pago</p>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="botonera__accion">
-                        <a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Reservar →</a>
-                        <p class="botonera__accion__texto-ayuda">Podrás realizar el pago hasta 2 días antes de la fecha de la reserva</p>
-                    </div>
-                </div>
+        <div class="col-sm-4 col-sm-push-6">
+            <div class="botonera__accion">
+                <a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Continuar →</a>
             </div>
         </div>
-        <div class="col-sm-4 col-sm-pull-8 col-lg-3 col-lg-pull-6">
+        <div class="col-sm-4 col-sm-pull-2">
             <div class="botonera__accion">
-                <a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__accion__boton">← Revisa y compra tu cupón</a>
+                <a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__accion__boton">← Todas las entradas</a>
             </div> 
         </div>
     </div>
 </div>
 </div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;botonera&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-8 col-sm-push-4 col-lg-7 col-lg-push-4&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-6&quot;</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;botonera__accion&quot;</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-lg btn-block botonera__accion__boton&quot;</span><span class="nt">&gt;</span>Pagar entradas →<span class="nt">&lt;/a&gt;</span>
-                        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;botonera__accion__texto-ayuda&quot;</span><span class="nt">&gt;</span>Serás dirigido a la pasarela de pago<span class="nt">&lt;/p&gt;</span>
-                    <span class="nt">&lt;/div&gt;</span>
-                <span class="nt">&lt;/div&gt;</span>
-                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-6&quot;</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;botonera__accion&quot;</span><span class="nt">&gt;</span>
-                        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-lg btn-block botonera__accion__boton&quot;</span><span class="nt">&gt;</span>Reservar →<span class="nt">&lt;/a&gt;</span>
-                        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;botonera__accion__texto-ayuda&quot;</span><span class="nt">&gt;</span>Podrás realizar el pago hasta 2 días antes de la fecha de la reserva<span class="nt">&lt;/p&gt;</span>
-                    <span class="nt">&lt;/div&gt;</span>
-                <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4 col-sm-push-6&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;botonera__accion&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-lg btn-block botonera__accion__boton&quot;</span><span class="nt">&gt;</span>Continuar →<span class="nt">&lt;/a&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4 col-sm-pull-8 col-lg-3 col-lg-pull-6&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4 col-sm-pull-2&quot;</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;botonera__accion&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-lg btn-link btn-block botonera__accion__boton&quot;</span><span class="nt">&gt;</span>← Revisa y compra tu cupón<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-lg btn-link btn-block botonera__accion__boton&quot;</span><span class="nt">&gt;</span>← Todas las entradas<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/div&gt;</span> 
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div></div></div>
+<h2>Ejemplo con tres botones y textos de ayuda</h2>
+<div class="codeExample"><div class="exampleOutput"><div class="botonera">
+    <div class="row">
+        <div class="col-sm-4 col-sm-push-4">
+            <div class="botonera__accion">
+                <a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Pagar entradas →</a>
+                <p class="botonera__accion__texto-ayuda">Serás dirigido a la pasarela de pago</p>
+            </div>
+        </div>
+        <div class="col-sm-4 col-sm-push-4">
+            <div class="botonera__accion">
+                <a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Reservar →</a>
+                <p class="botonera__accion__texto-ayuda">Podrás realizar el pago hasta 2 días antes de la fecha de la reserva</p>
+            </div>
+        </div>
+        <div class="col-sm-4 col-sm-pull-8">
+            <div class="botonera__accion">
+                <a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__accion__boton">← Revisar compra y cupón</a>
+            </div> 
+        </div>
+    </div>
+</div>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;botonera&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4 col-sm-push-4&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;botonera__accion&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-lg btn-block botonera__accion__boton&quot;</span><span class="nt">&gt;</span>Pagar entradas →<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;botonera__accion__texto-ayuda&quot;</span><span class="nt">&gt;</span>Serás dirigido a la pasarela de pago<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4 col-sm-push-4&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;botonera__accion&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-lg btn-block botonera__accion__boton&quot;</span><span class="nt">&gt;</span>Reservar →<span class="nt">&lt;/a&gt;</span>
+                <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;botonera__accion__texto-ayuda&quot;</span><span class="nt">&gt;</span>Podrás realizar el pago hasta 2 días antes de la fecha de la reserva<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-4 col-sm-pull-8&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;botonera__accion&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-primary btn-lg btn-link btn-block botonera__accion__boton&quot;</span><span class="nt">&gt;</span>← Revisar compra y cupón<span class="nt">&lt;/a&gt;</span>
             <span class="nt">&lt;/div&gt;</span> 
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -604,6 +628,8 @@
     Aquí va el contenido
 <span class="nt">&lt;/div&gt;</span>
 </pre></div></div></div>
+<p>Podemos añadirle el class <code>.island--margen-pequeno</code> para darle un margen inferior que le separe de los siguientes elementos.</p>
+
 <h1 id="List_group">List group</h1>
 
 <p>Utilizamos el componente <a href="http://getbootstrap.com/components/#list-group">&quot;List group&quot; de Bootstrap</a>, sobreescribiendo alguno de sus estilos y personalizando sus variables.</p>
