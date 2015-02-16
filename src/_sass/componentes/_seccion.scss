@@ -9,7 +9,10 @@ Lo utilizamos para dar estilos a los elementos de tipo <section> y a los posible
 */
 
 .seccion {
-	@include margin-bottom-sm;
+	@include margin-bottom-md;
+	@media (min-width: $screen-sm-min) {
+		@include margin-bottom-sm;
+	}
 }
 
 .seccion--separador-arriba--fino {
@@ -19,4 +22,8 @@ Lo utilizamos para dar estilos a los elementos de tipo <section> y a los posible
 
 .seccion--separador-abajo--fino {
 	border-bottom: 1px solid $border-color;
+}
+
+.seccion__cabecera {
+	@include margin-bottom-sm;
 }

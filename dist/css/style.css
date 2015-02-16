@@ -951,7 +951,7 @@ h4, .h4 {
   font-size: 20px; }
 
 h5, .h5 {
-  font-size: 16px; }
+  font-size: 18px; }
 
 h6, .h6 {
   font-size: 16px; }
@@ -3841,10 +3841,10 @@ button.close {
 
 .modal-body {
   position: relative;
-  padding: 15px; }
+  padding: 30px; }
 
 .modal-footer {
-  padding: 15px;
+  padding: 30px;
   text-align: right;
   border-top: 1px solid #e5e5e5; }
   .modal-footer:before, .modal-footer:after {
@@ -4608,18 +4608,18 @@ h4, .h4 {
       font-size: 20px; } }
 
 h5, .h5 {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 0;
   font-family: 'PFDinTextPro-Regular', Helvetica, Arial, sans-serif; }
   @media (min-width: 768px) {
     h5, .h5 {
-      font-size: 16px; } }
+      font-size: 18px; } }
   @media (min-width: 992px) {
     h5, .h5 {
-      font-size: 16px; } }
+      font-size: 18px; } }
   @media (min-width: 1200px) {
     h5, .h5 {
-      font-size: 16px; } }
+      font-size: 18px; } }
 
 h6, .h6 {
   font-size: 16px;
@@ -5616,7 +5616,10 @@ Lo utilizamos para dar estilos a los elementos de tipo <section> y a los posible
 
 */
 .seccion {
-  margin-bottom: 30px; }
+  margin-bottom: 45px; }
+  @media (min-width: 768px) {
+    .seccion {
+      margin-bottom: 30px; } }
 
 .seccion--separador-arriba--fino {
   padding-top: 30px;
@@ -5624,6 +5627,9 @@ Lo utilizamos para dar estilos a los elementos de tipo <section> y a los posible
 
 .seccion--separador-abajo--fino {
   border-bottom: 1px solid #ddd; }
+
+.seccion__cabecera {
+  margin-bottom: 30px; }
 
 /*doc
 ---

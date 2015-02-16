@@ -15,42 +15,43 @@ title: Tus datos
 		<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 
 			{% include checkout-resumen-compra-finalgrupos.html %}	
-
-			<div class="island island--xs island--margen-pequeno bg-info">
-				<div class="row">
-					<div class="col-sm-12">
-						<p><strong>Para comprar o reservar entradas de grupo, debes estar registrado:</strong></p>
-					</div>
-				</div>
+			
+			<div class="alert alert-warning">
+				<p>Para comprar o reservar entradas de grupo, <strong>debes estar registrado</strong>:</p>
 			</div>
+			<div class="row">
+				<div class="col-sm-6"> 
+					<section class="seccion">
+						<header class="seccion__cabecera">
+							<h2 class="panel-body__titulo">Regístrate</h2>
+							<p class="h5">Si es la primera vez que compras entradas</p>
+						</header>
+						
+						{% include checkout-formulario-registro.html %}
 
-			<div>
-				<div class="row">
-					<div class="col-sm-6">
-						<h2 class="panel-body__titulo">Regístrate</h2>
-						<p>Si es la primera vez que compras entradas</p> 
-
-						{% include checkout-formulario-registro.html %}	
-					</div>
-					<div class="col-sm-6">
-						<h2 class="panel-body__titulo">Inicia Sesión</h2> 
-						<p>Si ya estas registrado</p> 
-
+					</section>
+				</div>
+				<div class="col-sm-6">
+					<section class="seccion">
+						<header class="seccion__cabecera">
+							<h2 class="panel-body__titulo">Inicia Sesión</h2> 
+							<p class="h5">Si ya estas registrado</p>
+						</header>
+						
 						{% include checkout-formulario-inicio.html %}	
-					</div>
+
+					</section>
 				</div>
 			</div>
-
 		</div>
 	</div>		
-
 	<div class="botonera">
 		<div class="row">
 			<div class="col-lg-10 col-lg-offset-1">
 				<div class="row">
 					<div class="col-sm-4 col-sm-push-6">
 						<div class="botonera__accion">
-							<a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Completar compra →</a>
+							<a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton disabled">Completar compra →</a>
 						</div>
 					</div>
 					<div class="col-sm-4 col-sm-pull-2">
@@ -62,5 +63,4 @@ title: Tus datos
 			</div>
 		</div>
 	</div>
-
 </div>

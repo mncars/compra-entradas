@@ -33,7 +33,7 @@ $font-size-h1:            	44px;
 $font-size-h2:            	24px;
 $font-size-h3:            	22px;
 $font-size-h4:            	20px;
-$font-size-h5:            	16px;
+$font-size-h5:            	18px;
 $font-size-h6:            	16px;
 
 $headings-font-weight:    	normal;
@@ -83,6 +83,7 @@ $state-danger-bg:           #f3838f;
 $state-danger-text:         darken($state-danger-bg, 50%);
 $state-danger-border:       $state-danger-bg;
 
+$modal-inner-padding:       30px;
 
 /*
 	Variables propias
