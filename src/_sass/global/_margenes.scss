@@ -21,6 +21,10 @@ NOTA: Es recomendable no abusar de estas clases ya que son demasiado granulares.
 
 */
 
+.sin-margen {
+	@include no-margin-bottom;
+}
+
 .margen-muy-pequeno {
 	@include margin-bottom-xs;
 }
