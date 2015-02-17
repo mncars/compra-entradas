@@ -4962,6 +4962,10 @@ Igual que la anterior pero sin bordes y con menos celdas
 .rejilla--tabla__dato {
   font-weight: bold; }
 
+@media print {
+  .rejilla--tabla__columna, .col-sm-2, .col-sm-4 {
+    width: 50% !important; } }
+
 /*doc
 ---
 title: Panels
