@@ -225,3 +225,14 @@ Igual que la anterior pero sin bordes y con menos celdas
 	font-weight:bold;
 }
 
+@media print {
+
+    .rejilla--tabla .rejilla--tabla__columna,   .rejilla--tabla .col-sm-2,   .rejilla--tabla .col-sm-4{
+    	width: 50%!important; 
+    	float:left!important;
+    }
+
+     .rejilla--tabla  .rejilla--tabla__fila {
+     	padding: 3px 0!important;
+     }
+}

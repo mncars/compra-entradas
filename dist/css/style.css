@@ -4788,6 +4788,39 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 <input id="input-fecha-1" class="form-control input-lg input-xlg" type="text" value="Lunes, 16 febrero 2015">
 ```
 
+##formulario en linea
+```html_example
+
+<div class="form-inline">
+		<div class="form-group">
+			<span class="h3">Buscar reservas</span>
+			<label for="input-date1" class="control-label">desde</label>		
+			<input type="date" class="form-control" id="input-date1">	
+		</div>
+		<div class="form-group">
+			<label for="input-date2" class="control-label">Hasta</label>	
+			<input type="date" class="form-control" id="input-date2">
+		
+		</div>
+		<div class="form-group">
+			<label for="input-localizador" class="control-label">localizador</label>	
+			<input type="text" class="form-control" id="input-localizador" >	
+		</div>
+		<div class="form-group">
+			<label for="select-pais-1" class="control-label">Estado</label>
+
+			<select id="select-pais-1" class="form-control">
+				<option>Todos</option>
+				<option>Pagadas</option>			
+			</select>
+		</div>
+		<div class="form-group">
+			<a href="" class="btn btn-primary btn-md btn-block botonera__accion__boton">Buscar</a>
+		</div>
+	</div>
+```
+
+
 */
 @media (min-width: 768px) {
   .input-xlg {
@@ -4802,6 +4835,12 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
   padding-right: 12px;
   padding-left: 12px;
   background-color: rgba(0, 0, 0, 0.15); }
+
+.form-inline {
+  background-color: #f6f6f6;
+  padding: 15px; }
+  .form-inline label {
+    font-size: 12px; }
 
 /*doc
 ---
@@ -4996,6 +5035,15 @@ Igual que la anterior pero sin bordes y con menos celdas
 /*Regilla tabla de datos*/
 .rejilla--tabla__dato {
   font-weight: bold; }
+
+@media print {
+  .rejilla--tabla .rejilla--tabla__columna, .rejilla--tabla .col-sm-2, .rejilla--tabla .col-sm-4 {
+    width: 50% !important;
+    float: left !important; }
+
+  .rejilla--tabla .rejilla--tabla__fila {
+    padding: 3px 0 !important; }
+ }
 
 /*doc
 ---
@@ -5590,9 +5638,12 @@ Permite añadir una serie de botones que se colocan en función del uso que haga
 				<a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__accion__boton">← Revisar compra y cupón</a>
 			</div> 
 		</div>
+
+
 	</div>
 </div>
 ```
+
 
 */
 .botonera {
@@ -5650,6 +5701,51 @@ Lo utilizamos para dar estilos a los elementos de tipo <section> y a los posible
 
 .seccion__cabecera {
   margin-bottom: 30px; }
+
+/*doc
+---
+title: Panels
+category: Componentes
+---
+
+Utilizamos el componente ["Tabs" de Bootstrap](http://getbootstrap.com/components/#tabs), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+
+```html_example
+<div role="tabpanel" class="tabpanel">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Mis reservas</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Mis compras</a></li>
+  
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+			
+			Hola
+	
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+
+    	Adios
+
+    </div>
+  </div>
+
+</div>
+```
+
+*/
+.tabpanel {
+  margin-bottom: 30px; }
+
+.tab-content {
+  padding: 30px;
+  border-top: none;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc; }
 
 /*doc
 ---
