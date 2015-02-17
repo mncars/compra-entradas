@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="robots" content="noindex">
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!-- iOS icons -->
+<!--
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/touch/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/touch/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/touch/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/img/touch/apple-touch-icon-57x57-precomposed.png">
+-->
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<!--
+<meta name="msapplication-TileImage" content="/img/touch/ms-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#980165">
+-->
+
+<!-- Generic Icon -->
+<!--
+<link rel="shortcut icon" href="/img/touch/touch-icon-57x57.png">
+-->
+
+<!-- Chrome Add to Homescreen -->
+<!--
+<link rel="shortcut icon" sizes="196x196" href="/img/touch/touch-icon-196x196.png">
+
+<meta name="apple-mobile-web-app-title" content="Self Bank">
+-->
+
+<link rel="stylesheet" href="css/style.css">
+
+
+
+<!-- Html5 old IE fallback -->
+<!--[if lt IE 9]>
+    <script src="/vendor/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="/vendor/respondJs/dest/respond.min.js"></script>
+<![endif]-->
+
+<script src="/vendor/modernizr/modernizr.js"></script>
+        
+    </head>
+    <body>
+
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header>
+	<div class="container">
+		<nav class="navegacion-principal">
+			<div class="row">
+				<div class="col-sm-6 col-sm-push-6 col-md-5 col-md-push-7 col-lg-4 col-lg-push-8">
+					<div class="navegacion-principal__grupo-botones">
+						<div class="btn-group btn-group-justified btn-group-sm">
+							<a href="#" class="btn btn-default navegacion-principal__grupo-botones__boton">Todas las entradas</a>
+							<a href="#" class="btn btn-default navegacion-principal__grupo-botones__boton">Tus compras/reservas</a>
+						</div>		
+					</div>
+				</div>
+				<div class="col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5 col-lg-8 col-lg-pull-4">
+					<div class="navegacion-principal__cabecera">
+						<a class="navegacion-principal__cabecera__logo" href="#">
+							<span class="sr-only">Museo Nacional Centro de Arte Reina Sofía</span>
+						</a>
+						<p class="navegacion-principal__cabecera__slogan">Compra y reserva de entradas</p>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    
+                    <h1>Hemos guardado tu reserva</h1>	
+<div class="island island--xs island--margen-pequeno bg-success">
+  <p>Recuerda que puedes realizar el pago hasta 48 horas antes de la fecha de la visita</p>
+</div>
+
+
+<div role="tabpanel" class="tabpanel">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Mis reservas</a></li>
+    <li role="presentation"  class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Mis compras</a></li>
+  
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+
+    		<section class="seccion">
+	<div class="form-inline">
+
+		<p class="h4">Buscar reservas</p>
+		<div class="form-group">
+		
+			<label for="input-date1" class="control-label">desde</label>		
+			<input type="date" class="form-control" id="input-date1">	
+		</div>
+		<div class="form-group">
+			<label for="input-date2" class="control-label">Hasta</label>	
+			<input type="date" class="form-control" id="input-date2">
+		
+		</div>
+		<div class="form-group">
+			<label for="input-localizador" class="control-label">localizador</label>	
+			<input type="text" class="form-control" id="input-localizador" >	
+		</div>
+		<div class="form-group">
+			<label for="select-pais-1" class="control-label">Estado</label>
+
+			<select id="select-pais-1" class="form-control">
+				<option>Todos</option>
+				<option>Pagadas</option>			
+			</select>
+		</div>
+		<div class="form-group">
+			<a href="" class="btn btn-primary btn-md btn-block botonera__accion__boton">Buscar</a>
+		</div>
+	</div>
+</section>
+
+			
+			<div class="rejilla--tabla">
+	<div class="rejilla--tabla__fila row hidden-xs">
+		 <div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1"><input type="checkbox" /> </div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1">Tipo entrada</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Localizador</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Pedido</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Fecha de compra</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Fecha de visita</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Gastos de gestión</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Dto.</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Cant.</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Importe</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Estado</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Acciones</div>
+	</div>
+
+	<div class="rejilla--tabla__fila row">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1"><input type="checkbox" /> </div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <br><em>Kunstmuseum Basel</em></span></div>
+
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			R08360
+		</div>
+
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			1587458704
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			17/2/2015
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			27/2/2015
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			3.2€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			-7.5€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			8
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			19.70€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			Activa
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			<a href="" class="btn btn-primary btn-xs btn-block botonera__accion__boton">Pagar</a>
+			<a href="" class="btn btn-primary btn-xs btn-block botonera__accion__boton">Editar</a>
+			<a href="" class="btn btn-primary btn-xs btn-link botonera__accion__boton">Anular</a>
+		</div>
+	</div>
+	<div class="rejilla--tabla__fila row">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1"><input type="checkbox" /> </div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1">Entrada Grupo Turístico colección</div>
+
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			R08360
+		</div>
+
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			1587458704
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			17/2/2015
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			27/2/2015
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			3.2€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			-7.5€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			8
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			19.70€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			Activa
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			<a href="" class="btn btn-primary btn-xs btn-block botonera__accion__boton">Pagar</a>
+			<a href="" class="btn btn-primary btn-xs btn-block botonera__accion__boton">Editar</a>
+			<a href="" class="btn btn-primary btn-xs btn-link botonera__accion__boton">Anular</a>
+		</div>
+	</div>
+	<div class="rejilla--tabla__fila row">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-12">
+			<span>Mostrando</span>
+			<select>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+			</select>
+
+			<span>de 12</span>
+		</div>
+	</div>	
+	
+</div>
+	
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+
+    	<section class="seccion">
+	<div class="form-inline">
+
+		<p class="h4">Buscar compras</p>
+		<div class="form-group">
+		
+			<label for="input-date1" class="control-label">desde</label>		
+			<input type="date" class="form-control" id="input-date1">	
+		</div>
+		<div class="form-group">
+			<label for="input-date2" class="control-label">Hasta</label>	
+			<input type="date" class="form-control" id="input-date2">
+		
+		</div>
+		<div class="form-group">
+			<label for="input-localizador" class="control-label">localizador</label>	
+			<input type="text" class="form-control" id="input-localizador" >	
+		</div>
+		<div class="form-group">
+			<label for="select-pais-1" class="control-label">Estado</label>
+
+			<select id="select-pais-1" class="form-control">
+				<option>Todos</option>
+				<option>Pagadas</option>			
+			</select>
+		</div>
+		<div class="form-group">
+			<a href="" class="btn btn-primary btn-md btn-block botonera__accion__boton">Buscar</a>
+		</div>
+	</div>
+</section>
+
+
+    	<div class="rejilla--tabla">
+	<div class="rejilla--tabla__fila row hidden-xs">
+		 <div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1"><input type="checkbox" /> </div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1">Tipo entrada</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Localizador</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Pedido</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Fecha de compra</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Fecha de visita</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Gastos de gestión</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Dto.</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Cant.</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Importe</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Estado</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Acciones</div>
+	</div>
+
+	<div class="rejilla--tabla__fila row">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1"><input type="checkbox" /> </div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <br><em>Kunstmuseum Basel</em></span></div>
+
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			R08360
+		</div>
+
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			1587458704
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			17/2/2015
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			27/2/2015
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			3.2€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			-7.5€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			8
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			19.70€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			Activa
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			<a href="" class="btn btn-primary btn-xs btn-block botonera__accion__boton">Factura</a>
+			<a href="" class="btn btn-primary btn-xs btn-block botonera__accion__boton">Imprimir</a>
+			<a href="" class="btn btn-primary btn-xs btn-block botonera__accion__boton">Email</a>
+		</div>
+	</div>
+	<div class="rejilla--tabla__fila row">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1"><input type="checkbox" /> </div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1">Entrada Grupo Turístico colección</div>
+
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			R08360
+		</div>
+
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			1587458704
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			17/2/2015
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			27/2/2015
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			3.2€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			-7.5€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			8
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			19.70€
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			Activa
+		</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+			<a href="" class="btn btn-primary btn-xs btn-block botonera__accion__boton">Factura</a>
+			<a href="" class="btn btn-primary btn-xs btn-block botonera__accion__boton">Imprimir</a>
+			<a href="" class="btn btn-primary btn-xs btn-block botonera__accion__boton">Email</a>
+		</div>
+	</div>
+	
+	
+</div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="pie-principal">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<p><a href="" class="btn btn-default btn-sm">Horarios y Tarifas</a></p>
+			</div>
+			<div class="col-md-10">
+				<ul class="pie-principal__menu list-inline">
+					<li><a href="">Condiciones y términos para la compra</a></li>
+					<li>Centro de atención al visitante: <a href="tel: +34902364383" class="enlace--telefono">tel. +34 902 364 383</a></li>
+					<li><a href="mailto:reservasreinasofia@iacpos.com">reservasreinasofia@iacpos.com</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+</footer>
+
+<script src="./js/console.js"></script>
+<script src="./vendor/jquery/dist/jquery.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+<script>
+
+$(function () {
+	$('[data-toggle="popover"]').popover()
+})
+
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--
+	<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');ga('send','pageview');
+	</script>
+-->
+        
+    </body>
+</html>

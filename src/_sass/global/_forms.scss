@@ -12,6 +12,39 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 <input id="input-fecha-1" class="form-control input-lg input-xlg" type="text" value="Lunes, 16 febrero 2015">
 ```
 
+##formulario en linea
+```html_example
+
+<div class="form-inline">
+		<div class="form-group">
+			<span class="h3">Buscar reservas</span>
+			<label for="input-date1" class="control-label">desde</label>		
+			<input type="date" class="form-control" id="input-date1">	
+		</div>
+		<div class="form-group">
+			<label for="input-date2" class="control-label">Hasta</label>	
+			<input type="date" class="form-control" id="input-date2">
+		
+		</div>
+		<div class="form-group">
+			<label for="input-localizador" class="control-label">localizador</label>	
+			<input type="text" class="form-control" id="input-localizador" >	
+		</div>
+		<div class="form-group">
+			<label for="select-pais-1" class="control-label">Estado</label>
+
+			<select id="select-pais-1" class="form-control">
+				<option>Todos</option>
+				<option>Pagadas</option>			
+			</select>
+		</div>
+		<div class="form-group">
+			<a href="" class="btn btn-primary btn-md btn-block botonera__accion__boton">Buscar</a>
+		</div>
+	</div>
+```
+
+
 */
 
 .input-xlg {
@@ -29,4 +62,14 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 	padding-right: $padding-base-horizontal;
 	padding-left: $padding-base-horizontal;
 	background-color: rgba(0,0,0,.15);
+}
+
+
+
+.form-inline {
+	background-color:$gray-lighter;
+	padding:$space-unit-xs;
+	label{
+		font-size: $font-size-small;
+	}
 }
