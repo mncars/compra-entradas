@@ -87,24 +87,25 @@
                     <div class="island--sm">
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-                                <h1>Reserva confirmada</h1>	
-<div class="island island--xs island--margen-pequeno bg-success">
-  <p>Puedes imprimirla o dar este localizador en taquilla: <strong>R083063</strong></p>
+                                <div class="island island--sm island--margen-pequeno bg-success">
+	<h1 class="margen-muy-pequeno">Reserva confirmada</h1>
+  	<p class="lead hidden-print">Puedes <a href="" class="enlace--subrayado">imprimirla</a> o dar este localizador en taquilla: <strong>R083063</strong></p>
 </div>
 
-<div class="rejilla--tabla">
+<p class="lead visible-print-block">Localizador: <strong>R083063</strong></p>
+
+<div class="rejilla--tabla hidden-print">
 	<div class="rejilla--tabla__fila row hidden-xs">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-4">Entrada</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Fecha y hora</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-3">Entrada</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Para fecha y hora</div>
 		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Precio</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Gastos de gestión</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Gastos gestión</div>
 		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Dto.</div>
 		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Cant.</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Importe</div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Importe</div>
 	</div>
-
 	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-4">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <br><em>Kunstmuseum Basel</em></span></div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-3">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <br><em>Kunstmuseum Basel</em></span></div>
 		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
 			<span class="fuente-negrita visible-xs-inline">Fecha y hora</span> 19/02/2015
 		</div>
@@ -120,77 +121,106 @@
 		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
 			<span class="fuente-negrita visible-xs-inline">Cant.</span> 8
 		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
 			<span class="fuente-negrita visible-xs-inline">Importe</span> 40.00€
 		</div>
 	</div>
-	
 	<div class="rejilla--tabla__fila row">
 		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-xs-6 col-sm-10">Total</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1 text-right hidden-xs"><strong>8</strong></div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-xs-4 col-sm-1 text-right"><strong>46.00€</strong></div>
+		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-xs-6 col-sm-2 text-right"><strong>46.00€</strong></div>
 	</div>
-</div>	
+</div>
+
+<table class="table">
+	<tr>
+		<th>Entrada</th>
+		<th>Para fecha y hora</th>
+		<th>Precio</th>
+		<th>Gastos gestión</th>
+		<th>Dto.</th>
+		<th>Cant.</th>
+		<th>Importe</th>
+	</tr>
+	<tr>
+		<td><span class="fuente-negrita">Entrada individual</span> <br>Exposiciones temporales + <br><em>Kunstmuseum Btdl</em></td>
+		<td>19/02/2015</td>
+		<td>8€</td>
+		<td>6€</td>
+		<td>-20€</td>
+		<td>8</td>
+		<td>40.00€</td>
+	</tr>
+	<tr>
+		<td colspan="6"><span class="fuente-negrita">Total</span></td>
+		<td><span class="fuente-negrita">46.00€</span></td>
+	</tr>
+</table>
 
 <h2>Datos del visitante</h2>	
 
 <div class="rejilla--tabla rejilla--tabla--sin-bordes">
-<div class="island island--xs bg-info">	
-	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna col-sm-2">Nombre</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__dato col-sm-4">Susana</div>
-		<div class="rejilla--tabla__columna col-sm-2">Direccion</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__dato col-sm-4">Pol. Ind mutilva baja</div>	
+	<div class="island island--xs island--margen-pequeno bg-info">
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="rejilla--tabla__fila row">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera col-sm-4">Nombre</div>
+					<div class="rejilla--tabla__columna col-sm-8">Susana</div>
+				</div>
+				<div class="rejilla--tabla__fila row ">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera col-sm-4">Responsable</div>
+					<div class="rejilla--tabla__columna col-sm-8">Susana</div>
+				</div>
+				<div class="rejilla--tabla__fila row ">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera col-sm-4">Teléfono</div>
+					<div class="rejilla--tabla__columna col-sm-8">666558412</div>
+				</div>
+				<div class="rejilla--tabla__fila row ">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera col-sm-4">Email</div>
+					<div class="rejilla--tabla__columna col-sm-8">susana.arrizabalaga@gmail.com</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="rejilla--tabla__fila row">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera col-sm-4">Direccion</div>
+					<div class="rejilla--tabla__columna col-sm-8">Pol. Ind mutilva baja</div>	
+				</div>
+				<div class="rejilla--tabla__fila row ">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera col-sm-4">Población</div>
+					<div class="rejilla--tabla__columna col-sm-8">Mutilva baja</div>	
+				</div>
+				<div class="rejilla--tabla__fila row ">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera col-sm-4">Código postal</div>
+					<div class="rejilla--tabla__columna col-sm-8">31192</div>	
+				</div>
+				<div class="rejilla--tabla__fila row ">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera col-sm-4">Provincia</div>
+					<div class="rejilla--tabla__columna col-sm-8">Navarra</div>	
+				</div>
+				<div class="rejilla--tabla__fila row">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera col-sm-4">Pais</div>
+					<div class="rejilla--tabla__columna col-sm-8">España</div>	
+				</div>		
+			</div>
+		</div>
 	</div>
-	<div class="rejilla--tabla__fila row ">
-		<div class="rejilla--tabla__columna col-sm-2">Responsable</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__dato col-sm-4">Susana</div>
-		<div class="rejilla--tabla__columna col-sm-2">Población</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__dato col-sm-4">Mutilva baja</div>	
-	</div>
-	<div class="rejilla--tabla__fila row ">
-		<div class="rejilla--tabla__columna col-sm-2">Teléfono</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__dato col-sm-4">666558412</div>
-		<div class="rejilla--tabla__columna col-sm-2">Código postal</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__dato col-sm-4">31192</div>	
-	</div>
-	<div class="rejilla--tabla__fila row ">
-		<div class="rejilla--tabla__columna col-sm-2">Email</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__dato col-sm-4">susana.arrizabalaga@gmail.com</div>
-		<div class="rejilla--tabla__columna col-sm-2">Provincia</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__dato col-sm-4">Navarra</div>	
-	</div>
-	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna col-sm-offset-6 col-sm-2">Pais</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__dato col-sm-4">España</div>	
-	</div>
-</div>
 </div>	
 
 
 <div class="botonera">
 	<div class="row">
-		<div class="col-sm-4 col-sm-push-6">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Imprimir reserva</a>
-			</div>
+		<div class="col-sm-4 col-sm-offset-2">
+			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Imprimir reserva</a>
 		</div>
-		<div class="col-sm-4 col-sm-pull-2">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Imprimir factura</a>
-			</div> 
+		<div class="col-sm-4">
+			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Imprimir factura</a>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-sm-4 col-sm-push-6">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-default btn-lg btn-block botonera__accion__boton">Ver todas las entradas →</a>
-			</div>
+		<div class="col-sm-4 col-sm-offset-2">
+			<a href="" class="btn btn-default btn-block botonera__boton">Ver todas las entradas</a>
 		</div>
-		<div class="col-sm-4 col-sm-pull-2">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-default btn-lg btn-block botonera__accion__boton">Ir a la web del museo →</a>
-			</div> 
+		<div class="col-sm-4">
+			<a href="" class="btn btn-default btn-block botonera__boton">Ir a la web del museo</a>
 		</div>
 	</div>
 </div>        

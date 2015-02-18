@@ -12,14 +12,10 @@ Permite añadir una serie de botones que se colocan en función del uso que haga
 <div class="botonera">
 	<div class="row">
 		<div class="col-sm-4 col-sm-push-6">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Continuar →</a>
-			</div>
+			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Continuar →</a>
 		</div>
 		<div class="col-sm-4 col-sm-pull-2">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__accion__boton">← Todas las entradas</a>
-			</div> 
+			<a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__boton">← Todas las entradas</a>
 		</div>
 	</div>
 </div>
@@ -31,24 +27,16 @@ Permite añadir una serie de botones que se colocan en función del uso que haga
 <div class="botonera">
 	<div class="row">
 		<div class="col-sm-4 col-sm-push-4">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Pagar entradas →</a>
-				<p class="botonera__accion__texto-ayuda">Serás dirigido a la pasarela de pago</p>
-			</div>
+			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Pagar entradas →</a>
+			<p class="botonera__texto-ayuda">Serás dirigido a la pasarela de pago</p>
 		</div>
 		<div class="col-sm-4 col-sm-push-4">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Reservar →</a>
-				<p class="botonera__accion__texto-ayuda">Podrás realizar el pago hasta 2 días antes de la fecha de la reserva</p>
-			</div>
+			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Reservar →</a>
+			<p class="botonera__texto-ayuda">Podrás realizar el pago hasta 2 días antes de la fecha de la reserva</p>
 		</div>
 		<div class="col-sm-4 col-sm-pull-8">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__accion__boton">← Revisar compra y cupón</a>
-			</div> 
+			<a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__boton">← Revisar compra y cupón</a>
 		</div>
-
-
 	</div>
 </div>
 ```
@@ -57,19 +45,20 @@ Permite añadir una serie de botones que se colocan en función del uso que haga
 */
 
 .botonera {
-	@include padding-top-sm;
+	@include padding-top-sm;	
 }
 
-.botonera__accion {
-	@include margin-bottom-xs;
-}
-
-.botonera__accion__boton {
+.botonera__boton {
 	white-space: normal;
+	@include margin-bottom-xs;
+	+ .botonera__boton {
+		@include margin-left-xs;
+	}
 }
 
-.botonera__accion__texto-ayuda {
-	padding-top: 10px;
+.botonera__texto-ayuda {
+	margin-top: -5px;
+	@include margin-bottom-xs;
 	@include font-size-small;
 	color: darken($gray-light, 20%);
 	@media (max-width: $screen-xs-max) {
@@ -77,11 +66,3 @@ Permite añadir una serie de botones que se colocan en función del uso que haga
 	}
 
 }
-
-
-@media print {
-    .botonera{
-    	display: none;
-    }
-}
-

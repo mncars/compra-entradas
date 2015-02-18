@@ -1,0 +1,48 @@
+/*doc
+---
+title: Estilos para imprimir
+category: Global
+---
+
+Además de sobreescribir algunos estilos para que se vea correctamente la página al imprimir, utilizamos el mixin `responsive-invisibility` para ocultar los elementos que no son necesarios para la impresión.
+
+*/
+
+@media print {
+	@include responsive-invisibility('.navegacion-principal, .pie-principal, .botonera');
+}
+
+body {
+	@media print {
+		background-color: #fff;
+	}
+}
+
+.bg-primary,
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger {
+	@media print {
+	    background-color: transparent;  
+	}
+}
+
+.island {
+	@media print {
+		@include no-padding;
+	}
+}
+
+.panel {
+	@media print {
+		box-shadow: none;
+    	border: none;
+	}
+}
+
+.rejilla--tabla__fila {
+	@media print {
+    	padding: 5px 0!important;
+	}
+}

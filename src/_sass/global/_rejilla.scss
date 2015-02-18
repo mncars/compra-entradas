@@ -179,7 +179,7 @@ Igual que la anterior pero sin bordes y con menos celdas
 
 .rejilla--tabla__columna {
 	@media (min-width: $screen-sm-min) {
-		@include padding-xs;	
+		padding: $space-unit-xs 5px;
 	}
 }
 
@@ -206,6 +206,7 @@ Igual que la anterior pero sin bordes y con menos celdas
 }
 
 // Rejilla con aspecto de tabla sin bordes
+
 .rejilla--tabla--sin-bordes {
 	border: none;
 	.rejilla--tabla__fila {
@@ -218,21 +219,4 @@ Igual que la anterior pero sin bordes y con menos celdas
 			padding: 5px 0;
 		}
 	}
-}
-
-/*Regilla tabla de datos*/
-.rejilla--tabla__dato {
-	font-weight:bold;
-}
-
-@media print {
-
-    .rejilla--tabla .rejilla--tabla__columna,   .rejilla--tabla .col-sm-2,   .rejilla--tabla .col-sm-4{
-    	width: 50%!important; 
-    	float:left!important;
-    }
-
-     .rejilla--tabla  .rejilla--tabla__fila {
-     	padding: 3px 0!important;
-     }
 }

@@ -4550,6 +4550,9 @@ Además, disponemos de las siguientes clases para cambiar la apariencia de un t�
 .fuente-normal {
   font-weight: normal; }
 
+.fuente-subrayado {
+  font-weight: normal; }
+
 h1, .h1 {
   font-size: 40px;
   margin-top: 0;
@@ -4815,7 +4818,7 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 			</select>
 		</div>
 		<div class="form-group">
-			<a href="" class="btn btn-primary btn-md btn-block botonera__accion__boton">Buscar</a>
+			<a href="" class="btn btn-primary btn-md btn-block botonera__boton">Buscar</a>
 		</div>
 	</div>
 ```
@@ -5004,7 +5007,7 @@ Igual que la anterior pero sin bordes y con menos celdas
 
 @media (min-width: 768px) {
   .rejilla--tabla__columna {
-    padding: 15px; } }
+    padding: 15px 5px; } }
 
 .rejilla--tabla__columna--cabecera {
   font-weight: bold; }
@@ -5031,19 +5034,6 @@ Igual que la anterior pero sin bordes y con menos celdas
     @media (min-width: 768px) {
       .rejilla--tabla--sin-bordes .rejilla--tabla__columna {
         padding: 5px 0; } }
-
-/*Regilla tabla de datos*/
-.rejilla--tabla__dato {
-  font-weight: bold; }
-
-@media print {
-  .rejilla--tabla .rejilla--tabla__columna, .rejilla--tabla .col-sm-2, .rejilla--tabla .col-sm-4 {
-    width: 50% !important;
-    float: left !important; }
-
-  .rejilla--tabla .rejilla--tabla__fila {
-    padding: 3px 0 !important; }
- }
 
 /*doc
 ---
@@ -5136,15 +5126,6 @@ Utilizamos el componente ["Panels" de Bootstrap](http://getbootstrap.com/compone
 
 .list-group + .panel-heading {
   border-radius: 0; }
-
-@media print {
-  body {
-    background-color: #fff; }
-
-  .panel {
-    box-shadow: none;
-    border: none; }
- }
 
 /*doc
 ---
@@ -5318,12 +5299,6 @@ Podemos añadirle el class `.island--margen-pequeno` para darle un margen inferi
   @media (max-width: 767px) {
     .island--lg {
       padding: 15px; } }
-
-@media print {
-  .island {
-    display: block;
-    background-color: none; }
- }
 
 .island--margen-pequeno {
   margin-bottom: 30px; }
@@ -5603,14 +5578,10 @@ Permite añadir una serie de botones que se colocan en función del uso que haga
 <div class="botonera">
 	<div class="row">
 		<div class="col-sm-4 col-sm-push-6">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Continuar →</a>
-			</div>
+			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Continuar →</a>
 		</div>
 		<div class="col-sm-4 col-sm-pull-2">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__accion__boton">← Todas las entradas</a>
-			</div> 
+			<a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__boton">← Todas las entradas</a>
 		</div>
 	</div>
 </div>
@@ -5622,24 +5593,16 @@ Permite añadir una serie de botones que se colocan en función del uso que haga
 <div class="botonera">
 	<div class="row">
 		<div class="col-sm-4 col-sm-push-4">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Pagar entradas →</a>
-				<p class="botonera__accion__texto-ayuda">Serás dirigido a la pasarela de pago</p>
-			</div>
+			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Pagar entradas →</a>
+			<p class="botonera__texto-ayuda">Serás dirigido a la pasarela de pago</p>
 		</div>
 		<div class="col-sm-4 col-sm-push-4">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-primary btn-lg btn-block botonera__accion__boton">Reservar →</a>
-				<p class="botonera__accion__texto-ayuda">Podrás realizar el pago hasta 2 días antes de la fecha de la reserva</p>
-			</div>
+			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Reservar →</a>
+			<p class="botonera__texto-ayuda">Podrás realizar el pago hasta 2 días antes de la fecha de la reserva</p>
 		</div>
 		<div class="col-sm-4 col-sm-pull-8">
-			<div class="botonera__accion">
-				<a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__accion__boton">← Revisar compra y cupón</a>
-			</div> 
+			<a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__boton">← Revisar compra y cupón</a>
 		</div>
-
-
 	</div>
 </div>
 ```
@@ -5649,33 +5612,29 @@ Permite añadir una serie de botones que se colocan en función del uso que haga
 .botonera {
   padding-top: 30px; }
 
-.botonera__accion {
+.botonera__boton {
+  white-space: normal;
   margin-bottom: 15px; }
+  .botonera__boton + .botonera__boton {
+    margin-left: 15px; }
 
-.botonera__accion__boton {
-  white-space: normal; }
-
-.botonera__accion__texto-ayuda {
-  padding-top: 10px;
+.botonera__texto-ayuda {
+  margin-top: -5px;
+  margin-bottom: 15px;
   font-size: 12px;
   color: #909090; }
   @media (min-width: 768px) {
-    .botonera__accion__texto-ayuda {
+    .botonera__texto-ayuda {
       font-size: 12px; } }
   @media (min-width: 992px) {
-    .botonera__accion__texto-ayuda {
+    .botonera__texto-ayuda {
       font-size: 12px; } }
   @media (min-width: 1200px) {
-    .botonera__accion__texto-ayuda {
+    .botonera__texto-ayuda {
       font-size: 12px; } }
   @media (max-width: 767px) {
-    .botonera__accion__texto-ayuda {
+    .botonera__texto-ayuda {
       text-align: center; } }
-
-@media print {
-  .botonera {
-    display: none; }
- }
 
 /*doc
 ---
@@ -5886,11 +5845,6 @@ category: Módulos
       color: #222222;
       background-color: #c3c3c3; } }
 
-@media print {
-  .navegacion-principal {
-    display: none; }
- }
-
 /*doc
 ---
 title: Pie principal
@@ -5942,7 +5896,37 @@ category: Módulos
       .pie-principal__menu > li {
         display: block; } }
 
+/*doc
+---
+title: Estilos para imprimir
+category: Global
+---
+
+Además de sobreescribir algunos estilos para que se vea correctamente la página al imprimir, utilizamos el mixin `responsive-invisibility` para ocultar los elementos que no son necesarios para la impresión.
+
+*/
 @media print {
-  .pie-principal {
-    display: none; }
+  .navegacion-principal, .pie-principal, .botonera {
+    display: none !important; }
  }
+
+@media print {
+  body {
+    background-color: #fff; } }
+
+@media print {
+  .bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger {
+    background-color: transparent; } }
+
+@media print {
+  .island {
+    padding: 0; } }
+
+@media print {
+  .panel {
+    box-shadow: none;
+    border: none; } }
+
+@media print {
+  .rejilla--tabla__fila {
+    padding: 5px 0 !important; } }

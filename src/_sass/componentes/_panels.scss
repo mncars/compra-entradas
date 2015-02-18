@@ -65,19 +65,3 @@ Utilizamos el componente ["Panels" de Bootstrap](http://getbootstrap.com/compone
 .list-group + .panel-heading {
 	border-radius: 0;
 }
-
-.panel-estatico{
-	//padding: $space-unit-md;
-}
-
-
-@media print {
-	body{
-		background-color: #fff;
-	}
-    .panel{
-    	box-shadow:none;
-    	border:none;
-    }
-}
-

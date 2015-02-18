@@ -67,13 +67,6 @@ Podemos añadirle el class `.island--margen-pequeno` para darle un margen inferi
     }
 }
 
-
-@media print {
-    .island{
-       display: block;
-       background-color:none;
-    }   
-}
 .island--margen-pequeno {
     @include margin-bottom-sm;
 }
