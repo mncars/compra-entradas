@@ -46,3 +46,10 @@ body {
     	padding: 5px 0!important;
 	}
 }
+
+.rejilla--tabla__columna {
+	@media print {
+    	width: 50%;
+    	float: left;
+	}	
+}

@@ -5930,3 +5930,8 @@ Además de sobreescribir algunos estilos para que se vea correctamente la págin
 @media print {
   .rejilla--tabla__fila {
     padding: 5px 0 !important; } }
+
+@media print {
+  .rejilla--tabla__columna {
+    width: 50%;
+    float: left; } }
