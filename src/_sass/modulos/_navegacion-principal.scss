@@ -92,22 +92,31 @@ category: Módulos
 }
 
 .navegacion-principal__grupo-botones {
-	@media (max-width: $screen-xs-max) {
-		margin-left: -15px;
-		margin-right: -15px;
-	}
 	@media (min-width: $screen-sm-min) {
 		@include margin-top-xs;
+		text-align: right;
 	}
 	@media (min-width: $screen-lg-min) {
 		margin-top: 18px;
+	}
+	@media (max-width: $screen-xs-max) {
+		margin-left: -15px;
+		margin-right: -15px;
+		padding: 5px;
+		@include clearfix;
+		background-color: #000;
+		text-align: right;
+	}
+	.btn-default,
+	.btn-primary {
+		@media (max-width: $screen-xs-max) {
+			@include button-variant($gray-light, $gray-dark, $gray-dark);
+		}
 	}
 }
 
 .navegacion-principal__grupo-botones__boton {
 	@media (max-width: $screen-xs-max) {
-		@include button-variant($gray-light, $gray-darker, $gray-dark);
-		font-weight: normal;
-		border-radius: 0!important;
+		border-radius: 0;
 	}
 }
