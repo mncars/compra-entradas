@@ -2859,7 +2859,7 @@ tbody.collapse.in {
       padding: 10px 15px; }
       .nav > li > a:hover, .nav > li > a:focus {
         text-decoration: none;
-        background-color: #f6f6f6; }
+        background-color: #eeeeee; }
     .nav > li.disabled > a {
       color: #c3c3c3; }
       .nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
@@ -2868,7 +2868,7 @@ tbody.collapse.in {
         background-color: transparent;
         cursor: default; }
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background-color: #f6f6f6;
+    background-color: #eeeeee;
     border-color: #3fc2fb; }
   .nav .nav-divider {
     height: 1px;
@@ -2891,8 +2891,8 @@ tbody.collapse.in {
       .nav-tabs > li > a:hover {
         border-color: #f6f6f6 #f6f6f6 #ddd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-      color: #555555;
-      background-color: #f6f6f6;
+      color: #333333;
+      background-color: #fff;
       border: 1px solid #ddd;
       border-bottom-color: transparent;
       cursor: default; }
@@ -4646,46 +4646,6 @@ p + h1, p + h2, p + h3, p + h4, p + h5, p + h6, ul + h1, ul + h2, ul + h3, ul + 
 
 /*doc
 ---
-title: Márgenes
-category: Global
----
-
-
-Si necesitamos darle a un elemento un margen inferior para separarlo de otros, disponemos de las siguientes clases: `margen-muy-pequeno`, `margen-pequeno`, `margen-mediano`, `margen-largo`, `margen-muy-largo`.
-
-```html_example
-<div class="well margen-muy-pequeno">Margen muy pequeño</div>
-<div class="well margen-pequeno">Margen pequeño</div>
-<div class="well margen-mediano">Margen mediano</div>
-<div class="well margen-largo">Margen largo</div>
-<div class="well margen-muy-largo">Margen muy largo</div>
-```
-
-NOTA: Ignora el estilo `.well` , sólo sirve para diferenciar los bloques entre sí.
-
-NOTA: Es recomendable no abusar de estas clases ya que son demasiado granulares. Para dar margenes inferiores a componentes u otros elementos reutilizables es recomendable utilizar los mixins del tipo ["Espacios en blanco"](/docs/mixins.html#Espacios_en_blanco). Estas clases son útiles para dar formato a contenido introducido mediante WYSWYG o en casos en los que no tiene sentido utilizar componentes.
-
-*/
-.sin-margen {
-  margin-bottom: 0; }
-
-.margen-muy-pequeno {
-  margin-bottom: 15px; }
-
-.margen-pequeno {
-  margin-bottom: 30px; }
-
-.margen-mediano {
-  margin-bottom: 45px; }
-
-.margen-largo {
-  margin-bottom: 60px; }
-
-.margen-muy-largo {
-  margin-bottom: 75px; }
-
-/*doc
----
 title: Enlaces
 category: Global
 ---
@@ -4791,40 +4751,11 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 <input id="input-fecha-1" class="form-control input-lg input-xlg" type="text" value="Lunes, 16 febrero 2015">
 ```
 
-##formulario en linea
-```html_example
-
-<div class="form-inline">
-		<div class="form-group">
-			<span class="h3">Buscar reservas</span>
-			<label for="input-date1" class="control-label">desde</label>		
-			<input type="date" class="form-control" id="input-date1">	
-		</div>
-		<div class="form-group">
-			<label for="input-date2" class="control-label">Hasta</label>	
-			<input type="date" class="form-control" id="input-date2">
-		
-		</div>
-		<div class="form-group">
-			<label for="input-localizador" class="control-label">localizador</label>	
-			<input type="text" class="form-control" id="input-localizador" >	
-		</div>
-		<div class="form-group">
-			<label for="select-pais-1" class="control-label">Estado</label>
-
-			<select id="select-pais-1" class="form-control">
-				<option>Todos</option>
-				<option>Pagadas</option>			
-			</select>
-		</div>
-		<div class="form-group">
-			<a href="" class="btn btn-primary btn-md btn-block botonera__boton">Buscar</a>
-		</div>
-	</div>
-```
-
-
 */
+@media (min-width: 768px) {
+  .form-inline .form-group {
+    margin: 5px; } }
+
 @media (min-width: 768px) {
   .input-xlg {
     font-size: 22px; } }
@@ -4838,12 +4769,6 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
   padding-right: 12px;
   padding-left: 12px;
   background-color: rgba(0, 0, 0, 0.15); }
-
-.form-inline {
-  background-color: #f6f6f6;
-  padding: 15px; }
-  .form-inline label {
-    font-size: 12px; }
 
 /*doc
 ---
@@ -4991,6 +4916,21 @@ Igual que la anterior pero sin bordes y con menos celdas
     .rejilla--tabla {
       border-top: 1px solid #ddd; } }
 
+.rejilla--tabla--sin-bordes {
+  border: none; }
+  .rejilla--tabla--sin-bordes .rejilla--tabla__fila {
+    border-bottom: none; }
+  .rejilla--tabla--sin-bordes .rejilla--tabla__columna {
+    padding-left: 0;
+    padding-right: 0; }
+    @media (min-width: 768px) {
+      .rejilla--tabla--sin-bordes .rejilla--tabla__columna {
+        padding: 5px 0; } }
+    .rejilla--tabla--sin-bordes .rejilla--tabla__columna:first-child {
+      padding-left: 15px; }
+    .rejilla--tabla--sin-bordes .rejilla--tabla__columna:last-child {
+      padding-right: 15px; }
+
 .rejilla--tabla__fila {
   margin-left: 0;
   margin-right: 0;
@@ -5004,10 +4944,16 @@ Igual que la anterior pero sin bordes y con menos celdas
       border-bottom-width: 2px; } }
   .rejilla--tabla__fila:last-child {
     border-bottom: none; }
+  .rejilla--tabla__fila > .media {
+    margin-bottom: 0; }
 
 @media (min-width: 768px) {
   .rejilla--tabla__columna {
     padding: 15px 5px; } }
+.rejilla--tabla__columna:first-child {
+  padding-left: 15px; }
+.rejilla--tabla__columna:last-child {
+  padding-right: 15px; }
 
 .rejilla--tabla__columna--cabecera {
   font-weight: bold; }
@@ -5024,16 +4970,9 @@ Igual que la anterior pero sin bordes y con menos celdas
   .rejilla--tabla__columna--derecha {
     text-align: right; } }
 
-.rejilla--tabla--sin-bordes {
-  border: none; }
-  .rejilla--tabla--sin-bordes .rejilla--tabla__fila {
-    border-bottom: none; }
-  .rejilla--tabla--sin-bordes .rejilla--tabla__columna {
-    padding-left: 0;
-    padding-right: 0; }
-    @media (min-width: 768px) {
-      .rejilla--tabla--sin-bordes .rejilla--tabla__columna {
-        padding: 5px 0; } }
+@media (max-width: 767px) {
+  .rejilla--tabla__columna__botonera {
+    padding-top: 15px; } }
 
 /*doc
 ---
@@ -5255,6 +5194,46 @@ Utilizamos el componente ["Alerts" de Bootstrap](http://getbootstrap.com/compone
 */
 .alert {
   margin-bottom: 30px; }
+
+/*doc
+---
+title: Navs
+category: Componentes
+---
+
+Utilizamos el componente ["Navs" de Bootstrap](http://getbootstrap.com/components/#nav), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+
+Además, añadimos la clase `nav-tabs__enlace--lg` para dar estilo a las pestañas que contienen texto grande (sólo para pantallas grandes).
+
+```html_example
+<ul class="nav nav-tabs margen-pequeno">
+	<li class="active">
+		<a href="#" class="nav-tabs__enlace--lg">Mis reservas</a>
+	</li>
+	<li>
+		<a href="#" class="nav-tabs__enlace--lg">Mis compras</a>
+	</li>
+</ul>
+```
+*/
+.nav > li > a {
+  background-color: #f6f6f6; }
+
+.nav-tabs > li > a {
+  margin-right: 0;
+  color: #555555; }
+  .nav-tabs > li > a, .nav-tabs > li > a:hover {
+    border-color: #f6f6f6 #f6f6f6 #ddd; }
+
+.nav-tabs__enlace--lg {
+  font-family: 'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
+  font-size: 17px; }
+  @media (min-width: 768px) {
+    .nav-tabs__enlace--lg {
+      font-size: 24px; } }
+
+.active .nav-tabs__enlace--lg {
+  font-family: 'PFDinTextPro-Bold', Helvetica, Arial, sans-serif; }
 
 /*doc
 ---
@@ -5675,48 +5654,31 @@ Lo utilizamos para dar estilos a los elementos de tipo <section> y a los posible
 
 /*doc
 ---
-title: Panels
+title: Objeto multimedia
 category: Componentes
 ---
 
-Utilizamos el componente ["Tabs" de Bootstrap](http://getbootstrap.com/components/#tabs), sobreescribiendo alguno de sus estilos y personalizando sus variables.
-
-```html_example
-<div role="tabpanel" class="tabpanel">
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Mis reservas</a></li>
-    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Mis compras</a></li>
-  
-  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home">
-			
-			Hola
-	
-    </div>
-    <div role="tabpanel" class="tab-pane" id="profile">
-
-    	Adios
-
-    </div>
-  </div>
-
-</div>
-```
+En lugar de utilizar el componente "Media" de Bootstrap utilizaremos el de Nicole Sullivan.
 
 */
-.tabpanel {
-  margin-bottom: 30px; }
+.media {
+  margin-bottom: 15px; }
 
-.tab-content {
-  padding: 30px;
-  border-top: none;
-  border-bottom: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc; }
+.media, .media__contenido {
+  overflow: hidden;
+  _overflow: visible;
+  zoom: 1; }
+
+.media__izquierda {
+  float: left;
+  margin-right: 15px; }
+
+.media__derecha {
+  float: right;
+  margin-left: 15px; }
+
+.media__izquierda img, .media__derecha img {
+  display: block; }
 
 /*doc
 ---
@@ -5957,3 +5919,43 @@ Además de sobreescribir algunos estilos para que se vea correctamente la págin
   .rejilla--tabla__columna {
     width: 50%;
     float: left; } }
+
+/*doc
+---
+title: Márgenes
+category: Global
+---
+
+
+Si necesitamos darle a un elemento un margen inferior para separarlo de otros, disponemos de las siguientes clases: `margen-muy-pequeno`, `margen-pequeno`, `margen-mediano`, `margen-largo`, `margen-muy-largo`.
+
+```html_example
+<div class="well margen-muy-pequeno">Margen muy pequeño</div>
+<div class="well margen-pequeno">Margen pequeño</div>
+<div class="well margen-mediano">Margen mediano</div>
+<div class="well margen-largo">Margen largo</div>
+<div class="well margen-muy-largo">Margen muy largo</div>
+```
+
+NOTA: Ignora el estilo `.well` , sólo sirve para diferenciar los bloques entre sí.
+
+NOTA: Es recomendable no abusar de estas clases ya que son demasiado granulares. Para dar margenes inferiores a componentes u otros elementos reutilizables es recomendable utilizar los mixins del tipo ["Espacios en blanco"](/docs/mixins.html#Espacios_en_blanco). Estas clases son útiles para dar formato a contenido introducido mediante WYSWYG o en casos en los que no tiene sentido utilizar componentes.
+
+*/
+.sin-margen {
+  margin-bottom: 0; }
+
+.margen-muy-pequeno {
+  margin-bottom: 15px; }
+
+.margen-pequeno {
+  margin-bottom: 30px; }
+
+.margen-mediano {
+  margin-bottom: 45px; }
+
+.margen-largo {
+  margin-bottom: 60px; }
+
+.margen-muy-largo {
+  margin-bottom: 75px; }

@@ -1,0 +1,56 @@
+/*doc
+---
+title: Navs
+category: Componentes
+---
+
+Utilizamos el componente ["Navs" de Bootstrap](http://getbootstrap.com/components/#nav), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+
+Además, añadimos la clase `nav-tabs__enlace--lg` para dar estilo a las pestañas que contienen texto grande (sólo para pantallas grandes).
+
+```html_example
+<ul class="nav nav-tabs margen-pequeno">
+	<li class="active">
+		<a href="#" class="nav-tabs__enlace--lg">Mis reservas</a>
+	</li>
+	<li>
+		<a href="#" class="nav-tabs__enlace--lg">Mis compras</a>
+	</li>
+</ul>
+```
+*/
+
+.nav {
+	> li {
+		> a {
+			background-color: $gray-lighter;
+		}
+	}
+}
+
+.nav-tabs {
+	> li {
+		> a {
+			@include no-margin-right;
+			color: $gray;
+			&,
+			&:hover {
+				border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+			}
+		}
+	}
+}
+
+.nav-tabs__enlace--lg {
+	font-family: $font-museo-thin;
+	font-size: $font-size-large - 1;
+	@media (min-width: $screen-sm-min) {
+		font-size: $font-size-h2;
+	}
+}
+
+.active {
+	.nav-tabs__enlace--lg {
+		font-family: $font-museo-bold;
+	}
+}

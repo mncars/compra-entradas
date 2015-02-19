@@ -160,6 +160,26 @@ Igual que la anterior pero sin bordes y con menos celdas
 	}
 }
 
+.rejilla--tabla--sin-bordes {
+	border: none;
+	.rejilla--tabla__fila {
+		border-bottom: none;
+	}
+	.rejilla--tabla__columna{
+		padding-left: 0;
+		padding-right: 0;
+		@media (min-width: $screen-sm-min) {
+			padding: 5px 0;
+		}
+		&:first-child {
+			@include padding-left-xs;
+		}
+		&:last-child {
+			@include padding-right-xs;
+		}
+	}
+}
+
 .rejilla--tabla__fila {
 	@include no-margin-left;
 	@include no-margin-right;
@@ -175,11 +195,20 @@ Igual que la anterior pero sin bordes y con menos celdas
 	&:last-child {
 		border-bottom: none;
 	}
+	> .media {
+		@include no-margin-bottom;
+	}
 }
 
 .rejilla--tabla__columna {
 	@media (min-width: $screen-sm-min) {
 		padding: $space-unit-xs 5px;
+	}
+	&:first-child {
+		@include padding-left-xs;
+	}
+	&:last-child {
+		@include padding-right-xs;
 	}
 }
 
@@ -205,18 +234,8 @@ Igual que la anterior pero sin bordes y con menos celdas
 	}	
 }
 
-// Rejilla con aspecto de tabla sin bordes
-
-.rejilla--tabla--sin-bordes {
-	border: none;
-	.rejilla--tabla__fila {
-		border-bottom: none;
-	}
-	.rejilla--tabla__columna{
-		padding-left: 0;
-		padding-right: 0;
-		@media (min-width: $screen-sm-min) {
-			padding: 5px 0;
-		}
+.rejilla--tabla__columna__botonera {
+	@media (max-width: $screen-xs-max) {
+		@include padding-top-xs;
 	}
 }

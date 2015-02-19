@@ -94,303 +94,265 @@
             <div class="panel panel-default">
                 <div class="island island--sm">
                     
-                    <h1>Hemos guardado tu reserva</h1>	
-<div class="island island--xs island--margen-pequeno bg-success">
-  <p>Recuerda que puedes realizar el pago hasta 48 horas antes de la fecha de la visita</p>
+                    <div class="island island--sm island--margen-pequeno bg-success">
+	<h1 class="margen-muy-pequeno">Hemos guardado tu reserva</h1>
+	<p class="lead hidden-print">Recuerda que puedes realizar el pago hasta 48 horas antes de la fecha de la visita</p>
 </div>
 
+<ul class="nav nav-tabs margen-pequeno">
+	<li class="active"><a href="#" class="nav-tabs__enlace--lg">Mis reservas</a></li>
+	<li><a href="#" class="nav-tabs__enlace--lg">Mis compras</a></li>
+</ul>
 
-<div role="tabpanel" class="tabpanel">
-
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Mis reservas</a></li>
-    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Mis compras</a></li>
-  
-  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home">
-
-    		<section class="seccion">
+<section class="island island--xs island--margen-pequeno bg-info">
+	<h2 class="h4">Buscar reservas</h2>
 	<div class="form-inline">
-
-		<p class="h4">Buscar reservas</p>
 		<div class="form-group">
-		
-			<label for="input-date1" class="control-label">desde</label>		
-			<input type="date" class="form-control" id="input-date1">	
+			<label for="input-date-1" class="control-label">Desde</label>
+			<input type="date" class="form-control" id="input-date-1">	
+		</div>	
+		<div class="form-group">
+			<label for="input-date-2" class="control-label">Hasta</label>
+			<input type="date" class="form-control" id="input-date-2">
 		</div>
 		<div class="form-group">
-			<label for="input-date2" class="control-label">Hasta</label>	
-			<input type="date" class="form-control" id="input-date2">
-		
-		</div>
-		<div class="form-group">
-			<label for="input-localizador" class="control-label">localizador</label>	
-			<input type="text" class="form-control" id="input-localizador" >	
+			<label for="input-localizador-1" class="control-label">Localizador</label>
+			<input type="text" class="form-control" id="input-localizador-1" >
 		</div>
 		<div class="form-group">
 			<label for="select-pais-1" class="control-label">Estado</label>
-
 			<select id="select-pais-1" class="form-control">
 				<option>Todos</option>
 				<option>Pagadas</option>			
 			</select>
 		</div>
 		<div class="form-group">
-			<a href="" class="btn btn-primary btn-md btn-block botonera__boton">Buscar</a>
+			<a href="" class="btn btn-primary">Buscar</a>
 		</div>
 	</div>
 </section>
-
 			
-			<div class="rejilla--tabla">
-	<div class="rejilla--tabla__fila row hidden-xs">
-		 <div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1"><input type="checkbox" /> </div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1">Tipo entrada</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Localizador</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Pedido</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Fecha de compra</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Fecha de visita</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Gastos de gestión</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Dto.</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Cant.</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Importe</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Estado</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Acciones</div>
-	</div>
-
-	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1"><input type="checkbox" /> </div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <br><em>Kunstmuseum Basel</em></span></div>
-
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			R08360
-		</div>
-
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			1587458704
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			17/2/2015
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			27/2/2015
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			3.2€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			-7.5€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			8
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			19.70€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			Activa
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			<a href="" class="btn btn-primary btn-xs btn-block botonera__boton">Pagar</a>
-			<a href="" class="btn btn-primary btn-xs btn-block botonera__boton">Editar</a>
-			<a href="" class="btn btn-primary btn-xs btn-link botonera__boton">Anular</a>
+<div class="rejilla--tabla">
+	<div class="rejilla--tabla__fila hidden-xs">
+		<div class="media">
+			<div class="media__izquierda">
+				<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda">
+		 			<input type="checkbox">
+				</div>				
+			</div>
+			<div class="media__contenido">
+				<div class="row">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-2">Tipo entrada</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Localizador</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Pedido</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Fecha de compra</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Fecha de visita</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Gastos de gestión</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Dto.</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Cant.</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Importe</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Estado</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Acciones</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1"><input type="checkbox" /> </div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1">Entrada Grupo Turístico colección</div>
+	<div class="rejilla--tabla__fila">
+		<div class="media">
+			<div class="media__izquierda">
+				<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda">
+				 	<input type="checkbox">
+				</div>
+			</div>
+			<div class="media__contenido">
+				<div class="row">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-2">Entrada Grupo Turístico <br><span class="fuente-normal">Exposiciones temporales + <em>Kunstmuseum Basel</em></span></div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Localizador</span> R08360
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Pedido</span> 158742369
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Fecha de compra</span> 7/01/2015
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Fecha de visita</span> 19/02/2015
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Gastos de gestión</span> 3.2€
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Dto.</span> -7.5€
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Cant.</span> 8
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Importe</span> 19.70€
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Estado</span> Activa
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
 
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			R08360
+						<div class="rejilla--tabla__columna__botonera">
+	<div class="row">
+		<div class="col-xs-4 col-sm-12">
+			<p><a href="" class="btn btn-default btn-xs btn-block">Pagar</a></p>
+		</div>
+		<div class="col-xs-4 col-sm-12">
+			<p><a href="" class="btn btn-default btn-xs btn-block">Editar</a></p>
+		</div>
+		<div class="col-xs-4 col-sm-12">
+			<p><a href="" class="btn btn-default btn-xs btn-link btn-block">Anular</a></p>
 		</div>
 
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			1587458704
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			17/2/2015
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			27/2/2015
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			3.2€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			-7.5€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			8
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			19.70€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			Activa
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			<a href="" class="btn btn-primary btn-xs btn-block botonera__boton">Pagar</a>
-			<a href="" class="btn btn-primary btn-xs btn-block botonera__boton">Editar</a>
-			<a href="" class="btn btn-primary btn-xs btn-link botonera__boton">Anular</a>
-		</div>
-	</div>
-	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-12">
-			<span>Mostrando</span>
-			<select>
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-			</select>
-
-			<span>de 12</span>
-		</div>
 	</div>	
-	
 </div>
-	
-    </div>
-    <div role="tabpanel" class="tab-pane" id="profile">
-
-      <section class="seccion">
-	<div class="form-inline">
-
-		<p class="h4">Buscar compras</p>
-		<div class="form-group">
-		
-			<label for="input-date1" class="control-label">desde</label>		
-			<input type="date" class="form-control" id="input-date1">	
-		</div>
-		<div class="form-group">
-			<label for="input-date2" class="control-label">Hasta</label>	
-			<input type="date" class="form-control" id="input-date2">
-		
-		</div>
-		<div class="form-group">
-			<label for="input-localizador" class="control-label">localizador</label>	
-			<input type="text" class="form-control" id="input-localizador" >	
-		</div>
-		<div class="form-group">
-			<label for="select-pais-1" class="control-label">Estado</label>
-
-			<select id="select-pais-1" class="form-control">
-				<option>Todos</option>
-				<option>Pagadas</option>			
-			</select>
-		</div>
-		<div class="form-group">
-			<a href="" class="btn btn-primary btn-md btn-block botonera__boton">Buscar</a>
-		</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>		
 	</div>
-</section>
-
-
-    	<div class="rejilla--tabla">
-	<div class="rejilla--tabla__fila row hidden-xs">
-		 <div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1"><input type="checkbox" /> </div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1">Tipo entrada</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Localizador</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Pedido</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Fecha de compra</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Fecha de visita</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Gastos de gestión</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Dto.</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Cant.</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Importe</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Estado</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-1">Acciones</div>
-	</div>
-
-	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1"><input type="checkbox" /> </div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <br><em>Kunstmuseum Basel</em></span></div>
-
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			R08360
+	<div class="rejilla--tabla__fila">
+		<div class="media">
+			<div class="media__izquierda">
+				<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda">
+				 	<input type="checkbox">
+				</div>
+			</div>
+			<div class="media__contenido">
+				<div class="row">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-2">Entrada Grupo Turístico <br><span class="fuente-normal">Colección</span></div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Localizador</span> R08395
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Pedido</span> 258741369
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Fecha de compra</span> 7/01/2015
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Fecha de visita</span> 2/04/2015
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Gastos de gestión</span> 4€
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Dto.</span> 
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Cant.</span> 10
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Importe</span> 44.00€
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Estado</span> Activa
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						
+						<div class="rejilla--tabla__columna__botonera">
+	<div class="row">
+		<div class="col-xs-4 col-sm-12">
+			<p><a href="" class="btn btn-default btn-xs btn-block">Pagar</a></p>
+		</div>
+		<div class="col-xs-4 col-sm-12">
+			<p><a href="" class="btn btn-default btn-xs btn-block">Editar</a></p>
+		</div>
+		<div class="col-xs-4 col-sm-12">
+			<p><a href="" class="btn btn-default btn-xs btn-link btn-block">Anular</a></p>
 		</div>
 
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			1587458704
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			17/2/2015
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			27/2/2015
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			3.2€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			-7.5€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			8
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			19.70€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			Activa
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			<a href="" class="btn btn-primary btn-xs btn-block botonera__boton">Factura</a>
-			<a href="" class="btn btn-primary btn-xs btn-block botonera__boton">Imprimir</a>
-			<a href="" class="btn btn-primary btn-xs btn-block botonera__boton">Email</a>
-		</div>
-	</div>
-	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1"><input type="checkbox" /> </div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-1">Entrada Grupo Turístico colección</div>
-
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			R08360
-		</div>
-
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			1587458704
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			17/2/2015
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			27/2/2015
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			3.2€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			-7.5€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			8
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			19.70€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			Activa
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
-			<a href="" class="btn btn-primary btn-xs btn-block botonera__boton">Factura</a>
-			<a href="" class="btn btn-primary btn-xs btn-block botonera__boton">Imprimir</a>
-			<a href="" class="btn btn-primary btn-xs btn-block botonera__boton">Email</a>
-		</div>
-	</div>
-	
-	
+	</div>	
 </div>
 
-    </div>
-  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="rejilla--tabla__fila">
+		<div class="media">
+			<div class="media__izquierda">
+				<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda">
+				 	<input type="checkbox">
+				</div>
+			</div>
+			<div class="media__contenido">
+				<div class="row">
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-2">Entrada Grupo Turístico <br><span class="fuente-normal">Exposiciones temporales</span></div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Localizador</span> R08496
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Pedido</span> 259874569
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Fecha de compra</span> 21/01/2015
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Fecha de visita</span> 23/01/2015
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Gastos de gestión</span> 4€
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Dto.</span> 
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Cant.</span> 10
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Importe</span> 24.00€
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						<span class="fuente-negrita visible-xs-inline">Estado</span> Activa
+					</div>
+					<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+						
+						<div class="rejilla--tabla__columna__botonera">
+	<div class="row">
+		<div class="col-xs-4 col-sm-12">
+			<p><a href="" class="btn btn-default btn-xs btn-block">Pagar</a></p>
+		</div>
+		<div class="col-xs-4 col-sm-12">
+			<p><a href="" class="btn btn-default btn-xs btn-block">Editar</a></p>
+		</div>
+		<div class="col-xs-4 col-sm-12">
+			<p><a href="" class="btn btn-default btn-xs btn-link btn-block">Anular</a></p>
+		</div>
 
+	</div>	
 </div>
 
-
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+<div class="clearfix">
+	<div class="rejilla--adaptable pull-right">
+		<div class="rejilla--adaptable__contenedor">
+			<div class="rejilla--adaptable__fila">
+				<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">Mostrando</div>
+				<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+					<label for="select-numero-pagina-1" class="sr-only">Número de página</label>
+					<select id="select-numero-pagina-1" class="form-control">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+					</select>
+				</div>
+				<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">de 12</div>
+			</div>
+		</div>
+	</div>
+</div>
 
                 </div>
             </div>

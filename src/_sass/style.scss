@@ -7,12 +7,10 @@
 
 // Global
 @import "global/type";
-@import "global/margenes";
 @import "global/enlaces";
 @import "global/tables";
 @import "global/forms";
 @import "global/rejilla";
-
 
 // Componentes
 @import "componentes/dropdowns";
@@ -20,11 +18,12 @@
 @import "componentes/list-group";
 @import "componentes/popovers";
 @import "componentes/alerts";
+@import "componentes/navs";
 @import "componentes/island";
 @import "componentes/calendario";
 @import "componentes/botonera";
 @import "componentes/seccion";
-@import "componentes/tabs";
+@import "componentes/objeto-multimedia";
 
 // Módulos
 @import "modulos/navegacion-principal";
@@ -32,3 +31,6 @@
 
 // Imprimir
 @import "global/estilos-imprimir";
+
+// Utilidades
+@import "global/margenes";

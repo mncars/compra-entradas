@@ -3,38 +3,14 @@ layout: default--cabecera-compras-reservas
 title: Reserva guardada
 ---
 
-<h1>Hemos guardado tu reserva</h1>	
-<div class="island island--xs island--margen-pequeno bg-success">
-  <p>Recuerda que puedes realizar el pago hasta 48 horas antes de la fecha de la visita</p>
-</div>
 
+<ul class="nav nav-tabs margen-pequeno">
+	<li class="active"><a href="#">Mis reservas</a></li>
+	<li><a href="#">Mis compras</a></li>
+</ul>
 
-<div role="tabpanel" class="tabpanel">
+{% include checkout-form-busqueda.html %}
 
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Mis reservas</a></li>
-    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Mis compras</a></li>
-  
-  </ul>
+{% include checkout-mis-reservas.html %}
 
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home">
-
-    	{% include checkout-form-busqueda.html %}
-			
-			{% include checkout-mis-reservas-seleccion.html %}
-	
-    </div>
-    <div role="tabpanel" class="tab-pane" id="profile">
-
-      {% include checkout-form-compras.html %}
-
-    	{% include checkout-mis-compras.html %}
-
-    </div>
-  </div>
-
-</div>
-
+{% include checkout-mis-reservas-seleccion.html %}

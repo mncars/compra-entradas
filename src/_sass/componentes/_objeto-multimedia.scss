@@ -1,0 +1,38 @@
+/*doc
+---
+title: Objeto multimedia
+category: Componentes
+---
+
+En lugar de utilizar el componente "Media" de Bootstrap utilizaremos el de Nicole Sullivan.
+
+*/
+
+
+.media {
+	@include margin-bottom-xs;
+}
+
+.media, 
+.media__contenido {
+	overflow: hidden;
+	_overflow: visible;
+	zoom: 1;
+}
+
+.media__izquierda {
+	float: left;
+	@include margin-right-xs;
+}
+
+.media__derecha {
+	float: right;
+	@include margin-left-xs;
+}
+
+.media__izquierda,
+.media__derecha {
+	img {
+		display: block;
+	}
+}
