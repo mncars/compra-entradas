@@ -4947,13 +4947,16 @@ Igual que la anterior pero sin bordes y con menos celdas
   .rejilla--tabla__fila > .media {
     margin-bottom: 0; }
 
+.rejilla--tabla__fila--activa {
+  background-color: #f6f6f6; }
+
 @media (min-width: 768px) {
   .rejilla--tabla__columna {
     padding: 15px 5px; } }
 .rejilla--tabla__columna:first-child {
-  padding-left: 15px; }
+  padding-left: 20px; }
 .rejilla--tabla__columna:last-child {
-  padding-right: 15px; }
+  padding-right: 20px; }
 
 .rejilla--tabla__columna--cabecera {
   font-weight: bold; }

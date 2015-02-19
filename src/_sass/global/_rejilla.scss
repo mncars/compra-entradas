@@ -200,15 +200,19 @@ Igual que la anterior pero sin bordes y con menos celdas
 	}
 }
 
+.rejilla--tabla__fila--activa {
+	background-color: $gray-lighter;
+}
+
 .rejilla--tabla__columna {
 	@media (min-width: $screen-sm-min) {
 		padding: $space-unit-xs 5px;
 	}
 	&:first-child {
-		@include padding-left-xs;
+		padding-left: $space-unit-xs + 5px;
 	}
 	&:last-child {
-		@include padding-right-xs;
+		padding-right: $space-unit-xs + 5px;
 	}
 }
 

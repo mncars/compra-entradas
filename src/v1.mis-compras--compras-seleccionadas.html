@@ -8,6 +8,11 @@ title: Reserva guardada
 	<li class="active"><a href="#" class="nav-tabs__enlace--lg">Mis compras</a></li>
 </ul>
 
-{% include checkout-form-compras.html %}
+<section class="island island--xs island--margen-pequeno bg-info">
+	<h2 class="h4">Buscar compras</h2>
+	{% include buscador--compras-reservas.html %}
+</section>
 
-{% include checkout-mis-compras.html %}
+{% include tabla--mis-compras--compras-seleccionadas.html %}
+
+{% include acciones--compras-seleccionadas.html %}

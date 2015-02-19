@@ -1,0 +1,19 @@
+---
+layout: default--cabecera-compras-reservas
+title: Reserva guardada
+---
+
+
+<ul class="nav nav-tabs margen-pequeno">
+	<li class="active"><a href="#" class="nav-tabs__enlace--lg">Mis reservas</a></li>
+	<li><a href="#" class="nav-tabs__enlace--lg">Mis compras</a></li>
+</ul>
+
+<section class="island island--xs island--margen-pequeno bg-info">
+	<h2 class="h4">Buscar reservas</h2>
+	{% include buscador--compras-reservas.html %}
+</section>
+
+{% include tabla--mis-reservas--reservas-seleccionadas.html %}
+
+{% include acciones--reservas-seleccionadas.html %}

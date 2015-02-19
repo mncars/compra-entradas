@@ -1,0 +1,34 @@
+<div class="rejilla--tabla">
+
+	{% include tabla--mis-compras-mis-reservas__fila--1.html %}
+
+	{% include tabla--mis-compras-mis-reservas__fila__inicio--fila-seleccionada.html %}	
+		<div class="row">
+			{% include tabla--mis-compras-mis-reservas__fila--2.html %}		
+			<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+				{% include tabla--mis-reservas__botonera.html %}
+			</div>
+		</div>
+	{% include tabla--mis-compras-mis-reservas__fila__fin.html %}
+
+	{% include tabla--mis-compras-mis-reservas__fila__inicio--fila-seleccionada.html %}	
+		<div class="row">
+			{% include tabla--mis-compras-mis-reservas__fila--3.html %}		
+			<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+				{% include tabla--mis-reservas__botonera.html %}
+			</div>
+		</div>
+	{% include tabla--mis-compras-mis-reservas__fila__fin.html %}
+
+	{% include tabla--mis-compras-mis-reservas__fila__inicio.html %}	
+		<div class="row">
+			{% include tabla--mis-compras-mis-reservas__fila--4.html %}		
+			<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-1">
+				{% include tabla--mis-reservas__botonera.html %}
+			</div>
+		</div>
+	{% include tabla--mis-compras-mis-reservas__fila__fin.html %}
+	
+</div>
+
+{% include tabla--mis-compras-mis-reservas__paginado.html %}
