@@ -4818,38 +4818,38 @@ Se trata de una rejilla con aspecto de tabla, que en pantallas pequeñas apila s
 ```html_example
 <div class="rejilla--tabla">
 	<div class="rejilla--tabla__fila row hidden-xs">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-6">Entrada</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Precio ud.</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Cantidad</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Precio</div>
+		<div class="rejilla--tabla__columna col-sm-6">Entrada</div>
+		<div class="rejilla--tabla__columna col-sm-2">Precio ud.</div>
+		<div class="rejilla--tabla__columna col-sm-2">Cantidad</div>
+		<div class="rejilla--tabla__columna col-sm-2">Precio</div>
 	</div>
 	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-6">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <em>Kunstmuseum Basel</em></span></div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+		<div class="rejilla--tabla__columna col-sm-6">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <em>Kunstmuseum Basel</em></span></div>
+		<div class="rejilla--tabla__columna col-sm-2">
 			<span class="fuente-negrita visible-xs-inline">Precio ud.</span> 5€
 		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+		<div class="rejilla--tabla__columna col-sm-2">
 			<span class="fuente-negrita visible-xs-inline">Cantidad</span> 8
 		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+		<div class="rejilla--tabla__columna col-sm-2">
 			<span class="fuente-negrita visible-xs-inline">Precio</span> 40.00€
 		</div>
 	</div>
 	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-6">Gastos de gestión</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+		<div class="rejilla--tabla__columna col-sm-6">Gastos de gestión</div>
+		<div class="rejilla--tabla__columna col-sm-2">
 			<span class="fuente-negrita visible-xs-inline">Precio ud.</span> 0.75€
 		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+		<div class="rejilla--tabla__columna col-sm-2">
 			<span class="fuente-negrita visible-xs-inline">Cantidad.</span> 8
 		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
+		<div class="rejilla--tabla__columna col-sm-2">
 			<span class="fuente-negrita visible-xs-inline">Precio</span> 6.00€
 		</div>
 	</div>
 	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-xs-6 col-sm-10">Total</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-xs-6 col-sm-2 text-right"><strong>46.00€</strong></div>
+		<div class="rejilla--tabla__columna col-xs-6 col-sm-10">Total</div>
+		<div class="rejilla--tabla__columna col-xs-6 col-sm-2 text-right"><strong>46.00€</strong></div>
 	</div>
 </div>
 ```
@@ -4862,24 +4862,24 @@ Igual que la anterior pero sin bordes y con menos celdas
 <p class="lead"><strong>Tu reserva:</strong> Lunes, 16 febrero 2015 - 10:30h</p>
 <div class="rejilla--tabla rejilla--tabla--sinbordes">
 	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-8">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <em>Kunstmuseum Basel</em></span></div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-4"><span class="fuente-normal">8 x 8.00 €</span></div>		
+		<div class="rejilla--tabla__columna col-sm-8">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <em>Kunstmuseum Basel</em></span></div>
+		<div class="rejilla--tabla__columna col-sm-4"><span class="fuente-normal">8 x 8.00 €</span></div>		
 	</div>
 	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-8">Descuento Telefónica 50% <br /> <span class="fuente-normal">máx. 5 entradas</em></span></div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-4">
+		<div class="rejilla--tabla__columna col-sm-8">Descuento Telefónica 50% <br /> <span class="fuente-normal">máx. 5 entradas</em></span></div>
+		<div class="rejilla--tabla__columna col-sm-4">
 			<span class="fuente-normal">5 x -2.50€</span>
 		</div>		
 	</div>
 	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-8">Gastos de gestión</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-4">
+		<div class="rejilla--tabla__columna col-sm-8">Gastos de gestión</div>
+		<div class="rejilla--tabla__columna col-sm-4">
 			<span class="fuente-normal">8 x 0.75€</span>
 		</div>		
 	</div>
 	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-xs-6 col-sm-8">Total</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-xs-6 col-sm-4 text-right"><strong>33.50€</strong></div>
+		<div class="rejilla--tabla__columna col-xs-6 col-sm-8">Total</div>
+		<div class="rejilla--tabla__columna col-xs-6 col-sm-4 text-right"><strong>33.50€</strong></div>
 	</div>
 </div>
 ```
@@ -4911,35 +4911,35 @@ Igual que la anterior pero sin bordes y con menos celdas
   vertical-align: middle; }
 
 .rejilla--tabla {
-  margin-bottom: 30px; }
-  @media (max-width: 767px) {
+  margin-bottom: 30px;
+  border-top: 1px solid #ddd; }
+  @media (min-width: 992px) {
     .rejilla--tabla {
-      border-top: 1px solid #ddd; } }
+      border-top: none; } }
 
 .rejilla--tabla--sin-bordes {
   border: none; }
   .rejilla--tabla--sin-bordes .rejilla--tabla__fila {
+    padding: 5px 0;
     border-bottom: none; }
-  .rejilla--tabla--sin-bordes .rejilla--tabla__columna {
-    padding-left: 0;
-    padding-right: 0; }
-    @media (min-width: 768px) {
-      .rejilla--tabla--sin-bordes .rejilla--tabla__columna {
-        padding: 5px 0; } }
-    .rejilla--tabla--sin-bordes .rejilla--tabla__columna:first-child {
-      padding-left: 15px; }
-    .rejilla--tabla--sin-bordes .rejilla--tabla__columna:last-child {
-      padding-right: 15px; }
+  @media (min-width: 992px) {
+    .rejilla--tabla--sin-bordes .rejilla--tabla__columna {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .rejilla--tabla__fila {
   margin-left: 0;
   margin-right: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #ddd; }
-  @media (max-width: 767px) {
+  @media (min-width: 992px) {
     .rejilla--tabla__fila {
-      padding-top: 15px;
-      padding-bottom: 15px; } }
-  @media (min-width: 768px) {
+      padding-top: 0;
+      padding-bottom: 0; } }
+  @media (min-width: 992px) {
     .rejilla--tabla__fila:first-child {
       border-bottom-width: 2px; } }
   .rejilla--tabla__fila:last-child {
@@ -4947,35 +4947,73 @@ Igual que la anterior pero sin bordes y con menos celdas
   .rejilla--tabla__fila > .media {
     margin-bottom: 0; }
 
+.rejilla--tabla__fila--cabecera {
+  display: none; }
+  @media (min-width: 992px) {
+    .rejilla--tabla__fila--cabecera {
+      display: block;
+      font-weight: bold; } }
+
+.rejilla--tabla__fila--seleccionable {
+  padding-left: 20px;
+  position: relative; }
+  .rejilla--tabla__fila--seleccionable input[type="checkbox"] {
+    position: absolute;
+    top: 15px;
+    left: 2px; }
+
 .rejilla--tabla__fila--activa {
   background-color: #f6f6f6; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .rejilla--tabla__columna {
-    padding: 15px 5px; } }
-.rejilla--tabla__columna:first-child {
-  padding-left: 20px; }
-.rejilla--tabla__columna:last-child {
-  padding-right: 20px; }
+    padding: 15px 1px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center; } }
+@media (min-width: 992px) {
+  .rejilla--tabla__columna:first-child {
+    text-align: left;
+    padding-left: 16px; } }
+@media (min-width: 992px) {
+  .rejilla--tabla__columna:last-child {
+    padding-right: 16px; } }
+.rejilla--tabla__columna p {
+  margin-bottom: 10px; }
 
-.rejilla--tabla__columna--cabecera {
-  font-weight: bold; }
+.rejilla--tabla__columna--oculta {
+  display: none; }
+  @media (min-width: 992px) {
+    .rejilla--tabla__columna--oculta {
+      display: block; } }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .rejilla--tabla__columna--izquierda {
     text-align: left; } }
 
-@media (min-width: 768px) {
-  .rejilla--tabla__columna--centrada {
-    text-align: center; } }
-
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .rejilla--tabla__columna--derecha {
     text-align: right; } }
 
-@media (max-width: 767px) {
-  .rejilla--tabla__columna__botonera {
-    padding-top: 15px; } }
+@media (min-width: 992px) {
+  .rejilla--tabla__etiqueta {
+    display: none; } }
+
+.rejilla--tabla__dato {
+  font-weight: bold; }
+  @media (min-width: 992px) {
+    .rejilla--tabla__dato {
+      font-weight: normal; } }
+
+.rejilla--tabla__dato--destacado {
+  font-size: 18px; }
+  @media (min-width: 992px) {
+    .rejilla--tabla__dato--destacado {
+      font-size: 14px; } }
+
+@media (min-width: 992px) {
+  .rejilla--tabla__columna__mas-datos {
+    display: none; } }
 
 /*doc
 ---
@@ -5270,7 +5308,7 @@ Este componente se basa en el [objeto "Island" de Harry Roberts](http://csswizar
 Podemos añadirle el class `.island--margen-pequeno` para darle un margen inferior que le separe de los siguientes elementos.
 
 */
-.island p:last-child, .island ul:last-child, .island .rejilla--tabla:last-child {
+.island > p:last-child, .island > ul:last-child, .island > .rejilla--tabla:last-child {
   margin-bottom: 5px; }
 
 .island--xs {

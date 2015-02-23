@@ -102,39 +102,71 @@
 			
 			<p class="lead"><strong>Fecha:</strong> Lunes, 16 febrero 2015 - 10:30h</p>
 <div class="rejilla--tabla">
-	<div class="rejilla--tabla__fila row hidden-xs">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-6">Entrada</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Precio ud.</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Cantidad</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--centrada col-sm-2">Precio</div>
-	</div>
-	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-6">Entrada individual <br><span class="fuente-normal">Exposiciones temporales + <em>Kunstmuseum Basel</em></span></div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
-			<span class="fuente-negrita visible-xs-inline">Precio ud.</span> 5€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
-			<span class="fuente-negrita visible-xs-inline">Cantidad</span> 8
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
-			<span class="fuente-negrita visible-xs-inline">Precio</span> 40.00€
+	<div class="rejilla--tabla__fila rejilla--tabla__fila--cabecera">
+		<div class="row">
+			<div class="rejilla--tabla__columna col-md-6">Entrada</div>
+			<div class="rejilla--tabla__columna col-md-2">Precio ud.</div>
+			<div class="rejilla--tabla__columna col-md-2">Cantidad</div>
+			<div class="rejilla--tabla__columna col-md-2">Precio</div>
 		</div>
 	</div>
-	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-sm-6">Gastos de gestión</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
-			<span class="fuente-negrita visible-xs-inline">Precio ud.</span> 0.75€
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
-			<span class="fuente-negrita visible-xs-inline">Cantidad.</span> 8
-		</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-sm-2">
-			<span class="fuente-negrita visible-xs-inline">Precio</span> 6.00€
+	<div class="rejilla--tabla__fila">
+		<div class="row">
+			<div class="rejilla--tabla__columna col-md-6">
+				<p>
+					<span class="fuente-negrita">Entrada individual</span> <br>Exposiciones temporales + <em>Kunstmuseum Basel</em>
+				</p>
+			</div>
+			<div class="rejilla--tabla__columna col-md-2">
+				<p>
+					<span class="rejilla--tabla__etiqueta">Precio ud.</span> <span class="rejilla--tabla__dato">5€</span>
+				</p>
+			</div>
+			<div class="rejilla--tabla__columna col-md-2">
+				<p>
+					<span class="rejilla--tabla__etiqueta">Cantidad</span> <span class="rejilla--tabla__dato">8</span>
+				</p>
+			</div>
+			<div class="rejilla--tabla__columna col-md-2">
+				<p>
+					<span class="rejilla--tabla__etiqueta">Precio</span> <span class="rejilla--tabla__dato">40.00€</span>
+				</p>
+			</div>
 		</div>
 	</div>
-	<div class="rejilla--tabla__fila row">
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--cabecera rejilla--tabla__columna--izquierda col-xs-6 col-sm-10">Total</div>
-		<div class="rejilla--tabla__columna rejilla--tabla__columna--centrada col-xs-6 col-sm-2 text-right"><strong>46.00€</strong></div>
+	<div class="rejilla--tabla__fila">
+		<div class="row">
+			<div class="rejilla--tabla__columna col-md-6">
+				<p>
+					<span class="fuente-negrita">Gastos de gestión</span>
+				</p>
+			</div>
+			<div class="rejilla--tabla__columna col-md-2">
+				<p>
+					<span class="rejilla--tabla__etiqueta">Precio ud.</span> <span class="rejilla--tabla__dato">0.75€</span>
+				</p>
+			</div>
+			<div class="rejilla--tabla__columna col-md-2">
+				<p>
+					<span class="rejilla--tabla__etiqueta">Cantidad.</span> <span class="rejilla--tabla__dato">8</span>
+				</p>
+			</div>
+			<div class="rejilla--tabla__columna col-md-2">
+				<p>
+					<span class="rejilla--tabla__etiqueta">Precio</span> <span class="rejilla--tabla__dato">6.00€</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="rejilla--tabla__fila">
+		<div class="row">
+			<div class="rejilla--tabla__columna col-xs-6 col-md-10">
+				<p class="fuente-negrita">Total</p>
+			</div>
+			<div class="rejilla--tabla__columna col-xs-6 col-md-2 text-right">
+				<p class="fuente-negrita">46.00€</p>
+			</div>
+		</div>
 	</div>
 </div>			
 			
@@ -206,7 +238,8 @@
 <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
 <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
 <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
 <script>
 
 $(function () {

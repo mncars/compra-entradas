@@ -33,9 +33,9 @@ Podemos añadirle el class `.island--margen-pequeno` para darle un margen inferi
 
 
 .island {
-    p,
-    ul,
-    .rejilla--tabla {
+    > p,
+    > ul,
+    > .rejilla--tabla {
         &:last-child {
             margin-bottom: 5px;
         }
