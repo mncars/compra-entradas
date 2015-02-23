@@ -42,6 +42,14 @@ Podemos añadirle el class `.island--margen-pequeno` para darle un margen inferi
     }
 }
 
+.island--xxxs {
+    @include padding-xxxs;
+}
+
+.island--xxs {
+    @include padding-xxs;
+}
+
 .island--xs {
     @include padding-xs;
 }

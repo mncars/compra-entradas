@@ -4347,6 +4347,13 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 ...
 ```
 
+Para trabajar con espacios más pequeños que el tamaño de espacio base (`$space-unit-xs`) podemos trabajar con dos medidas más: `-xxs` y `-xxxs`.
+
+```
+$space-unit-xxs:  	$space-unit-xs / 1.5; // 10px
+$space-unit-xxxs: 	$space-unit-xs / 3;   // 5px
+```
+
 
 */
 /*doc
@@ -4643,6 +4650,9 @@ h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6, h2 + h1, h2 + h2, h2 + h3,
 
 p + h1, p + h2, p + h3, p + h4, p + h5, p + h6, ul + h1, ul + h2, ul + h3, ul + h4, ul + h5, ul + h6, ol + h1, ol + h2, ol + h3, ol + h4, ol + h5, ol + h6, dl + h1, dl + h2, dl + h3, dl + h4, dl + h5, dl + h6, table + h1, table + h2, table + h3, table + h4, table + h5, table + h6 {
   margin-top: 45px; }
+
+.text-wrap {
+  white-space: normal; }
 
 /*doc
 ---
@@ -4961,6 +4971,9 @@ Igual que la anterior pero sin bordes y con menos celdas
     position: absolute;
     top: 15px;
     left: 2px; }
+    @media (min-width: 1200px) {
+      .rejilla--tabla__fila--seleccionable input[type="checkbox"] {
+        left: 5px; } }
 
 .rejilla--tabla__fila--activa {
   background-color: #f6f6f6; }
@@ -4975,9 +4988,15 @@ Igual que la anterior pero sin bordes y con menos celdas
   .rejilla--tabla__columna:first-child {
     text-align: left;
     padding-left: 16px; } }
+@media (min-width: 1200px) {
+  .rejilla--tabla__columna:first-child {
+    padding-left: 21px; } }
 @media (min-width: 992px) {
   .rejilla--tabla__columna:last-child {
     padding-right: 16px; } }
+@media (min-width: 992px) {
+  .rejilla--tabla__columna:last-child {
+    padding-right: 21px; } }
 .rejilla--tabla__columna p {
   margin-bottom: 10px; }
 
@@ -5310,6 +5329,12 @@ Podemos añadirle el class `.island--margen-pequeno` para darle un margen inferi
 */
 .island > p:last-child, .island > ul:last-child, .island > .rejilla--tabla:last-child {
   margin-bottom: 5px; }
+
+.island--xxxs {
+  padding: 5px; }
+
+.island--xxs {
+  padding: 10px; }
 
 .island--xs {
   padding: 15px; }
@@ -5720,6 +5745,27 @@ En lugar de utilizar el componente "Media" de Bootstrap utilizaremos el de Nicol
 
 .media__izquierda img, .media__derecha img {
   display: block; }
+
+/*doc
+---
+title: Fijados
+category: Componentes
+---
+
+Documentación...
+
+*/
+@media (max-width: 767px) {
+  .fijado--xs {
+    width: 100%;
+    position: fixed;
+    z-index: 10; } }
+
+@media (max-width: 767px) {
+  .fijado--xs--abajo {
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3); } }
 
 /*doc
 ---

@@ -211,6 +211,9 @@ Igual que la anterior pero sin bordes y con menos celdas
 		position: absolute;
 		top: 15px;
 		left: 2px;
+		@media (min-width: $screen-lg-min) {
+			left: 5px;
+		}
 	}
 }
 
@@ -229,10 +232,16 @@ Igual que la anterior pero sin bordes y con menos celdas
 			text-align: left;
 			padding-left: $space-unit-xs + $rejilla-tabla-columna-horizontal-padding;
 		}
+		@media (min-width: $screen-lg-min) {
+			padding-left: $space-unit-xs + $rejilla-tabla-columna-horizontal-padding + 5px;
+		}
 	}
 	&:last-child {
 		@media (min-width: $screen-md-min) {
 			padding-right: $space-unit-xs + $rejilla-tabla-columna-horizontal-padding;
+		}
+		@media (min-width: $screen-md-min) {
+			padding-right: $space-unit-xs + $rejilla-tabla-columna-horizontal-padding + 5px;
 		}
 	}
 	p {

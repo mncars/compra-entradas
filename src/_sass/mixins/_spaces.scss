@@ -112,8 +112,23 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 ...
 ```
 
+Para trabajar con espacios más pequeños que el tamaño de espacio base (`$space-unit-xs`) podemos trabajar con dos medidas más: `-xxs` y `-xxxs`.
+
+```
+$space-unit-xxs:  	$space-unit-xs / 1.5; // 10px
+$space-unit-xxxs: 	$space-unit-xs / 3;   // 5px
+```
+
 
 */
+
+@mixin margin-xxxs {
+	margin: $space-unit-xxxs;
+}
+
+@mixin margin-xxs {
+	margin: $space-unit-xxs;
+}
 
 @mixin margin-xs {
 	margin: $space-unit-xs;
@@ -137,6 +152,14 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 
 @mixin no-margin {
 	margin: 0;
+}
+
+@mixin margin-top-xxxs {
+	margin-top: $space-unit-xxxs;
+}
+
+@mixin margin-top-xxs {
+	margin-top: $space-unit-xxs;
 }
 
 @mixin margin-top-xs {
@@ -163,6 +186,14 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 	margin-top: 0;
 }
 
+@mixin margin-right-xxxs {
+	margin-right: $space-unit-xxxs;
+}
+
+@mixin margin-right-xxs {
+	margin-right: $space-unit-xxs;
+}
+
 @mixin margin-right-xs {
 	margin-right: $space-unit-xs;
 }
@@ -185,6 +216,14 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 
 @mixin no-margin-right {
 	margin-right: 0;
+}
+
+@mixin margin-bottom-xxxs {
+	margin-bottom: $space-unit-xxxs;
+}
+
+@mixin margin-bottom-xxs {
+	margin-bottom: $space-unit-xxs;
 }
 
 @mixin margin-bottom-xs {
@@ -211,6 +250,14 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 	margin-bottom: 0;
 }
 
+@mixin margin-left-xxxs {
+	margin-left: $space-unit-xxxs;
+}
+
+@mixin margin-left-xxs {
+	margin-left: $space-unit-xxs;
+}
+
 @mixin margin-left-xs {
 	margin-left: $space-unit-xs;
 }
@@ -233,6 +280,16 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 
 @mixin no-margin-left {
 	margin-left: 0;
+}
+
+@mixin margin-vertical-xxxs {
+	@include margin-top-xxxs;
+	@include margin-bottom-xxxs;
+}
+
+@mixin margin-vertical-xxs {
+	@include margin-top-xxs;
+	@include margin-bottom-xxs;
 }
 
 @mixin margin-vertical-xs {
@@ -265,6 +322,16 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 	margin-bottom: 0;
 }
 
+@mixin margin-horizontal-xxxs {
+	@include margin-left-xxxs;
+	@include margin-right-xxxs;
+}
+
+@mixin margin-horizontal-xxs {
+	@include margin-left-xxs;
+	@include margin-right-xxs;
+}
+
 @mixin margin-horizontal-xs {
 	@include margin-left-xs;
 	@include margin-right-xs;
@@ -295,6 +362,14 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 	margin-right: 0;
 }
 
+@mixin padding-xxxs {
+	padding: $space-unit-xxxs;
+}
+
+@mixin padding-xxs {
+	padding: $space-unit-xxs;
+}
+
 @mixin padding-xs {
 	padding: $space-unit-xs;
 }
@@ -317,6 +392,14 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 
 @mixin no-padding {
 	padding: 0;
+}
+
+@mixin padding-top-xxxs {
+	padding-top: $space-unit-xxxs;
+}
+
+@mixin padding-top-xxs {
+	padding-top: $space-unit-xxs;
 }
 
 @mixin padding-top-xs {
@@ -343,6 +426,14 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 	padding-top: 0;
 }
 
+@mixin padding-right-xxxs {
+	padding-right: $space-unit-xxxs;
+}
+
+@mixin padding-right-xxs {
+	padding-right: $space-unit-xxs;
+}
+
 @mixin padding-right-xs {
 	padding-right: $space-unit-xs;
 }
@@ -365,6 +456,14 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 
 @mixin no-padding-right {
 	padding-right: 0;
+}
+
+@mixin padding-bottom-xxxs {
+	padding-bottom: $space-unit-xxxs;
+}
+
+@mixin padding-bottom-xxs {
+	padding-bottom: $space-unit-xxs;
 }
 
 @mixin padding-bottom-xs {
@@ -391,6 +490,14 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 	padding-bottom: 0;
 }
 
+@mixin padding-left-xxxs {
+	padding-left: $space-unit-xxxs;
+}
+
+@mixin padding-left-xxs {
+	padding-left: $space-unit-xxs;
+}
+
 @mixin padding-left-xs {
 	padding-left: $space-unit-xs;
 }
@@ -413,6 +520,16 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 
 @mixin no-padding-left {
 	padding-left: 0;
+}
+
+@mixin padding-vertical-xxxs {
+	@include padding-top-xxxs;
+	@include padding-bottom-xxxs;
+}
+
+@mixin padding-vertical-xxs {
+	@include padding-top-xxs;
+	@include padding-bottom-xxs;
 }
 
 @mixin padding-vertical-xs {
@@ -443,6 +560,16 @@ Además, tenemos otros mixins que combinan dos propiedades en función de si el 
 @mixin no-padding-vertical {
 	padding-top: 0;
 	padding-bottom: 0;
+}
+
+@mixin padding-horizontal-xxxs {
+	@include padding-left-xxxs;
+	@include padding-right-xxxs;
+}
+
+@mixin padding-horizontal-xxs {
+	@include padding-left-xxs;
+	@include padding-right-xxs;
 }
 
 @mixin padding-horizontal-xs {

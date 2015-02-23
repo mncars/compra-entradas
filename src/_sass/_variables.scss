@@ -154,6 +154,9 @@ $space-unit-md:  			($space-unit-xs * 3); // 45px;
 $space-unit-lg:  			($space-unit-xs * 4); // 60px;
 $space-unit-xl:  			($space-unit-xs * 5); // 75px;
 
+$space-unit-xxs: 			($space-unit-xs / 1.5); // 10px;
+$space-unit-xxxs:  			($space-unit-xs / 3);   // 5px;
+
 // Borders
 
 $border-color: 			#ddd;
@@ -161,7 +164,6 @@ $border-color: 			#ddd;
 // Arrows
 
 $arrow-size:     		12px;
-$arrow-z-index: 		2;
 $arrow-color: 			#fff;
 
 // Rejilla
@@ -199,3 +201,8 @@ $panel-list-group-list-group-item-font-size-lg: 		$panel-list-group-list-group-i
 $calendario-anchura-maxima: 				330px;
 $calendario-fondo: 							$gray-lighter;
 $calendario-desactivado-color: 				darken($gray-light, 10%);
+
+// Z index
+
+$fijado-z-index: 		10;
+$arrow-z-index: 		2;
