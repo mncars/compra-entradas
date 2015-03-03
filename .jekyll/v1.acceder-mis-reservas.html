@@ -94,90 +94,80 @@
                 <div class="panel-body">
                     
                     <div class="row">
-		<div class="col-md-4">
+	<div class="col-sm-4">
+		<section class="seccion">
 			<h2 class="panel-body__titulo">Consultar en pantalla</h2>
-			<p>Introduce tu email + localizador o número de pedido</p> 
-				
-						<div class="form-horizontal">
-	<div class="form-group">
-		<label for="inputEmail3" class="col-sm-4 control-label">Email</label>
-		<div class="col-sm-8">
-			<input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputLocalizador" class="col-sm-4 control-label">localizador</label>
-		<div class="col-sm-8">
-			<input type="localizador" class="form-control" id="inputLocalizador" placeholder="localizador">
-		</div>
-	</div>
+			<p class="h3">Introduce tu email + tu localizador o número de pedido</p> 
 
-	<div class="form-group">
-		<div class="col-sm-offset-4 col-sm-8">
-			<a href="" class="btn btn-primary btn-lg btn-block">consultar</a>
-		</div>
-	</div>
-
+			<div class="form-group">
+	<label class="sr-only" for="input-email-1">Email</label>
+	<input type="email" class="form-control" id="input-email-1" placeholder="Email">
 </div>
-				
+<div class="row">
+	<div class="col-md-5">
+		<div class="form-group">
+			<label class="sr-only" for="select-localizador-pedido-1">Localizador</label>
+			<select id="select-localizador-pedido-1" class="form-control">
+				<option>Localizador</option>
+				<option>Nº de pedido</option>
+			</select>
 		</div>
-		<div class="col-md-4">
+	</div>
+	<div class="col-md-7">
+		<div class="form-group">
+			<label class="sr-only" for="input-localizador-1">Localizador</label>
+			<input type="text" class="form-control" id="input-localizador-1">
+		</div>		
+	</div>
+</div>
+<div class="form-group">
+	<a href="" class="btn btn-primary">Consultar</a>
+</div>
+		
+		</section>
+	</div>
+	<div class="col-sm-4">
+		<section class="seccion">
 			<h2 class="panel-body__titulo">Recibe tu reserva de tu mail</h2> 
-			<p>Introduce el email con el que hiciste la reserva</p> 
-			
-				<div class="form-horizontal">
-	<div class="form-group">
-		<label for="inputEmail3" class="col-sm-4 control-label">Email</label>
-		<div class="col-sm-8">
-			<input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-		</div>
-	</div>
+			<p class="h3">Introduce el email con el que hiciste la reserva</p> 
 
-	<div class="form-group">
-		<div class="col-sm-offset-4 col-sm-8">
-			<a href="" class="btn btn-primary btn-lg btn-block">enviar</a>
-		</div>
+			<div class="form-group">
+	<label class="sr-only" for="input-email-2">Email</label>
+	<input type="email" class="form-control" id="input-email-2" placeholder="Email">	
+</div>
+<div class="form-group">
+	<a href="" class="btn btn-primary">Enviar</a>
+</div>
+		
+		</section>
 	</div>
-</div>	
-			
-		</div>
-		<div class="col-md-4">
+	<div class="col-sm-4">
+		<section class="seccion">
 			<h2 class="panel-body__titulo">Accede a tu cuenta</h2> 
-			<p>¿Eres usuario registrado? Consulta tus reservas introduciendo usuario y cotraseña:</p> 
-			
-				<div class="form-horizontal">
-	<div class="form-group">
-		<label for="inputEmail3" class="col-sm-4 control-label">Usuario</label>
-		<div class="col-sm-8">
-			<input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-		</div>
+			<p class="h3">¿Eres usuario registrado? Consulta tus reservas introduciendo usuario y cotraseña</p> 
+
+			<div class="form-group">
+	<label class="sr-only" for="input-email-3">Email</label>
+	<input type="email" class="form-control" id="input-email-3" placeholder="Email">
+</div>
+<div class="form-group">
+	<label class="sr-only" for="input-password-1">Contraseña</label>
+	<input type="password" class="form-control" id="input-password-1" placeholder="Contraseña">
+</div>
+<div class="form-group">
+	<div class="checkbox">
+		<label for="input-datos-acceso-1">
+			<input id="input-datos-acceso-1" type="checkbox"> guardar mis datos de acceso
+		</label>
 	</div>
-	<div class="form-group">
-		<label for="inputPassword3" class="col-sm-4 control-label">Contraseña</label>
-		<div class="col-sm-8">
-			<input type="password" class="form-control" id="inputpassword2" placeholder="password">
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="col-sm-offset-4 col-sm-8">
-			<div class="checkbox">
-				<label>
-					<input type="checkbox"> guardar mis datos de acceso
-				</label>
-			</div>      
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="col-sm-offset-4 col-sm-8">
-			<a href="" class="btn btn-primary btn-lg btn-block">Inicio</a>
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="col-sm-offset-4 col-sm-8">
-			<a hef="password.html" data-toggle="modal" data-target="#password">No recuerdo mi contraseña</a>
-		</div>
-	</div>
-	<div class="modal fade" id="password" tabindex="-1">
+</div>
+<div class="form-group">
+	<a href="" class="btn btn-primary">Acceder</a>
+</div>
+<div class="form-group">
+	<a hef="password.html" data-toggle="modal" data-target="#password">No recuerdo mi contraseña</a>
+</div>
+<div class="modal fade" id="password" tabindex="-1">
 	<div class="modal-dialog modal-md">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -202,13 +192,27 @@
 		</div>
 	</div>
 </div>
-</div>	
-			
+		
+		</section>
+	</div>
+</div>
+
+<div class="botonera">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="" class="btn btn-default btn-sm btn-block botonera__boton">Todas las entradas</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="" class="btn btn-default btn-sm btn-block botonera__boton">Horarios y tarifas</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="" class="btn btn-default btn-sm btn-block botonera__boton">Ir a la web del Museo</a>
+				</div>
+			</div>
 		</div>
-	</div>		
-
-
-	
+	</div>
 </div>
 
                 </div>

@@ -1,0 +1,52 @@
+---
+layout: default--cabecera-basica
+title: Acceso a mis reservas
+---
+
+<div class="row">
+	<div class="col-sm-4">
+		<section class="seccion">
+			<h2 class="panel-body__titulo">Consultar en pantalla</h2>
+			<p class="h3">Introduce tu email + tu localizador o número de pedido</p> 
+
+			{% include formulario--acceso-consultar-reservas.html %}
+		
+		</section>
+	</div>
+	<div class="col-sm-4">
+		<section class="seccion">
+			<h2 class="panel-body__titulo">Recibe tu reserva de tu mail</h2> 
+			<p class="h3">Introduce el email con el que hiciste la reserva</p> 
+
+			{% include formulario--recibir-reserva.html %}
+		
+		</section>
+	</div>
+	<div class="col-sm-4">
+		<section class="seccion">
+			<h2 class="panel-body__titulo">Accede a tu cuenta</h2> 
+			<p class="h3">¿Eres usuario registrado? Consulta tus reservas introduciendo usuario y cotraseña</p> 
+
+			{% include formulario--login--sin-label.html %}
+		
+		</section>
+	</div>
+</div>
+
+<div class="botonera">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="" class="btn btn-default btn-sm btn-block botonera__boton">Todas las entradas</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="" class="btn btn-default btn-sm btn-block botonera__boton">Horarios y tarifas</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="" class="btn btn-default btn-sm btn-block botonera__boton">Ir a la web del Museo</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -5275,6 +5275,11 @@ Utilizamos el componente ["Alerts" de Bootstrap](http://getbootstrap.com/compone
 .alert {
   margin-bottom: 30px; }
 
+.alert__texto-ayuda {
+  margin-top: -20px;
+  margin-bottom: 30px;
+  color: #555555; }
+
 /*doc
 ---
 title: Navs

@@ -1,0 +1,50 @@
+---
+layout: default--cabecera-basica
+title: Acceso a mis reservas
+---
+
+<div class="row">
+	<div class="col-sm-4">
+		<section class="seccion">
+			<h2 class="panel-body__titulo">Consultar en pantalla</h2>
+			<p class="h3">Introduce tu email + tu localizador o número de pedido</p> 
+			
+			{% for alerta in site.data.alertas.checkout offset:6 limit:1 %}
+
+				{% include alert.html %}
+
+			{% endfor %}
+
+			<p class="alert__texto-ayuda">Vuelve a intentarlo o contáctanos: <a href="" class="enlace--telefono">+34 902 364 383</a> <a href="mailto:entradas@entradas.museoreinasofia.es">entradas@entradas.museoreinasofia.es</a></p>
+
+			{% include formulario--acceso-consultar-reservas.html %}
+		
+		</section>
+	</div>
+	<div class="col-sm-4">
+		<section class="seccion">
+			<h2 class="panel-body__titulo">Recibe tu reserva de tu mail</h2> 
+			<p class="h3">Introduce el email con el que hiciste la reserva</p>
+
+			{% for alerta in site.data.alertas.checkout offset:5 limit:1 %}
+
+				{% include alert.html %}
+
+			{% endfor %}
+
+			<p class="alert__texto-ayuda">Vuelve a intentarlo o contáctanos: <a href="" class="enlace--telefono">+34 902 364 383</a> <a href="mailto:entradas@entradas.museoreinasofia.es">entradas@entradas.museoreinasofia.es</a></p>
+
+			{% include formulario--recibir-reserva.html %}
+		
+		</section>
+	</div>
+	<div class="col-sm-4">
+		<section class="seccion">
+			<h2 class="panel-body__titulo">Accede a tu cuenta</h2> 
+			<p class="h3">¿Eres usuario registrado? Consulta tus reservas introduciendo usuario y cotraseña</p> 
+
+			{% include formulario--login--sin-label.html %}
+		
+		</section>
+	</div>
+</div>

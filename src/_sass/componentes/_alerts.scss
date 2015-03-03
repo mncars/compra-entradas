@@ -26,3 +26,9 @@ Utilizamos el componente ["Alerts" de Bootstrap](http://getbootstrap.com/compone
 .alert {
 	@include margin-bottom-sm;
 }
+
+.alert__texto-ayuda {
+	margin-top: -20px;
+	@include margin-bottom-sm;
+	color: $gray;
+}
