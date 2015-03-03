@@ -972,7 +972,7 @@ small, .small {
   font-size: 85%; }
 
 mark, .mark {
-  background-color: #ffdd86;
+  background-color: #ffe090;
   padding: 0.2em; }
 
 .text-left {
@@ -1021,16 +1021,16 @@ a.text-info:hover {
   color: #023a53; }
 
 .text-warning {
-  color: #866000; }
+  color: #906800; }
 
 a.text-warning:hover {
-  color: #533c00; }
+  color: #5d4300; }
 
 .text-danger {
-  color: #6c0b15; }
+  color: #b21122; }
 
 a.text-danger:hover {
-  color: #3e060c; }
+  color: #840d19; }
 
 .bg-primary {
   color: #fff; }
@@ -1054,10 +1054,10 @@ a.bg-info:hover {
   background-color: #a3e2fd; }
 
 .bg-warning {
-  background-color: #ffdd86; }
+  background-color: #ffe090; }
 
 a.bg-warning:hover {
-  background-color: #ffcf53; }
+  background-color: #ffd25d; }
 
 .bg-danger {
   background-color: #f3838f; }
@@ -1912,10 +1912,10 @@ table td[class*="col-"], table th[class*="col-"] {
   background-color: #bceafe; }
 
 .table > thead > tr > td.warning, .table > thead > tr > th.warning, .table > thead > tr.warning > td, .table > thead > tr.warning > th, .table > tbody > tr > td.warning, .table > tbody > tr > th.warning, .table > tbody > tr.warning > td, .table > tbody > tr.warning > th, .table > tfoot > tr > td.warning, .table > tfoot > tr > th.warning, .table > tfoot > tr.warning > td, .table > tfoot > tr.warning > th {
-  background-color: #ffdd86; }
+  background-color: #ffe090; }
 
 .table-hover > tbody > tr > td.warning:hover, .table-hover > tbody > tr > th.warning:hover, .table-hover > tbody > tr.warning:hover > td, .table-hover > tbody > tr:hover > .warning, .table-hover > tbody > tr.warning:hover > th {
-  background-color: #ffd66c; }
+  background-color: #ffd977; }
 
 .table > thead > tr > td.danger, .table > thead > tr > th.danger, .table > thead > tr.danger > td, .table > thead > tr.danger > th, .table > tbody > tr > td.danger, .table > tbody > tr > th.danger, .table > tbody > tr.danger > td, .table > tbody > tr.danger > th, .table > tfoot > tr > td.danger, .table > tfoot > tr > th.danger, .table > tfoot > tr.danger > td, .table > tfoot > tr.danger > th {
   background-color: #f3838f; }
@@ -2176,34 +2176,34 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
   color: #538124; }
 
 .has-warning .help-block, .has-warning .control-label, .has-warning .radio, .has-warning .checkbox, .has-warning .radio-inline, .has-warning .checkbox-inline, .has-warning.radio label, .has-warning.checkbox label, .has-warning.radio-inline label, .has-warning.checkbox-inline label {
-  color: #866000; }
+  color: #906800; }
 .has-warning .form-control {
-  border-color: #866000;
+  border-color: #906800;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
   .has-warning .form-control:focus {
-    border-color: #533c00;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ecaa00; }
+    border-color: #5d4300;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #f6b100; }
 .has-warning .input-group-addon {
-  color: #866000;
-  border-color: #866000;
-  background-color: #ffdd86; }
+  color: #906800;
+  border-color: #906800;
+  background-color: #ffe090; }
 .has-warning .form-control-feedback {
-  color: #866000; }
+  color: #906800; }
 
 .has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
-  color: #6c0b15; }
+  color: #b21122; }
 .has-error .form-control {
-  border-color: #6c0b15;
+  border-color: #b21122;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
   .has-error .form-control:focus {
-    border-color: #3e060c;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c91427; }
+    border-color: #840d19;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ec3d50; }
 .has-error .input-group-addon {
-  color: #6c0b15;
-  border-color: #6c0b15;
+  color: #b21122;
+  border-color: #b21122;
   background-color: #f3838f; }
 .has-error .form-control-feedback {
-  color: #6c0b15; }
+  color: #b21122; }
 
 .has-feedback label ~ .form-control-feedback {
   top: 25px; }
@@ -3386,22 +3386,22 @@ tbody.collapse.in {
     color: #023a53; }
 
 .alert-warning {
-  background-color: #ffdd86;
-  border-color: #ffdd86;
-  color: #866000; }
+  background-color: #ffe090;
+  border-color: #ffe090;
+  color: #906800; }
   .alert-warning hr {
-    border-top-color: #ffd66c; }
+    border-top-color: #ffd977; }
   .alert-warning .alert-link {
-    color: #533c00; }
+    color: #5d4300; }
 
 .alert-danger {
   background-color: #f3838f;
   border-color: #f3838f;
-  color: #6c0b15; }
+  color: #b21122; }
   .alert-danger hr {
     border-top-color: #f16c7a; }
   .alert-danger .alert-link {
-    color: #3e060c; }
+    color: #840d19; }
 
 .list-group {
   margin-bottom: 20px;
@@ -3486,36 +3486,36 @@ a.list-group-item-info {
     border-color: #035d85; }
 
 .list-group-item-warning {
-  color: #866000;
-  background-color: #ffdd86; }
+  color: #906800;
+  background-color: #ffe090; }
 
 a.list-group-item-warning {
-  color: #866000; }
+  color: #906800; }
   a.list-group-item-warning .list-group-item-heading {
     color: inherit; }
   a.list-group-item-warning:hover, a.list-group-item-warning:focus {
-    color: #866000;
-    background-color: #ffd66c; }
+    color: #906800;
+    background-color: #ffd977; }
   a.list-group-item-warning.active, a.list-group-item-warning.active:hover, a.list-group-item-warning.active:focus {
     color: #fff;
-    background-color: #866000;
-    border-color: #866000; }
+    background-color: #906800;
+    border-color: #906800; }
 
 .list-group-item-danger {
-  color: #6c0b15;
+  color: #b21122;
   background-color: #f3838f; }
 
 a.list-group-item-danger {
-  color: #6c0b15; }
+  color: #b21122; }
   a.list-group-item-danger .list-group-item-heading {
     color: inherit; }
   a.list-group-item-danger:hover, a.list-group-item-danger:focus {
-    color: #6c0b15;
+    color: #b21122;
     background-color: #f16c7a; }
   a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
     color: #fff;
-    background-color: #6c0b15;
-    border-color: #6c0b15; }
+    background-color: #b21122;
+    border-color: #b21122; }
 
 .list-group-item-heading {
   margin-top: 0;
@@ -3699,30 +3699,30 @@ a.list-group-item-danger {
     border-bottom-color: #d5f2fe; }
 
 .panel-warning {
-  border-color: #ffdd86; }
+  border-color: #ffe090; }
   .panel-warning > .panel-heading {
-    color: #866000;
-    background-color: #ffdd86;
-    border-color: #ffdd86; }
+    color: #906800;
+    background-color: #ffe090;
+    border-color: #ffe090; }
     .panel-warning > .panel-heading + .panel-collapse > .panel-body {
-      border-top-color: #ffdd86; }
+      border-top-color: #ffe090; }
     .panel-warning > .panel-heading .badge {
-      color: #ffdd86;
-      background-color: #866000; }
+      color: #ffe090;
+      background-color: #906800; }
   .panel-warning > .panel-footer + .panel-collapse > .panel-body {
-    border-bottom-color: #ffdd86; }
+    border-bottom-color: #ffe090; }
 
 .panel-danger {
   border-color: #f3838f; }
   .panel-danger > .panel-heading {
-    color: #6c0b15;
+    color: #b21122;
     background-color: #f3838f;
     border-color: #f3838f; }
     .panel-danger > .panel-heading + .panel-collapse > .panel-body {
       border-top-color: #f3838f; }
     .panel-danger > .panel-heading .badge {
       color: #f3838f;
-      background-color: #6c0b15; }
+      background-color: #b21122; }
   .panel-danger > .panel-footer + .panel-collapse > .panel-body {
     border-bottom-color: #f3838f; }
 
@@ -4654,6 +4654,18 @@ p + h1, p + h2, p + h3, p + h4, p + h5, p + h6, ul + h1, ul + h2, ul + h3, ul + 
 .text-wrap {
   white-space: normal; }
 
+.bg-success .btn-link {
+  color: #466d1f; }
+
+.bg-info .btn-link {
+  color: #024c6c; }
+
+.bg-warning .btn-link {
+  color: #775500; }
+
+.bg-danger .btn-link {
+  color: #9b0f1e; }
+
 /*doc
 ---
 title: Enlaces
@@ -4762,6 +4774,11 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 ```
 
 */
+.form-control[type="date"] {
+  color: #999; }
+  .form-control[type="date"].completado {
+    color: #555555; }
+
 @media (min-width: 768px) {
   .form-inline .form-group {
     margin: 5px; } }
@@ -4965,12 +4982,15 @@ Igual que la anterior pero sin bordes y con menos celdas
       font-weight: bold; } }
 
 .rejilla--tabla__fila--seleccionable {
-  padding-left: 20px;
+  padding-left: 50px;
   position: relative; }
+  @media (min-width: 992px) {
+    .rejilla--tabla__fila--seleccionable {
+      padding-left: 20px; } }
   .rejilla--tabla__fila--seleccionable input[type="checkbox"] {
     position: absolute;
     top: 15px;
-    left: 2px; }
+    left: 20px; }
     @media (min-width: 1200px) {
       .rejilla--tabla__fila--seleccionable input[type="checkbox"] {
         left: 5px; } }
@@ -5297,6 +5317,38 @@ Además, añadimos la clase `nav-tabs__enlace--lg` para dar estilo a las pestañ
 
 /*doc
 ---
+title: Component Animations
+category: Componentes
+---
+
+Extendemos el archivo `_component-animations.scss` de Bootstrap.
+
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .collapse--visible-sm-block {
+    display: block;
+    visibility: visible; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .collapse--visible-md-block {
+    display: block;
+    visibility: visible; } }
+
+@media (min-width: 1200px) {
+  .collapse--visible-lg-block {
+    display: block;
+    visibility: visible; } }
+
+@media (max-width: 767px) {
+  .collapse--caja {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f3f3f3;
+    border-radius: 6px; } }
+
+/*doc
+---
 title: Island
 category: Componentes
 ---
@@ -5359,6 +5411,9 @@ Podemos añadirle el class `.island--margen-pequeno` para darle un margen inferi
 
 .island--margen-pequeno {
   margin-bottom: 30px; }
+
+.island--bordeado {
+  border: 1px solid #e9e9e9; }
 
 /*doc
 ---
@@ -5994,18 +6049,30 @@ Además de sobreescribir algunos estilos para que se vea correctamente la págin
     padding: 0; } }
 
 @media print {
+  .island--bordeado {
+    border: none; } }
+
+@media print {
   .panel {
     box-shadow: none;
     border: none; } }
 
 @media print {
-  .rejilla--tabla__fila {
-    padding: 5px 0 !important; } }
-
+  .rejilla--tabla .col-sm-4 {
+    width: 33%;
+    float: left; } }
 @media print {
-  .rejilla--tabla__columna {
+  .rejilla--tabla .col-sm-6 {
     width: 50%;
     float: left; } }
+@media print {
+  .rejilla--tabla .col-sm-8 {
+    width: 66%;
+    float: left; } }
+
+@media print {
+  .rejilla--tabla__fila {
+    padding: 5px 0 !important; } }
 
 /*doc
 ---

@@ -78,3 +78,7 @@ Podemos añadirle el class `.island--margen-pequeno` para darle un margen inferi
 .island--margen-pequeno {
     @include margin-bottom-sm;
 }
+
+.island--bordeado {
+    border: 1px solid darken($gray-lighter, 5%);
+}

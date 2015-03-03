@@ -147,15 +147,20 @@
 			<div class="alert alert-warning">
 				<p>Para comprar o reservar entradas de grupo, <strong>debes estar registrado</strong>:</p>
 			</div>
+
 			<div class="row">
-				<div class="col-sm-6"> 
-					<section class="seccion">
-						<header class="seccion__cabecera">
-							<h2 class="panel-body__titulo">Regístrate</h2>
-							<p class="h5">Si es la primera vez que compras entradas</p>
-						</header>
-						
-						<div class="form-horizontal">
+				<div class="col-sm-6">
+					<p class="visible-xs-block visible-sm-block">
+						<a class="btn btn-default btn-lg btn-block" data-toggle="collapse" href="#registrate-1" aria-expanded="false" aria-controls="registrate-1">Regístrate</a>
+					</p>
+					<div class="collapse collapse--visible-sm-block collapse--visible-md-block collapse--visible-lg-block collapse--caja" id="registrate-1">
+						<section>
+							<header class="seccion__cabecera">
+								<h2 class="panel-body__titulo hidden-xs">Regístrate</h2>
+								<p class="h5">Si es la primera vez que compras entradas</p>
+							</header>
+
+							<div class="form-horizontal">
 	<div class="form-group">
 		<label for="input-usuario-1" class="col-sm-4 control-label">Usuario</label>
 		<div class="col-sm-8">
@@ -263,16 +268,21 @@
 	</div>
 </div>
 
-					</section>
+						</section>
+					</div>
 				</div>
 				<div class="col-sm-6">
-					<section class="seccion">
-						<header class="seccion__cabecera">
-							<h2 class="panel-body__titulo">Inicia Sesión</h2> 
-							<p class="h5">Si ya estas registrado</p>
-						</header>
-						
-						<div class="form-horizontal">
+					<p class="visible-xs-block visible-sm-block">
+						<a class="btn btn-default btn-lg btn-block" data-toggle="collapse" href="#inicia-sesion-1" aria-expanded="false" aria-controls="inicia-sesion-1">Inicia sesión</a>
+					</p>
+					<div class="collapse collapse--visible-sm-block collapse--visible-md-block collapse--visible-lg-block collapse--caja" id="inicia-sesion-1">
+						<section>
+							<header class="seccion__cabecera">
+								<h2 class="panel-body__titulo hidden-xs">Inicia Sesión</h2> 
+								<p class="h5">Si ya estas registrado</p>
+							</header>
+							
+							<div class="form-horizontal">
 	<div class="form-group">
 		<label for="inputEmail3" class="col-sm-4 control-label">Usuario</label>
 		<div class="col-sm-8">
@@ -331,7 +341,8 @@
 </div>
 </div>	
 
-					</section>
+						</section>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -374,8 +385,9 @@
 	
 </footer>
 
-<script src="./js/console.js"></script>
 <script src="./vendor/jquery/dist/jquery.js"></script>
+<script src="./js/console.js"></script>
+<script src="./js/placeholder.js"></script>
 <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
 <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
 <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>

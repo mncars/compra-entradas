@@ -34,6 +34,12 @@ body {
 	}
 }
 
+.island--bordeado {
+	@media print {
+		border: none;
+	}
+}
+
 .panel {
 	@media print {
 		box-shadow: none;
@@ -41,15 +47,29 @@ body {
 	}
 }
 
+.rejilla--tabla {
+	.col-sm-4 {
+		@media print {
+			width: 33%;
+			float: left;   	
+		}	
+	}
+	.col-sm-6 {
+		@media print {
+			width: 50%;
+			float: left;   	
+		}	
+	}
+	.col-sm-8 {
+		@media print {
+			width: 66%;
+			float: left;   	
+		}	
+	}
+}
+
 .rejilla--tabla__fila {
 	@media print {
     	padding: 5px 0!important;
 	}
-}
-
-.rejilla--tabla__columna {
-	@media print {
-    	width: 50%;
-    	float: left;
-	}	
 }

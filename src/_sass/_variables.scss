@@ -75,12 +75,12 @@ $state-info-bg:             lighten($brand-primary, 20%);
 $state-info-text:           darken($state-info-bg, 65%);
 $state-info-border:         $state-info-bg;
 
-$state-warning-bg:          #ffdd86;
+$state-warning-bg:          lighten(#ffdd86, 2%);
 $state-warning-text:        darken($state-warning-bg, 50%);
 $state-warning-border:      $state-warning-bg;
 
 $state-danger-bg:           #f3838f;
-$state-danger-text:         darken($state-danger-bg, 50%);
+$state-danger-text:         darken($state-danger-bg, 35%);
 $state-danger-border:       $state-danger-bg;
 
 $modal-inner-padding:       30px;

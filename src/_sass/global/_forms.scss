@@ -14,6 +14,13 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 
 */
 
+.form-control[type="date"] {
+	color: $input-color-placeholder;
+	&.completado {
+		color: $input-color;
+	}
+}
+
 .form-inline {
 	.form-group {
 		@media (min-width: $screen-sm-min) {

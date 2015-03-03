@@ -9,10 +9,19 @@ title: Reserva guardada
 	<li><a href="#" class="nav-tabs__enlace--lg">Mis compras</a></li>
 </ul>
 
-<section class="island island--xs island--margen-pequeno bg-info">
-	<h2 class="h4">Buscar reservas</h2>
-	{% include buscador--compras-reservas.html %}
+<section>	
+	<p class="visible-xs-block visible-sm-block text-right">
+		<a class="btn btn-default btn-sm" data-toggle="collapse" href="#buscador-compras-reservas-1" aria-expanded="false" aria-controls="buscador-compras-reservas-1"><span class="glyphicon glyphicon-search"></span> Buscar reservas</a>
+	</p>
+	<div class="collapse collapse--visible-md-block collapse--visible-lg-block" id="buscador-compras-reservas-1">
+		<div class="island island--xs island--margen-pequeno bg-info">
+			<h2 class="h4 hidden-xs">Buscar compras</h2>
+			{% include buscador--compras-reservas.html %}
+		</div>
+	</div>
 </section>
+
+
 
 {% include tabla--mis-reservas--reservas-seleccionadas.html %}
 

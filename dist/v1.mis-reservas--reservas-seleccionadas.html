@@ -99,20 +99,25 @@
 	<li><a href="#" class="nav-tabs__enlace--lg">Mis compras</a></li>
 </ul>
 
-<section class="island island--xs island--margen-pequeno bg-info">
-	<h2 class="h4">Buscar reservas</h2>
-	<div class="form-inline">
+<section>	
+	<p class="visible-xs-block visible-sm-block text-right">
+		<a class="btn btn-default btn-sm" data-toggle="collapse" href="#buscador-compras-reservas-1" aria-expanded="false" aria-controls="buscador-compras-reservas-1"><span class="glyphicon glyphicon-search"></span> Buscar reservas</a>
+	</p>
+	<div class="collapse collapse--visible-md-block collapse--visible-lg-block" id="buscador-compras-reservas-1">
+		<div class="island island--xs island--margen-pequeno bg-info">
+			<h2 class="h4 hidden-xs">Buscar compras</h2>
+			<div class="form-inline">
 	<div class="form-group">
 		<label for="input-date-1" class="control-label">Desde</label>
-		<input type="date" class="form-control" id="input-date-1">	
+		<input type="date" class="form-control" id="input-date-1" placeholder="dd/mm/aaaa">	
 	</div>	
 	<div class="form-group">
 		<label for="input-date-2" class="control-label">Hasta</label>
-		<input type="date" class="form-control" id="input-date-2">
+		<input type="date" class="form-control" id="input-date-2" placeholder="dd/mm/aaaa">
 	</div>
 	<div class="form-group">
 		<label for="input-localizador-1" class="control-label">Localizador</label>
-		<input type="text" class="form-control" id="input-localizador-1" >
+		<input type="text" class="form-control" id="input-localizador-1">
 	</div>
 	<div class="form-group">
 		<label for="select-pais-1" class="control-label">Estado</label>
@@ -125,7 +130,11 @@
 		<a href="" class="btn btn-primary">Buscar</a>
 	</div>
 </div>
+		</div>
+	</div>
 </section>
+
+
 
 <div class="rejilla--tabla">
 
@@ -315,8 +324,8 @@
 		
 	</div>
 
-	<div class="rejilla--tabla__fila rejilla--tabla__fila--seleccionable rejilla--tabla__fila--activa">
-	<input type="checkbox" checked>	
+	<div class="rejilla--tabla__fila rejilla--tabla__fila--seleccionable">
+	<input type="checkbox">	
 
 		<div class="row">
 
@@ -419,16 +428,12 @@
 </section>
 
 <div class="island island--xxs bg-success fijado--xs fijado--xs--abajo text-center">
-	<h3 class="h3 hidden-xs">Has seleccionado dos reservas:</h3>
-	<p>
+	<p class="fuente-grande">Has seleccionado 2 reservas: <br>
 		<span class="fuente-grande">Importe <strong>63.7€</strong></span> <span class="fuente-pequena text-nowrap">(7.20€ gastos de gestión incluidos)</span>
 	</p>
 
 	<a href="" class="btn btn-primary">Pagar entradas</a>
-	<div class="island island--xxxs">
-		<a href="" class="btn btn-default btn-sm btn-link">Anular reservas</a>		
-		<a href="" class="btn btn-default btn-sm btn-link">Enviar por email</a>		
-	</div>
+	<a href="" class="btn btn-link">Anular reservas</a>
 	
 </div>
 
@@ -454,8 +459,9 @@
 	
 </footer>
 
-<script src="./js/console.js"></script>
 <script src="./vendor/jquery/dist/jquery.js"></script>
+<script src="./js/console.js"></script>
+<script src="./js/placeholder.js"></script>
 <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
 <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
 <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>

@@ -165,3 +165,29 @@ table {
 .text-wrap {
 	white-space: normal;
 }
+
+// Contextual backgrounds
+
+.bg-success {
+	.btn-link {
+		color: darken($state-success-text, 5%);
+	}
+}
+
+.bg-info {
+	.btn-link {
+		color: darken($state-info-text, 5%);
+	}
+}
+
+.bg-warning {
+	.btn-link {
+		color: darken($state-warning-text, 5%);
+	}
+}
+
+.bg-danger {
+	.btn-link {
+		color: darken($state-danger-text, 5%);
+	}
+}

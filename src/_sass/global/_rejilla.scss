@@ -205,12 +205,15 @@ Igual que la anterior pero sin bordes y con menos celdas
 }
 
 .rejilla--tabla__fila--seleccionable {
-	padding-left: 20px;
+	padding-left: 50px;
 	position: relative;
+	@media (min-width: $screen-md-min) {
+		padding-left: 20px;	
+	}
 	input[type="checkbox"] {
 		position: absolute;
 		top: 15px;
-		left: 2px;
+		left: 20px;
 		@media (min-width: $screen-lg-min) {
 			left: 5px;
 		}
