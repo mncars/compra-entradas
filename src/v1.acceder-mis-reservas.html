@@ -6,29 +6,35 @@ title: Acceso a mis reservas
 <div class="row">
 	<div class="col-sm-4">
 		<section class="seccion">
-			<h2 class="panel-body__titulo">Consultar en pantalla</h2>
-			<p class="h3">Introduce tu email + tu localizador o número de pedido</p> 
+			<div class="island island--xs">
+				<h2 class="h2">Consultar en pantalla</h2>
+				<p class="h5 margen-muy-pequeno">Introduce tu email + tu localizador o número de pedido</p> 
+				
+				{% include formulario--acceso-consultar-reservas.html %}
 
-			{% include formulario--acceso-consultar-reservas.html %}
-		
+			</div>		
 		</section>
 	</div>
 	<div class="col-sm-4">
 		<section class="seccion">
-			<h2 class="panel-body__titulo">Recibe tu reserva de tu mail</h2> 
-			<p class="h3">Introduce el email con el que hiciste la reserva</p> 
+			<div class="island island--xs">
+				<h2 class="h2">Recibe tu reserva de tu mail</h2> 
+				<p class="h5 margen-muy-pequeno">Introduce el email con el que hiciste la reserva</p> 
+			
+				{% include formulario--recibir-reserva.html %}
 
-			{% include formulario--recibir-reserva.html %}
-		
+			</div>
 		</section>
 	</div>
 	<div class="col-sm-4">
 		<section class="seccion">
-			<h2 class="panel-body__titulo">Accede a tu cuenta</h2> 
-			<p class="h3">¿Eres usuario registrado? Consulta tus reservas introduciendo usuario y cotraseña</p> 
+			<div class="island island--xs">
+				<h2 class="h2">Accede a tu cuenta</h2> 
+				<p class="h5 margen-muy-pequeno">¿Eres usuario registrado? Consulta tus reservas introduciendo usuario y cotraseña</p> 
+			
+				{% include formulario--login--sin-label.html %}
 
-			{% include formulario--login--sin-label.html %}
-		
+			</div>
 		</section>
 	</div>
 </div>
