@@ -4951,12 +4951,13 @@ Igual que la anterior pero sin bordes y con menos celdas
   position: relative; }
   @media (min-width: 992px) {
     .rejilla--tabla__fila--seleccionable {
-      padding-left: 20px; } }
+      padding-left: 30px; } }
   .rejilla--tabla__fila--seleccionable input[type="checkbox"] {
     position: absolute;
     top: 15px;
-    left: 20px; }
-    @media (min-width: 1200px) {
+    left: 20px;
+    z-index: 10; }
+    @media (min-width: 992px) {
       .rejilla--tabla__fila--seleccionable input[type="checkbox"] {
         left: 5px; } }
 
@@ -4965,23 +4966,18 @@ Igual que la anterior pero sin bordes y con menos celdas
 
 @media (min-width: 992px) {
   .rejilla--tabla__columna {
-    padding: 15px 1px;
     padding-top: 15px;
     padding-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
     text-align: center; } }
 @media (min-width: 992px) {
   .rejilla--tabla__columna:first-child {
     text-align: left;
-    padding-left: 16px; } }
-@media (min-width: 1200px) {
-  .rejilla--tabla__columna:first-child {
-    padding-left: 21px; } }
+    padding-left: 15px; } }
 @media (min-width: 992px) {
   .rejilla--tabla__columna:last-child {
-    padding-right: 16px; } }
-@media (min-width: 992px) {
-  .rejilla--tabla__columna:last-child {
-    padding-right: 21px; } }
+    padding-right: 15px; } }
 .rejilla--tabla__columna p {
   margin-bottom: 10px; }
 

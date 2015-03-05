@@ -208,13 +208,14 @@ Igual que la anterior pero sin bordes y con menos celdas
 	padding-left: 50px;
 	position: relative;
 	@media (min-width: $screen-md-min) {
-		padding-left: 20px;	
+		@include padding-left-sm;
 	}
 	input[type="checkbox"] {
 		position: absolute;
 		top: 15px;
 		left: 20px;
-		@media (min-width: $screen-lg-min) {
+		z-index: 10;
+		@media (min-width: $screen-md-min) {
 			left: 5px;
 		}
 	}
@@ -226,25 +227,19 @@ Igual que la anterior pero sin bordes y con menos celdas
 
 .rejilla--tabla__columna {
 	@media (min-width: $screen-md-min) {
-		padding: $space-unit-xs $rejilla-tabla-columna-horizontal-padding;
 		@include padding-vertical-xs;
+		@include no-padding-horizontal;
 		text-align: center;
 	}
 	&:first-child {
 		@media (min-width: $screen-md-min) {
 			text-align: left;
-			padding-left: $space-unit-xs + $rejilla-tabla-columna-horizontal-padding;
-		}
-		@media (min-width: $screen-lg-min) {
-			padding-left: $space-unit-xs + $rejilla-tabla-columna-horizontal-padding + 5px;
+			@include padding-left-xs;
 		}
 	}
 	&:last-child {
 		@media (min-width: $screen-md-min) {
-			padding-right: $space-unit-xs + $rejilla-tabla-columna-horizontal-padding;
-		}
-		@media (min-width: $screen-md-min) {
-			padding-right: $space-unit-xs + $rejilla-tabla-columna-horizontal-padding + 5px;
+			@include padding-right-xs;
 		}
 	}
 	p {
