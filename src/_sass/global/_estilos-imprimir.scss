@@ -12,9 +12,36 @@ Además de sobreescribir algunos estilos para que se vea correctamente la págin
 	@include responsive-invisibility('.navegacion-principal, .pie-principal, .botonera');
 }
 
+// Eliminamos los offsets de las columnas para imprimir
+
+@mixin eliminar-offsets-imprimir($class) {
+  @media print {
+    .col-#{$class}-offset-1 {
+      margin: 0;
+    }
+    @for $i from 1 through 12 {
+      .col-#{$class}-offset-#{$i} {
+        @extend .col-#{$class}-offset-1;
+      }
+    }
+  }
+}
+
+@include eliminar-offsets-imprimir(xs);
+@include eliminar-offsets-imprimir(sm);
+@include eliminar-offsets-imprimir(md);
+@include eliminar-offsets-imprimir(lg);
+
 body {
 	@media print {
 		background-color: #fff;
+	}
+}
+
+.col-md-offset-1,
+.col-lg-offset-2 {
+	@media print {
+		margin: 0;
 	}
 }
 
