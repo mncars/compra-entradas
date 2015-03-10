@@ -1,0 +1,12 @@
+- titulo: Tarjeta Museo del Prado + Museo Reina Sofía
+  descripcion: Incluye visita por xxxxxxxx a la Colección + Exposiciones temporales de Museo Reina Sofía (no incluye exposiciones especiales) y a la Colección del Museodel Prado
+  precio: XX,X€
+
+- titulo: Abono Paseo del Arte
+  tipo: "20% dto."
+  descripcion: "Incluye visita por 1 año a: Museo Nacional del Prado, Museo Thyssen-Bornemisza y Museo Reina Sofía"
+  precio: 25,60€
+
+- titulo: Tarjeta anual de Museos Estatales
+  descripcion: "Incluye visita por 1 año a 20 museos estatales: entre ellos Museo Nacional del Prado, Museo Thyssen-Bornemisza y Museo Reina Sofía"
+  precio: 36,06€

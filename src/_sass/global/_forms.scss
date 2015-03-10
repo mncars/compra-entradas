@@ -14,6 +14,15 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 
 */
 
+label {
+	@include font-size-label;
+	line-height: 1.2;
+}
+
+.fuente--label {
+	@extend label;
+}
+
 .form-control[type="date"] {
 	color: $input-color-placeholder;
 	&.completado {

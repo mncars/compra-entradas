@@ -31,7 +31,6 @@ Además, añadimos la clase `nav-tabs__enlace--lg` para dar estilo a las pestañ
 .nav-tabs {
 	> li {
 		> a {
-			@include no-margin-right;
 			color: $gray;
 			&,
 			&:hover {
@@ -43,10 +42,7 @@ Además, añadimos la clase `nav-tabs__enlace--lg` para dar estilo a las pestañ
 
 .nav-tabs__enlace--lg {
 	font-family: $font-museo-thin;
-	font-size: $font-size-large - 1;
-	@media (min-width: $screen-sm-min) {
-		font-size: $font-size-h2;
-	}
+	@include font-size-nav-tabs-enlace-lg;
 }
 
 .active {

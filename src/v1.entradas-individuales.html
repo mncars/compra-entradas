@@ -1,0 +1,172 @@
+---
+layout: default--cabecera-entradas
+title: Entradas individuales
+---
+
+<!--Titulo de página (móvil)-->
+<div class="panel-heading visible-xs-block">
+	<h1 class="panel-heading__titulo">{{ page.title }}</h1>
+</div>
+<!--/ Titulo de página (móvil)-->
+
+<div class="panel-body">
+	<!--Navegación con pestañas (tableta y escritorio)-->
+	<ul class="nav nav-tabs margen-pequeno hidden-xs">
+		<li class="active"><a href="#" class="nav-tabs__enlace--lg">Entradas individuales</a></li>
+		<li><a href="#" class="nav-tabs__enlace--lg">Entradas para grupos</a></li>
+		<li><a href="#" class="nav-tabs__enlace--lg">Actividades con inscripción</a></li>
+	</ul>
+	<!--Navegación con pestañas (tableta y escritorio)-->
+	<section>	
+		<p class="visible-xs-block text-right">
+			<a class="btn btn-default btn-sm" data-toggle="collapse" href="#buscador-compras-reservas-1" aria-expanded="false" aria-controls="buscador-compras-reservas-1"><span class="glyphicon glyphicon-calendar"></span> ¿Cuándo quieres ir?</a>
+		</p>
+		<div class="collapse collapse--visible-sm-block collapse--visible-md-block collapse--visible-lg-block" id="buscador-compras-reservas-1">
+			<div class="island island--xs island--margen-pequeno bg-info">
+				<div class="row">
+					<div class="col-sm-5 col-lg-4">
+						<h2 class="h4 hidden-xs">¿Cuándo quieres ir?</h2>
+						<p class="h5">Selecciona una fecha para tu visita</p>			
+					</div>
+					<div class="col-sm-7 col-lg-8">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="form-group margen-muy-pequeno">
+									<div class="input-group">
+										<input type="text" class="form-control input-lg input-xlg" value="Lunes, 16 febrero 2015">
+										<span class="input-group-btn">
+											<a class="btn btn-primary btn-lg" href="#" data-toggle="popover" data-placement="bottom" data-content="{% include calendario--popover.html %}" data-html="true" data-container="body"><span class="glyphicon glyphicon-calendar"></span></a>
+										</span>
+									</div>
+								</div>		
+							</div>
+							<div class="col-lg-5">
+								<p class="fuente-pequena sin-margen">Para más información, consulta los <a href="http://www.museoreinasofia.es/visita/horarios-tarifas">horarios y tarifas</a> en la web del museo.</p>		
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="seccion">
+		<header class="seccion__cabecera visible-xs">
+			<h2 class="seccion__cabecera__titulo">Actuales</h2>
+		</header>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
+					
+					{% for entrada in site.data.entradas.individuales.actuales %}
+
+					{% include miniatura--entrada.html %}
+
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+		<div class="island island--xxs bg-default">
+			<div class="row">
+				<div class="col-sm-7">
+					<p><strong>_Kuntsmuseum Basel_</strong><br>
+					Si ya tienes comprada tu entrada General o para Exposiciones temporales, puedes comprar el plus para visitar la exposición especial _Kunstmuseum Basel_ por 4€ más en taquilla.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="seccion">
+		<header class="seccion__cabecera">
+			<h2 class="seccion__cabecera__titulo">Futuras</h2>
+		</header>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
+
+					{% for entrada in site.data.entradas.individuales.futuras limit:4 %}
+
+					{% include miniatura--entrada.html %}
+
+					{% endfor %}
+
+				</div>
+				<div class="table-grid__row">
+
+					{% for entrada in site.data.entradas.individuales.futuras limit:4 offset:4 %}
+
+					{% include miniatura--entrada.html %}
+
+					{% endfor %}
+
+					<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
+					<div class="table-grid__col table-grid__col--3"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="seccion">
+		<header class="seccion__cabecera">
+			<h2 class="seccion__cabecera__titulo">Descuentos, tarjetas y abonos</h2>
+		</header>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
+
+					{% for entrada in site.data.entradas.individuales.descuentos-tarjetas-bonos %}
+
+					{% include miniatura--entrada.html %}
+
+					{% endfor %}
+
+					<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
+					<div class="table-grid__col table-grid__col--3"></div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="seccion">
+		<h2 class="lead">Si tiene alguno de estos pases, obtendrá un descuento al comprar entradas en taquilla:</h2>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
+
+					{% for entrada in site.data.entradas.individuales.pases %}
+
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja">
+						<a href="" class="miniatura__enlace enlace--bloque">
+							<div class="miniatura__pie">
+								<h2 class="miniatura__titulo">{{ entrada.titulo }}</h2>
+								
+								{% if entrada.descripcion %}
+								<p class="miniatura__texto">{{ entrada.descripcion }}</p>
+								{% endif %}	
+
+							</div>		
+						</a>
+					</article>
+
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+</div>
+
+<!--Navegación (móvil)-->
+<div class="list-group visible-xs-block">
+	<a href="#" class="list-group-item">Entradas para grupos</a>
+	<a href="#" class="list-group-item">Actividades con inscripción</a>
+</div>
+<!--/Navegación (móvil)-->
+
+
+
+
+

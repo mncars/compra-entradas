@@ -1,0 +1,20 @@
+/*doc
+---
+title: Etiquetas
+category: Componentes
+---
+
+Se trata de un nuevo componente para reemplazar al que trae Bootstrap.
+
+*/
+
+.etiqueta {
+	@include margin-bottom-xxxs;
+	@include padding-vertical-xxxs;
+	@include padding-horizontal-xxs;
+	display: inline-block;
+	font-family: $font-museo-regular;
+	line-height: 1.2;
+	color: $etiqueta-color;
+	background-color: $etiqueta-fondo-color;
+}

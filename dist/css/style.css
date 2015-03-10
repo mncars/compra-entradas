@@ -1962,7 +1962,7 @@ legend {
   border: 0;
   border-bottom: 1px solid #e5e5e5; }
 
-label {
+label, .fuente--label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
@@ -2050,7 +2050,7 @@ input[type="search"] {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px; }
-  .radio label, .checkbox label {
+  .radio label, .radio .fuente--label, .checkbox label, .checkbox .fuente--label {
     min-height: 20px;
     padding-left: 20px;
     margin-bottom: 0;
@@ -2083,7 +2083,7 @@ input[type="radio"][disabled], input[type="radio"].disabled, fieldset[disabled] 
 .radio-inline.disabled, fieldset[disabled] .radio-inline, .checkbox-inline.disabled, fieldset[disabled] .checkbox-inline {
   cursor: default; }
 
-.radio.disabled label, fieldset[disabled] .radio label, .checkbox.disabled label, fieldset[disabled] .checkbox label {
+.radio.disabled label, .radio.disabled .fuente--label, fieldset[disabled] .radio label, fieldset[disabled] .radio .fuente--label, .checkbox.disabled label, .checkbox.disabled .fuente--label, fieldset[disabled] .checkbox label, fieldset[disabled] .checkbox .fuente--label {
   cursor: default; }
 
 .form-control-static {
@@ -2183,7 +2183,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
   height: 30px;
   line-height: 30px; }
 
-.has-success .help-block, .has-success .control-label, .has-success .radio, .has-success .checkbox, .has-success .radio-inline, .has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label {
+.has-success .help-block, .has-success .control-label, .has-success .radio, .has-success .checkbox, .has-success .radio-inline, .has-success .checkbox-inline, .has-success.radio label, .has-success.radio .fuente--label, .has-success.checkbox label, .has-success.checkbox .fuente--label, .has-success.radio-inline label, .has-success.radio-inline .fuente--label, .has-success.checkbox-inline label, .has-success.checkbox-inline .fuente--label {
   color: #538124; }
 .has-success .form-control {
   border-color: #538124;
@@ -2198,7 +2198,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
 .has-success .form-control-feedback {
   color: #538124; }
 
-.has-warning .help-block, .has-warning .control-label, .has-warning .radio, .has-warning .checkbox, .has-warning .radio-inline, .has-warning .checkbox-inline, .has-warning.radio label, .has-warning.checkbox label, .has-warning.radio-inline label, .has-warning.checkbox-inline label {
+.has-warning .help-block, .has-warning .control-label, .has-warning .radio, .has-warning .checkbox, .has-warning .radio-inline, .has-warning .checkbox-inline, .has-warning.radio label, .has-warning.radio .fuente--label, .has-warning.checkbox label, .has-warning.checkbox .fuente--label, .has-warning.radio-inline label, .has-warning.radio-inline .fuente--label, .has-warning.checkbox-inline label, .has-warning.checkbox-inline .fuente--label {
   color: #906800; }
 .has-warning .form-control {
   border-color: #906800;
@@ -2213,7 +2213,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
 .has-warning .form-control-feedback {
   color: #906800; }
 
-.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.radio .fuente--label, .has-error.checkbox label, .has-error.checkbox .fuente--label, .has-error.radio-inline label, .has-error.radio-inline .fuente--label, .has-error.checkbox-inline label, .has-error.checkbox-inline .fuente--label {
   color: #b21122; }
 .has-error .form-control {
   border-color: #b21122;
@@ -2228,9 +2228,9 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
 .has-error .form-control-feedback {
   color: #b21122; }
 
-.has-feedback label ~ .form-control-feedback {
+.has-feedback label ~ .form-control-feedback, .has-feedback .fuente--label ~ .form-control-feedback {
   top: 25px; }
-.has-feedback label.sr-only ~ .form-control-feedback {
+.has-feedback label.sr-only ~ .form-control-feedback, .has-feedback .sr-only.fuente--label ~ .form-control-feedback {
   top: 0; }
 
 .help-block {
@@ -2265,7 +2265,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
     margin-top: 0;
     margin-bottom: 0;
     vertical-align: middle; }
-    .form-inline .radio label, .form-inline .checkbox label {
+    .form-inline .radio label, .form-inline .radio .fuente--label, .form-inline .checkbox label, .form-inline .checkbox .fuente--label {
       padding-left: 0; }
   .form-inline .radio input[type="radio"], .form-inline .checkbox input[type="checkbox"] {
     position: relative;
@@ -3157,7 +3157,7 @@ tbody.collapse.in {
       margin-top: 0;
       margin-bottom: 0;
       vertical-align: middle; }
-      .navbar-form .radio label, .navbar-form .checkbox label {
+      .navbar-form .radio label, .navbar-form .radio .fuente--label, .navbar-form .checkbox label, .navbar-form .checkbox .fuente--label {
         padding-left: 0; }
     .navbar-form .radio input[type="radio"], .navbar-form .checkbox input[type="checkbox"] {
       position: relative;
@@ -3391,6 +3391,45 @@ tbody.collapse.in {
     border-top-color: #f16c7a; }
   .alert-danger .alert-link {
     color: #840d19; }
+
+.media {
+  margin-top: 15px; }
+  .media:first-child {
+    margin-top: 0; }
+
+.media, .media-body {
+  zoom: 1;
+  overflow: hidden; }
+
+.media-body {
+  width: 10000px; }
+
+.media-object {
+  display: block; }
+
+.media-right, .media > .pull-right {
+  padding-left: 10px; }
+
+.media-left, .media > .pull-left {
+  padding-right: 10px; }
+
+.media-left, .media-right, .media-body {
+  display: table-cell;
+  vertical-align: top; }
+
+.media-middle {
+  vertical-align: middle; }
+
+.media-bottom {
+  vertical-align: bottom; }
+
+.media-heading {
+  margin-top: 0;
+  margin-bottom: 5px; }
+
+.media-list {
+  padding-left: 0;
+  list-style: none; }
 
 .list-group {
   margin-bottom: 20px;
@@ -3870,7 +3909,7 @@ button.close {
   left: 0;
   z-index: 1060;
   display: none;
-  max-width: 276px;
+  max-width: 292px;
   padding: 1px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -3880,7 +3919,7 @@ button.close {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 6px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   white-space: normal; }
@@ -3924,7 +3963,7 @@ button.close {
   margin-left: -11px;
   border-bottom-width: 0;
   border-top-color: #999999;
-  border-top-color: rgba(0, 0, 0, 0.25);
+  border-top-color: rgba(0, 0, 0, 0.1);
   bottom: -11px; }
   .popover.top > .arrow:after {
     content: " ";
@@ -3938,7 +3977,7 @@ button.close {
   margin-top: -11px;
   border-left-width: 0;
   border-right-color: #999999;
-  border-right-color: rgba(0, 0, 0, 0.25); }
+  border-right-color: rgba(0, 0, 0, 0.1); }
   .popover.right > .arrow:after {
     content: " ";
     left: 1px;
@@ -3950,7 +3989,7 @@ button.close {
   margin-left: -11px;
   border-top-width: 0;
   border-bottom-color: #999999;
-  border-bottom-color: rgba(0, 0, 0, 0.25);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
   top: -11px; }
   .popover.bottom > .arrow:after {
     content: " ";
@@ -3964,7 +4003,7 @@ button.close {
   margin-top: -11px;
   border-right-width: 0;
   border-left-color: #999999;
-  border-left-color: rgba(0, 0, 0, 0.25); }
+  border-left-color: rgba(0, 0, 0, 0.1); }
   .popover.left > .arrow:after {
     content: " ";
     right: 1px;
@@ -4619,6 +4658,9 @@ p + h1, p + h2, p + h3, p + h4, p + h5, p + h6, ul + h1, ul + h2, ul + h3, ul + 
 .text-wrap {
   white-space: normal; }
 
+.bg-default {
+  background-color: #eeeeee; }
+
 .bg-success .btn-link {
   color: #466d1f; }
 
@@ -4739,6 +4781,19 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 ```
 
 */
+label, .fuente--label {
+  font-size: inherit;
+  line-height: 1.2; }
+  @media (min-width: 768px) {
+    label, .fuente--label {
+      font-size: 13px; } }
+  @media (min-width: 992px) {
+    label, .fuente--label {
+      font-size: inherit; } }
+  @media (min-width: 1200px) {
+    label, .fuente--label {
+      font-size: inherit; } }
+
 .form-control[type="date"] {
   color: #999; }
   .form-control[type="date"].completado {
@@ -4761,6 +4816,19 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
   padding-right: 12px;
   padding-left: 12px;
   background-color: rgba(0, 0, 0, 0.15); }
+
+/*doc
+---
+title: Forms
+category: Global
+---
+
+Utilizamos los estilos básicos ["Buttons" de Bootstrap](http://getbootstrap.com/css/#buttons), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+
+*/
+.btn__texto--grande {
+  font-size: 20px;
+  font-weight: 400; }
 
 /*doc
 ---
@@ -4898,6 +4966,8 @@ Igual que la anterior pero sin bordes y con menos celdas
     margin-bottom: 0; }
   .rejilla--adaptable__columna select {
     min-width: 50px; }
+    .rejilla--adaptable__columna select.select-lg {
+      min-width: 70px; }
 
 .rejilla--adaptable__columna--vertical-centrada {
   vertical-align: middle; }
@@ -5014,6 +5084,99 @@ Igual que la anterior pero sin bordes y con menos celdas
 @media (min-width: 992px) {
   .rejilla--tabla__columna__mas-datos {
     display: none; } }
+
+/*doc
+---
+title: Table grid
+category: Componentes
+---
+
+Lo utilizamos para generar un grid de columnas que tengan la misma altura. Esta basado en [este ejemplo](http://mdo.github.io/table-grid) realizado por uno de los creadores de Bootstrap.
+
+*/
+@media (min-width: 768px) {
+  .table-grid {
+    margin-left: -5px;
+    margin-right: -5px; } }
+@media (min-width: 992px) {
+  .table-grid {
+    margin-left: -15px;
+    margin-right: -15px; } }
+@media (min-width: 1200px) {
+  .table-grid {
+    margin-left: -30px;
+    margin-right: -30px; } }
+
+@media (min-width: 768px) {
+  .table-grid__container {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    margin-top: -30px;
+    border-spacing: 5px 30px; } }
+@media (min-width: 992px) {
+  .table-grid__container {
+    border-spacing: 15px 30px; } }
+@media (min-width: 1200px) {
+  .table-grid__container {
+    border-spacing: 30px 30px; } }
+
+@media (min-width: 768px) {
+  .table-grid__row {
+    display: table-row; } }
+
+@media (min-width: 768px) {
+  .table-grid__col {
+    display: table-cell;
+    vertical-align: top; } }
+
+@media (min-width: 768px) {
+  .table-grid__col--1 {
+    width: 8.333333%; } }
+
+@media (min-width: 768px) {
+  .table-grid__col--2 {
+    width: 16.666667%; } }
+
+@media (min-width: 768px) {
+  .table-grid__col--3 {
+    width: 25%; } }
+
+@media (min-width: 768px) {
+  .table-grid__col--4 {
+    width: 33.333333%; } }
+
+@media (min-width: 768px) {
+  .table-grid__col--5 {
+    width: 41.666667%; } }
+
+@media (min-width: 768px) {
+  .table-grid__col--6 {
+    width: 50%; } }
+
+@media (min-width: 768px) {
+  .table-grid__col--7 {
+    width: 58.333333%; } }
+
+@media (min-width: 768px) {
+  .table-grid__col--8 {
+    width: 66.666667%; } }
+
+@media (min-width: 768px) {
+  .table-grid__col--9 {
+    width: 75%; } }
+
+@media (min-width: 768px) {
+  .table-grid__col--10 {
+    width: 83.333333%; } }
+
+@media (min-width: 768px) {
+  .table-grid__col--11 {
+    width: 91.666667%; } }
+
+@media (min-width: 768px) {
+  .table-grid__col--12 {
+    width: 100%; } }
 
 /*doc
 ---
@@ -5149,7 +5312,8 @@ Utilizamos el componente ["List group" de Bootstrap](http://getbootstrap.com/com
   margin-bottom: 30px; }
 
 .list-group-item {
-  padding: 7px 15px 8px; }
+  padding: 11px 15px 12px;
+  line-height: 1.1; }
 
 .list-group-item-heading {
   margin: 8px 0 12px;
@@ -5266,7 +5430,6 @@ Además, añadimos la clase `nav-tabs__enlace--lg` para dar estilo a las pestañ
   background-color: #f6f6f6; }
 
 .nav-tabs > li > a {
-  margin-right: 0;
   color: #555555; }
   .nav-tabs > li > a, .nav-tabs > li > a:hover {
     border-color: #f6f6f6 #f6f6f6 #ddd; }
@@ -5275,6 +5438,12 @@ Además, añadimos la clase `nav-tabs__enlace--lg` para dar estilo a las pestañ
   font-family: 'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
   font-size: 17px; }
   @media (min-width: 768px) {
+    .nav-tabs__enlace--lg {
+      font-size: 20px; } }
+  @media (min-width: 992px) {
+    .nav-tabs__enlace--lg {
+      font-size: 24px; } }
+  @media (min-width: 1200px) {
     .nav-tabs__enlace--lg {
       font-size: 24px; } }
 
@@ -5348,6 +5517,11 @@ Podemos añadirle el class `.island--margen-pequeno` para darle un margen inferi
 .island > p:last-child, .island > ul:last-child, .island > .rejilla--tabla:last-child {
   margin-bottom: 5px; }
 
+.island .checkbox {
+  margin-top: 0; }
+  .island .checkbox:last-child {
+    margin-bottom: 0; }
+
 .island--xxxs {
   padding: 5px; }
 
@@ -5375,8 +5549,20 @@ Podemos añadirle el class `.island--margen-pequeno` para darle un margen inferi
     .island--lg {
       padding: 15px; } }
 
+.island--margen-muy-pequeno {
+  margin-bottom: 15px; }
+
 .island--margen-pequeno {
   margin-bottom: 30px; }
+
+.island--margen-mediano {
+  margin-bottom: 45px; }
+
+.island--margen-largo {
+  margin-bottom: 60px; }
+
+.island--margen-muy-largo {
+  margin-bottom: 75px; }
 
 .island--bordeado {
   border: 1px solid #e9e9e9; }
@@ -5558,10 +5744,49 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
 
 */
 .calendario {
+  min-width: 260px;
   max-width: 330px;
   padding: 15px;
   margin-bottom: 30px;
   background-color: #f6f6f6; }
+  .calendario .table-bordered > thead > tr > th {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    border-color: transparent; }
+    @media (min-width: 768px) {
+      .calendario .table-bordered > thead > tr > th {
+        font-size: 12px; } }
+    @media (min-width: 992px) {
+      .calendario .table-bordered > thead > tr > th {
+        font-size: 12px; } }
+    @media (min-width: 1200px) {
+      .calendario .table-bordered > thead > tr > th {
+        font-size: 12px; } }
+  .calendario .table-bordered > tbody > tr > td {
+    padding: 0;
+    font-size: 12px;
+    text-align: right;
+    border-color: #f6f6f6; }
+    @media (min-width: 768px) {
+      .calendario .table-bordered > tbody > tr > td {
+        font-size: 12px; } }
+    @media (min-width: 992px) {
+      .calendario .table-bordered > tbody > tr > td {
+        font-size: 12px; } }
+    @media (min-width: 1200px) {
+      .calendario .table-bordered > tbody > tr > td {
+        font-size: 12px; } }
+
+.popover .calendario {
+  margin-bottom: 0; }
+
+.calendario--transparente {
+  background-color: transparent; }
+  .calendario--transparente .table-bordered > tbody > tr > td {
+    border: 1px solid transparent; }
+  .calendario--transparente .calendario__fechas__dia--vacio {
+    background-color: transparent; }
 
 .calendario__navegacion {
   padding-bottom: 15px;
@@ -5586,36 +5811,6 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
 .calendario__fechas {
   margin-bottom: 0;
   background-color: transparent; }
-
-.calendario__fechas__dia-semana {
-  font-size: 12px;
-  text-transform: uppercase;
-  text-align: center;
-  border-color: transparent !important; }
-  @media (min-width: 768px) {
-    .calendario__fechas__dia-semana {
-      font-size: 12px; } }
-  @media (min-width: 992px) {
-    .calendario__fechas__dia-semana {
-      font-size: 12px; } }
-  @media (min-width: 1200px) {
-    .calendario__fechas__dia-semana {
-      font-size: 12px; } }
-
-.calendario__fechas__dia {
-  padding: 0 !important;
-  font-size: 12px;
-  text-align: right;
-  border-color: #f6f6f6 !important; }
-  @media (min-width: 768px) {
-    .calendario__fechas__dia {
-      font-size: 12px; } }
-  @media (min-width: 992px) {
-    .calendario__fechas__dia {
-      font-size: 12px; } }
-  @media (min-width: 1200px) {
-    .calendario__fechas__dia {
-      font-size: 12px; } }
 
 .calendario__fechas__dia__enlace {
   padding: 5px;
@@ -5727,7 +5922,7 @@ Lo utilizamos para dar estilos a los elementos de tipo <section> y a los posible
   margin-bottom: 45px; }
   @media (min-width: 768px) {
     .seccion {
-      margin-bottom: 30px; } }
+      margin-bottom: 45px; } }
 
 .seccion--separador-arriba--fino {
   padding-top: 30px;
@@ -5787,6 +5982,146 @@ Documentación...
     bottom: 0;
     left: 0;
     box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.3); } }
+
+/*doc
+---
+title: Etiquetas
+category: Componentes
+---
+
+Se trata de un nuevo componente para reemplazar al que trae Bootstrap.
+
+*/
+.etiqueta {
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  font-family: 'PFDinTextPro-Regular', Helvetica, Arial, sans-serif;
+  line-height: 1.2;
+  color: #035d85;
+  background-color: #d5f2fe; }
+
+/*doc
+---
+title: Miniaturas
+category: Componentes
+---
+
+En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo elemento las clases de ambos.
+
+*/
+.miniatura {
+  position: relative;
+  margin-bottom: 30px; }
+
+.miniatura--caja {
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15); }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .miniatura--caja {
+      padding-left: 10px;
+      padding-right: 10px; } }
+  .miniatura--caja:hover {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2); }
+
+.miniatura--caja--accion-fija {
+  padding-bottom: 65px; }
+
+.miniatura__enlace {
+  display: block;
+  margin-bottom: 15px;
+  color: #737373; }
+  .miniatura__enlace:hover, .miniatura__enlace:hover .miniatura__titulo {
+    color: #05a4e9; }
+
+.miniatura__pie {
+  margin-bottom: 10px; }
+
+.miniatura__antetitulo {
+  margin-bottom: 5px;
+  font-family: 'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.2; }
+  @media (min-width: 768px) {
+    .miniatura__antetitulo {
+      font-size: 14px; } }
+  @media (min-width: 992px) {
+    .miniatura__antetitulo {
+      font-size: 14px; } }
+  @media (min-width: 1200px) {
+    .miniatura__antetitulo {
+      font-size: 15px; } }
+
+.miniatura__titulo {
+  margin-bottom: 5px;
+  font-family: 'PFDinTextPro-Bold', Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1; }
+  @media (min-width: 768px) {
+    .miniatura__titulo {
+      font-size: 19px; } }
+  @media (min-width: 992px) {
+    .miniatura__titulo {
+      font-size: 19px; } }
+  @media (min-width: 1200px) {
+    .miniatura__titulo {
+      font-size: 19px; } }
+
+.miniatura__subtitulo {
+  margin-bottom: 5px;
+  font-family: 'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1;
+  text-transform: none; }
+  @media (min-width: 768px) {
+    .miniatura__subtitulo {
+      font-size: 18px; } }
+  @media (min-width: 992px) {
+    .miniatura__subtitulo {
+      font-size: 18px; } }
+  @media (min-width: 1200px) {
+    .miniatura__subtitulo {
+      font-size: 18px; } }
+
+.miniatura__texto {
+  margin-bottom: 5px; }
+  .miniatura__texto, .miniatura__texto p {
+    font-size: 14px; }
+    @media (min-width: 768px) {
+      .miniatura__texto, .miniatura__texto p {
+        font-size: 13px; } }
+    @media (min-width: 992px) {
+      .miniatura__texto, .miniatura__texto p {
+        font-size: 14px; } }
+    @media (min-width: 1200px) {
+      .miniatura__texto, .miniatura__texto p {
+        font-size: 14px; } }
+
+.miniatura__acciones {
+  padding-top: 10px;
+  border-top: 1px dotted #ddd; }
+
+.miniatura__acciones__accion {
+  margin-bottom: 10px; }
+  .miniatura__acciones__accion:last-child {
+    margin-bottom: 0; }
+  .miniatura__acciones__accion .checkbox {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+.miniatura__acciones__accion--fija {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: absolute;
+  bottom: 15px;
+  left: 0; }
 
 /*doc
 ---

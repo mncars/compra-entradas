@@ -67,6 +67,8 @@ $panel-border-radius: 		0;
 $table-bg:                  #fff;
 $table-cell-padding:        12px 15px 14px;
 
+$state-default-bg:          darken($gray-lighter, 3%);
+
 $state-success-bg:          #b9e091;
 $state-success-text: 		darken($state-success-bg, 40%);
 $state-success-border:      $state-success-bg;
@@ -88,6 +90,9 @@ $modal-inner-padding:       30px;
 $nav-link-hover-bg:                 darken($gray-lighter, 3%);
 $nav-tabs-active-link-hover-color: 	$gray-dark;
 $nav-tabs-active-link-hover-bg: 	#fff;
+
+$popover-max-width: 		292px;
+$popover-border-color:      rgba(0,0,0,.05);
 
 /*
 	Variables propias
@@ -192,8 +197,16 @@ $panel-list-group-list-group-item-font-size-sm: 		$panel-list-group-list-group-i
 $panel-list-group-list-group-item-font-size-md: 		$panel-list-group-list-group-item-font-size-xs;
 $panel-list-group-list-group-item-font-size-lg: 		$panel-list-group-list-group-item-font-size-xs;
 
+// Componente Navs
+
+$nav-tabs-enlace-lg-font-size-xs: 	 		17px;
+$nav-tabs-enlace-lg-font-size-sm: 	 		20px;
+$nav-tabs-enlace-lg-font-size-md: 	 		24px;
+$nav-tabs-enlace-lg-font-size-lg: 	 		$nav-tabs-enlace-lg-font-size-md;
+
 // Componente Calendario
 
+$calendario-anchura-minima: 				260px;
 $calendario-anchura-maxima: 				330px;
 $calendario-fondo: 							$gray-lighter;
 $calendario-desactivado-color: 				darken($gray-light, 10%);
@@ -202,3 +215,46 @@ $calendario-desactivado-color: 				darken($gray-light, 10%);
 
 $fijado-z-index: 		10;
 $arrow-z-index: 		2;
+$z-index-miniatura-imagen-veladura:         980;
+$z-index-miniatura-tipo: 			        990;
+
+// Miniatura
+
+$miniatura-antetitulo-font-size-xs:         14px;
+$miniatura-antetitulo-font-size-sm:         $miniatura-antetitulo-font-size-xs;
+$miniatura-antetitulo-font-size-md:         $miniatura-antetitulo-font-size-xs;
+$miniatura-antetitulo-font-size-lg:         15px;
+
+$miniatura-titulo-font-size-xs:         	19px;
+$miniatura-titulo-font-size-sm:         	$miniatura-titulo-font-size-xs;
+$miniatura-titulo-font-size-md:         	$miniatura-titulo-font-size-xs;
+$miniatura-titulo-font-size-lg:         	$miniatura-titulo-font-size-xs;
+
+$miniatura-subtitulo-font-size-xs:         	18px;
+$miniatura-subtitulo-font-size-sm:         	$miniatura-subtitulo-font-size-xs;
+$miniatura-subtitulo-font-size-md:         	$miniatura-subtitulo-font-size-xs;
+$miniatura-subtitulo-font-size-lg:         	$miniatura-subtitulo-font-size-xs;
+
+$miniatura-texto-font-size-xs:     	    	$font-size-base;
+$miniatura-texto-font-size-sm:       	  	$font-size-base - 1;
+$miniatura-texto-font-size-md:       		$miniatura-texto-font-size-xs;
+$miniatura-texto-font-size-lg:        	 	$miniatura-texto-font-size-xs;
+
+// Table grid
+$table-grid-margin:				30px;
+
+$table-grid-gutter-width-sm: 	5px;
+$table-grid-gutter-width-md: 	15px;
+$table-grid-gutter-width-lg: 	$table-grid-margin;
+		
+// Etiquetas
+
+$etiqueta-color: 			$state-info-text;
+$etiqueta-fondo-color: 		$state-info-bg;
+
+// Forms
+
+$label-font-size-xs:     	    inherit;
+$label-font-size-sm:       	  	$font-size-base - 1;
+$label-font-size-md:       		$label-font-size-xs;
+$label-font-size-lg:        	$label-font-size-xs;

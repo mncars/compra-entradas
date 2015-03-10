@@ -168,6 +168,10 @@ table {
 
 // Contextual backgrounds
 
+.bg-default {
+	background-color: $state-default-bg;
+}
+
 .bg-success {
 	.btn-link {
 		color: darken($state-success-text, 5%);

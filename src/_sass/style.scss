@@ -10,7 +10,9 @@
 @import "global/enlaces";
 @import "global/tables";
 @import "global/forms";
+@import "global/buttons";
 @import "global/rejilla";
+@import "global/table-grid";
 
 // Componentes
 @import "componentes/dropdowns";
@@ -26,6 +28,8 @@
 @import "componentes/seccion";
 @import "componentes/objeto-multimedia";
 @import "componentes/fijados";
+@import "componentes/etiquetas";
+@import "componentes/miniatura";
 
 // Módulos
 @import "modulos/navegacion-principal";

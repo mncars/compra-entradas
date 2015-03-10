@@ -1,0 +1,102 @@
+<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+	<a href="" class="miniatura__enlace enlace--bloque">
+		<div class="miniatura__pie">
+			<h2 class="miniatura__titulo">{{ entrada.titulo }}</h2>
+			
+			{% if entrada.tipo %}
+			<p class="miniatura__texto"><span class="etiqueta">{{ entrada.tipo }}</span></p>
+			{% endif %}
+			
+			{% if entrada.descripcion %}
+			<p class="miniatura__texto">{{ entrada.descripcion }}</p>
+			{% endif %}	
+
+		</div>		
+	</a>
+	<div class="miniatura__acciones">
+
+		{% if entrada.fecha %}
+			<div class="miniatura__acciones__accion">
+				<div class="rejilla--adaptable">
+					<div class="rejilla--adaptable__contenedor">
+						<div class="rejilla--adaptable__fila">
+							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+								<span class="fuente--label">{{ entrada.fecha }}</span>
+							</div>
+							<div class="rejilla--adaptable__columna">
+								{% if entrada.fecha-seleccionable %}
+									<label for="select-fecha-1" class="sr-only">Fecha</label>
+									<select id="select-fecha-1" class="form-control input-sm">
+										<option>{{ entrada.fecha-seleccionable }}</option>
+									</select>
+								{% endif %}
+
+								{% if entrada.hora %}
+									<label for="select-hora-1" class="sr-only">Hora</label>
+									<select id="select-hora-1" class="form-control input-sm select-lg">
+										<option>20:00</option>
+										<option>21:00</option>
+										<option>22:00</option>
+									</select>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+		
+		<div class="miniatura__acciones__accion">
+			<div class="rejilla--adaptable">
+				<div class="rejilla--adaptable__contenedor">
+					<div class="rejilla--adaptable__fila">
+						<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+							<label for="select-cantidad-entradas-1">Cantidad de entradas</label>
+						</div>
+						<div class="rejilla--adaptable__columna">
+							<select id="select-cantidad-entradas-1" class="form-control input-sm">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% if entrada.extras %}
+			<div class="miniatura__acciones__accion">
+				<div class="rejilla--adaptable">
+					<div class="rejilla--adaptable__contenedor">
+						<div class="rejilla--adaptable__fila">
+							<div class="rejilla--adaptable__columna">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" value="">
+										<span class="fuente-pequena">
+											{{ entrada.extras }}
+										</span>
+									</label>
+								</div>
+							</div>
+							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+								<span class="fuente-grande fuente-negrita">3€</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+		
+		<div class="miniatura__acciones__accion">
+			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
+		</div>
+
+		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
+			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">{{ entrada.precio }}</span></a>			
+		</div>
+	</div>
+</article>

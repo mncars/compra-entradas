@@ -1,0 +1,14 @@
+/*doc
+---
+title: Forms
+category: Global
+---
+
+Utilizamos los estilos básicos ["Buttons" de Bootstrap](http://getbootstrap.com/css/#buttons), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+
+*/
+
+.btn__texto--grande {
+	font-size: $font-size-large + 2;
+	font-weight: 400;
+}

@@ -35,9 +35,18 @@ Podemos añadirle el class `.island--margen-pequeno` para darle un margen inferi
 .island {
     > p,
     > ul,
-    > .rejilla--tabla {
+    > .rejilla--tabla  {
         &:last-child {
             margin-bottom: 5px;
+        }
+    }
+}
+
+.island {
+    .checkbox {
+        @include no-margin-top;
+        &:last-child {
+            @include no-margin-bottom;
         }
     }
 }
@@ -75,8 +84,24 @@ Podemos añadirle el class `.island--margen-pequeno` para darle un margen inferi
     }
 }
 
+.island--margen-muy-pequeno {
+    @include margin-bottom-xs;
+}
+
 .island--margen-pequeno {
     @include margin-bottom-sm;
+}
+
+.island--margen-mediano {
+    @include margin-bottom-md;
+}
+
+.island--margen-largo {
+    @include margin-bottom-lg;
+}
+
+.island--margen-muy-largo {
+    @include margin-bottom-xl;
 }
 
 .island--bordeado {

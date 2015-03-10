@@ -1,0 +1,101 @@
+/*doc
+---
+title: Miniaturas
+category: Componentes
+---
+
+En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo elemento las clases de ambos.
+
+*/
+
+.miniatura {
+	position: relative;
+	@include margin-bottom-sm;
+}
+
+.miniatura--caja {
+	@include padding-xs;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	@include box-shadow(1px 1px 10px rgba(0, 0, 0, 0.15));
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		@include padding-horizontal-xxs;
+	}
+	&:hover {
+		border: 1px solid rgba(0, 0, 0, 0.15);
+		@include box-shadow(1px 1px 15px rgba(0, 0, 0, 0.2));
+	}
+}
+
+.miniatura--caja--accion-fija {
+	padding-bottom: 65px;
+}
+
+.miniatura__enlace {
+	display: block;
+	@include margin-bottom-xs;
+	color: lighten($text-color, 25%);
+	&:hover {
+		&,
+		.miniatura__titulo {
+			color: $link-hover-color;
+		}
+	}
+}
+
+.miniatura__pie {
+	margin-bottom: 10px;
+}
+
+.miniatura__antetitulo {
+	margin-bottom: 5px;
+	font-family: $font-museo-thin;
+	@include font-size-miniatura-antetitulo;
+	line-height: 1.2;
+}
+
+.miniatura__titulo {
+	margin-bottom: 5px;
+	font-family: $font-museo-bold;
+	@include font-size-miniatura-titulo;
+	line-height: 1;
+}
+
+.miniatura__subtitulo {
+	margin-bottom: 5px;
+	font-family: $font-museo-thin;
+	@include font-size-miniatura-subtitulo;
+	line-height: 1;
+	text-transform: none;
+}
+
+.miniatura__texto {
+	margin-bottom: 5px;
+	&,
+	p {
+		@include font-size-miniatura-texto;
+	}
+}
+
+.miniatura__acciones {
+	@include padding-top-xxs;
+	border-top: 1px dotted $border-color;
+}
+
+.miniatura__acciones__accion {
+	@include margin-bottom-xxs;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	.checkbox {
+		@include no-margin-vertical;
+	}
+}
+
+.miniatura__acciones__accion--fija {
+	width: 100%;
+	@include padding-horizontal-xs;
+	position: absolute;
+	bottom: 15px;
+	left: 0;
+}

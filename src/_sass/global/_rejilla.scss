@@ -144,6 +144,9 @@ Igual que la anterior pero sin bordes y con menos celdas
 	}
 	select {
 		min-width: 50px; // Si no damos este ancho mínimo no se ven los números
+		&.select-lg {
+			min-width: 70px;
+		}
 	}
 }
 

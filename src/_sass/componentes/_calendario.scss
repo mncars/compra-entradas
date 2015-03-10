@@ -176,10 +176,39 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
 */
 
 .calendario {
+	min-width: $calendario-anchura-minima;
 	max-width: $calendario-anchura-maxima;
 	@include padding-xs;
 	@include margin-bottom-sm;
 	background-color: $calendario-fondo;
+	.table-bordered > thead > tr > th {
+		@include font-size-small;
+		text-transform: uppercase;
+		text-align: center;
+		border-color: transparent;
+	}
+	.table-bordered > tbody > tr > td {
+		padding: 0;
+		@include font-size-small;
+		text-align: right;
+		border-color: $calendario-fondo;
+	}
+}
+
+.popover {
+	.calendario {
+		@include no-margin-bottom;
+	}
+}
+
+.calendario--transparente {
+	background-color: transparent;
+	.table-bordered > tbody > tr > td {
+		border: 1px solid transparent;
+	}
+	.calendario__fechas__dia--vacio {
+		background-color: transparent;
+	}
 }
 
 .calendario__navegacion {
@@ -207,20 +236,6 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
 .calendario__fechas {
 	@include no-margin-bottom;
 	background-color: transparent;
-}
-
-.calendario__fechas__dia-semana {
-	@include font-size-small;
-	text-transform: uppercase;
-	text-align: center;
-	border-color: transparent!important;
-}
-
-.calendario__fechas__dia {
-	padding: 0!important;
-	@include font-size-small;
-	text-align: right;
-	border-color: $calendario-fondo!important;
 }
 
 .calendario__fechas__dia__enlace {

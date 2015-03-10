@@ -1,0 +1,11 @@
+- titulo: General Círculo Bellas Artes
+  descripcion: Incluye visita a la exposición + exposiciones temporales con un descuento aplicado de 3€
+
+- titulo: Exposiciones temporales Círculo Bellas Artes
+  descripcion: Incluye solo exposiciones temporales con un descuento aplicado de 1€
+
+- titulo: General Conciertos CNDM
+  descripcion: Incluye visita a la exposición + exposiciones temporales con un descuento aplicado de 3€
+
+- titulo: Exposiciones temporales Conciertos CNDM
+  descripcion: Incluye solo exposiciones temporales con un descuento aplicado de 1€

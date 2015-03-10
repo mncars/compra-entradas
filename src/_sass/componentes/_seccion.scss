@@ -11,7 +11,7 @@ Lo utilizamos para dar estilos a los elementos de tipo <section> y a los posible
 .seccion {
 	@include margin-bottom-md;
 	@media (min-width: $screen-sm-min) {
-		@include margin-bottom-sm;
+		@include margin-bottom-md;
 	}
 }
 

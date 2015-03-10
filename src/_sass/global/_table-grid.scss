@@ -1,0 +1,125 @@
+/*doc
+---
+title: Table grid
+category: Componentes
+---
+
+Lo utilizamos para generar un grid de columnas que tengan la misma altura. Esta basado en [este ejemplo](http://mdo.github.io/table-grid) realizado por uno de los creadores de Bootstrap.
+
+*/
+
+.table-grid {
+	@media (min-width: $screen-sm-min) {
+		margin-left: -$table-grid-gutter-width-sm;
+		margin-right: -$table-grid-gutter-width-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		margin-left: -$table-grid-gutter-width-md;
+		margin-right: -$table-grid-gutter-width-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		margin-left: -$table-grid-gutter-width-lg;
+		margin-right: -$table-grid-gutter-width-lg;
+	}
+}
+
+.table-grid__container {
+	@media (min-width: $screen-sm-min) {
+		width: 100%;
+		display: table;
+		table-layout: fixed;
+		margin-top:  -$table-grid-margin;
+		border-spacing: $table-grid-gutter-width-sm $table-grid-margin;
+	}
+	@media (min-width: $screen-md-min) {
+		border-spacing: $table-grid-gutter-width-md $table-grid-margin;
+	}
+	@media (min-width: $screen-lg-min) {
+		border-spacing: $table-grid-gutter-width-lg $table-grid-margin;
+	}
+}
+
+.table-grid__row {
+	@media (min-width: $screen-sm-min) {
+		display: table-row;
+	}
+}
+
+.table-grid__col {
+	@media (min-width: $screen-sm-min) {
+		display: table-cell;
+		vertical-align: top;
+	}
+}
+
+.table-grid__col--1 { 
+	@media (min-width: $screen-sm-min) {
+		width: 8.333333%;
+	}
+}
+
+.table-grid__col--2 { 
+	@media (min-width: $screen-sm-min) {
+		width: 16.666667%;
+	}
+}
+
+.table-grid__col--3 { 
+	@media (min-width: $screen-sm-min) {
+		width: 25%;
+	}
+}
+
+.table-grid__col--4 { 
+	@media (min-width: $screen-sm-min) {
+		width: 33.333333%;
+	}
+}
+
+.table-grid__col--5 { 
+	@media (min-width: $screen-sm-min) {
+		width: 41.666667%;
+	}
+}
+
+.table-grid__col--6 { 
+	@media (min-width: $screen-sm-min) {
+		width: 50%;
+	}
+}
+
+.table-grid__col--7 { 
+	@media (min-width: $screen-sm-min) {
+		width: 58.333333%;
+	}
+}
+
+.table-grid__col--8 { 
+	@media (min-width: $screen-sm-min) {
+		width: 66.666667%;
+	}
+}
+
+.table-grid__col--9 { 
+	@media (min-width: $screen-sm-min) {
+		width: 75%;
+	}
+}
+
+.table-grid__col--10 { 
+	@media (min-width: $screen-sm-min) {
+		width: 83.333333%;
+	}
+}
+
+.table-grid__col--11 { 
+	@media (min-width: $screen-sm-min) {
+		width: 91.666667%;
+	}
+}
+
+.table-grid__col--12 { 
+	@media (min-width: $screen-sm-min) {
+		width: 100%;
+	}
+}

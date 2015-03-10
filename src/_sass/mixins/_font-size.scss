@@ -148,3 +148,51 @@ Sirven para asignar a un elemento un tamaño de fuente en función de los tamañ
 		$panel-list-group-list-group-item-font-size-md, 
 		$panel-list-group-list-group-item-font-size-lg);	
 }
+
+@mixin font-size-nav-tabs-enlace-lg {
+	@include font-size-helper (
+		$nav-tabs-enlace-lg-font-size-xs, 
+		$nav-tabs-enlace-lg-font-size-sm, 
+		$nav-tabs-enlace-lg-font-size-md, 
+		$nav-tabs-enlace-lg-font-size-lg);	
+}
+
+@mixin font-size-miniatura-antetitulo {
+	@include font-size-helper (
+		$miniatura-antetitulo-font-size-xs, 
+		$miniatura-antetitulo-font-size-sm, 
+		$miniatura-antetitulo-font-size-md, 
+		$miniatura-antetitulo-font-size-lg);	
+}
+
+@mixin font-size-miniatura-titulo {
+	@include font-size-helper (
+		$miniatura-titulo-font-size-xs, 
+		$miniatura-titulo-font-size-sm, 
+		$miniatura-titulo-font-size-md, 
+		$miniatura-titulo-font-size-lg);	
+}
+
+@mixin font-size-miniatura-subtitulo {
+	@include font-size-helper (
+		$miniatura-subtitulo-font-size-xs, 
+		$miniatura-subtitulo-font-size-sm, 
+		$miniatura-subtitulo-font-size-md, 
+		$miniatura-subtitulo-font-size-lg);	
+}
+
+@mixin font-size-miniatura-texto {
+	@include font-size-helper (
+		$miniatura-texto-font-size-xs, 
+		$miniatura-texto-font-size-sm, 
+		$miniatura-texto-font-size-md, 
+		$miniatura-texto-font-size-lg);	
+}
+
+@mixin font-size-label {
+	@include font-size-helper (
+		$label-font-size-xs, 
+		$label-font-size-sm, 
+		$label-font-size-md, 
+		$label-font-size-lg);	
+}
