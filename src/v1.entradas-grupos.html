@@ -57,7 +57,7 @@ title: Entradas individuales
 
 				{% for entrada in site.data.entradas.grupos.turistico.actuales %}
 
-				{% include miniatura--entrada.html %}
+				{% include miniatura--entrada--grupos.html %}
 
 				{% endfor %}
 
@@ -76,7 +76,7 @@ title: Entradas individuales
 
 				{% for entrada in site.data.entradas.grupos.turistico.futuras %}
 
-				{% include miniatura--entrada.html %}
+				{% include miniatura--entrada--grupos.html %}
 
 				{% endfor %}
 
@@ -95,7 +95,7 @@ title: Entradas individuales
 
 				{% for entrada in site.data.entradas.grupos.cultural.actuales %}
 
-				{% include miniatura--entrada.html %}
+				{% include miniatura--entrada--grupos.html %}
 
 				{% endfor %}
 
@@ -114,7 +114,7 @@ title: Entradas individuales
 
 				{% for entrada in site.data.entradas.grupos.cultural.futuras %}
 
-				{% include miniatura--entrada.html %}
+				{% include miniatura--entrada--grupos.html %}
 
 				{% endfor %}
 
@@ -131,11 +131,19 @@ title: Entradas individuales
 		<div class="table-grid__container">
 			<div class="table-grid__row">
 
-				{% for entrada in site.data.entradas.grupos.educativos-discapacidad.actuales %}
-
-				{% include miniatura--entrada.html %}
-
-				{% endfor %}
+				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<a href="" class="miniatura__enlace enlace--bloque">
+						<div class="miniatura__pie">
+							<h2 class="miniatura__titulo">General</h2>
+							<p class="miniatura__texto">Incluye visita a la colección + exposiciones temporales</p>
+						</div>		
+					</a>
+					<div class="miniatura__acciones">
+						<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
+							<a href="" class="btn btn-primary btn-block">Gratuita <span class="btn__texto--grande">0€</span></a>			
+						</div>
+					</div>
+				</article>
 
 				<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
 				<div class="table-grid__col table-grid__col--3"></div>
