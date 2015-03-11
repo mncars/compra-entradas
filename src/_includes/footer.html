@@ -29,7 +29,14 @@
 <script>
 
 $(function () {
-	$('[data-toggle="popover"]').popover()
+	$('[data-toggle="popover"]').popover().click(function(e) {
+		e.preventDefault();
+	})
+	.on('show.bs.popover', function(){
+		$('html, body').animate({
+			scrollTop: $(this).closest('.island').offset().top
+		}, 500);
+	});
 })
 
 </script>
