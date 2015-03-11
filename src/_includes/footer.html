@@ -33,9 +33,15 @@ $(function () {
 		e.preventDefault();
 	})
 	.on('show.bs.popover', function(){
-		$('html, body').animate({
-			scrollTop: $(this).closest('.island').offset().top
-		}, 500);
+		if($('.btn-movil').is(':visible')){
+			$('html, body').animate({
+				scrollTop: $(this).closest('.island').offset().top - 10
+			}, 500);
+		}
+	});
+	$('#input-fecha').keydown(function(e) {
+		e.preventDefault();
+		return false;
 	});
 })
 
