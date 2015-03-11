@@ -109,7 +109,7 @@
 
 <section>	
 	<p class="visible-xs-block text-right">
-		<a class="btn btn-default btn-sm" data-toggle="collapse" href="#buscador-compras-reservas-1" aria-expanded="false" aria-controls="buscador-compras-reservas-1"><span class="glyphicon glyphicon-calendar"></span> ¿Cuándo quieres ir?</a>
+		<a class="btn btn-default btn-sm btn-movil" data-toggle="collapse" href="#buscador-compras-reservas-1" aria-expanded="false" aria-controls="buscador-compras-reservas-1"><span class="glyphicon glyphicon-calendar"></span> ¿Cuándo quieres ir?</a>
 	</p>
 	<div class="collapse collapse--visible-sm-block collapse--visible-md-block collapse--visible-lg-block" id="buscador-compras-reservas-1">
 		<div class="island island--xs island--margen-pequeno bg-info">
@@ -123,7 +123,7 @@
 						<div class="col-lg-7">
 							<div class="form-group margen-muy-pequeno">
 								<div class="input-group">
-									<input type="text" class="form-control input-lg input-xlg" value="Lunes, 16 febrero 2015">
+									<input id="input-fecha" type="text" class="form-control input-lg input-xlg" value="Lunes, 16 febrero 2015">
 									<span class="input-group-btn">
 										<a class="btn btn-primary btn-lg" href="#" data-toggle="popover" data-placement="bottom" data-content="<div class='calendario calendario--transparente'>
 	<nav class='calendario__navegacion'>
@@ -1430,9 +1430,22 @@
 <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
 <script>
 
-	$(function () {
-		$('[data-toggle="popover"]').popover()
+$(function () {
+	$('[data-toggle="popover"]').popover().click(function(e) {
+		e.preventDefault();
 	})
+	.on('show.bs.popover', function(){
+		if($('.btn-movil').is(':visible')){
+			$('html, body').animate({
+				scrollTop: $(this).closest('.island').offset().top - 10
+			}, 500);
+		}
+	});
+	$('#input-fecha').keydown(function(e) {
+		e.preventDefault();
+		return false;
+	});
+})
 
 </script>
 

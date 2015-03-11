@@ -397,9 +397,22 @@
 <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
 <script>
 
-	$(function () {
-		$('[data-toggle="popover"]').popover()
+$(function () {
+	$('[data-toggle="popover"]').popover().click(function(e) {
+		e.preventDefault();
 	})
+	.on('show.bs.popover', function(){
+		if($('.btn-movil').is(':visible')){
+			$('html, body').animate({
+				scrollTop: $(this).closest('.island').offset().top - 10
+			}, 500);
+		}
+	});
+	$('#input-fecha').keydown(function(e) {
+		e.preventDefault();
+		return false;
+	});
+})
 
 </script>
 
