@@ -18,12 +18,14 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
 	background-color: #fff;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	@include box-shadow(1px 1px 10px rgba(0, 0, 0, 0.15));
+	@include transition(all 200ms ease-out);
 	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 		@include padding-horizontal-xxs;
 	}
 	&:hover {
+		background-color: lighten(#fcf8e3, 2%);
 		border: 1px solid rgba(0, 0, 0, 0.15);
-		@include box-shadow(1px 1px 15px rgba(0, 0, 0, 0.2));
+		@include box-shadow(1px 1px 20px rgba(0, 0, 0, 0.25));		
 	}
 }
 
@@ -38,7 +40,7 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
 	&:hover {
 		&,
 		.miniatura__titulo {
-			color: $link-hover-color;
+			color: darken(#fcf8e3, 60%);
 		}
 	}
 }
@@ -59,6 +61,10 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
 	font-family: $font-museo-bold;
 	@include font-size-miniatura-titulo;
 	line-height: 1;
+	em {
+		font-family: $font-museo-bold-italic;
+		font-style: normal;
+	}
 }
 
 .miniatura__subtitulo {
@@ -67,6 +73,10 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
 	@include font-size-miniatura-subtitulo;
 	line-height: 1;
 	text-transform: none;
+	em {
+		font-family: $font-museo-thin-italic;
+		font-style: normal;
+	}
 }
 
 .miniatura__texto {

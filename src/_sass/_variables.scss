@@ -87,7 +87,7 @@ $state-danger-border:       $state-danger-bg;
 
 $modal-inner-padding:       30px;
 
-$nav-link-hover-bg:                 darken($gray-lighter, 3%);
+$nav-link-hover-bg:                 darken($gray-lighter, 5%);
 $nav-tabs-active-link-hover-color: 	$gray-dark;
 $nav-tabs-active-link-hover-bg: 	#fff;
 
@@ -148,8 +148,10 @@ $font-size-h6-lg:         	$font-size-h6;
 // Familia tipográfica de Museo
 
 $font-museo-bold: 		  	'PFDinTextPro-Bold', Helvetica, Arial, sans-serif;
+$font-museo-bold-italic: 	'PFDinTextPro-BoldItalic', Helvetica, Arial, sans-serif;
 $font-museo-regular: 	  	'PFDinTextPro-Regular', Helvetica, Arial, sans-serif;
 $font-museo-thin: 		  	'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
+$font-museo-thin-italic: 	'PFDinTextPro-ThinItalic', Helvetica, Arial, sans-serif;
 
 // Espacio en blanco
 

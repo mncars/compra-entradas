@@ -6,10 +6,10 @@
   descripcion: Incluye solo exposiciones temporales
   precio: 4€
 
-- titulo: General +  _Kunstmuseum Basel_
+- titulo: General +  <em>Kunstmuseum Basel</em>
   descripcion: Incluye entrada a la colección, exposiciones temporales + exposición especial
   precio: 12€
 
-- titulo: Exposiciones temporales +  _Kunstmuseum Basel_
+- titulo: Exposiciones temporales +  <em>Kunstmuseum Basel</em>
   descripcion: Incluye exposiciones temporales + exposición especial
   precio: 8€
