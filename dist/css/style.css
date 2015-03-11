@@ -6027,8 +6027,8 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
       padding-left: 10px;
       padding-right: 10px; } }
   .miniatura--caja:hover {
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2); }
+    border: 1px solid #66afe9;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
 
 .miniatura--caja--accion-fija {
   padding-bottom: 65px; }
@@ -6072,6 +6072,9 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
   @media (min-width: 1200px) {
     .miniatura__titulo {
       font-size: 19px; } }
+  .miniatura__titulo em {
+    font-family: 'PFDinTextPro-BoldItalic', Helvetica, Arial, sans-serif;
+    font-style: normal; }
 
 .miniatura__subtitulo {
   margin-bottom: 5px;
@@ -6088,6 +6091,9 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
   @media (min-width: 1200px) {
     .miniatura__subtitulo {
       font-size: 18px; } }
+  .miniatura__subtitulo em {
+    font-family: 'PFDinTextPro-ThinItalic', Helvetica, Arial, sans-serif;
+    font-style: normal; }
 
 .miniatura__texto {
   margin-bottom: 5px; }
