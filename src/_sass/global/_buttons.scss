@@ -8,6 +8,17 @@ Utilizamos los estilos básicos ["Buttons" de Bootstrap](http://getbootstrap.com
 
 */
 
+.btn-primary {
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		background-color: #000;
+	}
+}
+
 .btn__texto--grande {
 	font-size: $font-size-large + 2;
 	font-weight: 400;

@@ -195,3 +195,9 @@ table {
 		color: darken($state-danger-text, 5%);
 	}
 }
+
+.text-capitalize--xs {
+	@media (max-width: $screen-xs-max) {
+		text-transform: capitalize;
+	}
+}
