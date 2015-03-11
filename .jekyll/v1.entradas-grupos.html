@@ -303,14 +303,19 @@
 	</div>
 </section>
 
-<section class="seccion">
-	<div class="table-grid">
-		<div class="table-grid__container">
-			<div class="table-grid__row">
+<section>
+	<header class="seccion__cabecera">
+		<h2 class="seccion__cabecera__titulo">Turístico</h2>
+		<p>No incluye guía del Museo. El grupo que lo desee puede llevar su propio guía, con entrada gratuita a recoger en taquilla exprés.</p>
+	</header>
+	<section>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">General</h2>
@@ -363,9 +368,9 @@
 	</div>
 </article>
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">Exposiciones temporales</h2>
@@ -418,9 +423,9 @@
 	</div>
 </article>
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">General +  <em>Kunstmuseum Basel</em></h2>
@@ -473,9 +478,9 @@
 	</div>
 </article>
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">Exposiciones temporales +  <em>Kunstmuseum Basel</em></h2>
@@ -528,24 +533,24 @@
 	</div>
 </article>
 
-				
+					
 
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+	<section class="seccion">
+		<header class="seccion__cabecera">
+			<h3 class="seccion__cabecera__titulo">Futuras</h3>
+			<p>Puedes comprar entradas para exposiciones futuras:</p>
+		</header>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
 
-<section class="seccion">
-	<header class="seccion__cabecera">
-		<h2 class="seccion__cabecera__titulo">Futuras</h2>
-	</header>
-	<div class="table-grid">
-		<div class="table-grid__container">
-			<div class="table-grid__row">
+					
 
-				
-
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">General +  <em>Klein Contest</em></h2>
@@ -615,9 +620,9 @@
 	</div>
 </article>
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">Exposiciones temporales +  <em>Klein Contest</em></h2>
@@ -687,15 +692,18 @@
 	</div>
 </article>
 
-				
+					
 
-				<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
-				<div class="table-grid__col table-grid__col--3"></div>
-				<div class="table-grid__col table-grid__col--3"></div>
+					<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
+					<div class="table-grid__col table-grid__col--3"></div>
+					<div class="table-grid__col table-grid__col--3"></div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 </section>
+
+
 
 <section class="seccion">
 	<div class="table-grid">
@@ -1158,7 +1166,7 @@
 <script>
 
 $(function () {
-	$('[data-toggle="popover"]').popover().click(function(e) {
+	$('[data-toggle="popover"]').popover({content: $('.calendar-content').html()}).click(function(e) {
 		e.preventDefault();
 	})
 	.on('show.bs.popover', function(){

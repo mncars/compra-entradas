@@ -50,43 +50,51 @@ title: Entradas individuales
 	</div>
 </section>
 
-<section class="seccion">
-	<div class="table-grid">
-		<div class="table-grid__container">
-			<div class="table-grid__row">
-
-				{% for entrada in site.data.entradas.grupos.turistico.actuales %}
-
-				{% include miniatura--entrada--grupos.html %}
-
-				{% endfor %}
-
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="seccion">
+<section>
 	<header class="seccion__cabecera">
-		<h2 class="seccion__cabecera__titulo">Futuras</h2>
+		<h2 class="seccion__cabecera__titulo">Turístico</h2>
+		<p>No incluye guía del Museo. El grupo que lo desee puede llevar su propio guía, con entrada gratuita a recoger en taquilla exprés.</p>
 	</header>
-	<div class="table-grid">
-		<div class="table-grid__container">
-			<div class="table-grid__row">
+	<section>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
 
-				{% for entrada in site.data.entradas.grupos.turistico.futuras %}
+					{% for entrada in site.data.entradas.grupos.turistico.actuales %}
 
-				{% include miniatura--entrada--grupos.html %}
+					{% include miniatura--entrada--grupos.html %}
 
-				{% endfor %}
+					{% endfor %}
 
-				<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
-				<div class="table-grid__col table-grid__col--3"></div>
-				<div class="table-grid__col table-grid__col--3"></div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+	<section class="seccion">
+		<header class="seccion__cabecera">
+			<h3 class="seccion__cabecera__titulo">Futuras</h3>
+			<p>Puedes comprar entradas para exposiciones futuras:</p>
+		</header>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
+
+					{% for entrada in site.data.entradas.grupos.turistico.futuras %}
+
+					{% include miniatura--entrada--grupos.html %}
+
+					{% endfor %}
+
+					<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
+					<div class="table-grid__col table-grid__col--3"></div>
+					<div class="table-grid__col table-grid__col--3"></div>
+				</div>
+			</div>
+		</div>
+	</section>
 </section>
+
+
 
 <section class="seccion">
 	<div class="table-grid">
