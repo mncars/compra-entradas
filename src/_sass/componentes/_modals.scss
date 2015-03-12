@@ -1,0 +1,37 @@
+/*doc
+---
+title: Alerts
+category: Componentes
+---
+
+Utilizamos el componente ["Modals" de Bootstrap](http://getbootstrap.com/javascript/#modals), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+
+*/
+
+.modal--pantalla-completa {
+	.modal-backdrop {
+		background-color: #fff;
+		&.in { @include opacity(.98); }
+	}
+	.modal-content {
+		position: relative;
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		@include box-shadow(none);
+	}
+
+	.modal-header {
+		@include no-padding;
+		border-bottom: none;
+		min-height: inherit;
+	}
+	.close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include no-margin-top;
+		font-size: 60px;
+		z-index: 100000000000;
+	}
+}

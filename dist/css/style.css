@@ -6140,6 +6140,38 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
 
 /*doc
 ---
+title: Alerts
+category: Componentes
+---
+
+Utilizamos el componente ["Modals" de Bootstrap](http://getbootstrap.com/javascript/#modals), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+
+*/
+.modal--pantalla-completa .modal-backdrop {
+  background-color: #fff; }
+  .modal--pantalla-completa .modal-backdrop.in {
+    opacity: 0.98;
+    filter: alpha(opacity=98); }
+.modal--pantalla-completa .modal-content {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none; }
+.modal--pantalla-completa .modal-header {
+  padding: 0;
+  border-bottom: none;
+  min-height: inherit; }
+.modal--pantalla-completa .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 0;
+  font-size: 60px;
+  z-index: 100000000000; }
+
+/*doc
+---
 title: Navegación principal
 category: Módulos
 ---
