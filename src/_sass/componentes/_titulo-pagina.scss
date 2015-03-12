@@ -1,0 +1,44 @@
+/*doc
+---
+title: Título de página
+category: Componentes
+---
+
+Este componente nos sirve para construir los títulos de página de los contenidos finales del site. Se puede personalizar editando las variables del apartado "Titulo página" de la hoja de variables.
+
+<div class="titulo-pagina">
+	<div class="titulo-pagina__titulos">
+		<h1 class="titulo-pagina__titulos__titulo">Encuentro con Daniel G. Andújar</h1>
+		<h2 class="titulo-pagina__titulos__subtitulo">En conversación con Manuel Borja-Villel e Iris Dressler</h2>
+	</div>
+	<p class="titulo-pagina__texto">21 enero, 2015 - 19:00 h / Edificio Nouvel, Auditorio 200</p>
+</div>
+
+*/
+
+
+.titulo-pagina {
+	@include margin-bottom-sm;
+}
+
+.titulo-pagina__titulos {
+	@include padding-bottom-xxs;
+	@include font-size-titulo-pagina-titulo;
+	border-bottom: 4px solid $gray-dark;
+}
+
+.titulo-pagina__titulos__titulo {
+	@include no-margin;
+}
+
+.titulo-pagina__titulos__subtitulo {
+	@include no-margin;
+	font-family: $font-museo-thin;
+	@include font-size-titulo-pagina-subtitulo;
+}
+
+.titulo-pagina__texto {
+	padding-top: 7px;
+	font-family: $font-museo-thin;
+	@include font-size-titulo-pagina-texto;
+}

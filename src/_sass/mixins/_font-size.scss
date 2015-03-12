@@ -196,3 +196,27 @@ Sirven para asignar a un elemento un tamaño de fuente en función de los tamañ
 		$label-font-size-md, 
 		$label-font-size-lg);	
 }
+
+@mixin font-size-titulo-pagina-titulo {
+	@include font-size-helper (
+		$titulo-pagina-titulo-font-size-xs, 
+		$titulo-pagina-titulo-font-size-sm, 
+		$titulo-pagina-titulo-font-size-md, 
+		$titulo-pagina-titulo-font-size-lg);	
+}
+
+@mixin font-size-titulo-pagina-subtitulo {
+	@include font-size-helper (
+		$titulo-pagina-subtitulo-font-size-xs, 
+		$titulo-pagina-subtitulo-font-size-sm, 
+		$titulo-pagina-subtitulo-font-size-md, 
+		$titulo-pagina-subtitulo-font-size-lg);	
+}
+
+@mixin font-size-titulo-pagina-texto {
+	@include font-size-helper (
+		$titulo-pagina-texto-font-size-xs, 
+		$titulo-pagina-texto-font-size-sm, 
+		$titulo-pagina-texto-font-size-md, 
+		$titulo-pagina-texto-font-size-lg);	
+}

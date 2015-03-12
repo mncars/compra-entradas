@@ -1002,7 +1002,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #333333;
+  color: #737373;
   background-color: #f6f6f6; }
 
 input, button, select, textarea {
@@ -2237,7 +2237,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373; }
+  color: #b3b3b3; }
 
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -2326,7 +2326,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .btn:focus, .btn.focus {
-    color: #333333;
+    color: #737373;
     text-decoration: none; }
   .btn:active, .btn.active {
     outline: 0;
@@ -2340,11 +2340,11 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
     box-shadow: none; }
 
 .btn-default {
-  color: #333333;
+  color: #737373;
   background-color: #fbfbfb;
   border-color: #dddddd; }
   .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
-    color: #333333;
+    color: #737373;
     background-color: #e2e2e2;
     border-color: #bebebe; }
   .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
@@ -2354,7 +2354,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
     border-color: #dddddd; }
   .btn-default .badge {
     color: #fbfbfb;
-    background-color: #333333; }
+    background-color: #737373; }
 
 .btn-primary {
   color: #fff;
@@ -3582,7 +3582,7 @@ a.list-group-item-danger {
 
 .panel-footer {
   padding: 15px;
-  background-color: #f5f5f5;
+  background-color: #f6f6f6;
   border-top: 1px solid #ddd;
   border-bottom-right-radius: -1;
   border-bottom-left-radius: -1; }
@@ -4505,7 +4505,8 @@ Además, disponemos de las siguientes clases para cambiar la apariencia de un t�
   font-size: 22px;
   font-family: 'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
   font-weight: inherit;
-  line-height: inherit; }
+  line-height: inherit;
+  color: #333333; }
   @media (min-width: 768px) {
     .lead {
       font-size: 22px; } }
@@ -4696,10 +4697,10 @@ Diferentes tipos de enlace: subrayado, enlaces a números de teléfono y enlaces
 
 */
 .enlace--subrayado {
-  color: #333333;
+  color: #737373;
   text-decoration: underline; }
   .enlace--subrayado:hover {
-    color: #1a1a1a; }
+    color: #5a5a5a; }
 
 .enlace--telefono {
   white-space: nowrap;
@@ -4711,9 +4712,12 @@ Diferentes tipos de enlace: subrayado, enlaces a números de teléfono y enlaces
 
 .enlace--bloque {
   color: inherit; }
-  .enlace--bloque:hover {
+  .enlace--bloque:hover, .enlace--bloque:focus {
     color: inherit;
     text-decoration: none; }
+  .enlace--bloque:focus {
+    outline: invert none medium;
+    outline-offset: 0; }
 
 /*doc
 ---
@@ -5289,6 +5293,9 @@ Utilizamos el componente ["Panels" de Bootstrap](http://getbootstrap.com/compone
 .list-group + .panel-heading {
   border-radius: 0; }
 
+.panel-footer {
+  border-top: none; }
+
 /*doc
 ---
 title: List group
@@ -5861,7 +5868,7 @@ Permite añadir una serie de botones que se colocan en función del uso que haga
 			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Continuar →</a>
 		</div>
 		<div class="col-sm-4 col-sm-pull-2">
-			<a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__boton">← Todas las entradas</a>
+			<a href="" class="btn btn-lg btn-link btn-block botonera__boton">← Todas las entradas</a>
 		</div>
 	</div>
 </div>
@@ -5881,7 +5888,7 @@ Permite añadir una serie de botones que se colocan en función del uso que haga
 			<p class="botonera__texto-ayuda">Podrás realizar el pago hasta 2 días antes de la fecha de la reserva</p>
 		</div>
 		<div class="col-sm-4 col-sm-pull-8">
-			<a href="" class="btn btn-primary btn-lg btn-link btn-block botonera__boton">← Revisar compra y cupón</a>
+			<a href="" class="btn btn-lg btn-link btn-block botonera__boton">← Revisar compra y cupón</a>
 		</div>
 	</div>
 </div>
@@ -6038,16 +6045,21 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
     background-color: #fdfaec;
     border: 1px solid rgba(0, 0, 0, 0.15);
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25); }
+  .miniatura--caja .miniatura__enlace {
+    margin-bottom: 15px; }
+    .miniatura--caja .miniatura__enlace:hover, .miniatura--caja .miniatura__enlace:hover .miniatura__titulo {
+      color: #9c8611; }
 
 .miniatura--caja--accion-fija {
   padding-bottom: 65px; }
 
 .miniatura__enlace {
   display: block;
-  margin-bottom: 15px;
-  color: #737373; }
-  .miniatura__enlace:hover, .miniatura__enlace:hover .miniatura__titulo {
-    color: #9c8611; }
+  color: inherit; }
+  .miniatura__enlace:hover {
+    color: #8d8d8d; }
+    .miniatura__enlace:hover .miniatura__antetitulo, .miniatura__enlace:hover .miniatura__titulo, .miniatura__enlace:hover .miniatura__subtitulo {
+      text-decoration: underline; }
 
 .miniatura__pie {
   margin-bottom: 10px; }
@@ -6056,7 +6068,8 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
   margin-bottom: 5px;
   font-family: 'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.2; }
+  line-height: 1.2;
+  color: #333333; }
   @media (min-width: 768px) {
     .miniatura__antetitulo {
       font-size: 14px; } }
@@ -6066,6 +6079,8 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
   @media (min-width: 1200px) {
     .miniatura__antetitulo {
       font-size: 15px; } }
+  .miniatura__antetitulo + .miniatura__titulo {
+    margin-top: 0; }
 
 .miniatura__titulo {
   margin-bottom: 5px;
@@ -6084,6 +6099,8 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
   .miniatura__titulo em {
     font-family: 'PFDinTextPro-BoldItalic', Helvetica, Arial, sans-serif;
     font-style: normal; }
+  .miniatura__titulo + .miniatura__subtitulo {
+    margin-top: 0; }
 
 .miniatura__subtitulo {
   margin-bottom: 5px;
@@ -6152,6 +6169,12 @@ Utilizamos el componente ["Modals" de Bootstrap](http://getbootstrap.com/javascr
   .modal--pantalla-completa .modal-backdrop.in {
     opacity: 0.98;
     filter: alpha(opacity=98); }
+.modal--pantalla-completa .modal-dialog {
+  margin-left: 0;
+  margin-right: 0; }
+  @media (min-width: 768px) {
+    .modal--pantalla-completa .modal-dialog {
+      width: auto; } }
 .modal--pantalla-completa .modal-content {
   position: relative;
   background-color: transparent;
@@ -6162,13 +6185,89 @@ Utilizamos el componente ["Modals" de Bootstrap](http://getbootstrap.com/javascr
   padding: 0;
   border-bottom: none;
   min-height: inherit; }
+.modal--pantalla-completa .modal-body {
+  padding: 0; }
 .modal--pantalla-completa .close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -10px;
+  right: 15px;
   margin-top: 0;
   font-size: 60px;
+  font-weight: 200;
   z-index: 100000000000; }
+  @media (min-width: 768px) {
+    .modal--pantalla-completa .close {
+      top: 0px; } }
+  @media (min-width: 1200px) {
+    .modal--pantalla-completa .close {
+      font-size: 90px; } }
+  .modal--pantalla-completa .close:focus {
+    outline: invert none medium; }
+
+/*doc
+---
+title: Título de página
+category: Componentes
+---
+
+Este componente nos sirve para construir los títulos de página de los contenidos finales del site. Se puede personalizar editando las variables del apartado "Titulo página" de la hoja de variables.
+
+<div class="titulo-pagina">
+	<div class="titulo-pagina__titulos">
+		<h1 class="titulo-pagina__titulos__titulo">Encuentro con Daniel G. Andújar</h1>
+		<h2 class="titulo-pagina__titulos__subtitulo">En conversación con Manuel Borja-Villel e Iris Dressler</h2>
+	</div>
+	<p class="titulo-pagina__texto">21 enero, 2015 - 19:00 h / Edificio Nouvel, Auditorio 200</p>
+</div>
+
+*/
+.titulo-pagina {
+  margin-bottom: 30px; }
+
+.titulo-pagina__titulos {
+  padding-bottom: 10px;
+  font-size: 34px;
+  border-bottom: 4px solid #333333; }
+  @media (min-width: 768px) {
+    .titulo-pagina__titulos {
+      font-size: 34px; } }
+  @media (min-width: 992px) {
+    .titulo-pagina__titulos {
+      font-size: 34px; } }
+  @media (min-width: 1200px) {
+    .titulo-pagina__titulos {
+      font-size: 44px; } }
+
+.titulo-pagina__titulos__titulo {
+  margin: 0; }
+
+.titulo-pagina__titulos__subtitulo {
+  margin: 0;
+  font-family: 'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
+  font-size: 34px; }
+  @media (min-width: 768px) {
+    .titulo-pagina__titulos__subtitulo {
+      font-size: 34px; } }
+  @media (min-width: 992px) {
+    .titulo-pagina__titulos__subtitulo {
+      font-size: 34px; } }
+  @media (min-width: 1200px) {
+    .titulo-pagina__titulos__subtitulo {
+      font-size: 44px; } }
+
+.titulo-pagina__texto {
+  padding-top: 7px;
+  font-family: 'PFDinTextPro-Thin', Helvetica, Arial, sans-serif;
+  font-size: 22px; }
+  @media (min-width: 768px) {
+    .titulo-pagina__texto {
+      font-size: 22px; } }
+  @media (min-width: 992px) {
+    .titulo-pagina__texto {
+      font-size: 22px; } }
+  @media (min-width: 1200px) {
+    .titulo-pagina__texto {
+      font-size: 22px; } }
 
 /*doc
 ---

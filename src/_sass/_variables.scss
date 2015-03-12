@@ -20,7 +20,7 @@ $brand-primary: 			#71D2FC;
 
 $body-bg:               	$gray-lighter;
 
-$text-color:              	$gray-dark;
+$text-color:              	#737373;
 
 $link-color:            	darken($brand-primary, 10%);
 $link-hover-color:      	darken($brand-primary, 25%);
@@ -93,6 +93,8 @@ $nav-tabs-active-link-hover-bg: 	#fff;
 
 $popover-max-width: 		292px;
 $popover-border-color:      rgba(0,0,0,.05);
+
+$panel-footer-bg:           $gray-lighter;
 
 /*
 	Variables propias
@@ -260,3 +262,20 @@ $label-font-size-xs:     	    inherit;
 $label-font-size-sm:       	  	$font-size-base - 1;
 $label-font-size-md:       		$label-font-size-xs;
 $label-font-size-lg:        	$label-font-size-xs;
+
+// Titulo página
+
+$titulo-pagina-titulo-font-size-xs:     	    34px;
+$titulo-pagina-titulo-font-size-sm:       	  	$titulo-pagina-titulo-font-size-xs;
+$titulo-pagina-titulo-font-size-md:       		$titulo-pagina-titulo-font-size-xs;
+$titulo-pagina-titulo-font-size-lg:        		44px;
+
+$titulo-pagina-subtitulo-font-size-xs:     	    34px;
+$titulo-pagina-subtitulo-font-size-sm:       	$titulo-pagina-subtitulo-font-size-xs;
+$titulo-pagina-subtitulo-font-size-md:       	$titulo-pagina-subtitulo-font-size-xs;
+$titulo-pagina-subtitulo-font-size-lg:        	44px;
+
+$titulo-pagina-texto-font-size-xs:     	    	22px;
+$titulo-pagina-texto-font-size-sm:       		$titulo-pagina-texto-font-size-xs;
+$titulo-pagina-texto-font-size-md:       		$titulo-pagina-texto-font-size-xs;
+$titulo-pagina-texto-font-size-lg:        		$titulo-pagina-texto-font-size-xs;
