@@ -65,3 +65,7 @@ Utilizamos el componente ["Panels" de Bootstrap](http://getbootstrap.com/compone
 .list-group + .panel-heading {
 	border-radius: 0;
 }
+
+.panel-footer {
+	border-top: none;
+}

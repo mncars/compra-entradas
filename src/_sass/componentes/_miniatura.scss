@@ -27,6 +27,15 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
 		border: 1px solid rgba(0, 0, 0, 0.15);
 		@include box-shadow(1px 1px 20px rgba(0, 0, 0, 0.25));		
 	}
+	.miniatura__enlace {
+		@include margin-bottom-xs;
+		&:hover {
+			&,
+			.miniatura__titulo {
+				color: darken(#fcf8e3, 60%);
+			}
+		}
+	}
 }
 
 .miniatura--caja--accion-fija {
@@ -35,12 +44,13 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
 
 .miniatura__enlace {
 	display: block;
-	@include margin-bottom-xs;
-	color: lighten($text-color, 25%);
+	color: inherit;
 	&:hover {
-		&,
-		.miniatura__titulo {
-			color: darken(#fcf8e3, 60%);
+		color: lighten($text-color, 10%);
+		.miniatura__antetitulo,
+		.miniatura__titulo,
+		.miniatura__subtitulo {
+			text-decoration: underline;
 		}
 	}
 }
@@ -54,6 +64,10 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
 	font-family: $font-museo-thin;
 	@include font-size-miniatura-antetitulo;
 	line-height: 1.2;
+	color: $headings-color;
+	+ .miniatura__titulo {
+		@include no-margin-top;
+	}
 }
 
 .miniatura__titulo {
@@ -64,6 +78,9 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
 	em {
 		font-family: $font-museo-bold-italic;
 		font-style: normal;
+	}
+	+ .miniatura__subtitulo {
+		@include no-margin-top;
 	}
 }
 

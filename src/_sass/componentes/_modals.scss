@@ -9,10 +9,19 @@ Utilizamos el componente ["Modals" de Bootstrap](http://getbootstrap.com/javascr
 */
 
 .modal--pantalla-completa {
+	
 	.modal-backdrop {
 		background-color: #fff;
 		&.in { @include opacity(.98); }
 	}
+	
+	.modal-dialog {
+		@include no-margin-horizontal;
+		@media (min-width: $screen-sm-min) {
+			width: auto;
+		}
+	}
+
 	.modal-content {
 		position: relative;
 		background-color: transparent;
@@ -26,12 +35,28 @@ Utilizamos el componente ["Modals" de Bootstrap](http://getbootstrap.com/javascr
 		border-bottom: none;
 		min-height: inherit;
 	}
+
+	.modal-body {
+		@include no-padding;
+	}
+
 	.close {
 		position: absolute;
-		top: 0;
-		right: 0;
+		top: -10px;
+		right: 15px;
 		@include no-margin-top;
 		font-size: 60px;
+		font-weight: 200;
 		z-index: 100000000000;
+		@media (min-width: $screen-sm-min) {
+			top: 0px;
+		}
+		@media (min-width: $screen-lg-min) {
+			font-size: 90px;
+		}
+		&:focus {
+			outline: invert none medium;
+		}
 	}
+	
 }
