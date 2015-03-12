@@ -4791,7 +4791,8 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 */
 label, .fuente--label {
   font-size: inherit;
-  line-height: 1.2; }
+  line-height: 1.2;
+  color: #333333; }
   @media (min-width: 768px) {
     label, .fuente--label {
       font-size: 13px; } }

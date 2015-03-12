@@ -334,6 +334,8 @@ $(function () {
 	$('#input-fecha').keydown(function(e) {
 		e.preventDefault();
 		return false;
+	}).click(function(e){
+		$('[data-toggle="popover"]').popover('toggle');
 	});
 })
 
