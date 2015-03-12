@@ -109,7 +109,7 @@
 
 <section>	
 	<p class="visible-xs-block text-right">
-		<a class="btn btn-default btn-sm" data-toggle="collapse" href="#buscador-compras-reservas-1" aria-expanded="false" aria-controls="buscador-compras-reservas-1"><span class="glyphicon glyphicon-calendar"></span> ¿Cuándo quieres ir?</a>
+		<a class="btn btn-default btn-sm btn-movil" data-toggle="collapse" href="#buscador-compras-reservas-1" aria-expanded="false" aria-controls="buscador-compras-reservas-1"><span class="glyphicon glyphicon-calendar"></span> ¿Cuándo quieres ir?</a>
 	</p>
 	<div class="collapse collapse--visible-sm-block collapse--visible-md-block collapse--visible-lg-block" id="buscador-compras-reservas-1">
 		<div class="island island--xs island--margen-pequeno bg-info">
@@ -123,9 +123,11 @@
 						<div class="col-lg-7">
 							<div class="form-group margen-muy-pequeno">
 								<div class="input-group">
-									<input type="text" class="form-control input-lg input-xlg" value="Lunes, 16 febrero 2015">
+									<input id="input-fecha" type="text" class="form-control input-lg input-xlg" value="Lunes, 16 febrero 2015">
 									<span class="input-group-btn">
-										<a class="btn btn-primary btn-lg" href="#" data-toggle="popover" data-placement="bottom" data-content="<div class='calendario calendario--transparente'>
+										<a class="btn btn-primary btn-lg" href="#" data-toggle="popover" data-placement="bottom" data-html="true" data-container="body"><span class="glyphicon glyphicon-calendar"></span></a>
+										<div class="hide calendar-content">
+											<div class='calendario calendario--transparente'>
 	<nav class='calendario__navegacion'>
 		<a class='calendario__navegacion__boton calendario__navegacion__boton--anterior' title='Anterior'>
 			<span class='glyphicon glyphicon-chevron-left'></span>
@@ -288,7 +290,8 @@
 			</tr>
 		</tbody>
 	</table>
-</div>" data-html="true" data-container="body"><span class="glyphicon glyphicon-calendar"></span></a>
+</div>
+										</div>
 									</span>
 								</div>
 							</div>		
@@ -311,7 +314,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">General</h2>
 			
@@ -363,7 +366,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">Exposiciones temporales</h2>
 			
@@ -415,7 +418,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">General +  <em>Kunstmuseum Basel</em></h2>
 			
@@ -467,7 +470,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">Exposiciones temporales +  <em>Kunstmuseum Basel</em></h2>
 			
@@ -541,7 +544,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">General +  <em>Klein Contest</em></h2>
 			
@@ -610,7 +613,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">Exposiciones temporales +  <em>Klein Contest</em></h2>
 			
@@ -679,7 +682,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">TIM FAIN: P. Glass / Max Richter / A. Vivaldi</h2>
 			
@@ -779,7 +782,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">TIM FAIN: P. Glass / Max Richter</h2>
 			
@@ -884,7 +887,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">IVÁN MARTÍN: J.S Bach</h2>
 			
@@ -975,7 +978,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">BIRGIT KOLAR: Arvo Part</h2>
 			
@@ -1049,7 +1052,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">IVÁN MARTÍN: J.S Bach / Arvo Part</h2>
 			
@@ -1157,7 +1160,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">Tarjeta Museo del Prado + Museo Reina Sofía</h2>
 			
@@ -1209,7 +1212,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">Abono Paseo del Arte</h2>
 			
@@ -1263,7 +1266,7 @@
 				
 
 				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">Tarjeta anual de Museos Estatales</h2>
 			
@@ -1414,9 +1417,38 @@
 				</ul>
 			</div>
 		</div>
-	</div>
-	
+	</div>	
 </footer>
+
+<div class="modal fade modal--pantalla-completa" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			
+			<div class="modal-body">
+				<h1>Entrada individual <small>Exposiciones + <em>Kunstmuseum Basel</em></small></h1>
+				<p class="lead">Incluye la visita a las exposiciones:</p>
+
+				<h2><a href="">Juan Luis Moraza</a> república</h2>
+				<p>15 octubre, 2014 - 2 marzo, 2015</p>
+				<p>república es una exposición de Juan Luis Moraza (Vitoria, 1960) que reúne una amplia selección de sus obras, estructurada en áreas que examinan el museo como sistema de convenciones y posibilidades de ciudadanía.</p>
+
+				<h2><a href="">Kerry James Marshall: <em>pintura y otras cosas</em></a> 13 junio - 26 octubre, 2014</h2>
+				<p>La exposición Kerry James Marshall: pintura y otras cosas, se configura como una de las muestras más amplias dedicadas a este autor norteamericano. (Birmingham, Alabama, 1955; reside en Chicago)<br>
+				Kerry Jame Marshall. Lost boys AKA Black Johnny, 1993. Cortesía del artista. Galería Jack Shainman, NY, y Koplin Del Rio, CA</p>
+
+				<h2><a href="">fotos & libros. España 1905-1977</a> 28 mayo, 2014 – 5 enero, 2015</h2>
+				<p>La exposición fotos y libros. España 1905-1977 propone un recorrido por la historia del fotolibro español, comenzando a principios del siglo XX y finalizando a mediados de los años setenta, con una selección de la colección del Museo Reina Sofía, contextualizados y acompañados de un variado material complementario. <br>
+				Colección Palabra e Imagen, publicada por la editorial Lumen entre 1961 y 1975</p>
+
+				<h2><a href="">Kunstmuseumm Basel <em>Le génie</em></a></h2>
+				<p>La exposición constituye una aproximación al trabajo de XXXXXX XXXXXX (Danzig. 1915 - México DF, 1990) realizado desde su instalación en México, en 1949. A lo largo de cuatro décadas, en su producción tanto teórica como práctica converge la utopía racional con el neoprimitivismo, factores que derivan de su propia biografía: el periplo por distintas ciudades de Europa y del norte de África (1948).</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 
 <script src="./vendor/jquery/dist/jquery.js"></script>
 <script src="./js/console.js"></script>
@@ -1430,9 +1462,22 @@
 <script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
 <script>
 
-	$(function () {
-		$('[data-toggle="popover"]').popover()
+$(function () {
+	$('[data-toggle="popover"]').popover({content: $('.calendar-content').html()}).click(function(e) {
+		e.preventDefault();
 	})
+	.on('show.bs.popover', function(){
+		if($('.btn-movil').is(':visible')){
+			$('html, body').animate({
+				scrollTop: $(this).closest('.island').offset().top - 10
+			}, 500);
+		}
+	});
+	$('#input-fecha').keydown(function(e) {
+		e.preventDefault();
+		return false;
+	});
+})
 
 </script>
 

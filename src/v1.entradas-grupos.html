@@ -1,0 +1,209 @@
+---
+layout: default--cabecera-entradas
+title: Entradas individuales
+---
+
+
+<ul class="nav nav-tabs margen-pequeno">
+	<li>
+		<a href="#" class="nav-tabs__enlace--lg">
+			<span class="hidden-xs">Entradas </span><span class="text-capitalize--xs">individuales</span>
+		</a>
+	</li>
+	<li class="active">
+		<a href="#" class="nav-tabs__enlace--lg">
+			<span class="hidden-xs">Entradas para </span><span class="text-capitalize--xs">grupos</span>
+		</a>
+	</li>
+</ul>
+
+<section>	
+	<p class="visible-xs-block text-right">
+		<a class="btn btn-default btn-sm" data-toggle="collapse" href="#buscador-compras-reservas-1" aria-expanded="false" aria-controls="buscador-compras-reservas-1"><span class="glyphicon glyphicon-calendar"></span> ¿Cuándo quieres ir?</a>
+	</p>
+	<div class="collapse collapse--visible-sm-block collapse--visible-md-block collapse--visible-lg-block" id="buscador-compras-reservas-1">
+		<div class="island island--xs island--margen-pequeno bg-info">
+			<div class="row">
+				<div class="col-sm-5 col-lg-4">
+					<h2 class="h4 hidden-xs">¿Cuándo quieres ir?</h2>
+					<p class="h5">Selecciona una fecha para tu visita</p>			
+				</div>
+				<div class="col-sm-7 col-lg-8">
+					<div class="row">
+						<div class="col-lg-7">
+							<div class="form-group margen-muy-pequeno">
+								<div class="input-group">
+									<input type="text" class="form-control input-lg input-xlg" value="Lunes, 16 febrero 2015">
+									<span class="input-group-btn">
+										<a class="btn btn-primary btn-lg" href="#" data-toggle="popover" data-placement="bottom" data-content="{% include calendario--popover.html %}" data-html="true" data-container="body"><span class="glyphicon glyphicon-calendar"></span></a>
+									</span>
+								</div>
+							</div>		
+						</div>
+						<div class="col-lg-5">
+							<p class="fuente-pequena sin-margen">Para más información, consulta los <a href="http://www.museoreinasofia.es/visita/horarios-tarifas">horarios y tarifas</a> en la web del museo.</p>		
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="seccion">
+	<header class="seccion__cabecera">
+		<h2 class="seccion__cabecera__titulo">Turístico</h2>
+		<div class="row">
+			<div class="col-md-8">
+				<p>No incluye guía del Museo. El grupo que lo desee puede llevar su propio guía, con entrada gratuita a recoger en taquilla exprés.</p>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
+
+					{% for entrada in site.data.entradas.grupos.turistico.actuales %}
+
+					{% include miniatura--entrada--grupos.html %}
+
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<header class="seccion__cabecera">
+			<h3 class="seccion__cabecera__titulo">Futuras</h3>
+			<div class="row">
+				<div class="col-md-8">
+					<p>Puedes comprar entradas para exposiciones futuras:</p>
+				</div>
+			</div>
+		</header>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
+
+					{% for entrada in site.data.entradas.grupos.turistico.futuras %}
+
+					{% include miniatura--entrada--grupos.html %}
+
+					{% endfor %}
+
+					<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
+					<div class="table-grid__col table-grid__col--3"></div>
+					<div class="table-grid__col table-grid__col--3"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+
+<section class="seccion">
+	<header class="seccion__cabecera">
+		<h2 class="seccion__cabecera__titulo">Cultural</h2>
+		<div class="row">
+			<div class="col-md-8">
+				<p>Personas pertenecientes a entidades cuyo objetivo fundamental es el desarrollo y fomento del arte y de la cultura. No incluye guías del Museo, los grupos que lo deseen pueden traer sus propios profesores/guías, que obtendrá su entrada gratuita en la taquilla, previa acreditación, al recoger las entradas del grupo.</p>		
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
+
+					{% for entrada in site.data.entradas.grupos.cultural.actuales %}
+
+					{% include miniatura--entrada--grupos.html %}
+
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<header class="seccion__cabecera">
+			<h3 class="seccion__cabecera__titulo">Futuras</h3>
+			<div class="row">
+				<div class="col-md-8">
+					<p>Puedes comprar entradas para exposiciones futuras:</p>
+				</div>
+			</div>
+		</header>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
+
+					{% for entrada in site.data.entradas.grupos.cultural.futuras %}
+
+					{% include miniatura--entrada--grupos.html %}
+
+					{% endfor %}
+
+					<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
+					<div class="table-grid__col table-grid__col--3"></div>
+					<div class="table-grid__col table-grid__col--3"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+
+<section class="seccion">
+	<header class="seccion__cabecera">
+		<h2 class="seccion__cabecera__titulo">Educativos/Discapacidad</h2>
+		<div class="row">
+			<div class="col-md-8">
+				<p>Estudiantes de cualquiera de los ciclos de enseñanza, sea esta obligatoria o no. <br>
+				Personas con discapacidad de centros, escuelas o talleres, destinados a este colectivo. <br>
+				No incluye guías del Museo. El grupo que lo desee puede traer su propio profesor/guía, con entrada gratuita que  obtendrá en taquilla exprés, previa acreditación, al recoger las entradas del grupo. <br>
+				¿Estás buscando la reserva de <a href="">actividades de educación</a>?</p>		
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
+
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+						<a href="" class="miniatura__enlace enlace--bloque">
+							<div class="miniatura__pie">
+								<h2 class="miniatura__titulo">General</h2>
+								<p class="miniatura__texto">Incluye visita a la colección + exposiciones temporales</p>
+							</div>		
+						</a>
+						<div class="miniatura__acciones">
+							<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
+								<a href="" class="btn btn-primary btn-block">Gratuita <span class="btn__texto--grande">0€</span></a>			
+							</div>
+						</div>
+					</article>
+
+					<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
+					<div class="table-grid__col table-grid__col--3"></div>
+					<div class="table-grid__col table-grid__col--3"></div>
+					<div class="table-grid__col table-grid__col--3"></div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+
+<section class="seccion">
+	<header>
+		<h2 class="seccion__cabecera__titulo">Bono Voucher</h2>
+		<div class="row">
+			<div class="col-md-8">
+				<p>Profesionales del turismo que tienen convenio con el Museo Nacional Centro de Arte Reina Sofía. Reserva de las entradas adquiridas mediante el código del bono.</p>		
+			</div>
+		</div>
+	</header>
+	<a href="" class="btn btn-default text-wrap">Solicitar registro o acceder con tu usuario y contraseña</a>
+</section>

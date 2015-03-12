@@ -95,12 +95,12 @@
                 <div class="island island--sm">
                 
                     <ul class="nav nav-tabs margen-pequeno">
-	<li class="active">
+	<li>
 		<a href="#" class="nav-tabs__enlace--lg">
 			<span class="hidden-xs">Entradas </span><span class="text-capitalize--xs">individuales</span>
 		</a>
 	</li>
-	<li>
+	<li class="active">
 		<a href="#" class="nav-tabs__enlace--lg">
 			<span class="hidden-xs">Entradas para </span><span class="text-capitalize--xs">grupos</span>
 		</a>
@@ -109,7 +109,7 @@
 
 <section>	
 	<p class="visible-xs-block text-right">
-		<a class="btn btn-default btn-sm btn-movil" data-toggle="collapse" href="#buscador-compras-reservas-1" aria-expanded="false" aria-controls="buscador-compras-reservas-1"><span class="glyphicon glyphicon-calendar"></span> ¿Cuándo quieres ir?</a>
+		<a class="btn btn-default btn-sm" data-toggle="collapse" href="#buscador-compras-reservas-1" aria-expanded="false" aria-controls="buscador-compras-reservas-1"><span class="glyphicon glyphicon-calendar"></span> ¿Cuándo quieres ir?</a>
 	</p>
 	<div class="collapse collapse--visible-sm-block collapse--visible-md-block collapse--visible-lg-block" id="buscador-compras-reservas-1">
 		<div class="island island--xs island--margen-pequeno bg-info">
@@ -123,11 +123,9 @@
 						<div class="col-lg-7">
 							<div class="form-group margen-muy-pequeno">
 								<div class="input-group">
-									<input id="input-fecha" type="text" class="form-control input-lg input-xlg" value="Lunes, 16 febrero 2015">
+									<input type="text" class="form-control input-lg input-xlg" value="Lunes, 16 febrero 2015">
 									<span class="input-group-btn">
-										<a class="btn btn-primary btn-lg" href="#" data-toggle="popover" data-placement="bottom" data-html="true" data-container="body"><span class="glyphicon glyphicon-calendar"></span></a>
-										<div class="hide calendar-content">
-											<div class='calendario calendario--transparente'>
+										<a class="btn btn-primary btn-lg" href="#" data-toggle="popover" data-placement="bottom" data-content="<div class='calendario calendario--transparente'>
 	<nav class='calendario__navegacion'>
 		<a class='calendario__navegacion__boton calendario__navegacion__boton--anterior' title='Anterior'>
 			<span class='glyphicon glyphicon-chevron-left'></span>
@@ -290,8 +288,7 @@
 			</tr>
 		</tbody>
 	</table>
-</div>
-										</div>
+</div>" data-html="true" data-container="body"><span class="glyphicon glyphicon-calendar"></span></a>
 									</span>
 								</div>
 							</div>		
@@ -307,13 +304,22 @@
 </section>
 
 <section class="seccion">
-	<div class="table-grid">
-		<div class="table-grid__container">
-			<div class="table-grid__row">
+	<header class="seccion__cabecera">
+		<h2 class="seccion__cabecera__titulo">Turístico</h2>
+		<div class="row">
+			<div class="col-md-8">
+				<p>No incluye guía del Museo. El grupo que lo desee puede llevar su propio guía, con entrada gratuita a recoger en taquilla exprés.</p>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">General</h2>
@@ -344,6 +350,9 @@
 								<option>3</option>
 								<option>4</option>
 								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option selected>8</option>
 							</select>
 						</div>
 					</div>
@@ -354,18 +363,18 @@
 		
 		
 		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
+			<p class="help-block fuente-pequena">+0,40€ gastos de gestión por entrada</p>
 		</div>
 
 		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">8€</span></a>			
+			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">4€</span></a>			
 		</div>
 	</div>
 </article>
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">Exposiciones temporales</h2>
@@ -396,6 +405,9 @@
 								<option>3</option>
 								<option>4</option>
 								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option selected>8</option>
 							</select>
 						</div>
 					</div>
@@ -406,18 +418,18 @@
 		
 		
 		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
+			<p class="help-block fuente-pequena">+0,40€ gastos de gestión por entrada</p>
 		</div>
 
 		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">4€</span></a>			
+			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">2€</span></a>			
 		</div>
 	</div>
 </article>
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">General +  <em>Kunstmuseum Basel</em></h2>
@@ -448,6 +460,9 @@
 								<option>3</option>
 								<option>4</option>
 								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option selected>8</option>
 							</select>
 						</div>
 					</div>
@@ -458,18 +473,18 @@
 		
 		
 		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
+			<p class="help-block fuente-pequena">+0,40€ gastos de gestión por entrada</p>
 		</div>
 
 		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">12€</span></a>			
+			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">5€</span></a>			
 		</div>
 	</div>
 </article>
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">Exposiciones temporales +  <em>Kunstmuseum Basel</em></h2>
@@ -500,6 +515,9 @@
 								<option>3</option>
 								<option>4</option>
 								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option selected>8</option>
 							</select>
 						</div>
 					</div>
@@ -510,40 +528,37 @@
 		
 		
 		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
+			<p class="help-block fuente-pequena">+0,40€ gastos de gestión por entrada</p>
 		</div>
 
 		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">8€</span></a>			
+			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">3€</span></a>			
 		</div>
 	</div>
 </article>
 
-				
+					
 
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="island island--xxs bg-default">
-		<div class="row">
-			<div class="col-sm-7">
-				<p><strong><em>Kuntsmuseum Basel</em></strong><br> Si ya tienes comprada tu entrada General o para Exposiciones temporales, puedes comprar el plus para visitar la exposición especial _Kunstmuseum Basel_ por 4€ más en taquilla.</p>
+	</section>
+	<section>
+		<header class="seccion__cabecera">
+			<h3 class="seccion__cabecera__titulo">Futuras</h3>
+			<div class="row">
+				<div class="col-md-8">
+					<p>Puedes comprar entradas para exposiciones futuras:</p>
+				</div>
 			</div>
-		</div>
-	</div>
-</section>
+		</header>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
 
-<section class="seccion">
-	<header class="seccion__cabecera">
-		<h2 class="seccion__cabecera__titulo">Futuras</h2>
-	</header>
-	<div class="table-grid">
-		<div class="table-grid__container">
-			<div class="table-grid__row">
+					
 
-				
-
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">General +  <em>Klein Contest</em></h2>
@@ -564,7 +579,7 @@
 					<div class="rejilla--adaptable__contenedor">
 						<div class="rejilla--adaptable__fila">
 							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-								<span class="fuente--label">Desde 5 marzo</span>
+								<span class="fuente--label">Desde 5 marzo 2015</span>
 							</div>
 							<div class="rejilla--adaptable__columna">
 								
@@ -591,6 +606,9 @@
 								<option>3</option>
 								<option>4</option>
 								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option selected>8</option>
 							</select>
 						</div>
 					</div>
@@ -601,18 +619,18 @@
 		
 		
 		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
+			<p class="help-block fuente-pequena">+0,40€ gastos de gestión por entrada</p>
 		</div>
 
 		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">10€</span></a>			
+			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">7€</span></a>			
 		</div>
 	</div>
 </article>
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
 			<h2 class="miniatura__titulo">Exposiciones temporales +  <em>Klein Contest</em></h2>
@@ -633,7 +651,7 @@
 					<div class="rejilla--adaptable__contenedor">
 						<div class="rejilla--adaptable__fila">
 							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-								<span class="fuente--label">Desde 5 marzo</span>
+								<span class="fuente--label">Desde 5 marzo 2015</span>
 							</div>
 							<div class="rejilla--adaptable__columna">
 								
@@ -660,6 +678,9 @@
 								<option>3</option>
 								<option>4</option>
 								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option selected>8</option>
 							</select>
 						</div>
 					</div>
@@ -670,7 +691,7 @@
 		
 		
 		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
+			<p class="help-block fuente-pequena">+0,40€ gastos de gestión por entrada</p>
 		</div>
 
 		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
@@ -679,495 +700,42 @@
 	</div>
 </article>
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
-		<div class="miniatura__pie">
-			<h2 class="miniatura__titulo">TIM FAIN: P. Glass / Max Richter / A. Vivaldi</h2>
-			
-			
-			<p class="miniatura__texto"><span class="etiqueta">Concierto mini 01/02</span></p>
-			
-			
-			
-			<p class="miniatura__texto">Incluye entrada a la colección + exposiciones temporales</p>
-				
-
-		</div>		
-	</a>
-	<div class="miniatura__acciones">
-
-		
-			<div class="miniatura__acciones__accion">
-				<div class="rejilla--adaptable">
-					<div class="rejilla--adaptable__contenedor">
-						<div class="rejilla--adaptable__fila">
-							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-								<span class="fuente--label">Viernes 27 marzo</span>
-							</div>
-							<div class="rejilla--adaptable__columna">
-								
-
-								
-									<label for="select-hora-1" class="sr-only">Hora</label>
-									<select id="select-hora-1" class="form-control input-sm select-lg">
-										<option>20:00</option>
-										<option>21:00</option>
-										<option>22:00</option>
-									</select>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		
-		<div class="miniatura__acciones__accion">
-			<div class="rejilla--adaptable">
-				<div class="rejilla--adaptable__contenedor">
-					<div class="rejilla--adaptable__fila">
-						<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-							<label for="select-cantidad-entradas-1">Cantidad de entradas</label>
-						</div>
-						<div class="rejilla--adaptable__columna">
-							<select id="select-cantidad-entradas-1" class="form-control input-sm">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</div>
-					</div>
+					<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
+					<div class="table-grid__col table-grid__col--3"></div>
+					<div class="table-grid__col table-grid__col--3"></div>
 				</div>
 			</div>
 		</div>
-
-		
-			<div class="miniatura__acciones__accion">
-				<div class="rejilla--adaptable">
-					<div class="rejilla--adaptable__contenedor">
-						<div class="rejilla--adaptable__fila">
-							<div class="rejilla--adaptable__columna">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" value="">
-										<span class="fuente-pequena">
-											+ exposiciones temporales y consumición en terrazas
-										</span>
-									</label>
-								</div>
-							</div>
-							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-								<span class="fuente-grande fuente-negrita">3€</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		
-		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
-		</div>
-
-		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">5€</span></a>			
-		</div>
-	</div>
-</article>
-
-				
-
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
-		<div class="miniatura__pie">
-			<h2 class="miniatura__titulo">TIM FAIN: P. Glass / Max Richter</h2>
-			
-			
-			<p class="miniatura__texto"><span class="etiqueta">Concierto mini 03/04</span></p>
-			
-			
-			
-			<p class="miniatura__texto">Incluye entrada a la colección + exposiciones temporales</p>
-				
-
-		</div>		
-	</a>
-	<div class="miniatura__acciones">
-
-		
-			<div class="miniatura__acciones__accion">
-				<div class="rejilla--adaptable">
-					<div class="rejilla--adaptable__contenedor">
-						<div class="rejilla--adaptable__fila">
-							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-								<span class="fuente--label">Viernes 28 marzo</span>
-							</div>
-							<div class="rejilla--adaptable__columna">
-								
-
-								
-									<label for="select-hora-1" class="sr-only">Hora</label>
-									<select id="select-hora-1" class="form-control input-sm select-lg">
-										<option>20:00</option>
-										<option>21:00</option>
-										<option>22:00</option>
-									</select>
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		
-		<div class="miniatura__acciones__accion">
-			<div class="rejilla--adaptable">
-				<div class="rejilla--adaptable__contenedor">
-					<div class="rejilla--adaptable__fila">
-						<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-							<label for="select-cantidad-entradas-1">Cantidad de entradas</label>
-						</div>
-						<div class="rejilla--adaptable__columna">
-							<select id="select-cantidad-entradas-1" class="form-control input-sm">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		
-			<div class="miniatura__acciones__accion">
-				<div class="rejilla--adaptable">
-					<div class="rejilla--adaptable__contenedor">
-						<div class="rejilla--adaptable__fila">
-							<div class="rejilla--adaptable__columna">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" value="">
-										<span class="fuente-pequena">
-											+ exposiciones temporales y consumición en terrazas
-										</span>
-									</label>
-								</div>
-							</div>
-							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-								<span class="fuente-grande fuente-negrita">3€</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		
-		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
-		</div>
-
-		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">5€</span></a>			
-		</div>
-	</div>
-</article>
-
-				
-
-			</div>
-			<div class="table-grid__row">
-
-				
-
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
-		<div class="miniatura__pie">
-			<h2 class="miniatura__titulo">IVÁN MARTÍN: J.S Bach</h2>
-			
-			
-			<p class="miniatura__texto"><span class="etiqueta">Concierto mini 05</span></p>
-			
-			
-				
-
-		</div>		
-	</a>
-	<div class="miniatura__acciones">
-
-		
-			<div class="miniatura__acciones__accion">
-				<div class="rejilla--adaptable">
-					<div class="rejilla--adaptable__contenedor">
-						<div class="rejilla--adaptable__fila">
-							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-								<span class="fuente--label">Sábado 16 mayo, 20:00</span>
-							</div>
-							<div class="rejilla--adaptable__columna">
-								
-
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		
-		<div class="miniatura__acciones__accion">
-			<div class="rejilla--adaptable">
-				<div class="rejilla--adaptable__contenedor">
-					<div class="rejilla--adaptable__fila">
-						<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-							<label for="select-cantidad-entradas-1">Cantidad de entradas</label>
-						</div>
-						<div class="rejilla--adaptable__columna">
-							<select id="select-cantidad-entradas-1" class="form-control input-sm">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		
-			<div class="miniatura__acciones__accion">
-				<div class="rejilla--adaptable">
-					<div class="rejilla--adaptable__contenedor">
-						<div class="rejilla--adaptable__fila">
-							<div class="rejilla--adaptable__columna">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" value="">
-										<span class="fuente-pequena">
-											+ exposiciones temporales y consumición en terrazas
-										</span>
-									</label>
-								</div>
-							</div>
-							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-								<span class="fuente-grande fuente-negrita">3€</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		
-		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
-		</div>
-
-		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">5€</span></a>			
-		</div>
-	</div>
-</article>
-
-				
-
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
-		<div class="miniatura__pie">
-			<h2 class="miniatura__titulo">BIRGIT KOLAR: Arvo Part</h2>
-			
-			
-			<p class="miniatura__texto"><span class="etiqueta">Concierto mini 06/08</span></p>
-			
-			
-				
-
-		</div>		
-	</a>
-	<div class="miniatura__acciones">
-
-		
-		
-		<div class="miniatura__acciones__accion">
-			<div class="rejilla--adaptable">
-				<div class="rejilla--adaptable__contenedor">
-					<div class="rejilla--adaptable__fila">
-						<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-							<label for="select-cantidad-entradas-1">Cantidad de entradas</label>
-						</div>
-						<div class="rejilla--adaptable__columna">
-							<select id="select-cantidad-entradas-1" class="form-control input-sm">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		
-			<div class="miniatura__acciones__accion">
-				<div class="rejilla--adaptable">
-					<div class="rejilla--adaptable__contenedor">
-						<div class="rejilla--adaptable__fila">
-							<div class="rejilla--adaptable__columna">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" value="">
-										<span class="fuente-pequena">
-											+ exposiciones temporales y consumición en terrazas
-										</span>
-									</label>
-								</div>
-							</div>
-							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-								<span class="fuente-grande fuente-negrita">3€</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		
-		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
-		</div>
-
-		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">5€</span></a>			
-		</div>
-	</div>
-</article>
-
-				
-
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
-	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
-		<div class="miniatura__pie">
-			<h2 class="miniatura__titulo">IVÁN MARTÍN: J.S Bach / Arvo Part</h2>
-			
-			
-			<p class="miniatura__texto"><span class="etiqueta">Concierto mini 07</span></p>
-			
-			
-				
-
-		</div>		
-	</a>
-	<div class="miniatura__acciones">
-
-		
-			<div class="miniatura__acciones__accion">
-				<div class="rejilla--adaptable">
-					<div class="rejilla--adaptable__contenedor">
-						<div class="rejilla--adaptable__fila">
-							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-								<span class="fuente--label">Domingo 17 mayo, 20:00</span>
-							</div>
-							<div class="rejilla--adaptable__columna">
-								
-
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		
-		<div class="miniatura__acciones__accion">
-			<div class="rejilla--adaptable">
-				<div class="rejilla--adaptable__contenedor">
-					<div class="rejilla--adaptable__fila">
-						<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-							<label for="select-cantidad-entradas-1">Cantidad de entradas</label>
-						</div>
-						<div class="rejilla--adaptable__columna">
-							<select id="select-cantidad-entradas-1" class="form-control input-sm">
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-							</select>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		
-			<div class="miniatura__acciones__accion">
-				<div class="rejilla--adaptable">
-					<div class="rejilla--adaptable__contenedor">
-						<div class="rejilla--adaptable__fila">
-							<div class="rejilla--adaptable__columna">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" value="">
-										<span class="fuente-pequena">
-											+ exposiciones temporales y consumición en terrazas
-										</span>
-									</label>
-								</div>
-							</div>
-							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
-								<span class="fuente-grande fuente-negrita">3€</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		
-		
-		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
-		</div>
-
-		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">5€</span></a>			
-		</div>
-	</div>
-</article>
-
-				
-
-				<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
-				<div class="table-grid__col table-grid__col--3"></div>
-			</div>
-		</div>
-	</div>
+	</section>
 </section>
 
 <section class="seccion">
 	<header class="seccion__cabecera">
-		<h2 class="seccion__cabecera__titulo">Descuentos, tarjetas y abonos</h2>
+		<h2 class="seccion__cabecera__titulo">Cultural</h2>
+		<div class="row">
+			<div class="col-md-8">
+				<p>Personas pertenecientes a entidades cuyo objetivo fundamental es el desarrollo y fomento del arte y de la cultura. No incluye guías del Museo, los grupos que lo deseen pueden traer sus propios profesores/guías, que obtendrá su entrada gratuita en la taquilla, previa acreditación, al recoger las entradas del grupo.</p>		
+			</div>
+		</div>
 	</header>
-	<div class="table-grid">
-		<div class="table-grid__container">
-			<div class="table-grid__row">
+	<section>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
-			<h2 class="miniatura__titulo">Tarjeta Museo del Prado + Museo Reina Sofía</h2>
+			<h2 class="miniatura__titulo">General</h2>
 			
 			
 			
 			
-			<p class="miniatura__texto">Incluye visita por xxxxxxxx a la Colección + Exposiciones temporales de Museo Reina Sofía (no incluye exposiciones especiales) y a la Colección del Museodel Prado</p>
+			<p class="miniatura__texto">Incluye entrada a la colección + exposiciones temporales</p>
 				
 
 		</div>		
@@ -1190,6 +758,9 @@
 								<option>3</option>
 								<option>4</option>
 								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option selected>8</option>
 							</select>
 						</div>
 					</div>
@@ -1200,28 +771,26 @@
 		
 		
 		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
+			<p class="help-block fuente-pequena">+0,40€ gastos de gestión por entrada</p>
 		</div>
 
 		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">XX,X€</span></a>			
+			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">4€</span></a>			
 		</div>
 	</div>
 </article>
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
-			<h2 class="miniatura__titulo">Abono Paseo del Arte</h2>
-			
-			
-			<p class="miniatura__texto"><span class="etiqueta">20% dto.</span></p>
+			<h2 class="miniatura__titulo">Exposiciones temporales</h2>
 			
 			
 			
-			<p class="miniatura__texto">Incluye visita por 1 año a: Museo Nacional del Prado, Museo Thyssen-Bornemisza y Museo Reina Sofía</p>
+			
+			<p class="miniatura__texto">Incluye solo exposiciones temporales</p>
 				
 
 		</div>		
@@ -1244,6 +813,9 @@
 								<option>3</option>
 								<option>4</option>
 								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option selected>8</option>
 							</select>
 						</div>
 					</div>
@@ -1254,26 +826,26 @@
 		
 		
 		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
+			<p class="help-block fuente-pequena">+0,40€ gastos de gestión por entrada</p>
 		</div>
 
 		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">25,60€</span></a>			
+			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">2€</span></a>			
 		</div>
 	</div>
 </article>
 
-				
+					
 
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
 	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
 		<div class="miniatura__pie">
-			<h2 class="miniatura__titulo">Tarjeta anual de Museos Estatales</h2>
+			<h2 class="miniatura__titulo">General +  <em>Kunstmuseum Basel</em></h2>
 			
 			
 			
 			
-			<p class="miniatura__texto">Incluye visita por 1 año a 20 museos estatales: entre ellos Museo Nacional del Prado, Museo Thyssen-Bornemisza y Museo Reina Sofía</p>
+			<p class="miniatura__texto">Incluye entrada a la colección, exposiciones temporales + exposición especial</p>
 				
 
 		</div>		
@@ -1296,6 +868,9 @@
 								<option>3</option>
 								<option>4</option>
 								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option selected>8</option>
 							</select>
 						</div>
 					</div>
@@ -1306,96 +881,296 @@
 		
 		
 		<div class="miniatura__acciones__accion">
-			<p class="help-block fuente-pequena">+0,75€ gastos de gestión por entrada</p>
+			<p class="help-block fuente-pequena">+0,40€ gastos de gestión por entrada</p>
 		</div>
 
 		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
-			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">36,06€</span></a>			
+			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">5€</span></a>			
 		</div>
 	</div>
 </article>
 
+					
+
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
+		<div class="miniatura__pie">
+			<h2 class="miniatura__titulo">Exposiciones temporales +  <em>Kunstmuseum Basel</em></h2>
+			
+			
+			
+			
+			<p class="miniatura__texto">Incluye exposiciones temporales + exposición especial</p>
 				
 
-				<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
-				<div class="table-grid__col table-grid__col--3"></div>
+		</div>		
+	</a>
+	<div class="miniatura__acciones">
 
+		
+		
+		<div class="miniatura__acciones__accion">
+			<div class="rejilla--adaptable">
+				<div class="rejilla--adaptable__contenedor">
+					<div class="rejilla--adaptable__fila">
+						<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+							<label for="select-cantidad-entradas-1">Cantidad de entradas</label>
+						</div>
+						<div class="rejilla--adaptable__columna">
+							<select id="select-cantidad-entradas-1" class="form-control input-sm">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option selected>8</option>
+							</select>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+
+		
+		
+		<div class="miniatura__acciones__accion">
+			<p class="help-block fuente-pequena">+0,40€ gastos de gestión por entrada</p>
+		</div>
+
+		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
+			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">3€</span></a>			
+		</div>
 	</div>
+</article>
+
+					
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<header class="seccion__cabecera">
+			<h3 class="seccion__cabecera__titulo">Futuras</h3>
+			<div class="row">
+				<div class="col-md-8">
+					<p>Puedes comprar entradas para exposiciones futuras:</p>
+				</div>
+			</div>
+		</header>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
+
+					
+
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
+		<div class="miniatura__pie">
+			<h2 class="miniatura__titulo">General +  <em>Klein Contest</em></h2>
+			
+			
+			
+			
+			<p class="miniatura__texto">Incluye entrada a la colección, exposiciones temporales + exposición especial</p>
+				
+
+		</div>		
+	</a>
+	<div class="miniatura__acciones">
+
+		
+			<div class="miniatura__acciones__accion">
+				<div class="rejilla--adaptable">
+					<div class="rejilla--adaptable__contenedor">
+						<div class="rejilla--adaptable__fila">
+							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+								<span class="fuente--label">Desde 5 marzo 2015</span>
+							</div>
+							<div class="rejilla--adaptable__columna">
+								
+
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		
+		<div class="miniatura__acciones__accion">
+			<div class="rejilla--adaptable">
+				<div class="rejilla--adaptable__contenedor">
+					<div class="rejilla--adaptable__fila">
+						<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+							<label for="select-cantidad-entradas-1">Cantidad de entradas</label>
+						</div>
+						<div class="rejilla--adaptable__columna">
+							<select id="select-cantidad-entradas-1" class="form-control input-sm">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option selected>8</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		
+		<div class="miniatura__acciones__accion">
+			<p class="help-block fuente-pequena">+0,40€ gastos de gestión por entrada</p>
+		</div>
+
+		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
+			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">7€</span></a>			
+		</div>
+	</div>
+</article>
+
+					
+
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+	<a href="" class="miniatura__enlace enlace--bloque" data-toggle="modal" data-target=".modal--pantalla-completa">
+		<div class="miniatura__pie">
+			<h2 class="miniatura__titulo">Exposiciones temporales +  <em>Klein Contest</em></h2>
+			
+			
+			
+			
+			<p class="miniatura__texto">Incluye exposiciones temporales + exposición especial</p>
+				
+
+		</div>		
+	</a>
+	<div class="miniatura__acciones">
+
+		
+			<div class="miniatura__acciones__accion">
+				<div class="rejilla--adaptable">
+					<div class="rejilla--adaptable__contenedor">
+						<div class="rejilla--adaptable__fila">
+							<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+								<span class="fuente--label">Desde 5 marzo 2015</span>
+							</div>
+							<div class="rejilla--adaptable__columna">
+								
+
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		
+		<div class="miniatura__acciones__accion">
+			<div class="rejilla--adaptable">
+				<div class="rejilla--adaptable__contenedor">
+					<div class="rejilla--adaptable__fila">
+						<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+							<label for="select-cantidad-entradas-1">Cantidad de entradas</label>
+						</div>
+						<div class="rejilla--adaptable__columna">
+							<select id="select-cantidad-entradas-1" class="form-control input-sm">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option selected>8</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		
+		<div class="miniatura__acciones__accion">
+			<p class="help-block fuente-pequena">+0,40€ gastos de gestión por entrada</p>
+		</div>
+
+		<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
+			<a href="" class="btn btn-primary btn-block">Comprar <span class="btn__texto--grande">6€</span></a>			
+		</div>
+	</div>
+</article>
+
+					
+
+					<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
+					<div class="table-grid__col table-grid__col--3"></div>
+					<div class="table-grid__col table-grid__col--3"></div>
+				</div>
+			</div>
+		</div>
+	</section>
 </section>
 
 <section class="seccion">
-	<h2 class="lead">Si tiene alguno de estos pases, obtendrá un descuento al comprar entradas en taquilla:</h2>
-	<div class="table-grid">
-		<div class="table-grid__container">
-			<div class="table-grid__row">
-
-				
-
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja">
-					<a href="" class="miniatura__enlace enlace--bloque">
-						<div class="miniatura__pie">
-							<h2 class="miniatura__titulo">General Círculo Bellas Artes</h2>
-
-							
-							<p class="miniatura__texto">Incluye visita a la exposición + exposiciones temporales con un descuento aplicado de 3€</p>
-								
-
-						</div>		
-					</a>
-				</article>
-
-				
-
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja">
-					<a href="" class="miniatura__enlace enlace--bloque">
-						<div class="miniatura__pie">
-							<h2 class="miniatura__titulo">Exposiciones temporales Círculo Bellas Artes</h2>
-
-							
-							<p class="miniatura__texto">Incluye solo exposiciones temporales con un descuento aplicado de 1€</p>
-								
-
-						</div>		
-					</a>
-				</article>
-
-				
-
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja">
-					<a href="" class="miniatura__enlace enlace--bloque">
-						<div class="miniatura__pie">
-							<h2 class="miniatura__titulo">General Conciertos CNDM</h2>
-
-							
-							<p class="miniatura__texto">Incluye visita a la exposición + exposiciones temporales con un descuento aplicado de 3€</p>
-								
-
-						</div>		
-					</a>
-				</article>
-
-				
-
-				<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja">
-					<a href="" class="miniatura__enlace enlace--bloque">
-						<div class="miniatura__pie">
-							<h2 class="miniatura__titulo">Exposiciones temporales Conciertos CNDM</h2>
-
-							
-							<p class="miniatura__texto">Incluye solo exposiciones temporales con un descuento aplicado de 1€</p>
-								
-
-						</div>		
-					</a>
-				</article>
-
-				
-
+	<header class="seccion__cabecera">
+		<h2 class="seccion__cabecera__titulo">Educativos/Discapacidad</h2>
+		<div class="row">
+			<div class="col-md-8">
+				<p>Estudiantes de cualquiera de los ciclos de enseñanza, sea esta obligatoria o no. <br>
+				Personas con discapacidad de centros, escuelas o talleres, destinados a este colectivo. <br>
+				No incluye guías del Museo. El grupo que lo desee puede traer su propio profesor/guía, con entrada gratuita que  obtendrá en taquilla exprés, previa acreditación, al recoger las entradas del grupo. <br>
+				¿Estás buscando la reserva de <a href="">actividades de educación</a>?</p>		
 			</div>
 		</div>
-	</div>
+	</header>
+	<section>
+		<div class="table-grid">
+			<div class="table-grid__container">
+				<div class="table-grid__row">
+
+					<article class="table-grid__col table-grid__col--3 miniatura miniatura--caja miniatura--caja--accion-fija">
+						<a href="" class="miniatura__enlace enlace--bloque">
+							<div class="miniatura__pie">
+								<h2 class="miniatura__titulo">General</h2>
+								<p class="miniatura__texto">Incluye visita a la colección + exposiciones temporales</p>
+							</div>		
+						</a>
+						<div class="miniatura__acciones">
+							<div class="miniatura__acciones__accion miniatura__acciones__accion--fija">
+								<a href="" class="btn btn-primary btn-block">Gratuita <span class="btn__texto--grande">0€</span></a>			
+							</div>
+						</div>
+					</article>
+
+					<!-- Este grid se comporta cómo una tabla, en caso de que no se completen las columnas es necesario que se pinten vacías -->
+					<div class="table-grid__col table-grid__col--3"></div>
+					<div class="table-grid__col table-grid__col--3"></div>
+					<div class="table-grid__col table-grid__col--3"></div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+
+<section class="seccion">
+	<header>
+		<h2 class="seccion__cabecera__titulo">Bono Voucher</h2>
+		<div class="row">
+			<div class="col-md-8">
+				<p>Profesionales del turismo que tienen convenio con el Museo Nacional Centro de Arte Reina Sofía. Reserva de las entradas adquiridas mediante el código del bono.</p>		
+			</div>
+		</div>
+	</header>
+	<a href="" class="btn btn-default text-wrap">Solicitar registro o acceder con tu usuario y contraseña</a>
 </section>
 
                 </div>
