@@ -176,7 +176,6 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
 */
 
 .calendario {
-	min-width: $calendario-anchura-minima;
 	max-width: $calendario-anchura-maxima;
 	@include padding-xs;
 	@include margin-bottom-sm;
@@ -231,6 +230,14 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
 
 .calendario__navegacion__boton--siguiente {
 	right: 0;
+}
+
+.calendario__navegacion__desplegable--mes {
+	margin-right: -10px;
+}
+
+.calendario__navegacion__desplegable--ano {
+	margin-left: -10px;	
 }
 
 .calendario__fechas {

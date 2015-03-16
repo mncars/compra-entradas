@@ -4791,6 +4791,7 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 */
 label, .fuente--label {
   font-size: inherit;
+  max-width: none;
   line-height: 1.2;
   color: #333333; }
   @media (min-width: 768px) {
@@ -5759,7 +5760,6 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
 
 */
 .calendario {
-  min-width: 260px;
   max-width: 330px;
   padding: 15px;
   margin-bottom: 30px;
@@ -5822,6 +5822,12 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
 
 .calendario__navegacion__boton--siguiente {
   right: 0; }
+
+.calendario__navegacion__desplegable--mes {
+  margin-right: -10px; }
+
+.calendario__navegacion__desplegable--ano {
+  margin-left: -10px; }
 
 .calendario__fechas {
   margin-bottom: 0;
@@ -6044,12 +6050,17 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
       padding-right: 10px; } }
   .miniatura--caja:hover {
     background-color: #fdfaec;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 0, 0, 0.15);
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25); }
   .miniatura--caja .miniatura__enlace {
     margin-bottom: 15px; }
     .miniatura--caja .miniatura__enlace:hover, .miniatura--caja .miniatura__enlace:hover .miniatura__titulo {
       color: #9c8611; }
+
+.lt-ie9 .miniatura--caja {
+  border: 1px solid #ddd; }
+  .lt-ie9 .miniatura--caja:hover {
+    border-color: #ddd; }
 
 .miniatura--caja--accion-fija {
   padding-bottom: 65px; }
@@ -6323,6 +6334,12 @@ category: Módulos
   @media (min-width: 992px) {
     .navegacion-principal__cabecera {
       padding-top: 15px; } }
+
+.lt-ie9 .navegacion-principal__cabecera {
+  min-height: 47px; }
+  @media (min-width: 768px) {
+    .lt-ie9 .navegacion-principal__cabecera {
+      min-height: 45px; } }
 
 .navegacion-principal__cabecera__logo {
   padding: 0;

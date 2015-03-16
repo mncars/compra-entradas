@@ -56,6 +56,13 @@ category: Módulos
 	}
 }
 
+.lt-ie9 .navegacion-principal__cabecera {
+	min-height: 47px;
+	@media (min-width: $screen-sm-min) {
+		min-height: 45px;
+	}
+}
+
 .navegacion-principal__cabecera__logo {
 	@include no-padding;
 	position: absolute;
