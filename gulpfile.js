@@ -207,7 +207,7 @@ gulp.task('watch', function() {
   gulp.watch([sassPath + "/**/*.scss"], ['sass']);
   gulp.watch([jekyllPath + "/**/*", "!" + sassPath + "**/*"], ['jekyll']);
   gulp.watch([jsPath + "**/*.js"], ['lint']);
-  gulp.watch([jekyllPath + "/_doc_assets/**/*", sassPath + "/**/*"]);
+  gulp.watch([jekyllPath + "/_doc_assets/**/*", sassPath + "/**/*"], ['hologram']);
 });
 
 
@@ -215,7 +215,7 @@ gulp.task('watch', function() {
 // Compila el site y hoja de estilos
 // ****************************************************
 gulp.task('compile', function(done) {
-  runSequence('clean:tmp', ['jekyll', 'sass'],done);
+  runSequence('clean:tmp', ['jekyll', 'sass'], 'hologram', done);
 });
 
 // ****************************************************
