@@ -1002,7 +1002,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #737373;
+  color: #666;
   background-color: #f6f6f6; }
 
 input, button, select, textarea {
@@ -2237,7 +2237,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #b3b3b3; }
+  color: #a6a6a6; }
 
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -2326,7 +2326,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .btn:focus, .btn.focus {
-    color: #737373;
+    color: #666;
     text-decoration: none; }
   .btn:active, .btn.active {
     outline: 0;
@@ -2340,11 +2340,11 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
     box-shadow: none; }
 
 .btn-default {
-  color: #737373;
+  color: #666;
   background-color: #fbfbfb;
   border-color: #dddddd; }
   .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
-    color: #737373;
+    color: #666;
     background-color: #e2e2e2;
     border-color: #bebebe; }
   .btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle {
@@ -2354,7 +2354,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > te
     border-color: #dddddd; }
   .btn-default .badge {
     color: #fbfbfb;
-    background-color: #737373; }
+    background-color: #666; }
 
 .btn-primary {
   color: #fff;
@@ -4697,10 +4697,10 @@ Diferentes tipos de enlace: subrayado, enlaces a números de teléfono y enlaces
 
 */
 .enlace--subrayado {
-  color: #737373;
+  color: #666;
   text-decoration: underline; }
   .enlace--subrayado:hover {
-    color: #5a5a5a; }
+    color: #4d4d4d; }
 
 .enlace--telefono {
   white-space: nowrap;
@@ -4791,6 +4791,7 @@ Hemos añadido un tamaño más a los elementos tipo input, se aplica con la clas
 */
 label, .fuente--label {
   font-size: inherit;
+  max-width: none;
   line-height: 1.2;
   color: #333333; }
   @media (min-width: 768px) {
@@ -5759,7 +5760,6 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
 
 */
 .calendario {
-  min-width: 260px;
   max-width: 330px;
   padding: 15px;
   margin-bottom: 30px;
@@ -5822,6 +5822,12 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
 
 .calendario__navegacion__boton--siguiente {
   right: 0; }
+
+.calendario__navegacion__desplegable--mes {
+  margin-right: -10px; }
+
+.calendario__navegacion__desplegable--ano {
+  margin-left: -10px; }
 
 .calendario__fechas {
   margin-bottom: 0;
@@ -6044,12 +6050,17 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
       padding-right: 10px; } }
   .miniatura--caja:hover {
     background-color: #fdfaec;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 0, 0, 0.15);
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25); }
   .miniatura--caja .miniatura__enlace {
     margin-bottom: 15px; }
     .miniatura--caja .miniatura__enlace:hover, .miniatura--caja .miniatura__enlace:hover .miniatura__titulo {
       color: #9c8611; }
+
+.lt-ie9 .miniatura--caja {
+  border: 1px solid #ddd; }
+  .lt-ie9 .miniatura--caja:hover {
+    border-color: #ddd; }
 
 .miniatura--caja--accion-fija {
   padding-bottom: 65px; }
@@ -6058,7 +6069,7 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
   display: block;
   color: inherit; }
   .miniatura__enlace:hover {
-    color: #8d8d8d; }
+    color: gray; }
     .miniatura__enlace:hover .miniatura__antetitulo, .miniatura__enlace:hover .miniatura__titulo, .miniatura__enlace:hover .miniatura__subtitulo {
       text-decoration: underline; }
 
@@ -6323,6 +6334,12 @@ category: Módulos
   @media (min-width: 992px) {
     .navegacion-principal__cabecera {
       padding-top: 15px; } }
+
+.lt-ie9 .navegacion-principal__cabecera {
+  min-height: 47px; }
+  @media (min-width: 768px) {
+    .lt-ie9 .navegacion-principal__cabecera {
+      min-height: 45px; } }
 
 .navegacion-principal__cabecera__logo {
   padding: 0;

@@ -24,7 +24,7 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
 	}
 	&:hover {
 		background-color: lighten(#fcf8e3, 2%);
-		border: 1px solid rgba(0, 0, 0, 0.15);
+		border-color: rgba(0, 0, 0, 0.15);
 		@include box-shadow(1px 1px 20px rgba(0, 0, 0, 0.25));		
 	}
 	.miniatura__enlace {
@@ -34,6 +34,15 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
 			.miniatura__titulo {
 				color: darken(#fcf8e3, 60%);
 			}
+		}
+	}
+}
+
+.lt-ie9 {
+	.miniatura--caja {
+		border: 1px solid $border-color;
+		&:hover {
+			border-color: $border-color;
 		}
 	}
 }

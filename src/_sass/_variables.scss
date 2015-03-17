@@ -20,7 +20,7 @@ $brand-primary: 			#71D2FC;
 
 $body-bg:               	$gray-lighter;
 
-$text-color:              	#737373;
+$text-color:              	#666;
 
 $link-color:            	darken($brand-primary, 10%);
 $link-hover-color:      	darken($brand-primary, 25%);
@@ -210,7 +210,6 @@ $nav-tabs-enlace-lg-font-size-lg: 	 		$nav-tabs-enlace-lg-font-size-md;
 
 // Componente Calendario
 
-$calendario-anchura-minima: 				260px;
 $calendario-anchura-maxima: 				330px;
 $calendario-fondo: 							$gray-lighter;
 $calendario-desactivado-color: 				darken($gray-light, 10%);
