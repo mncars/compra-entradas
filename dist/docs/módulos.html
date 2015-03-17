@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Módulos - MNCARS Compra y reserva de entradas</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Compiled site styles -->
+    <link type="text/css" rel="stylesheet" media="all" href="../css/style.css">
+
+    <!-- Styles for documentation only -->
+    <link type="text/css" rel="stylesheet" media="all" href="doc.css">
+    <link type="text/css" rel="stylesheet" media="all" href="github.css">
+    
+    <script src="/vendor/jquery/dist/jquery.js"></script>
+    <script src="/vendor/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+
+    <style>
+   
+      .main-content > *:first-child {
+        margin-top: 20px;
+      }
+
+      .main-content > h2,
+      .main-content > h1 {
+        margin-top: 50px;
+      }
+      .main-content > h1 {
+        font-size: 45px;
+      }
+      .main-content > h2 {
+        font-size: 30px;
+      }
+      .main-content > h1 + h2 {
+        margin-top: 0;
+      }
+      .affix {
+        top: 10px;
+        width: 16%;
+      }
+      .navbar-default .navbar-brand, 
+      .navbar-default .navbar-brand:hover {
+        height: 50px;
+        padding-top: 15px;
+        background-color: #00a0b4;
+      }
+      a.navbar-brand{ color:#fff!important;}
+      .submenu-container .nav > li > a {
+        color: #aaa;
+        font-weight: normal;
+        font-size: 13px;
+        text-decoration: none;
+      }
+      .navbar .nav > li > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-right: 1px solid #ddd;
+        -webkit-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+      }
+
+      .navbar .nav > li > a:hover {
+        background-color: #b4d232;
+        color: white;
+      }
+
+      @media(max-width: 991px) {
+        .affix {
+          display: none;
+        }
+      }
+      .nav > li > a {
+        padding-top: 3px;
+        padding-bottom: 3px;
+
+      }
+      table {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      @media(max-width: 400px) {
+        .nav > li > a {
+          padding: 10px 7px;
+          font-size: 0.95em;
+        }
+      }
+      pre {
+        font-size: 13px;
+      }
+      .bloque {
+        padding: 5px;
+        background-color: #ddd;
+      }
+      .bloque.alternativo {
+        background-color: #ccc;
+      }
+    </style>
+    <script>
+      $(function() {
+        // select current page
+        $(".navbar-nav li a").each(function() {
+          var navItemUrl = $(this).attr("href");
+          if (document.URL.indexOf(navItemUrl) > -1) {
+            $(this).parent().addClass("active");
+          }
+        });
+      })
+    </script>
+  </head>
+  <body id="top" data-spy="scroll" data-target=".submenu-container" data-offset="10">
+
+  <nav class="navbar navbar-default" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Inicio
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="componentes.html">Componentes</a>
+            </li>
+          
+            <li>
+              <a href="global.html">Global</a>
+            </li>
+          
+            <li>
+              <a href="mixins.html">Mixins</a>
+            </li>
+          
+            <li>
+              <a href="módulos.html">Módulos</a>
+            </li>
+          
+        </ul>
+      </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 main-content">
+    
+      
+
+
+
+<h1 id="Navegación_principal">Navegación principal</h1>
+<div class="codeExample"><div class="exampleOutput"><header>
+    <div class="container">
+        <nav class="navegacion-principal">
+            <div class="row">
+                <div class="col-sm-6 col-sm-push-6 col-md-5 col-md-push-7 col-lg-4 col-lg-push-8">
+                    <div class="navegacion-principal__grupo-botones">
+                        <div class="btn-group btn-group-justified btn-group-sm">
+                            <a href="#" class="btn btn-default navegacion-principal__grupo-botones__boton">Todas las entradas</a>
+                            <a href="#" class="btn btn-default navegacion-principal__grupo-botones__boton">Tus compras/reservas</a>
+                        </div>      
+                    </div>
+                </div>
+                <div class="col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5 col-lg-8 col-lg-pull-4">
+                    <div class="navegacion-principal__cabecera">
+                        <a class="navegacion-principal__cabecera__logo" href="#">
+                            <span class="sr-only">Museo Nacional Centro de Arte Reina Sofía</span>
+                        </a>
+                        <p class="navegacion-principal__cabecera__slogan">Compra y reserva de entradas</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navegacion-principal&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-6 col-sm-push-6 col-md-5 col-md-push-7 col-lg-4 col-lg-push-8&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navegacion-principal__grupo-botones&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;btn-group btn-group-justified btn-group-sm&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default navegacion-principal__grupo-botones__boton&quot;</span><span class="nt">&gt;</span>Todas las entradas<span class="nt">&lt;/a&gt;</span>
+                            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default navegacion-principal__grupo-botones__boton&quot;</span><span class="nt">&gt;</span>Tus compras/reservas<span class="nt">&lt;/a&gt;</span>
+                        <span class="nt">&lt;/div&gt;</span>      
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5 col-lg-8 col-lg-pull-4&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navegacion-principal__cabecera&quot;</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;navegacion-principal__cabecera__logo&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;sr-only&quot;</span><span class="nt">&gt;</span>Museo Nacional Centro de Arte Reina Sofía<span class="nt">&lt;/span&gt;</span>
+                        <span class="nt">&lt;/a&gt;</span>
+                        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;navegacion-principal__cabecera__slogan&quot;</span><span class="nt">&gt;</span>Compra y reserva de entradas<span class="nt">&lt;/p&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+</pre></div></div></div>
+<h1 id="Pie_principal">Pie principal</h1>
+<div class="codeExample"><div class="exampleOutput"><footer class="pie-principal">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <p><a href="" class="btn btn-default btn-sm">Horarios y Tarifas</a></p>
+            </div>
+            <div class="col-md-10">
+                <ul class="pie-principal__menu list-inline">
+                    <li><a href="">Condiciones y términos para la compra</a></li>
+                    <li>Centro de atención al visitante: <a href="tel: +34902364383" class="enlace--telefono">tel. +34 902 364 383</a></li>
+                    <li><a href="mailto:reservasreinasofia@iacpos.com">reservasreinasofia@iacpos.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">&quot;pie-principal&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-2&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span> <span class="na">class=</span><span class="s">&quot;btn btn-default btn-sm&quot;</span><span class="nt">&gt;</span>Horarios y Tarifas<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-10&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;pie-principal__menu list-inline&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Condiciones y términos para la compra<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>Centro de atención al visitante: <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;tel: +34902364383&quot;</span> <span class="na">class=</span><span class="s">&quot;enlace--telefono&quot;</span><span class="nt">&gt;</span>tel. +34 902 364 383<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;mailto:reservasreinasofia@iacpos.com&quot;</span><span class="nt">&gt;</span>reservasreinasofia@iacpos.com<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/footer&gt;</span>
+</pre></div></div></div>      </div>
+      <div class="col-md-2">
+        <div class="submenu-container" data-spy="affix" data-offset-top="60">
+          <ul class="nav">
+          
+            <li><a href="#Navegación_principal">Navegación principal</a></li>
+          
+            <li><a href="#Pie_principal">Pie principal</a></li>
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
