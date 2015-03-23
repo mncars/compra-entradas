@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="robots" content="noindex">
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!-- iOS icons -->
+<!--
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/touch/apple-touch-icon-144x144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/touch/apple-touch-icon-114x114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/touch/apple-touch-icon-72x72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="/img/touch/apple-touch-icon-57x57-precomposed.png">
+-->
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<!--
+<meta name="msapplication-TileImage" content="/img/touch/ms-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#980165">
+-->
+
+<!-- Generic Icon -->
+<!--
+<link rel="shortcut icon" href="/img/touch/touch-icon-57x57.png">
+-->
+
+<!-- Chrome Add to Homescreen -->
+<!--
+<link rel="shortcut icon" sizes="196x196" href="/img/touch/touch-icon-196x196.png">
+
+<meta name="apple-mobile-web-app-title" content="Self Bank">
+-->
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Html5 old IE fallback -->
+<!--[if lt IE 9]>
+    <script src="vendor/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="vendor/respondJs/dest/respond.min.js"></script>
+<![endif]-->
+
+<script src="vendor/modernizr/modernizr.js"></script>
+
+    </head>
+    <body>
+
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header>
+	<div class="container">
+		<nav class="navegacion-principal">
+			<div class="row">
+				<div class="col-sm-6 col-sm-push-6 col-md-5 col-md-push-7 col-lg-4 col-lg-push-8">
+
+					<div class="navegacion-principal__grupo-botones">
+	<a href="#" class="btn btn-default btn-sm navegacion-principal__grupo-botones__boton">Todas las entradas</a>
+	<a href="#" class="btn btn-default btn-sm navegacion-principal__grupo-botones__boton">Tus compras/reservas</a>
+</div>
+
+				</div>
+				<div class="col-sm-6 col-sm-pull-6 col-md-7 col-md-pull-5 col-lg-8 col-lg-pull-4">
+
+					<div class="navegacion-principal__cabecera">
+	<a class="navegacion-principal__cabecera__logo" href="#">
+		<span class="sr-only">Museo Nacional Centro de Arte Reina Sofía</span>
+	</a>
+	<p class="navegacion-principal__cabecera__slogan">Compra y reserva de entradas</p>
+</div>
+
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+        
+        <div class="container">
+            <form>
+                <div class="panel panel-primary">
+        
+                    <div class="list-group">
+	<a href="#" class="list-group-item">Fecha</a>
+</div>
+
+<div class="panel-heading">
+	<h1 class="panel-heading__titulo">Entradas y horario</h1>
+</div>
+
+<div class="panel-body">
+	<div class="row">
+		<div class="col-md-3">
+			<h2 class="panel-body__titulo">Tipo de grupo</h2>    
+		</div>
+		<div class="col-md-2">
+			<div class="form-group margen-pequeno">
+				<label class="sr-only" for="select-tipo-grupo-1">Tipo de grupo</label>
+				<select id="select-tipo-grupo-1" class="form-control input-lg">
+					<option>Turístico</option>
+					<option>...</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<h2 class="panel-body__titulo">Entradas</h2>    
+		</div>
+		<div class="col-md-9">
+			<div class="list-group">
+				<a href="#" class="list-group-item">
+					<div class="row">
+						<div class="col-sm-5">
+							<h3 class="list-group-item-heading">General</h3>
+						</div>
+						<div class="col-sm-6">
+							<div class="rejilla--adaptable">
+								<div class="rejilla--adaptable__contenedor">
+									<div class="rejilla--adaptable__fila">
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<label class="sr-only" for="select-numero-entradas-1">Número de entradas</label>
+											<select id="numero-entradas-1" class="form-control" disabled>
+												<option>0</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
+												<option>7</option>
+												<option>8</option>
+											</select>
+										</div>
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<p class="fuente-grande">8€</p>
+										</div>
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<p class="fuente-pequena">+0,40€ gastos gestión por entrada</p>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="list-group-item">
+					<div class="row">
+						<div class="col-sm-5">
+							<h3 class="list-group-item-heading">Exposiciones temporales</h3>
+						</div>
+						<div class="col-sm-6">
+							<div class="rejilla--adaptable">
+								<div class="rejilla--adaptable__contenedor">
+									<div class="rejilla--adaptable__fila">
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<label class="sr-only" for="select-numero-entradas-2">Número de entradas</label>
+											<select id="select-numero-entradas-2" class="form-control" disabled>
+												<option>0</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
+												<option>7</option>
+												<option>8</option>
+											</select>
+										</div>
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<p class="fuente-grande">4€</p>
+										</div>
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<p class="fuente-pequena">+0,40€ gastos gestión por entrada</p>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="list-group-item">
+					<div class="row">
+						<div class="col-sm-5">
+							<h3 class="list-group-item-heading">General + <em>Kunstmuseum Basel</em></h3>
+						</div>
+						<div class="col-sm-6">
+							<div class="rejilla--adaptable">
+								<div class="rejilla--adaptable__contenedor">
+									<div class="rejilla--adaptable__fila">
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<label class="sr-only" for="select-numero-entradas-3">Número de entradas</label>
+											<select id="select-numero-entradas-3" class="form-control" disabled>
+												<option>0</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
+												<option>7</option>
+												<option>8</option>
+											</select>
+										</div>
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<p class="fuente-grande">9€</p>
+										</div>
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<p class="fuente-pequena">+0,40€ gastos gestión por entrada</p>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#" class="list-group-item list-group-item-info">
+					<div class="row">
+						<div class="col-sm-5">
+							<h3 class="list-group-item-heading">Exposiciones + <em>Kunstmuseum Basel</em></h3>
+						</div>
+						<div class="col-sm-7">
+							<div class="rejilla--adaptable">
+								<div class="rejilla--adaptable__contenedor">
+									<div class="rejilla--adaptable__fila">
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<label class="sr-only" for="select-numero-entradas-4">Número de entradas</label>
+											<select id="select-numero-entradas-4" class="form-control">
+												<option>0</option>
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+												<option>6</option>
+												<option>7</option>
+												<option selected>8</option>
+											</select>
+										</div>
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<p class="fuente-grande">5€</p>
+										</div>
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<p class="fuente-pequena">+0,40€ gastos gestión por entrada</p>	
+										</div>
+										<div class="rejilla--adaptable__columna rejilla--adaptable__columna--vertical-centrada">
+											<p class="fuente-grande">
+												<strong>46€</strong>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<h2 class="panel-body__titulo">Horario</h2>    
+		</div>
+		<div class="col-md-2">
+			<div class="form-group margen-pequeno">
+				<label class="sr-only" for="select-tipo-grupo-1">Horario</label>
+				<select id="select-tipo-grupo-1" class="form-control input-lg">
+					<option>Selecciona</option>
+					<option>...</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="botonera">
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+				<div class="row">
+					<div class="col-sm-4 col-sm-push-6">
+						<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Continuar →</a>
+					</div>
+					<div class="col-sm-4 col-sm-pull-2">
+						<a href="" class="btn btn-lg btn-link btn-block botonera__boton">← Ver todas las entradas</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<div class="list-group">
+	<a href="#" class="list-group-item disabled">Revisar compra y cupón</a>
+	<a href="#" class="list-group-item disabled">Tus datos</a>
+</div>
+        
+                </div>
+            </form>
+        </div>
+        
+        <footer class="pie-principal">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
+				<p><a href="" class="btn btn-default btn-sm">Horarios y Tarifas</a></p>
+			</div>
+			<div class="col-md-10">
+				<ul class="pie-principal__menu list-inline">
+					<li><a href="">Condiciones y términos para la compra</a></li>
+					<li>Centro de atención al visitante: <a href="tel: +34902364383" class="enlace--telefono">tel. +34 902 364 383</a></li>
+					<li><a href="mailto:reservasreinasofia@iacpos.com">reservasreinasofia@iacpos.com</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+</footer>
+
+<div class="modal fade modal--pantalla-completa" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<p>
+								<a href="" class="btn btn-primary">← Todas las entradas</a>
+							</p>		
+						</div>
+						<div class="col-md-9">
+
+							<div class="titulo-pagina">
+								<div class="titulo-pagina__titulos">
+									<h1 class="titulo-pagina__titulos__titulo">Entrada individual</h1>
+									<h2 class="titulo-pagina__titulos__subtitulo">Exposiciones + <em>Kunstmuseum Basel</em></h2>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-sm-9">
+
+									<p class="lead">Incluye la visita a las exposiciones:</p>
+
+									<article class="miniatura">
+										<a href="" class="miniatura__enlace enlace--bloque">
+											<p class="miniatura__antetitulo">15 octubre, 2014 - 2 marzo, 2015</p>
+											<h3 class="miniatura__titulo">Juan Luis Moraza</h3>
+											<h4 class="miniatura__subtitulo">república</h4>
+											<p class="miniatura__texto">república es una exposición de Juan Luis Moraza (Vitoria, 1960) que reúne una amplia selección de sus obras, estructurada en áreas que examinan el museo como sistema de convenciones y posibilidades de ciudadanía.</p>
+										</a>
+									</article>
+									<article class="miniatura">
+										<a href="" class="miniatura__enlace enlace--bloque">
+											<p class="miniatura__antetitulo">13 junio - 26 octubre, 2014</p>
+											<h3 class="miniatura__titulo">Kerry James Marshall: <em>pintura y otras cosas</em></h3>
+											<p class="miniatura__texto">La exposición Kerry James Marshall: pintura y otras cosas, se configura como una de las muestras más amplias dedicadas a este autor norteamericano. (Birmingham, Alabama, 1955; reside en Chicago)<br>
+											Kerry Jame Marshall. Lost boys AKA Black Johnny, 1993. Cortesía del artista. Galería Jack Shainman, NY, y Koplin Del Rio, CA</p>
+										</a>
+									</article>
+									<article class="miniatura">
+										<a href="" class="miniatura__enlace enlace--bloque">
+											<p class="miniatura__antetitulo">28 mayo, 2014 – 5 enero, 2015</p>
+											<h3 class="miniatura__titulo">fotos & libros. España 1905-1977</h3>
+											<p class="miniatura__texto">La exposición fotos y libros. España 1905-1977 propone un recorrido por la historia del fotolibro español, comenzando a principios del siglo XX y finalizando a mediados de los años setenta, con una selección de la colección del Museo Reina Sofía, contextualizados y acompañados de un variado material complementario. <br>Colección Palabra e Imagen, publicada por la editorial Lumen entre 1961 y 1975</p>
+										</a>
+									</article>
+									<article class="miniatura">
+										<a href="" class="miniatura__enlace enlace--bloque">
+											<h3 class="miniatura__titulo">Kunstmuseumm Basel <em>Le génie</em></h3>
+											<p class="miniatura__texto">La exposición constituye una aproximación al trabajo de XXXXXX XXXXXX (Danzig. 1915 - México DF, 1990) realizado desde su instalación en México, en 1949. A lo largo de cuatro décadas, en su producción tanto teórica como práctica converge la utopía racional con el neoprimitivismo, factores que derivan de su propia biografía: el periplo por distintas ciudades de Europa y del norte de África (1948).</p>
+										</a>
+									</article>
+									<img src="img/628x353.gif" class="img-responsive">
+								</div>
+								<div class="col-sm-3">
+									<div class="panel panel-primary">
+										<div class="panel-heading text-center">
+											<span class="h1">8€</span>
+										</div>
+										<div class="panel-footer text-center">
+											+0,75€ <span class="fuente-pequena">gastos de gestión por entrada</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="./vendor/jquery/dist/jquery.js"></script>
+<script src="./js/console.js"></script>
+<script src="./js/placeholder.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+<script src="./vendor/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+<script>
+
+$(function () {
+	$('[data-toggle="popover"]').popover({content: $('.calendar-content').html()}).click(function(e) {
+		e.preventDefault();
+	})
+	.on('show.bs.popover', function(){
+		if($('.btn-movil').is(':visible')){
+			$('html, body').animate({
+				scrollTop: $(this).closest('.island').offset().top - 10
+			}, 500);
+		}
+	});
+	$('#input-fecha').keydown(function(e) {
+		e.preventDefault();
+		return false;
+	}).click(function(e){
+		$('[data-toggle="popover"]').popover('toggle');
+	});
+})
+
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--
+	<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');ga('send','pageview');
+	</script>
+-->
+        
+    </body>
+</html>
