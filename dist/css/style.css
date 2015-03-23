@@ -5395,39 +5395,21 @@ title: Alerts
 category: Componentes
 ---
 
-Utilizamos el componente ["Alerts" de Bootstrap](http://getbootstrap.com/components/#alerts), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+Mensajes de alerta creados a partir del [componente Alerts de Bootstrap](http://getbootstrap.com/components/#alerts).
 
 ```html_example
-<div class="botonera">
-	<div class="row">
-		<div class="col-sm-4 col-sm-push-6">
-			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Continuar →</a>
-		</div>
-		<div class="col-sm-4 col-sm-pull-2">
-			<a href="" class="btn btn-lg btn-link btn-block botonera__boton">← Todas las entradas</a>
-		</div>
-	</div>
-</div>
+<div class="alert alert-success">Hemos guardado tu reserva.</div>
+<div class="alert alert-info">Para más información, consulta los horarios y tarifas en la web del museo.</div>
+<div class="alert alert-warning">¿Tienes un <strong>cupón de descuento</strong>? Introduce tu código y aplica tu descuento.</div>
+<div class="alert alert-danger">No existen reservas con ese localizador.</div>
 ```
 
-##Ejemplo con tres botones y textos de ayuda##
+###Texto de ayuda opcional###
+Hemos añadido un texto de ayuda opcional que puede acompañar al mensaje de alerta.
 
 ```html_example
-<div class="botonera">
-	<div class="row">
-		<div class="col-sm-4 col-sm-push-4">
-			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Pagar entradas →</a>
-			<p class="botonera__texto-ayuda">Serás dirigido a la pasarela de pago</p>
-		</div>
-		<div class="col-sm-4 col-sm-push-4">
-			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Reservar →</a>
-			<p class="botonera__texto-ayuda">Podrás realizar el pago hasta 2 días antes de la fecha de la reserva</p>
-		</div>
-		<div class="col-sm-4 col-sm-pull-8">
-			<a href="" class="btn btn-lg btn-link btn-block botonera__boton">← Revisar compra y cupón</a>
-		</div>
-	</div>
-</div>
+<div class="alert alert-danger">No existen reservas con ese localizador.</div> 
+<p class="alert__texto-ayuda">Vuelve a intentarlo o contáctanos: <a href="tel:+34902364383" class="text-nowrap">+34 902 364 383</a>, <a href="mailto:entradas@entradas.museoreinasofia.es">entradas@entradas.museoreinasofia.es</a></p>
 ```
 
 */
@@ -5607,7 +5589,16 @@ title: Calendario
 category: Componentes
 ---
 
-Este componente esta basado en el diseño de los calendarios que aparecen en la web del Museo. Tiene definidos estilos para días activos, inactivos y día actual.
+Calendario basado en el diseño de los que aparecen en la web del Museo.
+
+Por defecto tiene fondo gris, si queremos que no tenga color de fondo hay que añadir la clase `.calendario--transparente` al elemento `div.calendario`.
+
+|Estilos                                         |Descripción                                                                                   |
+|------------------------------------------------|----------------------------------------------------------------------------------------------|
+|`.calendario__fechas__dia--vacio`               |Se añade al elemento `td` si en esa celda no se muestra ningún día del mes que estamos viendo.|
+|`.calendario__fechas__dia__enlace--seleccionado`|Se añade al elemento `.calendario__fechas__dia__enlace` si el día esta activo.                |
+|`.calendario__fechas__dia__enlace--desactivado` |Se añade al elemento `.calendario__fechas__dia__enlace` si el día no esta activo.             |
+
 
 ```html_example
 <div class="calendario">
@@ -5622,152 +5613,154 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
 		</a>
 		<div class="row">		
 			<div class="col-xs-6">
-				<label for="select-mes-1" class="sr-only">Mes</label>
-				<select id="select-mes-1" class="form-control input-sm calendario__navegacion__desplegable calendario__navegacion__desplegable--mes">
-					<option>Ene</option>
-					<option>Feb</option>
-					<option>...</option>
-				</select>
+				<div class="calendario__navegacion__desplegable--mes">
+					<select class="form-control input-sm">
+						<option>Ene</option>
+						<option>Feb</option>
+						<option>...</option>
+					</select>
+				</div>
 			</div>
 			<div class="col-xs-6">
-				<label for="select-ano-1" class="sr-only">Mes</label>
-				<select id="select-ano-1" class="form-control input-sm calendario__navegacion__desplegable calendario__navegacion__desplegable--ano">
-					<option>2004</option>
-					<option>2005</option>
-					<option>...</option>
-				</select>
+				<div class="calendario__navegacion__desplegable--ano">
+					<select class="form-control input-sm">
+						<option>2004</option>
+						<option>2005</option>
+						<option>...</option>
+					</select>					
+				</div>
 			</div>
 		</div>
 	</nav>
 	<table class="table table-bordered table-condensed calendario__fechas">
 		<thead>
 			<tr>
-				<th class="calendario__fechas__dia-semana">
+				<th>
 					<span title="Lunes">Lu</span>
 				</th>
-				<th class="calendario__fechas__dia-semana">
+				<th>
 					<span title="Martes">Ma</span>
 				</th>
-				<th class="calendario__fechas__dia-semana">
+				<th>
 					<span title="Miércoles">Mi</span>
 				</th>
-				<th class="calendario__fechas__dia-semana">
+				<th>
 					<span title="Jueves">Ju</span>
 				</th>
-				<th class="calendario__fechas__dia-semana">
+				<th>
 					<span title="Viernes">Vi</span>
 				</th>
-				<th class="calendario__fechas__dia-semana">
+				<th>
 					<span title="Sábado">Sá</span>
 				</th>
-				<th class="calendario__fechas__dia-semana">
+				<th>
 					<span title="Domingo">Do</span>
 				</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				<td class="calendario__fechas__dia calendario__fechas__dia--vacio">&nbsp;</td>
-				<td class="calendario__fechas__dia calendario__fechas__dia--vacio">&nbsp;</td>
-				<td class="calendario__fechas__dia calendario__fechas__dia--vacio">&nbsp;</td>
-				<td class="calendario__fechas__dia calendario__fechas__dia--vacio">&nbsp;</td>
-				<td class="calendario__fechas__dia calendario__fechas__dia--vacio">&nbsp;</td>
-				<td class="calendario__fechas__dia">
+				<td class="calendario__fechas__dia--vacio">&nbsp;</td>
+				<td class="calendario__fechas__dia--vacio">&nbsp;</td>
+				<td class="calendario__fechas__dia--vacio">&nbsp;</td>
+				<td class="calendario__fechas__dia--vacio">&nbsp;</td>
+				<td class="calendario__fechas__dia--vacio">&nbsp;</td>
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">1</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">2</a>
 				</td>
 			</tr>
 			<tr>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">3</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace calendario__fechas__dia__enlace--desactivado" href="#">4</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">5</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">6</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">7</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">8</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">9</a>
 				</td>
 			</tr>
 			<tr>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">10</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace calendario__fechas__dia__enlace--desactivado" href="#">11</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">12</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">13</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">14</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">15</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace calendario__fechas__dia__enlace--seleccionado" href="#">16</a>
 				</td>
 			</tr>
 			<tr>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">17</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace calendario__fechas__dia__enlace--desactivado" href="#">18</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">19</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">20</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">21</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">22</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">23</a>
 				</td>
 			</tr>
 			<tr>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">24</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace calendario__fechas__dia__enlace--desactivado" href="#">25</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">26</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">27</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">28</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">29</a>
 				</td>
-				<td class="calendario__fechas__dia">
+				<td>
 					<a class="calendario__fechas__dia__enlace" href="#">30</a>
 				</td>
 			</tr>
@@ -5851,6 +5844,9 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
   margin-bottom: 0;
   background-color: transparent; }
 
+.calendario__fechas__dia--vacio {
+  background-color: #f6f6f6; }
+
 .calendario__fechas__dia__enlace {
   padding: 5px;
   display: block;
@@ -5873,47 +5869,51 @@ Este componente esta basado en el diseño de los calendarios que aparecen en la 
     color: #aaaaaa;
     cursor: default; }
 
-.calendario__fechas__dia--vacio {
-  background-color: #f6f6f6; }
-
 /*doc
 ---
 title: Botonera
 category: Componentes
 ---
 
-Permite añadir una serie de botones que se colocan en función del uso que hagamos de la rejilla.
-
-##Ejemplo con dos botones##
+Conjunto de botones que se [reordenan en base a la rejilla de Bootstrap](http://getbootstrap.com/css/#grid-column-ordering).
 
 ```html_example
 <div class="botonera">
 	<div class="row">
-		<div class="col-sm-4 col-sm-push-6">
-			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Continuar →</a>
-		</div>
-		<div class="col-sm-4 col-sm-pull-2">
-			<a href="" class="btn btn-lg btn-link btn-block botonera__boton">← Todas las entradas</a>
+		<div class="col-lg-10 col-lg-offset-1">
+			<div class="row">
+				<div class="col-sm-4 col-sm-push-6">
+					<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Continuar →</a>
+				</div>
+				<div class="col-sm-4 col-sm-pull-2">
+					<a href="" class="btn btn-lg btn-link btn-block botonera__boton">← Todas las entradas</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 ```
 
-##Ejemplo con tres botones y textos de ayuda##
+###Texto de ayuda opcional###
+Hemos añadido un texto de ayuda opcional que puede acompañar a uno de los botones.
 
 ```html_example
 <div class="botonera">
 	<div class="row">
-		<div class="col-sm-4 col-sm-push-4">
-			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Pagar entradas →</a>
-			<p class="botonera__texto-ayuda">Serás dirigido a la pasarela de pago</p>
-		</div>
-		<div class="col-sm-4 col-sm-push-4">
-			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Reservar →</a>
-			<p class="botonera__texto-ayuda">Podrás realizar el pago hasta 2 días antes de la fecha de la reserva</p>
-		</div>
-		<div class="col-sm-4 col-sm-pull-8">
-			<a href="" class="btn btn-lg btn-link btn-block botonera__boton">← Revisar compra y cupón</a>
+		<div class="col-lg-10 col-lg-offset-1">
+			<div class="row">
+				<div class="col-sm-4 col-sm-push-4">
+					<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Pagar entradas →</a>
+					<p class="botonera__texto-ayuda">Serás dirigido a la pasarela de pago</p>
+				</div>
+				<div class="col-sm-4 col-sm-push-4">
+					<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Reservar →</a>
+					<p class="botonera__texto-ayuda">Podrás realizar el pago hasta 2 días antes de la fecha de la reserva</p>
+				</div>
+				<div class="col-sm-4 col-sm-pull-8">
+					<a href="" class="btn btn-lg btn-link btn-block botonera__boton">← Revisar compra y cupón</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -6187,7 +6187,7 @@ En caso de utilizarlo con la rejilla `table-grid` combinamos en un mismo element
 
 /*doc
 ---
-title: Alerts
+title: Modals
 category: Componentes
 ---
 

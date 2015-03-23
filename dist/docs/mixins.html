@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Mixins - MNCARS Compra y reserva de entradas</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Compiled site styles -->
+    <link type="text/css" rel="stylesheet" media="all" href="../css/style.css">
+
+    <!-- Styles for documentation only -->
+    <link type="text/css" rel="stylesheet" media="all" href="doc.css">
+    <link type="text/css" rel="stylesheet" media="all" href="github.css">
+    
+    <script src="/vendor/jquery/dist/jquery.js"></script>
+    <script src="/vendor/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+
+    <style>
+   
+      .main-content > *:first-child {
+        margin-top: 20px;
+      }
+
+      .main-content > h2,
+      .main-content > h1 {
+        margin-top: 50px;
+      }
+      .main-content > h1 {
+        font-size: 45px;
+      }
+      .main-content > h2 {
+        font-size: 30px;
+      }
+      .main-content > h1 + h2 {
+        margin-top: 0;
+      }
+      .affix {
+        top: 10px;
+        width: 16%;
+      }
+      .navbar-default .navbar-brand, 
+      .navbar-default .navbar-brand:hover {
+        height: 50px;
+        padding-top: 15px;
+        background-color: #00a0b4;
+      }
+      a.navbar-brand{ color:#fff!important;}
+      .submenu-container .nav > li > a {
+        color: #aaa;
+        font-weight: normal;
+        font-size: 13px;
+        text-decoration: none;
+      }
+      .navbar .nav > li > a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-right: 1px solid #ddd;
+        -webkit-transition: background-color 0.3s;
+        transition: background-color 0.3s;
+      }
+
+      .navbar .nav > li > a:hover {
+        background-color: #b4d232;
+        color: white;
+      }
+
+      @media(max-width: 991px) {
+        .affix {
+          display: none;
+        }
+      }
+      .nav > li > a {
+        padding-top: 3px;
+        padding-bottom: 3px;
+
+      }
+      table {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      @media(max-width: 400px) {
+        .nav > li > a {
+          padding: 10px 7px;
+          font-size: 0.95em;
+        }
+      }
+      pre {
+        font-size: 13px;
+      }
+      .bloque {
+        padding: 5px;
+        background-color: #ddd;
+      }
+      .bloque.alternativo {
+        background-color: #ccc;
+      }
+    </style>
+    <script>
+      $(function() {
+        // select current page
+        $(".navbar-nav li a").each(function() {
+          var navItemUrl = $(this).attr("href");
+          if (document.URL.indexOf(navItemUrl) > -1) {
+            $(this).parent().addClass("active");
+          }
+        });
+      })
+    </script>
+  </head>
+  <body id="top" data-spy="scroll" data-target=".submenu-container" data-offset="10">
+
+  <nav class="navbar navbar-default" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          Inicio
+        </a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          
+            <li>
+              <a href="componentes.html">Componentes</a>
+            </li>
+          
+            <li>
+              <a href="global.html">Global</a>
+            </li>
+          
+            <li>
+              <a href="mixins.html">Mixins</a>
+            </li>
+          
+            <li>
+              <a href="módulos.html">Módulos</a>
+            </li>
+          
+        </ul>
+      </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 main-content">
+    
+      
+
+
+
+<h1 id="Espacios_en_blanco">Espacios en blanco</h1>
+
+<p>Son una serie muy extensa de mixins para aplicar las propiedades de margin y padding en función de una escala de valores definida previamente. La escala esta disponible en el archivo <code>_sass/_variables.scss</code>. En caso de que necesitemos aplicar un tamaño de espacio diferente, lo haremos con una regla CSS normal.</p>
+<div class="highlight"><pre><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="nl">xs:</span><span class="w">             </span><span class="il">15</span><span class="vg">px</span><span class="p">;</span>
+<span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="nl">sm:</span><span class="w">             </span><span class="p">(</span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="il">2</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="il">30</span><span class="vg">px</span><span class="p">;</span>
+<span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="nl">md:</span><span class="w">             </span><span class="p">(</span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="il">3</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="il">45</span><span class="vg">px</span><span class="p">;</span>
+<span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="nl">lg:</span><span class="w">             </span><span class="p">(</span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="il">4</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="il">60</span><span class="vg">px</span><span class="p">;</span>
+<span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="nl">xl:</span><span class="w">             </span><span class="p">(</span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="il">5</span><span class="p">);</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="il">75</span><span class="vg">px</span><span class="p">;</span>
+</pre></div>
+<p>Se pueden modificar estos valores pero no es recomendable ya que la rejilla de Bootstrap se compone de calles cuya anchura es de 30px, una medida proporcional a nuestra unidad base de 15px.</p>
+
+<p>Los mixins se definen añadiendo a cada propiedad (<code>margin-top</code>, <code>padding-bottom</code>, etc) el sufijo que especifica su tamaño (son cinco: <code>-xs</code> , <code>-sm</code> , <code>-md</code> , <code>-lg</code> , <code>-xl</code> ).</p>
+<div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">margin</span><span class="o">-</span><span class="nl">top:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xs</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="o">-</span><span class="vg">sm</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">margin</span><span class="o">-</span><span class="nl">top:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">sm</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="o">-</span><span class="vg">md</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">margin</span><span class="o">-</span><span class="nl">top:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">md</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="o">-</span><span class="vg">lg</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">margin</span><span class="o">-</span><span class="nl">top:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">lg</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="o">-</span><span class="vg">xl</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">margin</span><span class="o">-</span><span class="nl">top:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xl</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">...</span>
+</pre></div>
+<p>Disponemos también de otros mixins que sirven para elminar los espacios en blanco del elemento.</p>
+<div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">no</span><span class="o">-</span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">margin</span><span class="o">-</span><span class="nl">top:</span><span class="w"> </span><span class="il">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">...</span>
+</pre></div>
+<p>Además, tenemos otros mixins que combinan dos propiedades en función de si el espacio que crean es vertical u horizontal, y otros que modifican el espacio tanto vertical cómo horizontalmente.</p>
+<div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">vertical</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="o">-</span><span class="vg">xs</span><span class="p">;</span>
+<span class="w">    </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">bottom</span><span class="o">-</span><span class="vg">xs</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">vertical</span><span class="o">-</span><span class="vg">sm</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="o">-</span><span class="vg">sm</span><span class="p">;</span>
+<span class="w">    </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">bottom</span><span class="o">-</span><span class="vg">sm</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">vertical</span><span class="o">-</span><span class="vg">md</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="o">-</span><span class="vg">md</span><span class="p">;</span>
+<span class="w">    </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">bottom</span><span class="o">-</span><span class="vg">md</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">vertical</span><span class="o">-</span><span class="vg">lg</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="o">-</span><span class="vg">lg</span><span class="p">;</span>
+<span class="w">    </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">bottom</span><span class="o">-</span><span class="vg">lg</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">vertical</span><span class="o">-</span><span class="vg">xl</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">top</span><span class="o">-</span><span class="vg">xl</span><span class="p">;</span>
+<span class="w">    </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">bottom</span><span class="o">-</span><span class="vg">xl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">no</span><span class="o">-</span><span class="vg">margin</span><span class="o">-</span><span class="vg">vertical</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">margin</span><span class="o">-</span><span class="nl">top:</span><span class="w"> </span><span class="il">0</span><span class="p">;</span>
+<span class="w">    </span><span class="vg">margin</span><span class="o">-</span><span class="nl">bottom:</span><span class="w"> </span><span class="il">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">...</span>
+</pre></div><div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">margin:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xs</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">sm</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">margin:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">sm</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">md</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">margin:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">md</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">lg</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">margin:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">lg</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">margin</span><span class="o">-</span><span class="vg">xl</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">margin:</span><span class="w"> </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xl</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">no</span><span class="o">-</span><span class="vg">margin</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">margin:</span><span class="w"> </span><span class="il">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">...</span>
+</pre></div>
+<p>Para trabajar con espacios más pequeños que el tamaño de espacio base (<code>$space-unit-xs</code>) podemos trabajar con dos medidas más: <code>-xxs</code> y <code>-xxxs</code>.</p>
+<div class="highlight"><pre><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="nl">xxs:</span><span class="w">    </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1.5</span><span class="p">;</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="il">10</span><span class="vg">px</span>
+<span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="nl">xxxs:</span><span class="w">   </span><span class="err">$</span><span class="vg">space</span><span class="o">-</span><span class="vg">unit</span><span class="o">-</span><span class="vg">xs</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="il">3</span><span class="p">;</span><span class="w">   </span><span class="o">//</span><span class="w"> </span><span class="il">5</span><span class="vg">px</span>
+</pre></div>
+<h1 id="Sprites">Sprites</h1>
+
+<p>Para trabajar comodamente con sprites hay definidos una serie de mixins creados a partir de los ejemplos de <a href="http://www.smashingmagazine.com/2012/04/11/css-sprites-revisited/">este post</a>.</p>
+
+<p>Los sprites de imágenes los guardamos en la carpeta <code>img/sprites/</code> y los nombramos de la siguiente forma: <code>sprite1</code> , <code>sprite2</code> , <code>sprite3</code> . Cada sprite consta de una cuadrícula donde se colocan las imágenes y cuyas dimensiones de celda pueden variar. El nombre del sprite, su ruta, y las dimensiones de su cuadrícula las vamos definiendo en el archivo <code>_sass/mixins/_sprites.scss</code>, cómo se ve en el siguiente ejemplo:</p>
+<div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">sprite</span><span class="p">(</span><span class="err">$</span><span class="vg">image</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">x</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="err">@</span><span class="vg">if</span><span class="w"> </span><span class="err">$</span><span class="vg">image</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="vg">sprite1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="err">$</span><span class="nl">spriteX:</span><span class="w"> </span><span class="il">120</span><span class="vg">px</span><span class="p">;</span>
+<span class="w">      </span><span class="err">$</span><span class="nl">spriteY:</span><span class="w"> </span><span class="il">120</span><span class="vg">px</span><span class="p">;</span>
+<span class="w">         </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">spriteHelper</span><span class="p">(</span><span class="err">$</span><span class="vg">x</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">y</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">spriteX</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">spriteY</span><span class="p">);</span>
+<span class="w">         </span><span class="vg">background</span><span class="o">-</span><span class="nl">image:</span><span class="w"> </span><span class="vg">url</span><span class="p">(</span><span class="s2">&quot;../img/sprites/${image}.svg&quot;</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<p>Tenemos tres mixins para aplicar los sprites de tres formas diferentes.</p>
+
+<h2>spriteReplace</h2>
+<div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">spriteReplace</span><span class="w"> </span><span class="p">(</span><span class="err">$</span><span class="vg">image</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">x</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">y</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">width</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">height</span><span class="p">);</span>
+</pre></div>
+<p>Sirve para reemplazar un texto por una imagen, por ejemplo:</p>
+<div class="highlight"><pre><span class="o">.</span><span class="vg">sharing</span><span class="w"> </span><span class="o">.</span><span class="vg">twitter</span><span class="w"> </span><span class="vg">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="o">.</span><span class="vg">spriteReplace</span><span class="p">(</span><span class="vg">sprite1</span><span class="p">,</span><span class="w"> </span><span class="il">0</span><span class="p">,</span><span class="w"> </span><span class="il">0</span><span class="p">,</span><span class="w"> </span><span class="il">32</span><span class="vg">px</span><span class="p">,</span><span class="w"> </span><span class="il">32</span><span class="vg">px</span><span class="p">);</span><span class="w"> </span><span class="nl">display:</span><span class="vg">block</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h2>spriteInline</h2>
+<div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">spriteInline</span><span class="p">(</span><span class="err">$</span><span class="vg">image</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">x</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">y</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">width</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">height</span><span class="p">);</span>
+</pre></div>
+<p>Sirve para añadir una imagen en línea a un lado de un texto de una sola línea, por ejemplo:</p>
+<div class="highlight"><pre><span class="o">.</span><span class="vg">affiliates</span><span class="w"> </span><span class="o">.</span><span class="vg">amazon</span><span class="w"> </span><span class="nl">a:</span><span class="vg">before</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="o">.</span><span class="vg">spriteInline</span><span class="p">(</span><span class="vg">sprite1</span><span class="p">,</span><span class="w"> </span><span class="il">4</span><span class="p">,</span><span class="w"> </span><span class="il">1</span><span class="p">,</span><span class="w"> </span><span class="il">22</span><span class="vg">px</span><span class="p">,</span><span class="w"> </span><span class="il">16</span><span class="vg">px</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+<h2>spritePadded</h2>
+<div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">spritePadded</span><span class="p">(</span><span class="err">$</span><span class="vg">image</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">x</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">y</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">width</span><span class="p">,</span><span class="w"> </span><span class="err">$</span><span class="vg">height</span><span class="p">);</span>
+</pre></div>
+<p>Sirve para añadir una imagen a un lado de un texto de más de una línea, por ejemplo:</p>
+<div class="highlight"><pre><span class="o">.</span><span class="vg">translated</span><span class="w"> </span><span class="vg">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="vg">padding</span><span class="o">-</span><span class="nl">left:</span><span class="w"> </span><span class="il">22</span><span class="vg">px</span><span class="p">;</span>
+<span class="w">   </span><span class="nl">position:</span><span class="w"> </span><span class="vg">relative</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">.</span><span class="vg">translated</span><span class="w"> </span><span class="nl">p:</span><span class="vg">before</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="o">.</span><span class="vg">spritePadded</span><span class="p">(</span><span class="vg">sprite1</span><span class="p">,</span><span class="w"> </span><span class="il">5</span><span class="p">,</span><span class="w"> </span><span class="il">5</span><span class="p">,</span><span class="w"> </span><span class="il">16</span><span class="vg">px</span><span class="p">,</span><span class="w"> </span><span class="il">14</span><span class="vg">px</span><span class="p">);</span>
+<span class="w">   </span><span class="nl">left:</span><span class="w"> </span><span class="il">0</span><span class="p">;</span>
+<span class="w">   </span><span class="nl">top:</span><span class="w"> </span><span class="il">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h2>Sustituir SVG por PNG en Internet Explorer 8</h2>
+
+<p>Internet Explorer 8 no soporta el formato SVG, así que utilizaremos un mixin que reemplace la imágen SVG por un PNG. Este es un ejemplo de uso:</p>
+<div class="highlight"><pre><span class="o">.</span><span class="vg">lt</span><span class="o">-</span><span class="vg">ie9</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="o">.</span><span class="vg">navegacion</span><span class="o">-</span><span class="vg">principal__cabecera__logo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="err">@</span><span class="vg">include</span><span class="w"> </span><span class="vg">spritePNG</span><span class="w"> </span><span class="p">(</span><span class="vg">sprite1</span><span class="p">);</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<h1 id="Tamaños_de_fuente">Tamaños de fuente</h1>
+
+<p>Sirven para asignar a un elemento un tamaño de fuente en función de los tamaños de pantalla que define Bootstrap. Los tamaños están definidos en una serie de variables que se pueden editar en el archivo <code>_sass/_variables.scss</code>, bajo el apartado titulado &quot;Tamaños de fuente en función del tamaño de pantaña&quot;.</p>
+<div class="highlight"><pre><span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">large</span><span class="p">;</span>
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">base</span><span class="p">;</span>
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">small</span><span class="p">;</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">h1</span><span class="p">;</span>
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">h2</span><span class="p">;</span>
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">h3</span><span class="p">;</span>
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">h4</span><span class="p">;</span>
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">h5</span><span class="p">;</span>
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">h6</span><span class="p">;</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">navegacion</span><span class="o">-</span><span class="vg">principal__cabecera__slogan</span><span class="p">;</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">panel</span><span class="o">-</span><span class="vg">heading__titulo</span><span class="p">;</span>
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">panel</span><span class="o">-</span><span class="vg">body__titulo</span><span class="p">;</span>
+
+<span class="err">@</span><span class="vg">mixin</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="vg">size</span><span class="o">-</span><span class="vg">panel</span><span class="o">-</span><span class="vg">list</span><span class="o">-</span><span class="vg">group</span><span class="o">-</span><span class="vg">list</span><span class="o">-</span><span class="vg">group</span><span class="o">-</span><span class="vg">item</span><span class="p">;</span>
+</pre></div>      </div>
+      <div class="col-md-2">
+        <div class="submenu-container" data-spy="affix" data-offset-top="60">
+          <ul class="nav">
+          
+            <li><a href="#Espacios_en_blanco">Espacios en blanco</a></li>
+          
+            <li><a href="#Sprites">Sprites</a></li>
+          
+            <li><a href="#Tamaños_de_fuente">Tamaños de fuente</a></li>
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
