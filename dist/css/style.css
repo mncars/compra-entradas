@@ -5398,17 +5398,35 @@ category: Componentes
 Utilizamos el componente ["Alerts" de Bootstrap](http://getbootstrap.com/components/#alerts), sobreescribiendo alguno de sus estilos y personalizando sus variables.
 
 ```html_example
-<div class="alert alert-success" role="alert">
-	<strong>Well done!</strong> You successfully read this important alert message.
+<div class="botonera">
+	<div class="row">
+		<div class="col-sm-4 col-sm-push-6">
+			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Continuar →</a>
+		</div>
+		<div class="col-sm-4 col-sm-pull-2">
+			<a href="" class="btn btn-lg btn-link btn-block botonera__boton">← Todas las entradas</a>
+		</div>
+	</div>
 </div>
-<div class="alert alert-info" role="alert">
-    <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-</div>
-<div class="alert alert-warning" role="alert">
-    <strong>Warning!</strong> Better check yourself, you're not looking too good.
-</div>
-<div class="alert alert-danger" role="alert">
-    <strong>Oh snap!</strong> Change a few things up and try submitting again.
+```
+
+##Ejemplo con tres botones y textos de ayuda##
+
+```html_example
+<div class="botonera">
+	<div class="row">
+		<div class="col-sm-4 col-sm-push-4">
+			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Pagar entradas →</a>
+			<p class="botonera__texto-ayuda">Serás dirigido a la pasarela de pago</p>
+		</div>
+		<div class="col-sm-4 col-sm-push-4">
+			<a href="" class="btn btn-primary btn-lg btn-block botonera__boton">Reservar →</a>
+			<p class="botonera__texto-ayuda">Podrás realizar el pago hasta 2 días antes de la fecha de la reserva</p>
+		</div>
+		<div class="col-sm-4 col-sm-pull-8">
+			<a href="" class="btn btn-lg btn-link btn-block botonera__boton">← Revisar compra y cupón</a>
+		</div>
+	</div>
 </div>
 ```
 

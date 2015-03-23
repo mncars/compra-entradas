@@ -17,6 +17,10 @@
   margin-top: 0;
 }
 
+h1 {
+  margin-bottom: 15px;
+}
+
 footer {
   margin-top: 20px;
   text-align: center;
@@ -57,7 +61,7 @@ code {
 div.codeExample, div.jsExample {
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin: 10px 0;
+  margin: 30px 0 60px;
 }
 
 div.jsExample {
@@ -137,4 +141,8 @@ table:not(.table) th {
 
 table:not(.table) th {
   font-weight: bold;
+}
+
+th, td {
+  white-space: normal;
 }

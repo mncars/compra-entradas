@@ -4,21 +4,21 @@ title: Alerts
 category: Componentes
 ---
 
-Utilizamos el componente ["Alerts" de Bootstrap](http://getbootstrap.com/components/#alerts), sobreescribiendo alguno de sus estilos y personalizando sus variables.
+Mensajes de alerta creados a partir del [componente Alerts de Bootstrap](http://getbootstrap.com/components/#alerts).
 
 ```html_example
-<div class="alert alert-success" role="alert">
-	<strong>Well done!</strong> You successfully read this important alert message.
-</div>
-<div class="alert alert-info" role="alert">
-    <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-</div>
-<div class="alert alert-warning" role="alert">
-    <strong>Warning!</strong> Better check yourself, you're not looking too good.
-</div>
-<div class="alert alert-danger" role="alert">
-    <strong>Oh snap!</strong> Change a few things up and try submitting again.
-</div>
+<div class="alert alert-success">Hemos guardado tu reserva.</div>
+<div class="alert alert-info">Para más información, consulta los horarios y tarifas en la web del museo.</div>
+<div class="alert alert-warning">¿Tienes un <strong>cupón de descuento</strong>? Introduce tu código y aplica tu descuento.</div>
+<div class="alert alert-danger">No existen reservas con ese localizador.</div>
+```
+
+###Texto de ayuda opcional###
+Hemos añadido un texto de ayuda opcional que puede acompañar al mensaje de alerta.
+
+```html_example
+<div class="alert alert-danger">No existen reservas con ese localizador.</div> 
+<p class="alert__texto-ayuda">Vuelve a intentarlo o contáctanos: <a href="tel:+34902364383" class="text-nowrap">+34 902 364 383</a>, <a href="mailto:entradas@entradas.museoreinasofia.es">entradas@entradas.museoreinasofia.es</a></p>
 ```
 
 */
